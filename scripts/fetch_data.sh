@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Fetch the inputs this project reads into ./data (git-ignored). Run from the repo root.
+# Openly hosted sources are downloaded. Restricted ones are cloned only where the upstream host serves them
+# publicly; check each upstream licence yourself (see DATA_POLICY.md). Books are NOT downloaded.
+set -euo pipefail
+mkdir -p data && cd data
+clone () { # url dir commit
+  [ -d "$2/.git" ] || git clone --quiet "$1" "$2"
+  [ -n "${3:-}" ] && git -C "$2" checkout --quiet "$3" || true
+  echo "ok  $2 ($(git -C "$2" rev-parse --short HEAD))"
+}
+# --- corpora (restricted terms: private research use; do not redistribute) ---
+clone https://github.com/joyboseroy/indus_decipher joyboseroy_indus_decipher cd60034        # M77 export: ASI copyright
+clone https://github.com/yajnadevam/lipi lipi fc8813a                                       # no licence; ICIT-derived
+clone https://github.com/field-cady/indus_valley_script_corpus field-cady_indus_valley_script_corpus 3030826
+clone https://github.com/yajnadevam/indus-website yajnadevam_indus-website 2434249          # GPL-3; SK font All Rights Reserved
+# --- open ---
+clone https://github.com/mayig/indus-valley-script-corpus mayig_indus-valley-script-corpus ad2f1e2   # MIT
+clone https://github.com/isramos/indus-script-sign-merging isramos_indus-script-sign-merging 0759bd6  # GPL-3
+clone https://github.com/elamicon/elamicon elamicon_repo 69b4cc2                              # GPL-2
+mkdir -p weights lexicons fonts_open zenodo/dravidian_db_22682542 vidyut toy
+curl -sfL https://richardsproat.com/indus_weights/weights.xml -o weights/weights.xml && echo "ok  weights/weights.xml (GPL-3)"
+curl -sfL https://raw.githubusercontent.com/sanskrit-lexicon/csl-orig/master/v02/mw/mw.txt -o lexicons/mw.txt && echo "ok  lexicons/mw.txt (CC BY-SA 4.0)"
+for l in en fi tr id hu; do
+  curl -sfL "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/$l/${l}_50k.txt" -o "lexicons/freq_$l.txt" && echo "ok  lexicons/freq_$l.txt (CC BY-SA 4.0)"
+done
+for f in NotoSansBrahmi NotoSansCuneiform NotoSansEgyptianHieroglyphs NotoSansLinearA; do
+  echo "    get $f-Regular.ttf from https://github.com/notofonts (OFL) into data/fonts_open/"
+done
+echo "    Dravidian DB v1.2 (CC BY 4.0): download the files of https://zenodo.org/records/22682542 into data/zenodo/dravidian_db_22682542/"
+python - <<'PY' || echo "    vidyut data: run python -c \"import vidyut; vidyut.download_data('data/vidyut')\""
+import vidyut; vidyut.download_data('vidyut'); print('ok  vidyut data (MIT)')
+PY
+cp ../data_open/toy/toy_corpus.csv toy/ 2>/dev/null || true
+cat <<'MSG'
+
+Restricted inputs that are NOT fetched (obtain lawfully; see DATA_POLICY.md):
+  - Mahadevan 1977, The Indus Script: Texts, Concordance and Tables (MASI 77), (c) ASI. Needed for object types,
+    plate crops and the M77 OCR scripts. Place the PDF under data/books/masi77/ and adjust the paths in ocr_m77_*.py.
+  - Parpola 1994, Deciphering the Indus Script, (c) CUP. Used only for page-cited claims (already in the claims table).
+  - Wikipedia comparanda text: python scripts/fetch_wiki.py (CC BY-SA 4.0).
+MSG

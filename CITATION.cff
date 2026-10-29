@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "UNREVIEWED PREPRINT / working draft, not peer-reviewed. If you use this code or these derived results, please cite them as below."
+title: "Calibrated structural analysis of the Indus script: positional classes, slot grammar, a full sign map, and null-model tests of published readings"
+type: software
+authors:
+  - name: "Indus Valley Script project contributors"
+version: "0.5.0-draft"
+date-released: "2026-10-29"
+license: MIT
+repository-code: "https://github.com/thewisecrab/indus-valley-script"
+abstract: "Unreviewed preprint (working draft). Null-model-calibrated structural analysis of the Indus script; code MIT, text and derived results CC BY 4.0."
+keywords:
+  - Indus script
+  - undeciphered scripts
+  - null models
+  - computational epigraphy
+references:
+  - type: article
+    authors:
+      - family-names: Yadav
+        given-names: Nisha
+    title: "Statistical Analysis of the Indus Script Using n-Grams"
+    journal: "PLoS ONE"
+    year: 2010
+    doi: "10.1371/journal.pone.0009506"
+  - type: article
+    authors:
+      - family-names: Nair
+        given-names: Ashish
+    title: "How Non-Linguistic Is the Indus Sign System? A Synthetic-Baseline Scorecard"
+    year: 2026
+    url: "https://arxiv.org/abs/2604.17828"
+  - type: book
+    authors:
+      - family-names: Mahadevan
+        given-names: Iravatham
+    title: "The Indus Script: Texts, Concordance and Tables"
+    year: 1977

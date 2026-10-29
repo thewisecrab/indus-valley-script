@@ -1,0 +1,42 @@
+{
+ "signs_in_key": 716,
+ "signs_with_direct_value": 683,
+ "signs_value_via_canonical_decomposition": 33,
+ "signs_noncanonical": 626,
+ "distinct_values": 129,
+ "sign_types_in_corpus": 714,
+ "sign_types_in_corpus_with_value": 714,
+ "published_readings_nonref": 1764,
+ "ref_rows": 2070,
+ "value_length_dist": [
+  [
+   1,
+   442
+  ],
+  [
+   2,
+   123
+  ],
+  [
+   3,
+   96
+  ],
+  [
+   5,
+   28
+  ],
+  [
+   4,
+   19
+  ],
+  [
+   6,
+   7
+  ],
+  [
+   7,
+   1
+  ]
+ ],
+ "notes": "Additional unquantified freedoms: optional inherent-a (regex \"a?\"), key letter -> multiple published phonemes (see A_substitutions), word segmentation and sandhi choice per reading, choice of dictionary (MW) sense."
+}

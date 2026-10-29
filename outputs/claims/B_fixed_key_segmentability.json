@@ -1,0 +1,81 @@
+{
+ "n_texts_unique": 2317,
+ "lexicon_size_each": 4361,
+ "length_counts": {
+  "2": 101,
+  "3": 532,
+  "4": 1298,
+  "5": 1319,
+  "6": 613,
+  "7": 297,
+  "8": 98,
+  "9": 62,
+  "10": 41
+ },
+ "full_MW_size": 172432,
+ "rows": [
+  {
+   "lexicon": "_full_MW",
+   "real": 0.9935261113508848,
+   "shuffled_within_mean": 0.9907926916990362,
+   "shuffled_global_mean": 0.991799741044454,
+   "permuted_key_mean": 0.9902172349302258
+  },
+  {
+   "lexicon": "sanskrit_MW",
+   "real": 0.9577039274924471,
+   "shuffled_within_mean": 0.9381383973528988,
+   "shuffled_global_mean": 0.9390015825061142,
+   "permuted_key_mean": 0.93482952093224
+  },
+  {
+   "lexicon": "proto_dravidian_PDR",
+   "real": 0.6486836426413466,
+   "shuffled_within_mean": 0.6397640627247879,
+   "shuffled_global_mean": 0.6488275068335492,
+   "permuted_key_mean": 0.5574737447849231
+  },
+  {
+   "lexicon": "finnish",
+   "real": 0.6758739749676306,
+   "shuffled_within_mean": 0.6704071356639333,
+   "shuffled_global_mean": 0.6932815422241404,
+   "permuted_key_mean": 0.6081139404402244
+  },
+  {
+   "lexicon": "turkish",
+   "real": 0.7280966767371602,
+   "shuffled_within_mean": 0.7224859732412602,
+   "shuffled_global_mean": 0.7355776147316933,
+   "permuted_key_mean": 0.6695439505107178
+  },
+  {
+   "lexicon": "indonesian",
+   "real": 0.5442382391022874,
+   "shuffled_within_mean": 0.5066896849374191,
+   "shuffled_global_mean": 0.5176233635448138,
+   "permuted_key_mean": 0.3983599482088908
+  },
+  {
+   "lexicon": "hungarian",
+   "real": 0.7388864911523522,
+   "shuffled_within_mean": 0.7256509854697165,
+   "shuffled_global_mean": 0.7298230470435909,
+   "permuted_key_mean": 0.6341533592288879
+  },
+  {
+   "lexicon": "english",
+   "real": 0.4920155373327579,
+   "shuffled_within_mean": 0.4822327722629838,
+   "shuffled_global_mean": 0.4697165875413609,
+   "permuted_key_mean": 0.2895986189037549
+  },
+  {
+   "lexicon": "markov_nonsense",
+   "real": 0.8631851532153647,
+   "shuffled_within_mean": 0.8459214501510574,
+   "shuffled_global_mean": 0.8518198820313625,
+   "permuted_key_mean": 0.898719608689397
+  }
+ ]
+}

@@ -1,0 +1,121 @@
+{
+ "TOY": {
+  "n_texts": 6,
+  "n_tokens": 16,
+  "n_sign_types": 6,
+  "hapax": 2,
+  "mean_len": 2.8333333333333335,
+  "median_len": 3.0,
+  "max_len": 4,
+  "signs_for_50pct_tokens": 2,
+  "signs_for_80pct_tokens": 4,
+  "top10": [
+   [
+    "A",
+    4
+   ],
+   [
+    "B",
+    4
+   ],
+   [
+    "C",
+    4
+   ],
+   [
+    "D",
+    2
+   ],
+   [
+    "E",
+    1
+   ],
+   [
+    "F",
+    1
+   ]
+  ],
+  "zipf_all": {
+   "slope": -0.8543191220174802,
+   "intercept": 1.7454683971494216,
+   "r2": 0.6900371390360907,
+   "n_ranks": 6
+  },
+  "zipf_top100": {
+   "slope": -0.8543191220174802,
+   "intercept": 1.7454683971494216,
+   "r2": 0.6900371390360907,
+   "n_ranks": 6
+  },
+  "H_unigram": 2.375,
+  "H_cond_real": 0.3605680553151701,
+  "H_cond_within_shuffle": 0.8625313543649847,
+  "H_cond_global_shuffle": 0.8685249774916965,
+  "direction": {
+   "H_initial": 0.8112781244591328,
+   "H_final": 1.0,
+   "top_initial": [
+    [
+     "A",
+     3
+    ],
+    [
+     "E",
+     1
+    ]
+   ],
+   "top_final": [
+    [
+     "C",
+     2
+    ],
+    [
+     "D",
+     2
+    ]
+   ]
+  },
+  "top_final_pct": [],
+  "top_initial_pct": [],
+  "top_bigrams": [
+   [
+    "A B",
+    3
+   ],
+   [
+    "B C",
+    3
+   ],
+   [
+    "B D",
+    1
+   ],
+   [
+    "E B",
+    1
+   ],
+   [
+    "C D",
+    1
+   ]
+  ],
+  "top_trigrams": [
+   [
+    "A B C",
+    2
+   ],
+   [
+    "A B D",
+    1
+   ],
+   [
+    "E B C",
+    1
+   ],
+   [
+    "B C D",
+    1
+   ]
+  ]
+ }
+}

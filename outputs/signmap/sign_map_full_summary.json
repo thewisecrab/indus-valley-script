@@ -1,0 +1,26 @@
+{
+ "M_rows": 418,
+ "M_attested_in_M77": 417,
+ "M_with_W_link": 334,
+ "M_with_strong_or_supported_link": 216,
+ "M_with_session3_class": 135,
+ "M_glyph": 416,
+ "M_with_published_claim": 29,
+ "W_rows": 714,
+ "W_attested_ICIT": 712,
+ "W_with_M_link": 469,
+ "provisional_class_counts_M": {
+  "unresolved (n<5)": 180,
+  "MEDIAL/UNSPECIFIED (provisional)": 139,
+  "INITIAL-like (provisional)": 50,
+  "TERMINAL-like (provisional)": 25,
+  "unresolved (solo/too rare)": 23
+ },
+ "provisional_class_counts_W": {
+  "unresolved (n<5)": 390,
+  "MEDIAL/UNSPECIFIED (provisional)": 185,
+  "INITIAL-like (provisional)": 69,
+  "TERMINAL-like (provisional)": 37,
+  "unresolved (solo/too rare)": 31
+ }
+}

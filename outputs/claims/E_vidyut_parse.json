@@ -1,0 +1,44 @@
+{
+ "mechanical_real": {
+  "n": 2317,
+  "full_parse": 0.5792,
+  "mean_token_len": 5.619,
+  "short_token_share": 0.2727
+ },
+ "mechanical_shuffled_within": {
+  "n": 2317,
+  "full_parse": 0.5934,
+  "mean_token_len": 5.445,
+  "short_token_share": 0.3026
+ },
+ "mechanical_shuffled_global": {
+  "n": 2317,
+  "full_parse": 0.5891,
+  "mean_token_len": 5.55,
+  "short_token_share": 0.3043
+ },
+ "mechanical_permuted_key": {
+  "n": 2317,
+  "full_parse": 0.4035,
+  "mean_token_len": 7.675,
+  "short_token_share": 0.2614
+ },
+ "markov_nonsense_matched_length": {
+  "n": 2317,
+  "full_parse": 0.3815,
+  "mean_token_len": 5.055,
+  "short_token_share": 0.3646
+ },
+ "published_readings_as_written": {
+  "n": 1756,
+  "full_parse": 0.9134,
+  "mean_token_len": 4.014,
+  "short_token_share": 0.1748
+ },
+ "published_readings_unsegmented": {
+  "n": 1756,
+  "full_parse": 0.7506,
+  "mean_token_len": 5.652,
+  "short_token_share": 0.159
+ }
+}

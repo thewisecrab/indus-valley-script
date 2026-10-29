@@ -1,0 +1,6 @@
+ngram,count
+A B,3
+B C,3
+B D,1
+E B,1
+C D,1

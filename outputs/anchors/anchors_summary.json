@@ -1,0 +1,968 @@
+{
+ "numerals": {
+  "short_stroke_value_tokens": {
+   "1": 214,
+   "2": 852,
+   "3": 259,
+   "4": 107,
+   "5": 57,
+   "6": 56,
+   "7": 88,
+   "8": 7,
+   "9": 6,
+   "10": 2
+  },
+  "long_stroke_value_tokens": {
+   "1": 258,
+   "2": 588,
+   "3": 523,
+   "4": 184,
+   "5": 37
+  },
+  "short_positions": {
+   "initial": 419,
+   "medial": 1085,
+   "final": 144
+  },
+  "next_sign_after_short_numeral_top": [
+   [
+    "<END>",
+    226
+   ],
+   [
+    "240",
+    87
+   ],
+   [
+    "390",
+    84
+   ],
+   [
+    "220",
+    67
+   ],
+   [
+    "032",
+    57
+   ],
+   [
+    "235",
+    45
+   ],
+   [
+    "156",
+    43
+   ],
+   [
+    "003",
+    40
+   ],
+   [
+    "803",
+    36
+   ],
+   [
+    "900",
+    35
+   ],
+   [
+    "031",
+    31
+   ],
+   [
+    "861",
+    30
+   ],
+   [
+    "585",
+    30
+   ],
+   [
+    "004",
+    28
+   ],
+   [
+    "233",
+    26
+   ]
+  ],
+  "prev_sign_before_short_numeral_top": [
+   [
+    "<START>",
+    419
+   ],
+   [
+    "861",
+    176
+   ],
+   [
+    "817",
+    158
+   ],
+   [
+    "820",
+    122
+   ],
+   [
+    "002",
+    88
+   ],
+   [
+    "741",
+    34
+   ],
+   [
+    "405",
+    34
+   ],
+   [
+    "031",
+    29
+   ],
+   [
+    "740",
+    26
+   ],
+   [
+    "368",
+    23
+   ]
+  ],
+  "share_texts_with_short_numeral_by_type": [
+   {
+    "type0": "BEAD",
+    "mean": 0.0,
+    "sum": 0,
+    "count": 2
+   },
+   {
+    "type0": "BNGL",
+    "mean": 0.1,
+    "sum": 5,
+    "count": 50
+   },
+   {
+    "type0": "IMPL",
+    "mean": 0.565,
+    "sum": 13,
+    "count": 23
+   },
+   {
+    "type0": "MDLN",
+    "mean": 0.0,
+    "sum": 0,
+    "count": 2
+   },
+   {
+    "type0": "MISC",
+    "mean": 0.111,
+    "sum": 9,
+    "count": 81
+   },
+   {
+    "type0": "POT",
+    "mean": 0.172,
+    "sum": 109,
+    "count": 635
+   },
+   {
+    "type0": "POsT",
+    "mean": 0.0,
+    "sum": 0,
+    "count": 1
+   },
+   {
+    "type0": "ROD",
+    "mean": 0.238,
+    "sum": 10,
+    "count": 42
+   },
+   {
+    "type0": "SEAL",
+    "mean": 0.408,
+    "sum": 934,
+    "count": 2291
+   },
+   {
+    "type0": "TAB",
+    "mean": 0.128,
+    "sum": 293,
+    "count": 2290
+   },
+   {
+    "type0": "TAG",
+    "mean": 0.366,
+    "sum": 96,
+    "count": 262
+   },
+   {
+    "type0": "Unknown",
+    "mean": 0.0,
+    "sum": 0,
+    "count": 1
+   }
+  ],
+  "weights_n": 1154,
+  "weights_by_ratio_class_within15pct": {
+   "1": 20,
+   "2": 55,
+   "2.67": 12,
+   "4": 117,
+   "8": 151,
+   "16": 233,
+   "32": 286,
+   "64": 89,
+   "160": 57,
+   "200": 5,
+   "320": 13,
+   "640": 4,
+   "1600": 9,
+   "3200": 8,
+   "6400": 1,
+   "8000": 1,
+   "12800": 3
+  },
+  "weights_unassigned": 90,
+  "short_value_obs_vs_loglinear": [
+   {
+    "value": 1,
+    "obs": 214,
+    "fit": 688.1,
+    "ratio": 0.31
+   },
+   {
+    "value": 2,
+    "obs": 852,
+    "fit": 386.0,
+    "ratio": 2.21
+   },
+   {
+    "value": 3,
+    "obs": 259,
+    "fit": 216.5,
+    "ratio": 1.2
+   },
+   {
+    "value": 4,
+    "obs": 107,
+    "fit": 121.4,
+    "ratio": 0.88
+   },
+   {
+    "value": 5,
+    "obs": 57,
+    "fit": 68.1,
+    "ratio": 0.84
+   },
+   {
+    "value": 6,
+    "obs": 56,
+    "fit": 38.2,
+    "ratio": 1.47
+   },
+   {
+    "value": 7,
+    "obs": 88,
+    "fit": 21.4,
+    "ratio": 4.11
+   },
+   {
+    "value": 8,
+    "obs": 7,
+    "fit": 12.0,
+    "ratio": 0.58
+   },
+   {
+    "value": 9,
+    "obs": 6,
+    "fit": 6.7,
+    "ratio": 0.89
+   },
+   {
+    "value": 10,
+    "obs": 2,
+    "fit": 3.8,
+    "ratio": 0.53
+   }
+  ]
+ },
+ "motif": {
+  "n_seals": 1472,
+  "motifs": {
+   "Bull1": 1290,
+   "Gaur": 87,
+   "Zebu": 56,
+   "Elep": 39
+  },
+  "significant_p_lt_0_05": [],
+  "top_z_per_motif": [
+   {
+    "group": "Elep",
+    "sign": "440",
+    "k": 3,
+    "n_group": 39,
+    "sign_total": 23,
+    "z": 3.137,
+    "p_maxperm": 0.312
+   },
+   {
+    "group": "Elep",
+    "sign": "520",
+    "k": 9,
+    "n_group": 39,
+    "sign_total": 144,
+    "z": 2.86,
+    "p_maxperm": 0.472
+   },
+   {
+    "group": "Zebu",
+    "sign": "575",
+    "k": 4,
+    "n_group": 56,
+    "sign_total": 30,
+    "z": 2.843,
+    "p_maxperm": 0.415
+   },
+   {
+    "group": "Gaur",
+    "sign": "235",
+    "k": 13,
+    "n_group": 87,
+    "sign_total": 111,
+    "z": 2.749,
+    "p_maxperm": 0.462
+   },
+   {
+    "group": "Zebu",
+    "sign": "615",
+    "k": 3,
+    "n_group": 56,
+    "sign_total": 21,
+    "z": 2.667,
+    "p_maxperm": 0.528
+   },
+   {
+    "group": "Gaur",
+    "sign": "527",
+    "k": 5,
+    "n_group": 87,
+    "sign_total": 33,
+    "z": 2.411,
+    "p_maxperm": 0.761
+   },
+   {
+    "group": "Gaur",
+    "sign": "100",
+    "k": 7,
+    "n_group": 87,
+    "sign_total": 53,
+    "z": 2.409,
+    "p_maxperm": 0.761
+   },
+   {
+    "group": "Zebu",
+    "sign": "706",
+    "k": 4,
+    "n_group": 56,
+    "sign_total": 38,
+    "z": 2.37,
+    "p_maxperm": 0.831
+   },
+   {
+    "group": "Bull1",
+    "sign": "032",
+    "k": 136,
+    "n_group": 1290,
+    "sign_total": 145,
+    "z": 2.229,
+    "p_maxperm": 0.734
+   },
+   {
+    "group": "Elep",
+    "sign": "416",
+    "k": 2,
+    "n_group": 39,
+    "sign_total": 23,
+    "z": 2.146,
+    "p_maxperm": 0.953
+   },
+   {
+    "group": "Bull1",
+    "sign": "798",
+    "k": 61,
+    "n_group": 1290,
+    "sign_total": 63,
+    "z": 1.975,
+    "p_maxperm": 0.924
+   },
+   {
+    "group": "Bull1",
+    "sign": "740",
+    "k": 567,
+    "n_group": 1290,
+    "sign_total": 636,
+    "z": 1.526,
+    "p_maxperm": 1.0
+   }
+  ],
+  "jar740_rate_by_motif": {
+   "Bull1": 0.44,
+   "Elep": 0.308,
+   "Gaur": 0.437,
+   "Zebu": 0.339
+  }
+ },
+ "site_values": {
+  "Harappa": 2717,
+  "Mohenjo-daro": 1923,
+  "Dholavira": 238,
+  "Kalibangan": 212,
+  "Lothal": 208,
+  "Chanhu-daro": 74,
+  "Nausharo": 38,
+  "Unknown": 28
+ },
+ "site": {
+  "n": {
+   "Mohenjo-daro": 1342,
+   "Harappa": 436
+  },
+  "significant_p_lt_0_01": []
+ },
+ "type_length": {
+  "BEAD": 1.0,
+  "POT:M": 1.0,
+  "POT:T:g": 1.57,
+  "POT:T:p": 1.67,
+  "POT:T:s": 1.84,
+  "BNGL": 1.86,
+  "MISC": 1.88,
+  "POsT:T:g": 2.0,
+  "TAG:C": 2.0,
+  "TAB:I": 2.68,
+  "ROD": 3.35,
+  "TAB:B": 3.43,
+  "IMPL": 3.63,
+  "SEAL": 3.94,
+  "TAG:B": 4.0,
+  "TAG:P": 4.2,
+  "TAG:O": 4.33,
+  "SEAL:C": 4.35,
+  "TAG": 4.43,
+  "TAB:C": 4.51,
+  "SEAL:CY": 4.6,
+  "SEAL:S": 4.62,
+  "TAG:W": 4.67,
+  "SEAL:R": 4.8,
+  "SEAL:L": 5.0,
+  "TAG:L": 5.4,
+  "TAG:R": 7.0
+ },
+ "west": {
+  "n_objects": {
+   "Gulf": 17,
+   "Mesopotamia/Iran": 16,
+   "Central Asia": 2
+  },
+  "n_with_signs": 33,
+  "types": {
+   "Central Asia|SEAL:S": 2,
+   "Gulf|SEAL:C": 10,
+   "Gulf|POT:T:g": 3,
+   "Gulf|SEAL:S": 2,
+   "Gulf|TAB:I": 1,
+   "Gulf|TAG": 1,
+   "Mesopotamia/Iran|SEAL:C": 8,
+   "Mesopotamia/Iran|SEAL:S": 4,
+   "Mesopotamia/Iran|SEAL:CY": 1,
+   "Mesopotamia/Iran|TAG:L": 1,
+   "Mesopotamia/Iran|POT:T:s": 1,
+   "Mesopotamia/Iran|POT:T:g": 1
+  },
+  "motifs": {
+   "Central Asia|None": 1,
+   "Central Asia|Elep": 1,
+   "Gulf|Gaur": 9,
+   "Gulf|None": 5,
+   "Gulf|-": 1,
+   "Gulf|Bull1": 1,
+   "Gulf|Elep": 1,
+   "Mesopotamia/Iran|Gaur": 7,
+   "Mesopotamia/Iran|-": 3,
+   "Mesopotamia/Iran|Bull1": 2,
+   "Mesopotamia/Iran|Bull1:L": 1,
+   "Mesopotamia/Iran|Zebu": 1,
+   "Mesopotamia/Iran|Tigr": 1,
+   "Mesopotamia/Iran|None": 1
+  },
+  "bigrams_total": 91,
+  "bigrams_attested_in_indus": 32,
+  "attested_share": 0.352,
+  "null_attested_share_mean": 0.793,
+  "null_2_5pct": 0.681,
+  "null_97_5pct": 0.901,
+  "signs_unattested_in_indus": [
+   "340"
+  ],
+  "jar740_share_tokens_west": 0.055,
+  "jar740_share_tokens_indus": 0.107,
+  "final_sign_west": [
+   [
+    "740",
+    5
+   ],
+   [
+    "090",
+    3
+   ],
+   [
+    "390",
+    2
+   ],
+   [
+    "405",
+    2
+   ],
+   [
+    "220",
+    2
+   ],
+   [
+    "002",
+    2
+   ],
+   [
+    "617",
+    1
+   ],
+   [
+    "643",
+    1
+   ]
+  ],
+  "sign_090_091_west": 12,
+  "sign_090_091_indus": 211,
+  "texts": [
+   {
+    "site": "Altyn Depe",
+    "type": "SEAL:S",
+    "symbol": "None",
+    "text": "+390-415+"
+   },
+   {
+    "site": "Failaka",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 4 signs redacted]"
+   },
+   {
+    "site": "Failaka",
+    "type": "SEAL:C",
+    "symbol": "-",
+    "text": "[ICIT text of 4 signs redacted]"
+   },
+   {
+    "site": "Hajar",
+    "type": "TAB:I",
+    "symbol": "Gaur",
+    "text": "+617-117+"
+   },
+   {
+    "site": "Ra's al-Junayz",
+    "type": "SEAL:S",
+    "symbol": "Bull1",
+    "text": "+000+"
+   },
+   {
+    "site": "Kish",
+    "type": "SEAL:S",
+    "symbol": "Bull1",
+    "text": "+000-643-240+"
+   },
+   {
+    "site": "Kish",
+    "type": "SEAL:S",
+    "symbol": "Bull1:L",
+    "text": "[ICIT text of 8 signs redacted]"
+   },
+   {
+    "site": "Luristan",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 4 signs redacted]"
+   },
+   {
+    "site": "Nippur",
+    "type": "SEAL:S",
+    "symbol": "Zebu",
+    "text": "+151-000+"
+   },
+   {
+    "site": "Qala'at al-Bahrain",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 5 signs redacted]"
+   },
+   {
+    "site": "Ra's al-Junayz",
+    "type": "POT:T:g",
+    "symbol": "None",
+    "text": "[ICIT text of 4 signs redacted]"
+   },
+   {
+    "site": "Ra's al-Junayz",
+    "type": "POT:T:g",
+    "symbol": "None",
+    "text": "+405-004+"
+   },
+   {
+    "site": "Ra's al-Junayz",
+    "type": "POT:T:g",
+    "symbol": "None",
+    "text": "]740-892-517+"
+   },
+   {
+    "site": "Susa",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 6 signs redacted]"
+   },
+   {
+    "site": "Susa",
+    "type": "SEAL:CY",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 8 signs redacted]"
+   },
+   {
+    "site": "Tell Umma",
+    "type": "TAG:L",
+    "symbol": "Bull1",
+    "text": "[ICIT text of 5 signs redacted]"
+   },
+   {
+    "site": "Tello",
+    "type": "SEAL:S",
+    "symbol": "Tigr",
+    "text": "[ICIT text of 5 signs redacted]"
+   },
+   {
+    "site": "Tepe Yahya",
+    "type": "POT:T:s",
+    "symbol": "None",
+    "text": "+002-095-000["
+   },
+   {
+    "site": "Ur",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 5 signs redacted]"
+   },
+   {
+    "site": "Ur",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 6 signs redacted]"
+   },
+   {
+    "site": "Ur",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 5 signs redacted]"
+   },
+   {
+    "site": "Gonur Depe",
+    "type": "SEAL:S",
+    "symbol": "Elep",
+    "text": "[ICIT text of 8 signs redacted]"
+   },
+   {
+    "site": "Salut",
+    "type": "SEAL:S",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 5 signs redacted]"
+   },
+   {
+    "site": "Salut",
+    "type": "TAG",
+    "symbol": "Elep",
+    "text": "+921-000["
+   },
+   {
+    "site": "Girsu",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 5 signs redacted]"
+   },
+   {
+    "site": "Ur",
+    "type": "SEAL:C",
+    "symbol": "-",
+    "text": "[ICIT text of 5 signs redacted]"
+   },
+   {
+    "site": "Karzakan",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 4 signs redacted]"
+   },
+   {
+    "site": "Karzakan",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 4 signs redacted]"
+   },
+   {
+    "site": "Saar",
+    "type": "SEAL:C",
+    "symbol": "None",
+    "text": "[ICIT text of 6 signs redacted]"
+   },
+   {
+    "site": "Karzakan",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "+740/740+"
+   },
+   {
+    "site": "Ur",
+    "type": "SEAL:C",
+    "symbol": "-",
+    "text": "]405-090["
+   },
+   {
+    "site": "Janabiyah",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 7 signs redacted]"
+   },
+   {
+    "site": "Kalba",
+    "type": "SEAL:C",
+    "symbol": "None",
+    "text": "+091+"
+   },
+   {
+    "site": "Murda Sang",
+    "type": "POT:T:g",
+    "symbol": "-",
+    "text": "+000+"
+   },
+   {
+    "site": "Dilmun",
+    "type": "SEAL:C",
+    "symbol": "Gaur",
+    "text": "[ICIT text of 5 signs redacted]"
+   }
+  ],
+  "seal_shape_C_share": {
+   "Central Asia": 0.0,
+   "Gulf": 0.588,
+   "Indus+borderlands": 0.003,
+   "Mesopotamia/Iran": 0.5
+  }
+ },
+ "duplicates": {
+  "n_complete_texts_len2plus": 3309,
+  "n_distinct": 2126,
+  "n_in_duplicate_sets": 1480,
+  "n_duplicate_sets": 297,
+  "dup_share_by_type": [
+   {
+    "type": "BNGL",
+    "mean": 0.208,
+    "sum": 5,
+    "count": 24
+   },
+   {
+    "type": "POT:T:g",
+    "mean": 0.241,
+    "sum": 21,
+    "count": 87
+   },
+   {
+    "type": "POT:T:s",
+    "mean": 0.444,
+    "sum": 12,
+    "count": 27
+   },
+   {
+    "type": "ROD",
+    "mean": 0.333,
+    "sum": 7,
+    "count": 21
+   },
+   {
+    "type": "SEAL:R",
+    "mean": 0.129,
+    "sum": 32,
+    "count": 249
+   },
+   {
+    "type": "SEAL:S",
+    "mean": 0.147,
+    "sum": 186,
+    "count": 1265
+   },
+   {
+    "type": "TAB:B",
+    "mean": 0.731,
+    "sum": 543,
+    "count": 743
+   },
+   {
+    "type": "TAB:C",
+    "mean": 0.845,
+    "sum": 147,
+    "count": 174
+   },
+   {
+    "type": "TAB:I",
+    "mean": 0.812,
+    "sum": 463,
+    "count": 570
+   },
+   {
+    "type": "TAG",
+    "mean": 0.586,
+    "sum": 17,
+    "count": 29
+   }
+  ],
+  "texts_shared_across_sites": 83,
+  "examples_across_sites": [
+   {
+    "text": "003-003",
+    "sites": [
+     "Harappa",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "[ICIT text of 4 signs redacted]",
+    "sites": [
+     "Harappa",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "003-156",
+    "sites": [
+     "Harappa",
+     "Lothal",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "003-390",
+    "sites": [
+     "Harappa",
+     "Kalibangan",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "003-405",
+    "sites": [
+     "Harappa",
+     "Kalibangan"
+    ]
+   },
+   {
+    "text": "003-422",
+    "sites": [
+     "Dholavira",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "003-550-617",
+    "sites": [
+     "Harappa",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "004-390",
+    "sites": [
+     "Banawali",
+     "Kalibangan",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "005-405",
+    "sites": [
+     "Harappa",
+     "Kalibangan",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "005-900-740",
+    "sites": [
+     "Harappa",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "013-840-740",
+    "sites": [
+     "Harappa",
+     "Kalibangan",
+     "Lothal",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "016-390",
+    "sites": [
+     "Harappa",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "017-390",
+    "sites": [
+     "Kalibangan",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "017-405",
+    "sites": [
+     "Alamgirpur",
+     "Mohenjo-daro"
+    ]
+   },
+   {
+    "text": "017-585-740",
+    "sites": [
+     "Mohenjo-daro",
+     "Rupar"
+    ]
+   }
+  ],
+  "TAB_B_n": 743,
+  "TAB_B_distinct": 323,
+  "TAB_B_largest_sets": {
+   "033-700": 59,
+   "032-700": 52,
+   "034-700": 37,
+   "[ICIT text of 5 signs redacted]": 29,
+   "700-033": 25,
+   "700-032": 16,
+   "[ICIT text of 11 signs redacted]": 11,
+   "[ICIT text of 6 signs redacted]": 10,
+   "630-740": 9,
+   "[ICIT text of 5 signs redacted]": 8
+  },
+  "TAB_B_sites": {
+   "Harappa": 645,
+   "Mohenjo-daro": 85,
+   "Kalibangan": 3,
+   "Unknown": 3,
+   "Lothal": 2
+  },
+  "TAB_B_distinct_texts_also_on_seals": 28
+ }
+}

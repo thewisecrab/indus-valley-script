@@ -1,0 +1,40 @@
+{
+ "source": "Mahadevan 2015 RMRL booklet (papers/Mahadevan_Indus-Dravidian_2015.pdf): place signs M261/M373 house, M267 fortified house, M284 city; \"place signs are likely to occur in the initial position\"; jar = most frequent end sign",
+ "corpus": "M77 lines, outputs/M77/positional.csv",
+ "results": {
+  "M261": {
+   "initial": 9,
+   "n_nonsolo": 20,
+   "share": 0.45,
+   "baseline_initial_share": 0.238,
+   "p_binom_greater": 0.030406669016720185
+  },
+  "M373": {
+   "initial": 15,
+   "n_nonsolo": 51,
+   "share": 0.294,
+   "baseline_initial_share": 0.238,
+   "p_binom_greater": 0.21532285346627955
+  },
+  "M267": {
+   "initial": 248,
+   "n_nonsolo": 317,
+   "share": 0.782,
+   "baseline_initial_share": 0.238,
+   "p_binom_greater": 1.4146126724717992e-92
+  },
+  "M284": {
+   "initial": 15,
+   "n_nonsolo": 34,
+   "share": 0.441,
+   "baseline_initial_share": 0.238,
+   "p_binom_greater": 0.007285653889338495
+  },
+  "M342_jar": {
+   "final": 834,
+   "n": 1191,
+   "share": 0.7,
+   "note": "most frequent final sign in M77 (next: M176 277, M328 268)"
+  }
+ }
+}

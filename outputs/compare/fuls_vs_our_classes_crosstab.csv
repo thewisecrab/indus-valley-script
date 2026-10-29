@@ -1,0 +1,7 @@
+cls,early-medial,initial,late-medial,mid-medial,terminal
+BOUND-COLLOCATE,3,0,1,2,0
+INITIAL,10,3,0,1,0
+MEDIAL/UNSPECIFIED,26,0,6,25,0
+NUMERAL-STROKE,6,0,0,9,0
+PRE-TERMINAL,1,0,9,7,0
+TERMINAL,0,0,3,1,11
