@@ -1,0 +1,160 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "Indus open sign list",
+ "type": "object",
+ "properties": {
+  "meta": {
+   "type": "object"
+  },
+  "signs": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "scheme": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "parpola_id": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "parpola_description_mayig": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "concordance_W": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "concordance_M": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "concordance_confidence": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "freq_M77": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "freq_ICIT": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "init_share": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "final_share": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "medial_share": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "solo": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "structural_class": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "class_confidence": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "class_bootstrap_stability": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "icit_replication": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "preregistered_tests": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "recurrent_units_branching_entropy": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "phonetic_value_status": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "published_value_proposals_by": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "sites": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "object_types": {
+      "type": [
+       "number",
+       "null"
+      ]
+     }
+    },
+    "required": [
+     "id",
+     "scheme"
+    ]
+   }
+  }
+ }
+}

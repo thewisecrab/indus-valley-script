@@ -1,0 +1,86 @@
+{
+ "H1": {
+  "description": "terminal-class signs are text-final",
+  "splits_sufficient": 9,
+  "passed": 9,
+  "failed": [],
+  "insufficient": [],
+  "passed_BH": 9,
+  "overall": "replicated"
+ },
+ "H2": {
+  "description": "initial-class signs are text-initial",
+  "splits_sufficient": 9,
+  "passed": 9,
+  "failed": [],
+  "insufficient": [],
+  "passed_BH": 9,
+  "overall": "replicated"
+ },
+ "H3": {
+  "description": "pre-terminal-class signs are penultimate",
+  "splits_sufficient": 8,
+  "passed": 8,
+  "failed": [],
+  "insufficient": [
+   "ICIT region: Eastern Headwaters + Upper Indus"
+  ],
+  "passed_BH": 8,
+  "overall": "replicated"
+ },
+ "H4": {
+  "description": "jar sign M342 is text-final",
+  "splits_sufficient": 9,
+  "passed": 9,
+  "failed": [],
+  "insufficient": [],
+  "passed_BH": 9,
+  "overall": "replicated"
+ },
+ "H5": {
+  "description": "M267 is text-initial",
+  "splits_sufficient": 8,
+  "passed": 8,
+  "failed": [],
+  "insufficient": [
+   "ICIT region: Eastern Headwaters + Upper Indus"
+  ],
+  "passed_BH": 8,
+  "overall": "replicated"
+ },
+ "H6": {
+  "description": "M267 is immediately followed by M099 (unit)",
+  "splits_sufficient": 8,
+  "passed": 8,
+  "failed": [],
+  "insufficient": [
+   "ICIT region: Eastern Headwaters + Upper Indus"
+  ],
+  "passed_BH": 8,
+  "overall": "replicated"
+ },
+ "H7": {
+  "description": "a stroke numeral immediately precedes the fish M059",
+  "splits_sufficient": 8,
+  "passed": 7,
+  "failed": [
+   "ICIT object: POT (pottery)"
+  ],
+  "insufficient": [
+   "ICIT region: Eastern Headwaters + Upper Indus"
+  ],
+  "passed_BH": 7,
+  "overall": "partially replicated"
+ },
+ "H8": {
+  "description": "initial-class tokens all precede terminal-class tokens",
+  "splits_sufficient": 8,
+  "passed": 8,
+  "failed": [],
+  "insufficient": [
+   "ICIT region: Eastern Headwaters + Upper Indus"
+  ],
+  "passed_BH": 8,
+  "overall": "replicated"
+ }
+}

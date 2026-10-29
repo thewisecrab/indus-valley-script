@@ -1,0 +1,66 @@
+{
+ "name": "FieldCady_PDR_syllables",
+ "author": "Field-Cady (github.com/field-cady/indus_valley_script_corpus, MIT, (c) 2024 Michael Carlson)",
+ "language": "Proto-Dravidian (syllabic)",
+ "lexicon": "proto_dravidian_PDR",
+ "scheme": "W",
+ "n_texts_corpus": 2317,
+ "valued_signs": 99,
+ "T1": {
+  "real": 0.4104330708661417,
+  "n_fully_valued_texts": 1016,
+  "shuffled_within": [
+   0.43799212598425197,
+   0.4360236220472441,
+   0.43700787401574803,
+   0.4330708661417323,
+   0.43503937007874016
+  ],
+  "shuffled_global": [
+   0.49570200573065903,
+   0.5085877862595419,
+   0.4573055028462998,
+   0.49071358748778104,
+   0.4826923076923077
+  ],
+  "permuted_key": [
+   0.07775590551181102,
+   0.24507874015748032,
+   0.343503937007874,
+   0.36811023622047245,
+   0.27460629921259844
+  ],
+  "real_above_all_nulls": false
+ },
+ "T2": {
+  "sanskrit_MW": 0.38484251968503935,
+  "proto_dravidian_PDR": 0.3986220472440945,
+  "dravidian_DEDR_forms+PDR": 0.1643700787401575,
+  "finnish": 0.4202755905511811,
+  "turkish": 0.5482283464566929,
+  "hungarian": 0.4940944881889764,
+  "indonesian": 0.19291338582677164,
+  "english": 0.1643700787401575,
+  "_submission": 0.3986220472440945,
+  "submission_lexicon_is_best": false
+ },
+ "T3": {
+  "submission_heldout": 0.36018957345971564,
+  "fitted_to_shuffled_heldout": 0.7582938388625592,
+  "submission_beats_fitted_noise": false
+ },
+ "T4": {
+  "signs_tested": 99,
+  "p_lt_05": 5,
+  "q_lt_05": 0,
+  "mean_p_alt": 0.547645125958379,
+  "min_possible_p": 0.012048192771084338
+ },
+ "T5": {
+  "valued_signs": 99,
+  "distinct_values": 83,
+  "log2_assignments": 631.1,
+  "inherent_vowel": ""
+ },
+ "beats_all_nulls": false
+}

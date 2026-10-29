@@ -1,0 +1,66 @@
+{
+ "name": "Random_baseline_FieldCady_inventory_shuffled",
+ "author": "project (control)",
+ "language": "none (values randomly reassigned, seed 0)",
+ "lexicon": "proto_dravidian_PDR",
+ "scheme": "W",
+ "n_texts_corpus": 2317,
+ "valued_signs": 99,
+ "T1": {
+  "real": 0.2283464566929134,
+  "n_fully_valued_texts": 1016,
+  "shuffled_within": [
+   0.2155511811023622,
+   0.22145669291338582,
+   0.21948818897637795,
+   0.21948818897637795,
+   0.22440944881889763
+  ],
+  "shuffled_global": [
+   0.276981852913085,
+   0.26049618320610685,
+   0.2903225806451613,
+   0.26392961876832843,
+   0.27307692307692305
+  ],
+  "permuted_key": [
+   0.27165354330708663,
+   0.296259842519685,
+   0.1545275590551181,
+   0.46653543307086615,
+   0.3297244094488189
+  ],
+  "real_above_all_nulls": false
+ },
+ "T2": {
+  "sanskrit_MW": 0.4311023622047244,
+  "proto_dravidian_PDR": 0.22440944881889763,
+  "dravidian_DEDR_forms+PDR": 0.16535433070866143,
+  "finnish": 0.25098425196850394,
+  "turkish": 0.41929133858267714,
+  "hungarian": 0.3248031496062992,
+  "indonesian": 0.125,
+  "english": 0.12401574803149606,
+  "_submission": 0.22440944881889763,
+  "submission_lexicon_is_best": false
+ },
+ "T3": {
+  "submission_heldout": 0.23696682464454977,
+  "fitted_to_shuffled_heldout": 0.7393364928909952,
+  "submission_beats_fitted_noise": false
+ },
+ "T4": {
+  "signs_tested": 99,
+  "p_lt_05": 2,
+  "q_lt_05": 0,
+  "mean_p_alt": 0.5792868443470852,
+  "min_possible_p": 0.012048192771084338
+ },
+ "T5": {
+  "valued_signs": 99,
+  "distinct_values": 83,
+  "log2_assignments": 631.1,
+  "inherent_vowel": ""
+ },
+ "beats_all_nulls": false
+}

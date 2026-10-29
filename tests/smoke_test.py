@@ -55,6 +55,21 @@ check(rep['nair_replication']['ICIT_lipi_dedup_undamaged']['hcond']['obs'] == 3.
 r = subprocess.run([sys.executable, f'{ROOT}/scripts/loo_global_calibration.py', '--check'], capture_output=True, text=True, cwd=ROOT)
 print(r.stdout.strip()); check(r.returncode == 0, 'global LOO calibration block recomputes from loo_phonetic_all_conditions.csv')
 
+# 4b. session 6: pre-registration integrity and headline outcomes (including the partial failure of H7)
+import hashlib
+for line in open(f'{ROOT}/prereg/SHA256SUMS.txt'):
+    h, f = line.split()
+    check(hashlib.sha256(open(f'{ROOT}/{f}', 'rb').read()).hexdigest() == h, f'pre-registered file unchanged: {f}')
+pr = J('outputs/prereg/prereg_heldout_summary.json')
+check(pr['H7']['overall'] == 'partially replicated' and all(pr[h]['overall'] == 'replicated' for h in ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'H8']),
+      'pre-registered held-out: H1-H6, H8 replicated; H7 partially')
+rb = J('outputs/robustness/robustness_summary.json')
+check(rb['passed'] == rb['cells'] == 90, 'robustness: 90/90 cells pass')
+r = subprocess.run([sys.executable, f'{ROOT}/scripts/prereg_heldout.py', '--selftest'], capture_output=True, text=True, cwd=ROOT)
+check(r.returncode == 0, 'prereg_heldout.py --selftest (synthetic data) passes')
+sl = J('outputs/signlist/indus_open_signlist.json')
+check(len(sl) == 1132 if isinstance(sl, list) else len(sl.get('signs', sl)) == 1132, 'open sign list has 1,132 entries')
+
 # 5. restricted-content checker
 r = subprocess.run([sys.executable, f'{ROOT}/tools/check_public.py'], capture_output=True, text=True, cwd=ROOT)
 print(r.stdout.strip()); check(r.returncode == 0, 'tools/check_public.py clean')

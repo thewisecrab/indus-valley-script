@@ -13,12 +13,12 @@ PART H (hand-sourced logographic/morphemic claims): tests the distributional pre
 each claim on ICIT texts from sites OUTSIDE Mohenjo-daro and Harappa (site-held-out), against a
 within-text shuffle null. These test the position or function implied by a claim, not the sound value.
 """
-import sys, os, re, json, random, collections
+import sys, os, re, json, random, collections, zlib
 import numpy as np, pandas as pd
 from multiprocessing import Pool
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import claim_harness as C
-ROOT = C.ROOT; OUT = os.path.join(ROOT, 'outputs', 'claims')
+ROOT = C.ROOT; OUT = C.OUT; K = C.LEXSEED  # session 6: replicate index (0 = canonical)
 NALT = 300; MINOCC = 5   # alternatives = whole distinct value inventory, capped at 300
 
 def owned_items_yaj(seq, key):
@@ -102,7 +102,7 @@ def run_condition(key, mode, seqs, W, label, procs=8):
     pool = sorted({v for v in key.values() if v})
     occ = occurrences(seqs, {s for s, v in key.items() if v})
     signs = [s for s, o in occ.items() if len(o) >= MINOCC]
-    jobs = [(s, occ[s], key, pool, W, mode, hash((s, 'alt')) % 10**6) for s in signs]
+    jobs = [(s, occ[s], key, pool, W, mode, zlib.crc32(f'{s}|alt|{K}'.encode()) % 10**6) for s in signs]  # session 6: crc32 (was hash(), which is per-process)
     with Pool(procs) as P: rows = P.map(sign_stat, jobs, chunksize=4)
     df = pd.DataFrame(rows, columns=['sign', 'hit_real', 'hit_alt_mean', 'effect', 'p_alt', 'p_poissonbinom_anticonservative', 'n_occ'])
     df['q_alt'] = bh(df.p_alt); df['condition'] = label; df['n_texts'] = [len(occ[s]) for s in df.sign]
@@ -138,9 +138,9 @@ def part_P():
     yk = C.load_key()
     fc = pd.read_csv(f'{ROOT}/data/field-cady_indus_valley_script_corpus/indus_dravidian_mapping_100.csv', dtype=str)
     fk = {s: v for s, v in zip(fc.Indus_Sign, fc.Dravidian_Syllable) if s not in ('000', '999')}
-    sh900 = C.shuffle_within(seqs, random.Random(900))
-    k_sh = fit_key_on(sh900, 'sanskrit_MW', seed=9)          # a key fitted to an order-destroyed corpus
-    k_rr = fit_key_on(seqs, 'sanskrit_MW', seed=11)          # a key fitted to the real corpus from a random start
+    sh900 = C.shuffle_within(seqs, random.Random(900 + 1000 * K))
+    k_sh = fit_key_on(sh900, 'sanskrit_MW', seed=9 + 1000 * K)          # a key fitted to an order-destroyed corpus
+    k_rr = fit_key_on(seqs, 'sanskrit_MW', seed=11 + 1000 * K)          # a key fitted to the real corpus from a random start
     json.dump(dict(fitted_to_shuffled=k_sh, fitted_to_real_random_init=k_rr), open(f'{OUT}/loo_fitted_noise_keys.json', 'w'))
     allres = []
     for kname, key, mode, claimed, corpus in [('Yajnadevam', yk, 'yaj', 'sanskrit_MW', seqs), ('FieldCady', fk, 'syl', 'proto_dravidian_PDR', seqs),
@@ -149,7 +149,7 @@ def part_P():
             allres.append(run_condition(key, mode, corpus, L[lname], f'{kname}|real|{lname}').assign(key=kname, lexicon=lname, corpus='real'))
             pd.concat(allres).to_csv(f'{OUT}/loo_phonetic_all_conditions.csv', index=False)
         for i in range(2):
-            sh = C.shuffle_within(corpus, random.Random(500 + i))
+            sh = C.shuffle_within(corpus, random.Random(500 + i + 1000 * K))
             allres.append(run_condition(key, mode, sh, L[claimed], f'{kname}|shuffled{i}|{claimed}').assign(key=kname, lexicon=claimed, corpus=f'shuffled{i}'))
             pd.concat(allres).to_csv(f'{OUT}/loo_phonetic_all_conditions.csv', index=False)
     return pd.concat(allres)

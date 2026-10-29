@@ -613,32 +613,32 @@
  "calibration": {
   "linear_elamite": {
    "mean_best": 0.6627091346153846,
-   "mean_ctrl": 0.6265168269230769,
-   "share_best_above_ctrl": 0.6370192307692307,
+   "mean_ctrl": 0.6267427884615385,
+   "share_best_above_ctrl": 0.6394230769230769,
    "n_score_ge_0_8": 48
   },
   "egyptian": {
    "mean_best": 0.6453293269230769,
-   "mean_ctrl": 0.6719471153846155,
-   "share_best_above_ctrl": 0.375,
+   "mean_ctrl": 0.6714086538461539,
+   "share_best_above_ctrl": 0.3798076923076923,
    "n_score_ge_0_8": 24
   },
   "cuneiform": {
    "mean_best": 0.6119951923076923,
-   "mean_ctrl": 0.6865552884615383,
+   "mean_ctrl": 0.6868221153846155,
    "share_best_above_ctrl": 0.15384615384615385,
    "n_score_ge_0_8": 4
   },
   "brahmi": {
    "mean_best": 0.579,
-   "mean_ctrl": 0.5872740384615385,
+   "mean_ctrl": 0.5861466346153846,
    "share_best_above_ctrl": 0.4230769230769231,
    "n_score_ge_0_8": 10
   },
   "linear_a": {
    "mean_best": 0.6221274038461538,
-   "mean_ctrl": 0.6328221153846154,
-   "share_best_above_ctrl": 0.43028846153846156,
+   "mean_ctrl": 0.6335889423076922,
+   "share_best_above_ctrl": 0.4182692307692308,
    "n_score_ge_0_8": 19
   }
  }

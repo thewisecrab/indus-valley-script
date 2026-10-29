@@ -9,7 +9,7 @@ Run: python scripts/loo_global_calibration.py [--check]   (--check: recompute an
 import os, sys, json
 import pandas as pd
 from scipy.stats import mannwhitneyu
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); OUT = f'{ROOT}/outputs/claims'
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); OUT = os.environ.get('INDUS_CLAIMS_OUT') or f'{ROOT}/outputs/claims'
 A = pd.read_csv(f'{OUT}/loo_phonetic_all_conditions.csv', dtype={'sign': str})
 g = {c: dict(mean=round(float(x.p_alt.mean()), 3), median=round(float(x.p_alt.median()), 3), count=int(len(x)),
              frac_p_le_0_05=round(float((x.p_alt <= 0.05).mean()), 3))
@@ -25,6 +25,12 @@ if '--check' in sys.argv:
     print(f'conditions: {len(g)}; differing: {sorted(diff)}; MWU p {mwu["p"]:.6f} vs committed {old_m.get("p")}: {"same" if same_mwu else "DIFFERENT"}')
     sys.exit(0 if not diff and same_mwu else 1)
 pool = S.pop('alt_value_pool_sizes', None)
+try:  # recompute the alternative-value pool sizes when the (restricted) keys are present locally
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import claim_harness as CH
+    fc = pd.read_csv(f'{ROOT}/data/field-cady_indus_valley_script_corpus/indus_dravidian_mapping_100.csv', dtype=str)
+    pool = dict(Yajnadevam=len({v for v in CH.load_key().values() if v}),
+                FieldCady=len({v for s, v in zip(fc.Indus_Sign, fc.Dravidian_Syllable) if s not in ('000', '999') and v}))
+except Exception: pass
 S['global_mean_p_alt_by_condition'] = g
 if pool is not None: S['alt_value_pool_sizes'] = pool
 S['Yajnadevam_vs_FittedToShuffled_MWU_less'] = mwu

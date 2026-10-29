@@ -33,7 +33,23 @@ KEEP += [f'outputs/signmap/{f}' for f in ['concordance_accuracy.json', 'concorda
          'concordance_cv_rows.csv.gz', 'sign_map_full_summary.json']]
 KEEP += [f'outputs/structure/{f}' for f in ['classes_summary.json', 'linguistic_measures.csv', 'linguistic_v2_and_slots.json',
          'nsb_entropy.json', 'sign_classes_M77.csv', 'structure2_summary.json', 'structure3_dedup.json', 'structure4_branching_entropy.json']]
+# session 6: deterministic seed spread, pre-registration, robustness, emblem, open sign list, benchmark, rater kit
+KEEP += ['outputs/claims/seed_spread.csv', 'outputs/claims/alt_value_pool_sizes.json'] if os.path.exists(f'{SRC}/outputs/claims/alt_value_pool_sizes.json') else ['outputs/claims/seed_spread.csv']
+for sub in ['prereg', 'robustness', 'emblem']:
+    KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/outputs/{sub}/*') if os.path.isfile(f))
+KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/prereg/*') if os.path.isfile(f))
+KEEP += ['scripts/run_claim_seeds.sh']
+KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/bench/*') + glob.glob(f'{SRC}/bench/examples/*') + glob.glob(f'{SRC}/bench/results/*') if os.path.isfile(f))
+KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/rater_kit/*') if os.path.isfile(f))
+KEEP += ['map/schema.sql'] + sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/map/seed/*.csv'))
+assert not any(k.startswith(('bench/private', 'rater_kit_private', 'data/')) for k in KEEP)
 for k in KEEP: cp(k)
+# session 6: the 'leads' seed table is private research notes (social-media links, identity speculation): ship its header only
+with open(f'{SRC}/map/seed/leads.csv') as fh: hdr = fh.readline()
+open(f'{DST}/map/seed/leads.csv', 'w').write(hdr)
+cl = pd.read_csv(f'{SRC}/map/seed/claims.csv', dtype=str, keep_default_na=False)
+cl['proponent'] = cl.proponent.str.replace(r'\s*\(.*per Reddit.*\)', '', regex=True)  # no identity speculation about pseudonymous authors
+cl.to_csv(f'{DST}/map/seed/claims.csv', index=False)
 # redact complete ICIT/lipi texts of >= 4 signs quoted as examples inside anchor JSONs
 TXT = re.compile(r'[+\]\[]?\d{3}(?:-\d{3}){3,}[+\]\[]?')
 for k in ['outputs/anchors/anchors_summary.json', 'outputs/anchors/w700_vs_weights.json']:
@@ -79,6 +95,14 @@ with open(f'{DST}/data_open/images/commons/ATTRIBUTION.md', 'w') as fh:
     fh.write('# Wikimedia Commons images: attribution\n\nEach file keeps its own licence (shown below). These files are NOT covered by the repository\'s MIT or CC BY 4.0 grants. CC BY-SA files must be shared under the same licence when adapted.\n\n| File | Author | Licence | Source |\n|---|---|---|---|\n')
     for r in rows: fh.write(f"| `{r['file']}` | {r['author'].replace('|', '/')} | [{r['license']}]({r['license_url']}) | {r['source_page']} |\n")
 cp('data/toy/toy_corpus.csv', 'data_open/toy/toy_corpus.csv')
+# session 6: exact Wikipedia page IDs for the comparanda (fetch_wiki.py --pages re-downloads them)
+for f in sorted(glob.glob(f'{SRC}/tools/repo_docs/comparanda_pages/*')):
+    cp(os.path.relpath(f, SRC), f'data_open/comparanda_pages/{os.path.basename(f)}')
+# session 6: open sign list, rebuilt from the PUBLIC (redacted) sign map only
+os.makedirs(f'{DST}/outputs/signlist', exist_ok=True)
+subprocess.run([f'{SRC}/.venv/bin/python', f'{SRC}/scripts/open_signlist.py'], check=True, cwd=SRC,
+               env=dict(os.environ, SIGNMAP_PUBLIC=f'{DST}/outputs/signmap/sign_map_full_public.csv'), stdout=subprocess.DEVNULL)
+for f in glob.glob(f'{SRC}/outputs/signlist/*'): cp(os.path.relpath(f, SRC))
 print('commons images:', len(rows), 'met images:', len(os.listdir(f"{DST}/data_open/images/met")) - 1)
 
 # ---------- paper (public variant) ----------

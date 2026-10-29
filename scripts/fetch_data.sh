@@ -49,11 +49,14 @@ python - <<'PY' || echo "    vidyut data: run python -c \"import vidyut; vidyut.
 import vidyut; vidyut.download_data('vidyut'); print('ok  vidyut data (MIT)')
 PY
 cp ../data_open/toy/toy_corpus.csv toy/ 2>/dev/null || true
+# Sproat (2014) non-linguistic symbol corpora (Apache-2.0), used by scripts/emblem_tests.py
+mkdir -p sproat_nonling && ( cd sproat_nonling && curl -sfLO https://richardsproat.com/data/non-linguistic-symbols/corpora.zip && unzip -o -q corpora.zip && echo "ok  sproat_nonling/corpora (Apache-2.0)" ) || echo "    get corpora.zip from https://richardsproat.com/data/non-linguistic-symbols/ into data/sproat_nonling/"
+# Wikipedia comparanda text (CC BY-SA 4.0), used by emblem_tests.py and structure_ling.py
+( cd .. && python scripts/fetch_wiki.py --pages >/dev/null 2>&1 && echo "ok  comparanda_text (Wikipedia, CC BY-SA 4.0)" ) || echo "    run python scripts/fetch_wiki.py --pages"
 cat <<'MSG'
 
 Restricted inputs that are NOT fetched (obtain lawfully; see DATA_POLICY.md):
   - Mahadevan 1977, The Indus Script: Texts, Concordance and Tables (MASI 77), (c) ASI. Needed for object types,
     plate crops and the M77 OCR scripts. Place the PDF under data/books/masi77/ and adjust the paths in ocr_m77_*.py.
   - Parpola 1994, Deciphering the Indus Script, (c) CUP. Used only for page-cited claims (already in the claims table).
-  - Wikipedia comparanda text: python scripts/fetch_wiki.py (CC BY-SA 4.0).
 MSG

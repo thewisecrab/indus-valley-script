@@ -1,0 +1,153 @@
+{
+ "Indus M77 (dedup)": {
+  "Hcond_ratio": {
+   "indus": 0.7525,
+   "nonling_range": [
+    0.6893,
+    1.0808
+   ],
+   "ling_range": [
+    0.873,
+    0.9637
+   ],
+   "inside_nonling": true,
+   "inside_ling": false
+  },
+  "edge_MI_gain": {
+   "indus": 0.4526,
+   "nonling_range": [
+    -0.0005,
+    0.6765
+   ],
+   "ling_range": [
+    -0.0077,
+    0.0118
+   ],
+   "inside_nonling": true,
+   "inside_ling": false
+  },
+  "rep_rate": {
+   "indus": 0.0976,
+   "nonling_range": [
+    0.1339,
+    0.99
+   ],
+   "ling_range": [
+    0.0291,
+    0.477
+   ],
+   "inside_nonling": false,
+   "inside_ling": true
+  },
+  "zipf_slope": {
+   "indus": -0.6955,
+   "nonling_range": [
+    -1.8802,
+    -0.6607
+   ],
+   "ling_range": [
+    -1.6459,
+    -0.4387
+   ],
+   "inside_nonling": true,
+   "inside_ling": true
+  },
+  "types_800": {
+   "indus": 174.6,
+   "nonling_range": [
+    13.06,
+    263.64
+   ],
+   "ling_range": [
+    41.4,
+    676.78
+   ],
+   "inside_nonling": true,
+   "inside_ling": true
+  }
+ },
+ "Indus ICIT (dedup)": {
+  "Hcond_ratio": {
+   "indus": 0.7742,
+   "nonling_range": [
+    0.6893,
+    1.0808
+   ],
+   "ling_range": [
+    0.873,
+    0.9637
+   ],
+   "inside_nonling": true,
+   "inside_ling": false
+  },
+  "edge_MI_gain": {
+   "indus": 0.4057,
+   "nonling_range": [
+    -0.0005,
+    0.6765
+   ],
+   "ling_range": [
+    -0.0077,
+    0.0118
+   ],
+   "inside_nonling": true,
+   "inside_ling": false
+  },
+  "rep_rate": {
+   "indus": 0.0366,
+   "nonling_range": [
+    0.1339,
+    0.99
+   ],
+   "ling_range": [
+    0.0291,
+    0.477
+   ],
+   "inside_nonling": false,
+   "inside_ling": true
+  },
+  "zipf_slope": {
+   "indus": -0.6967,
+   "nonling_range": [
+    -1.8802,
+    -0.6607
+   ],
+   "ling_range": [
+    -1.6459,
+    -0.4387
+   ],
+   "inside_nonling": true,
+   "inside_ling": true
+  },
+  "types_800": {
+   "indus": 211.16,
+   "nonling_range": [
+    13.06,
+    263.64
+   ],
+   "ling_range": [
+    41.4,
+    676.78
+   ],
+   "inside_nonling": true,
+   "inside_ling": true
+  }
+ },
+ "nearest_centroid": {
+  "loso_accuracy_on_known_systems": "11/15",
+  "assignment_of_other_systems": {
+   "Indus M77 (dedup)": "non-linguistic (real)",
+   "Indus ICIT (dedup)": "linguistic",
+   "SYN memoryless (Indus unigrams)": "linguistic",
+   "SYN positional slots (Indus)": "non-linguistic (real)",
+   "SYN order-1 Markov (Indus)": "linguistic"
+  },
+  "measures": [
+   "Hcond_ratio",
+   "edge_MI_gain",
+   "rep_rate",
+   "zipf_slope",
+   "types_800"
+  ]
+ }
+}

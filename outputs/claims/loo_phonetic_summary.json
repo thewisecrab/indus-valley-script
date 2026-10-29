@@ -24,8 +24,8 @@
    },
    "Yajnadevam|real|markov_nonsense": {
     "q05": 0,
-    "p05": 5,
-    "mean_effect": 0.1602
+    "p05": 6,
+    "mean_effect": 0.1521
    },
    "Yajnadevam|real|proto_dravidian_PDR": {
     "q05": 0,
@@ -81,8 +81,8 @@
    },
    "FieldCady|real|markov_nonsense": {
     "q05": 0,
-    "p05": 5,
-    "mean_effect": 0.0009
+    "p05": 4,
+    "mean_effect": 0.0003
    },
    "FieldCady|real|proto_dravidian_PDR": {
     "q05": 0,
@@ -138,8 +138,8 @@
    },
    "FittedToShuffled|real|markov_nonsense": {
     "q05": 0,
-    "p05": 11,
-    "mean_effect": 0.1782
+    "p05": 8,
+    "mean_effect": 0.1281
    },
    "FittedToShuffled|real|proto_dravidian_PDR": {
     "q05": 0,
@@ -195,8 +195,8 @@
    },
    "FittedToReal_randominit|real|markov_nonsense": {
     "q05": 0,
-    "p05": 9,
-    "mean_effect": 0.1464
+    "p05": 5,
+    "mean_effect": 0.1343
    },
    "FittedToReal_randominit|real|proto_dravidian_PDR": {
     "q05": 0,
@@ -253,10 +253,10 @@
    "frac_p_le_0.05": 0.03
   },
   "FieldCady|real|markov_nonsense": {
-   "mean": 0.554,
-   "median": 0.596,
+   "mean": 0.543,
+   "median": 0.525,
    "count": 99,
-   "frac_p_le_0.05": 0.051
+   "frac_p_le_0.05": 0.04
   },
   "FieldCady|real|proto_dravidian_PDR": {
    "mean": 0.562,
@@ -313,10 +313,10 @@
    "frac_p_le_0.05": 0.018
   },
   "FittedToReal_randominit|real|markov_nonsense": {
-   "mean": 0.426,
-   "median": 0.396,
+   "mean": 0.435,
+   "median": 0.432,
    "count": 226,
-   "frac_p_le_0.05": 0.04
+   "frac_p_le_0.05": 0.022
   },
   "FittedToReal_randominit|real|proto_dravidian_PDR": {
    "mean": 0.482,
@@ -373,10 +373,10 @@
    "frac_p_le_0.05": 0.027
   },
   "FittedToShuffled|real|markov_nonsense": {
-   "mean": 0.392,
-   "median": 0.37,
+   "mean": 0.43,
+   "median": 0.426,
    "count": 226,
-   "frac_p_le_0.05": 0.049
+   "frac_p_le_0.05": 0.035
   },
   "FittedToShuffled|real|proto_dravidian_PDR": {
    "mean": 0.48,
@@ -433,10 +433,10 @@
    "frac_p_le_0.05": 0.031
   },
   "Yajnadevam|real|markov_nonsense": {
-   "mean": 0.393,
-   "median": 0.388,
+   "mean": 0.407,
+   "median": 0.391,
    "count": 226,
-   "frac_p_le_0.05": 0.022
+   "frac_p_le_0.05": 0.027
   },
   "Yajnadevam|real|proto_dravidian_PDR": {
    "mean": 0.471,
@@ -471,7 +471,7 @@
  },
  "alt_value_pool_sizes": {
   "Yajnadevam": 129,
-  "FieldCady": 100
+  "FieldCady": 99
  },
  "Yajnadevam_vs_FittedToShuffled_MWU_less": {
   "p": 0.3235645234149853

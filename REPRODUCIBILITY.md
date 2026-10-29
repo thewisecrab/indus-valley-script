@@ -25,7 +25,11 @@ This creates `data/`, which is git-ignored. Restricted items need your own lawfu
 | Concordance and sign map (`concordance.py`, `sign_map_full.py`) | mayig corpus, M77 crops (`m77_glyph_crops.py` from your scan), SK font renders (`render_w_glyphs.py`) |
 | Look-alikes (`render_comparanda.py`, `lookalikes.py`) | Noto fonts, elamicon, M77 crops |
 | Anchors (`anchors.py`, `w700_weights.py`) | weights.xml, lipi texts |
-| Map DB (`build_map.py`) | all of the above |
+| Map DB (`build_map.py`) | all of the above; schema and seed tables ship in `map/` |
+| Pre-registered held-out tests, robustness (`prereg_heldout.py`, `robustness_schemes.py`) | M77 export, lipi texts, mayig corpus, isramos merge file (GPL-3) |
+| Non-linguistic comparison (`emblem_tests.py`) | Sproat corpora (fetched; Apache-2.0), M77 export, lipi texts, Wikipedia comparanda (`fetch_wiki.py --pages`) |
+| Benchmark (`bench_score.py`) | lipi texts, the lexicons above |
+| Open sign list (`open_signlist.py`) | only files in this repository |
 
 ## 3. Order
 
@@ -36,6 +40,8 @@ m77_glyph_crops.py → render_w_glyphs.py → glyphsim.py → concordance.py →
 claims_table.py → loo_signs.py → loo_global_calibration.py → loo_hand.py → structure4_be.py → nsb_entropy.py
 render_comparanda.py → lookalikes.py → sign_map_full.py → make_figures.py
 compare_replications.py → compare_sigil_hmm.py → prior_work_matrix.py
+prereg_heldout.py → robustness_schemes.py → emblem_tests.py → bench_score.py → open_signlist.py
+run_claim_seeds.sh → seed_spread.py
 ```
 
 `run_all.py` runs the early pipeline. `scripts/indus_lib.py` holds the shared loaders and measures. After `loo_signs.py`, run `loo_global_calibration.py` to add the global calibration block to `outputs/claims/loo_phonetic_summary.json`.
@@ -59,13 +65,15 @@ We cloned this repository into an empty directory, built a new virtual environme
 | `run_all.py`, `run_all.py --toy` | runs | yes, byte-identical (`outputs/M77`, `icitweb`, `cisi_mayig`, `TOY`, `summary*.json`) |
 | `prior_work_matrix.py` | runs | yes |
 | `loo_global_calibration.py --check` | runs | yes, exactly (all 40 conditions and the Mann–Whitney p) |
-| `claim_harness.py`, `rebus_harness.py`, `parse_test_vidyut.py`, `loo_signs.py` | run | published-key results and the natural-language lexicon results of parts B, C and LOO match; **every Markov-nonsense control, and the fitted rebus keys of `rebus_harness.py` for all lexicons, vary from run to run** (see below) |
+| `claim_harness.py`, `rebus_harness.py`, `parse_test_vidyut.py`, `loo_signs.py` | run | session 5: only partly (hash-order dependence, see below). Session 6: deterministic; two runs under `PYTHONHASHSEED` = 1 and 2 give byte-identical outputs |
 | `anchors.py`, `w700_weights.py` | run | yes, except that a local run writes the full ICIT texts that the committed files redact. **Do not commit those files**; `tools/check_public.py` flags them |
-| `build_map.py`, `sign_table.py`, `claims_table.py`, `loo_hand.py` | **do not run**: they need the SQLite map, whose schema and seed tables are not yet in this repository | – |
+| `build_map.py`, `sign_table.py`, `claims_table.py`, `loo_hand.py` | session 6 ships `map/schema.sql` and `map/seed/*.csv`, so `build_map.py` can now build the map; **not yet re-tested from a fresh clone** | – |
 | `structure*.py`, `nsb_entropy.py`, `compare_replications.py`, `compare_sigil_hmm.py` | **do not run**: they need `outputs/m77_codes_digitocr.csv`, the M77 object-type codes, which come from OCR of the printed Mahadevan 1977 concordance and are not redistributed | – |
 | concordance, glyph and look-alike scripts | need the M77 plate crops (your own scan) and the SK font | – |
 
-**Run-to-run variation (known issue).** The Markov-nonsense control lexicon and the fitted rebus keys depend on Python's per-process string-hash order (the code iterates over sets of strings). Different runs therefore give slightly different control values. For example, fixed-key segmentability for the Markov-nonsense lexicon was 0.863 in the committed run and 0.76–0.91 across reruns with `PYTHONHASHSEED` = 0 and 1. The real-corpus, published-key values do not change. In our fresh-clone rerun the fitted rebus scores moved by up to about 0.02 (e.g. English, real corpus: 0.094 committed, 0.101 rerun). None of the qualitative conclusions changed: no key beat all nulls in the per-sign tests, and the fitted Dravidian rebus key (0.073 in both runs) still scored below the English, Finnish, Sanskrit and Markov-nonsense keys. A fix (sorted iteration plus a fixed hash seed, then a full rerun with reported spread) is planned. Until then, set `PYTHONHASHSEED=0` for repeatable local runs.
+**Determinism and seed spread (fixed in session 6).** Earlier versions iterated over Python sets of strings and used `hash()`, so the Markov-nonsense control lexicon and the fitted rebus keys changed with Python's per-process hash seed. Session 6 sorts before sampling and derives seeds with `zlib.crc32`; reruns are now byte-identical under any `PYTHONHASHSEED`. The canonical run (replicate 0) changed 33 of 173 tracked metrics relative to the session-5 committed values. All are control values; the published-key values are unchanged. Examples: Markov-nonsense fixed-key segmentability 0.863 → 0.786, fitted Dravidian rebus key 0.073 → 0.068, Markov-nonsense rebus key 0.107 → 0.089. `scripts/run_claim_seeds.sh` reruns parts B, C, the rebus fits and the per-sign LOO for replicates 1–4 (`INDUS_LEXSEED=k`), and `scripts/seed_spread.py` writes the canonical value, mean, min and max of every metric, with the session-5 value alongside, to `outputs/claims/seed_spread.csv`. The spread is substantial for the fitted keys: e.g. the Dravidian rebus score is 0.068–0.157 over five seeds, and the one-sided Mann–Whitney p for Yajnadevam vs the shuffle-fitted key is 0.004–0.99. See manuscript §4.6 and §4.9.
+
+`lookalikes.py` also used `hash()` for its control draws. After the fix only the random-control columns move (by under 0.012 in the share of signs above control); the category tests and the Mantel test are unchanged.
 
 `scripts/fetch_data.sh` now copies the *lipi* data files into the flat `data/lipi/` folder that the scripts read. It also downloads the Dravidian DB files from Zenodo and checks their checksums. Earlier versions left both steps to the user.
 

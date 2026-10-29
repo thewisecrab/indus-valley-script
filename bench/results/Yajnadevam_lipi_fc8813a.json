@@ -1,0 +1,66 @@
+{
+ "name": "Yajnadevam_lipi_fc8813a",
+ "author": "Yajnadevam (lipi @ fc8813a; key not redistributed)",
+ "language": "Sanskrit",
+ "lexicon": "sanskrit_MW",
+ "scheme": "W",
+ "n_texts_corpus": 2317,
+ "valued_signs": 714,
+ "T1": {
+  "real": 0.9611566681053086,
+  "n_fully_valued_texts": 2317,
+  "shuffled_within": [
+   0.9520932239965473,
+   0.9542511868795857,
+   0.9546827794561934,
+   0.9568407423392318,
+   0.9572723349158394
+  ],
+  "shuffled_global": [
+   0.9594302977988779,
+   0.9602934829520933,
+   0.9637462235649547,
+   0.9693569270608545,
+   0.9568407423392318
+  ],
+  "permuted_key": [
+   0.9115235217954252,
+   0.9779887785930081,
+   0.5973241260250324,
+   0.9671989641778161,
+   0.9654725938713854
+  ],
+  "real_above_all_nulls": false
+ },
+ "T2": {
+  "sanskrit_MW": 0.9425981873111783,
+  "proto_dravidian_PDR": 0.743202416918429,
+  "dravidian_DEDR_forms+PDR": 0.612861458782909,
+  "finnish": 0.7289598618903755,
+  "turkish": 0.8731117824773413,
+  "hungarian": 0.8644799309451877,
+  "indonesian": 0.6404833836858006,
+  "english": 0.5675442382391023,
+  "_submission": 0.9425981873111783,
+  "submission_lexicon_is_best": true
+ },
+ "T3": {
+  "submission_heldout": 0.959051724137931,
+  "fitted_to_shuffled_heldout": 0.9935344827586207,
+  "submission_beats_fitted_noise": false
+ },
+ "T4": {
+  "signs_tested": 226,
+  "p_lt_05": 0,
+  "q_lt_05": 0,
+  "mean_p_alt": 0.6674577634754626,
+  "min_possible_p": 0.00909090909090909
+ },
+ "T5": {
+  "valued_signs": 714,
+  "distinct_values": 110,
+  "log2_assignments": 4841.9,
+  "inherent_vowel": "a"
+ },
+ "beats_all_nulls": false
+}

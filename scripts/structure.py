@@ -172,5 +172,5 @@ COH = {g: cohesion_test(v) for g, v in groups.items() if len([x for x in v if x 
 json.dump(dict(class_counts=dict(real_counts), null_mean_counts={k: float(np.mean(v)) for k, v in null_counts.items()}, FDR=FDR,
                cohesion=COH, n_lines=len(LINES), n_full_lines=len(FULL), icit_lines=len(W_FULL),
                replication_rate={c: float(np.mean([r['replicated'] for r in rows if r['cls'] == c and r['icit_replication'] != 'n/a'])) if any(r['cls'] == c and r['icit_replication'] != 'n/a' for r in rows) else None for c in real_counts}),
-          open(f'{OUT}/classes_summary.json', 'w'), indent=1, default=str)
+          open(f'{OUT}/classes_summary.json', 'w'), indent=1, default=str, sort_keys=True)  # session 6: stable key order
 print(real_counts, '\nFDR', FDR, '\nCOH', COH)

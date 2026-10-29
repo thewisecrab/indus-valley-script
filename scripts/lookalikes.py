@@ -51,7 +51,7 @@ if __name__ == '__main__':
     for i, m in enumerate(Ms):
         for s in SCRIPTS:
             cols = [j for j, k in enumerate(KEYS) if k[0] == s]; v = A[i, cols]; o = np.argsort(-v)[:3]
-            others = [j for j, k in enumerate(KEYS) if k[0] != s]; rr = random.Random(hash((m, s)) % 10**6)
+            others = [j for j, k in enumerate(KEYS) if k[0] != s]; rr = random.Random(__import__('zlib').crc32(f'{m}|{s}'.encode()) % 10**6)  # session 6: was hash()
             ctrl = [A[i, rr.sample(others, len(cols))].max() for _ in range(20)]
             rows.append(dict(M=m, script=s, best=KEYS[cols[o[0]]][1], best_name=GL[KEYS[cols[o[0]]]][1], best_cat=GL[KEYS[cols[o[0]]]][2],
                              score=round(float(v[o[0]]), 3), second=KEYS[cols[o[1]]][1], score2=round(float(v[o[1]]), 3),

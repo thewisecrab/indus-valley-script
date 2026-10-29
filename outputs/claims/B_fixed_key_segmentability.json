@@ -72,10 +72,10 @@
   },
   {
    "lexicon": "markov_nonsense",
-   "real": 0.8631851532153647,
-   "shuffled_within_mean": 0.8459214501510574,
-   "shuffled_global_mean": 0.8518198820313625,
-   "permuted_key_mean": 0.898719608689397
+   "real": 0.7859300820025895,
+   "shuffled_within_mean": 0.7791684649690692,
+   "shuffled_global_mean": 0.7898144151920586,
+   "permuted_key_mean": 0.8699467702488851
   }
  ]
 }

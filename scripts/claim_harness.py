@@ -9,7 +9,10 @@ import sys, re, json, random, unicodedata, collections, os
 from multiprocessing import Pool
 import pandas as pd, numpy as np
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, 'outputs', 'claims'); os.makedirs(OUT, exist_ok=True)
+# session 6: INDUS_LEXSEED selects a replicate (control lexicons, length-matched subsamples, shuffles, hill-climb seeds);
+# 0 = canonical run. INDUS_CLAIMS_OUT redirects outputs (used for the seed replicates).
+LEXSEED = int(os.environ.get('INDUS_LEXSEED', '0'))
+OUT = os.environ.get('INDUS_CLAIMS_OUT') or os.path.join(ROOT, 'outputs', 'claims'); os.makedirs(OUT, exist_ok=True)
 LIPI = os.path.join(ROOT, 'data', 'lipi')
 LEX = os.path.join(ROOT, 'data', 'lexicons')
 
@@ -81,7 +84,7 @@ def lex_pdr():
     return {collapse(red_lat(re.sub(r'[^A-Za-zāīūēōḷṭṇṛḍṉṟḻñṅśṣ]', '', w))) for w in d.simplified}
 def lex_random(ref, seed=0):
     """order-2 char Markov strings trained on ref, same size & length dist (a 'language' with no meaning)"""
-    rng = random.Random(seed); ref = list(ref); tr = collections.defaultdict(collections.Counter)
+    rng = random.Random(seed); ref = sorted(ref); tr = collections.defaultdict(collections.Counter)  # session 6: sorted (was list(set): hash-order dependent)
     for w in ref:
         w2 = '^^' + w + '$'
         for i in range(2, len(w2)): tr[w2[i-2:i]][w2[i]] += 1
@@ -233,10 +236,10 @@ def get_lexicons():
     full = {'sanskrit_MW': lex_sanskrit(), 'proto_dravidian_PDR': lex_pdr(), 'finnish': lex_freq('fi'),
             'turkish': lex_freq('tr'), 'indonesian': lex_freq('id'), 'hungarian': lex_freq('hu'), 'english': lex_freq('en')}
     LEXCACHE['_full_MW'] = full['sanskrit_MW']
-    mk = lex_random({w for w in full['sanskrit_MW'] if 2 <= len(w) <= 10}, seed=0)
+    mk = lex_random({w for w in full['sanskrit_MW'] if 2 <= len(w) <= 10}, seed=0 + 1000 * LEXSEED)
     full['markov_nonsense'] = mk
     counts = {l: min(sum(1 for w in v if len(w) == l) for v in full.values()) for l in range(2, 11)}
-    for k, v in full.items(): LEXCACHE[k] = stratified(v, counts)
+    for k, v in full.items(): LEXCACHE[k] = stratified(v, counts, seed=1000 * LEXSEED)
     LEXCACHE['_N'] = sum(counts.values()); LEXCACHE['_counts'] = counts
     return LEXCACHE
 
@@ -306,6 +309,7 @@ def part_C(iters=2000, seeds=(0, 1), topk=150, procs=4):
         for r in p.imap_unordered(fit_run, jobs):
             rows.append(r); print(r, flush=True)
             pd.DataFrame(rows).to_csv(f'{OUT}/C_fitted_keys.csv', index=False)
+    pd.DataFrame(rows).sort_values(['lexicon', 'corpus', 'seed']).to_csv(f'{OUT}/C_fitted_keys.csv', index=False)  # session 6: stable row order
     return rows
 
 def part_D():
@@ -331,5 +335,5 @@ if __name__ == '__main__':
     quick = '--quick' in sys.argv
     if what in ('A', 'all'): print(json.dumps(part_A(), indent=1)[:3000])
     if what in ('D', 'all'): print(json.dumps(part_D(), indent=1, default=str))
-    if what in ('B', 'all'): part_B()
-    if what in ('C', 'all'): part_C(iters=300 if quick else 2000, seeds=(0,) if quick else (0, 1))
+    if what in ('B', 'all'): part_B(seed=100 * LEXSEED)
+    if what in ('C', 'all'): part_C(iters=300 if quick else 2000, seeds=(2 * LEXSEED,) if quick else (2 * LEXSEED, 2 * LEXSEED + 1))

@@ -1,0 +1,7 @@
+{
+ "name": "YourKeyName",
+ "author": "Your name or handle",
+ "language": "e.g. Proto-Dravidian, Sanskrit, ...",
+ "lexicon": "one of: sanskrit_MW, proto_dravidian_PDR, dravidian_DEDR_forms+PDR, finnish, turkish, hungarian, indonesian, english; or a path to your own UTF-8 word list",
+ "inherent_vowel": "\"\" for none, or a vowel inserted optionally between signs, e.g. \"a\""
+}

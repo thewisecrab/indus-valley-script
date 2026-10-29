@@ -64,7 +64,7 @@ xl = pd.read_csv(f"{R}/data/field-cady_indus_valley_script_corpus/xlits.csv", dt
 for _, r in xl.iterrows():
     cur.execute("INSERT INTO claimed_sign_values VALUES (?,?,?,?,?)", ("C7", "W" + r["sign"].zfill(3), r["xlit"], "field-cady/xlits.csv (derived from yajnadevam/lipi; upstream licence not stated)", "fringe"))
 # images
-for row in csv.DictReader(open(f"{R}/data/images/commons/manifest.csv")):
+for row in (csv.DictReader(open(f"{R}/data/images/commons/manifest.csv")) if os.path.exists(f"{R}/data/images/commons/manifest.csv") else []):  # session 6: optional (fresh clones)
     cur.execute("INSERT INTO images(file,object_ref,description,license,license_url,attribution,source_url,source_id,downloaded) VALUES (?,?,?,?,?,?,?,?,?)",
                 (row["local_file"] or None, None, row["title"] + " | " + row["description"][:200], row["license"], row["license_url"], row["artist"], row["page"], "ds_commons", row["downloaded"]))
 if os.path.exists(f"{R}/data/images/met/manifest.csv"):

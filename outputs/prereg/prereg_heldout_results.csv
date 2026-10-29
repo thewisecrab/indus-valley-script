@@ -1,0 +1,81 @@
+split,kind,scheme,hypothesis,description,n_texts_split,n_relevant,observed,null_mean,ratio,p,verdict,q_BH_primary
+ICIT region: Lower Indus,primary,W,H1,terminal-class signs are text-final,1230,970,891.0,282.03,3.16,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Lower Indus,primary,W,H2,initial-class signs are text-initial,1230,346,273.0,76.23,3.58,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Lower Indus,primary,W,H3,pre-terminal-class signs are penultimate,1230,265,190.0,57.12,3.33,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Lower Indus,primary,W,H4,jar sign M342 is text-final,1230,576,457.0,132.2,3.46,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Lower Indus,primary,W,H5,M267 is text-initial,1230,185,150.0,38.08,3.94,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Lower Indus,primary,W,H6,M267 is immediately followed by M099 (unit),1230,152,150.0,29.8,5.03,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Lower Indus,primary,W,H7,a stroke numeral immediately precedes the fish M059,1230,94,64.0,23.85,2.68,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Lower Indus,primary,W,H8,initial-class tokens all precede terminal-class tokens,1230,284,272.0,129.95,2.09,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Inter-Riverine,primary,W,H1,terminal-class signs are text-final,929,659,618.0,249.19,2.48,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Inter-Riverine,primary,W,H2,initial-class signs are text-initial,929,180,139.0,49.21,2.82,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Inter-Riverine,primary,W,H3,pre-terminal-class signs are penultimate,929,140,79.0,35.55,2.22,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Inter-Riverine,primary,W,H4,jar sign M342 is text-final,929,387,249.0,101.52,2.45,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Inter-Riverine,primary,W,H5,M267 is text-initial,929,93,70.0,23.27,3.01,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Inter-Riverine,primary,W,H6,M267 is immediately followed by M099 (unit),929,61,59.0,13.13,4.49,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Inter-Riverine,primary,W,H7,a stroke numeral immediately precedes the fish M059,929,46,29.0,12.99,2.23,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Inter-Riverine,primary,W,H8,initial-class tokens all precede terminal-class tokens,929,115,112.0,53.68,2.09,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Gujarat/Kutch,primary,W,H1,terminal-class signs are text-final,200,140,121.0,47.55,2.54,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Gujarat/Kutch,primary,W,H2,initial-class signs are text-initial,200,52,42.0,13.79,3.05,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Gujarat/Kutch,primary,W,H3,pre-terminal-class signs are penultimate,200,24,13.0,5.07,2.56,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Gujarat/Kutch,primary,W,H4,jar sign M342 is text-final,200,60,48.0,15.82,3.03,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Gujarat/Kutch,primary,W,H5,M267 is text-initial,200,33,29.0,9.05,3.2,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Gujarat/Kutch,primary,W,H6,M267 is immediately followed by M099 (unit),200,23,23.0,6.13,3.75,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Gujarat/Kutch,primary,W,H7,a stroke numeral immediately precedes the fish M059,200,11,7.0,2.17,3.22,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Gujarat/Kutch,primary,W,H8,initial-class tokens all precede terminal-class tokens,200,30,27.0,13.04,2.07,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Eastern Headwaters + Upper Indus,primary,W,H1,terminal-class signs are text-final,36,23,22.0,10.27,2.14,0.0004997501249375312,pass,0.0005979153280502605
+ICIT region: Eastern Headwaters + Upper Indus,primary,W,H2,initial-class signs are text-initial,36,5,5.0,1.68,2.97,0.0034982508745627187,pass,0.0038423411245197075
+ICIT region: Eastern Headwaters + Upper Indus,primary,W,H3,pre-terminal-class signs are penultimate,36,2,,,,,insufficient data,
+ICIT region: Eastern Headwaters + Upper Indus,primary,W,H4,jar sign M342 is text-final,36,10,9.0,3.4,2.65,0.0014992503748125937,pass,0.0016741629185407297
+ICIT region: Eastern Headwaters + Upper Indus,primary,W,H5,M267 is text-initial,36,2,,,,,insufficient data,
+ICIT region: Eastern Headwaters + Upper Indus,primary,W,H6,M267 is immediately followed by M099 (unit),36,2,,,,,insufficient data,
+ICIT region: Eastern Headwaters + Upper Indus,primary,W,H7,a stroke numeral immediately precedes the fish M059,36,4,,,,,insufficient data,
+ICIT region: Eastern Headwaters + Upper Indus,primary,W,H8,initial-class tokens all precede terminal-class tokens,36,1,,,,,insufficient data,
+"ICIT region: West/foreign (Persian Gulf, Mesopotamia, Iranian Plateau, Central Asia)",exploratory,W,H1,terminal-class signs are text-final,25,15,13.0,5.67,2.29,0.0004997501249375312,pass (exploratory),
+"ICIT region: West/foreign (Persian Gulf, Mesopotamia, Iranian Plateau, Central Asia)",exploratory,W,H2,initial-class signs are text-initial,25,2,,,,,insufficient data,
+"ICIT region: West/foreign (Persian Gulf, Mesopotamia, Iranian Plateau, Central Asia)",exploratory,W,H3,pre-terminal-class signs are penultimate,25,1,,,,,insufficient data,
+"ICIT region: West/foreign (Persian Gulf, Mesopotamia, Iranian Plateau, Central Asia)",exploratory,W,H4,jar sign M342 is text-final,25,5,4.0,1.19,3.37,0.011494252873563218,pass (exploratory),
+"ICIT region: West/foreign (Persian Gulf, Mesopotamia, Iranian Plateau, Central Asia)",exploratory,W,H5,M267 is text-initial,25,1,,,,,insufficient data,
+"ICIT region: West/foreign (Persian Gulf, Mesopotamia, Iranian Plateau, Central Asia)",exploratory,W,H6,M267 is immediately followed by M099 (unit),25,0,,,,,insufficient data,
+"ICIT region: West/foreign (Persian Gulf, Mesopotamia, Iranian Plateau, Central Asia)",exploratory,W,H7,a stroke numeral immediately precedes the fish M059,25,5,2.0,1.08,1.85,0.29185407296351823,fail (exploratory),
+"ICIT region: West/foreign (Persian Gulf, Mesopotamia, Iranian Plateau, Central Asia)",exploratory,W,H8,initial-class tokens all precede terminal-class tokens,25,1,,,,,insufficient data,
+ICIT object: SEAL,primary,W,H1,terminal-class signs are text-final,1487,1181,1091.0,335.73,3.25,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: SEAL,primary,W,H2,initial-class signs are text-initial,1487,452,355.0,100.06,3.55,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: SEAL,primary,W,H3,pre-terminal-class signs are penultimate,1487,296,213.0,62.1,3.43,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: SEAL,primary,W,H4,jar sign M342 is text-final,1487,683,548.0,149.83,3.66,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: SEAL,primary,W,H5,M267 is text-initial,1487,247,197.0,51.24,3.84,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: SEAL,primary,W,H6,M267 is immediately followed by M099 (unit),1487,199,196.0,39.45,4.97,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: SEAL,primary,W,H7,a stroke numeral immediately precedes the fish M059,1487,128,87.0,32.89,2.64,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: SEAL,primary,W,H8,initial-class tokens all precede terminal-class tokens,1487,357,343.0,163.93,2.09,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: TAB (tablets),primary,W,H1,terminal-class signs are text-final,638,479,445.0,195.29,2.28,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: TAB (tablets),primary,W,H2,initial-class signs are text-initial,638,91,71.0,25.91,2.74,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: TAB (tablets),primary,W,H3,pre-terminal-class signs are penultimate,638,122,62.0,33.2,1.87,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: TAB (tablets),primary,W,H4,jar sign M342 is text-final,638,292,169.0,80.64,2.1,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: TAB (tablets),primary,W,H5,M267 is text-initial,638,42,31.0,11.08,2.8,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: TAB (tablets),primary,W,H6,M267 is immediately followed by M099 (unit),638,23,22.0,5.22,4.22,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: TAB (tablets),primary,W,H7,a stroke numeral immediately precedes the fish M059,638,21,11.0,5.63,1.95,0.012993503248375811,pass,0.013602573713143428
+ICIT object: TAB (tablets),primary,W,H8,initial-class tokens all precede terminal-class tokens,638,58,54.0,26.5,2.04,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: POT (pottery),primary,W,H1,terminal-class signs are text-final,159,79,71.0,35.4,2.01,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: POT (pottery),primary,W,H2,initial-class signs are text-initial,159,19,13.0,7.28,1.79,0.0074962518740629685,pass,0.007972204374003474
+ICIT object: POT (pottery),primary,W,H3,pre-terminal-class signs are penultimate,159,5,5.0,1.32,3.78,0.0009995002498750624,pass,0.001174851170905775
+ICIT object: POT (pottery),primary,W,H4,jar sign M342 is text-final,159,37,34.0,13.64,2.49,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: POT (pottery),primary,W,H5,M267 is text-initial,159,10,9.0,3.91,2.3,0.0014992503748125937,pass,0.0016741629185407297
+ICIT object: POT (pottery),primary,W,H6,M267 is immediately followed by M099 (unit),159,5,5.0,1.42,3.52,0.0004997501249375312,pass,0.0005979153280502605
+ICIT object: POT (pottery),primary,W,H7,a stroke numeral immediately precedes the fish M059,159,5,4.0,2.16,1.86,0.1089455272363818,FAIL,0.1089455272363818
+ICIT object: POT (pottery),primary,W,H8,initial-class tokens all precede terminal-class tokens,159,8,8.0,3.82,2.1,0.0014992503748125937,pass,0.0016741629185407297
+"ICIT object: other (TAG, MISC, BNGL, ROD, IMPL, BEAD)",primary,W,H1,terminal-class signs are text-final,140,70,61.0,27.25,2.24,0.0004997501249375312,pass,0.0005979153280502605
+"ICIT object: other (TAG, MISC, BNGL, ROD, IMPL, BEAD)",primary,W,H2,initial-class signs are text-initial,140,27,23.0,7.74,2.97,0.0004997501249375312,pass,0.0005979153280502605
+"ICIT object: other (TAG, MISC, BNGL, ROD, IMPL, BEAD)",primary,W,H3,pre-terminal-class signs are penultimate,140,15,8.0,3.78,2.12,0.015492253873063468,pass,0.01596893860761927
+"ICIT object: other (TAG, MISC, BNGL, ROD, IMPL, BEAD)",primary,W,H4,jar sign M342 is text-final,140,34,23.0,9.76,2.36,0.0004997501249375312,pass,0.0005979153280502605
+"ICIT object: other (TAG, MISC, BNGL, ROD, IMPL, BEAD)",primary,W,H5,M267 is text-initial,140,14,13.0,4.37,2.97,0.0004997501249375312,pass,0.0005979153280502605
+"ICIT object: other (TAG, MISC, BNGL, ROD, IMPL, BEAD)",primary,W,H6,M267 is immediately followed by M099 (unit),140,10,10.0,3.17,3.16,0.0004997501249375312,pass,0.0005979153280502605
+"ICIT object: other (TAG, MISC, BNGL, ROD, IMPL, BEAD)",primary,W,H7,a stroke numeral immediately precedes the fish M059,140,9,7.0,2.04,3.42,0.0004997501249375312,pass,0.0005979153280502605
+"ICIT object: other (TAG, MISC, BNGL, ROD, IMPL, BEAD)",primary,W,H8,initial-class tokens all precede terminal-class tokens,140,10,9.0,4.59,1.96,0.0069965017491254375,pass,0.007560735761151682
+CISI/mayig transcription: Mohenjo-daro seals,primary,P,H1,terminal-class signs are text-final,96,82,79.0,20.86,3.79,0.0004997501249375312,pass,0.0005979153280502605
+CISI/mayig transcription: Mohenjo-daro seals,primary,P,H2,initial-class signs are text-initial,96,30,22.0,7.04,3.13,0.0004997501249375312,pass,0.0005979153280502605
+CISI/mayig transcription: Mohenjo-daro seals,primary,P,H3,pre-terminal-class signs are penultimate,96,16,12.0,3.03,3.96,0.0004997501249375312,pass,0.0005979153280502605
+CISI/mayig transcription: Mohenjo-daro seals,primary,P,H4,jar sign M342 is text-final,96,46,37.0,9.06,4.08,0.0004997501249375312,pass,0.0005979153280502605
+CISI/mayig transcription: Mohenjo-daro seals,primary,P,H5,M267 is text-initial,96,17,14.0,3.34,4.19,0.0004997501249375312,pass,0.0005979153280502605
+CISI/mayig transcription: Mohenjo-daro seals,primary,P,H6,M267 is immediately followed by M099 (unit),96,14,14.0,2.53,5.53,0.0004997501249375312,pass,0.0005979153280502605
+CISI/mayig transcription: Mohenjo-daro seals,primary,P,H7,a stroke numeral immediately precedes the fish M059,96,9,5.0,2.26,2.22,0.04597701149425287,pass,0.04667363288052943
+CISI/mayig transcription: Mohenjo-daro seals,primary,P,H8,initial-class tokens all precede terminal-class tokens,96,24,22.0,10.61,2.07,0.0004997501249375312,pass,0.0005979153280502605

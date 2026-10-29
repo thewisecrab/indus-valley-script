@@ -8,7 +8,7 @@ import sys, os, json, random, collections, re
 import numpy as np, pandas as pd
 from multiprocessing import Pool
 sys.path.insert(0, os.path.dirname(__file__)); import claim_harness as h
-ROOT = h.ROOT; OUT = f'{ROOT}/outputs/claims'
+ROOT = h.ROOT; OUT = h.OUT; LEXSEED = h.LEXSEED
 def lex_drav():
     d = pd.read_csv(f'{ROOT}/data/zenodo/dravidian_db_22682542/forms.csv', dtype=str, keep_default_na=False)
     ws = {h.collapse(h.red_lat(re.sub(r'[^\w]', '', w))) for w in d.Form}
@@ -18,9 +18,9 @@ def lexicons():
     if CACHE: return CACHE
     full = {'dravidian_DEDR_forms+PDR': lex_drav(), 'sanskrit_MW': h.lex_sanskrit(), 'finnish': h.lex_freq('fi'), 'turkish': h.lex_freq('tr'),
             'hungarian': h.lex_freq('hu'), 'indonesian': h.lex_freq('id'), 'english': h.lex_freq('en')}
-    full['markov_nonsense'] = h.lex_random({w for w in full['dravidian_DEDR_forms+PDR'] if 2 <= len(w) <= 10}, seed=1)
+    full['markov_nonsense'] = h.lex_random({w for w in full['dravidian_DEDR_forms+PDR'] if 2 <= len(w) <= 10}, seed=1 + 1000 * LEXSEED)
     counts = {l: min(sum(1 for w in v if len(w) == l) for v in full.values()) for l in range(2, 11)}
-    for k, v in full.items(): CACHE[k] = h.stratified(v, counts)
+    for k, v in full.items(): CACHE[k] = h.stratified(v, counts, seed=1000 * LEXSEED)
     CACHE['_counts'] = counts
     return CACHE
 def corpus_pairs(seqs):
@@ -53,12 +53,12 @@ def fit(args):
 if __name__ == '__main__':
     L = lexicons()
     print('stratum counts', L['_counts'])
-    jobs = [(l, c, s, 4000, 150) for l in [k for k in L if not k.startswith('_')] for c in ['real', 'shuffled_within', 'shuffled_global'] for s in (0, 1)]
+    jobs = [(l, c, s, 4000, 150) for l in [k for k in L if not k.startswith('_')] for c in ['real', 'shuffled_within', 'shuffled_global'] for s in (2 * LEXSEED, 2 * LEXSEED + 1)]
     rows = []
     with Pool(6) as p:
         for r in p.imap_unordered(fit, jobs):
             rows.append(r); print(r, flush=True)
-    R = pd.DataFrame(rows); R.to_csv(f'{OUT}/F_rebus_fitted.csv', index=False)
+    R = pd.DataFrame(rows).sort_values(['lexicon', 'corpus', 'seed']); R.to_csv(f'{OUT}/F_rebus_fitted.csv', index=False)
     S = R.groupby(['lexicon', 'corpus']).heldout.mean().unstack().round(4); S.to_csv(f'{OUT}/F_rebus_summary.csv'); print(S)
     # Parpola-seeded compounds: numeral + fish (M059 / W220)
     D = lexicons()['dravidian_DEDR_forms+PDR']; Dfull = lex_drav()
