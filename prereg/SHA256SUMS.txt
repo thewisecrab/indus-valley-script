@@ -1,0 +1,2 @@
+baf2a4cba26396158631ae1febe36a5b9738fe0f116861b9c1cd57e4acc64d27  prereg/PREREG_session6_heldout.md
+253abc051a741ecfddf672d65853d83d36f063977ca676afb202f270e7817666  prereg/sign_sets_session6.json
