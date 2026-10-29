@@ -28,6 +28,9 @@ Code, derived statistics and manuscript for a null-model-calibrated study of the
 
 ## Quick start
 
+Clone over SSH with `git clone git@github.com:thewisecrab/indus-valley-script.git`, or over HTTPS with `git clone https://github.com/thewisecrab/indus-valley-script.git`.
+
+
 ```bash
 python -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
