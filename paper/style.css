@@ -1,0 +1,20 @@
+body{font-family:Georgia,serif;font-size:10.5pt;max-width:46em;margin:auto;line-height:1.4}
+table{border-collapse:collapse;font-size:8pt;margin:0.6em 0}
+td,th{border:1px solid #bbb;padding:2px 4px;vertical-align:top}
+img{max-width:100%}
+h1{font-size:15pt}h2{font-size:12.5pt}
+@page{size:A4;margin:16mm}
+table.signs{font-size:6.5pt;table-layout:auto;width:100%}
+table.signs td{word-break:break-word}
+table.signs td{word-break:normal;overflow-wrap:anywhere}
+table.signs td:nth-child(1),table.signs td:nth-child(2),table.signs td:nth-child(4),table.signs td:nth-child(5),table.signs td:nth-child(6){white-space:nowrap;overflow-wrap:normal}
+table.signs td:nth-child(3){min-width:5.5em;overflow-wrap:normal}
+
+/* public preprint labelling */
+.preprint-banner { border: 2px solid #b00; color: #b00; font-weight: bold; padding: 6px 10px; margin: 8px 0 16px; text-align: center; }
+p.subtitle { color: #b00; font-weight: bold; }
+body::before { content: "UNREVIEWED PREPRINT - WORKING DRAFT - NOT PEER-REVIEWED"; position: fixed; top: -11mm; left: 0; right: 0;
+  text-align: center; font-size: 8pt; color: #b00; letter-spacing: 0.5px; }
+body::after { content: "PREPRINT"; position: fixed; top: 45%; left: 0; right: 0; text-align: center; font-size: 110pt;
+  color: rgba(180, 0, 0, 0.07); transform: rotate(-35deg); z-index: -1; pointer-events: none; }
+@page { margin-top: 18mm; }
