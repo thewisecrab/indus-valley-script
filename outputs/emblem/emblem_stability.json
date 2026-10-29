@@ -1,0 +1,146 @@
+{
+ "n_known_systems": {
+  "windows": 15,
+  "short_texts": 13,
+  "both": 21
+ },
+ "n_configs": 54,
+ "share_of_configs_assigning_linguistic": {
+  "Indus M77 (dedup)": 0.444,
+  "Indus ICIT (dedup)": 0.519,
+  "SYN memoryless (Indus unigrams)": 0.481,
+  "SYN positional slots (Indus)": 0.407,
+  "SYN order-1 Markov (Indus)": 0.426
+ },
+ "loso_accuracy_range": [
+  5,
+  16
+ ],
+ "loso_accuracy_by_reference": {
+  "both": "12-16 of 21",
+  "short_texts": "5-10 of 13",
+  "windows": "6-13 of 15"
+ },
+ "all5_both": [
+  {
+   "reference": "both",
+   "measures": "all5",
+   "classifier": "nearest_centroid",
+   "n_known": 21,
+   "loso_correct": 16,
+   "Indus M77 (dedup)": "linguistic",
+   "Indus ICIT (dedup)": "linguistic",
+   "SYN memoryless (Indus unigrams)": "linguistic",
+   "SYN positional slots (Indus)": "non-linguistic",
+   "SYN order-1 Markov (Indus)": "linguistic"
+  },
+  {
+   "reference": "both",
+   "measures": "all5",
+   "classifier": "1-NN",
+   "n_known": 21,
+   "loso_correct": 15,
+   "Indus M77 (dedup)": "linguistic",
+   "Indus ICIT (dedup)": "linguistic",
+   "SYN memoryless (Indus unigrams)": "non-linguistic",
+   "SYN positional slots (Indus)": "linguistic",
+   "SYN order-1 Markov (Indus)": "non-linguistic"
+  },
+  {
+   "reference": "both",
+   "measures": "all5",
+   "classifier": "3-NN",
+   "n_known": 21,
+   "loso_correct": 14,
+   "Indus M77 (dedup)": "non-linguistic",
+   "Indus ICIT (dedup)": "non-linguistic",
+   "SYN memoryless (Indus unigrams)": "linguistic",
+   "SYN positional slots (Indus)": "non-linguistic",
+   "SYN order-1 Markov (Indus)": "linguistic"
+  }
+ ],
+ "random_drop_25pct_share_linguistic": {
+  "Indus M77 (dedup)": {
+   "nearest_centroid": 0.632,
+   "1-NN": 0.674,
+   "3-NN": 0.248
+  },
+  "Indus ICIT (dedup)": {
+   "nearest_centroid": 0.89,
+   "1-NN": 0.73,
+   "3-NN": 0.452
+  }
+ },
+ "ranges": {
+  "Hcond_ratio": {
+   "non-linguistic (real)": [
+    0.6893,
+    1.0808
+   ],
+   "linguistic (running-text windows)": [
+    0.873,
+    0.9637
+   ],
+   "linguistic (short real texts)": [
+    0.2912,
+    1.5334
+   ]
+  },
+  "edge_MI_gain": {
+   "non-linguistic (real)": [
+    -0.0005,
+    0.6765
+   ],
+   "linguistic (running-text windows)": [
+    -0.0077,
+    0.0118
+   ],
+   "linguistic (short real texts)": [
+    0.0508,
+    0.3114
+   ]
+  },
+  "rep_rate": {
+   "non-linguistic (real)": [
+    0.1339,
+    0.99
+   ],
+   "linguistic (running-text windows)": [
+    0.0291,
+    0.477
+   ],
+   "linguistic (short real texts)": [
+    0.005,
+    0.7634
+   ]
+  },
+  "zipf_slope": {
+   "non-linguistic (real)": [
+    -1.8802,
+    -0.6607
+   ],
+   "linguistic (running-text windows)": [
+    -1.6459,
+    -0.4387
+   ],
+   "linguistic (short real texts)": [
+    -1.0789,
+    -0.4831
+   ]
+  },
+  "types_800": {
+   "non-linguistic (real)": [
+    13.06,
+    263.64
+   ],
+   "linguistic (running-text windows)": [
+    41.4,
+    676.78
+   ],
+   "linguistic (short real texts)": [
+    22.22,
+    755.86
+   ]
+  }
+ }
+}

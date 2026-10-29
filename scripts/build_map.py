@@ -64,11 +64,17 @@ xl = pd.read_csv(f"{R}/data/field-cady_indus_valley_script_corpus/xlits.csv", dt
 for _, r in xl.iterrows():
     cur.execute("INSERT INTO claimed_sign_values VALUES (?,?,?,?,?)", ("C7", "W" + r["sign"].zfill(3), r["xlit"], "field-cady/xlits.csv (derived from yajnadevam/lipi; upstream licence not stated)", "fringe"))
 # images
-for row in (csv.DictReader(open(f"{R}/data/images/commons/manifest.csv")) if os.path.exists(f"{R}/data/images/commons/manifest.csv") else []):  # session 6: optional (fresh clones)
-    cur.execute("INSERT INTO images(file,object_ref,description,license,license_url,attribution,source_url,source_id,downloaded) VALUES (?,?,?,?,?,?,?,?,?)",
-                (row["local_file"] or None, None, row["title"] + " | " + row["description"][:200], row["license"], row["license_url"], row["artist"], row["page"], "ds_commons", row["downloaded"]))
-if os.path.exists(f"{R}/data/images/met/manifest.csv"):
-    for row in csv.DictReader(open(f"{R}/data/images/met/manifest.csv")):
+if os.path.exists(f"{R}/data/images/commons/manifest.csv"):  # session 6: optional (fresh clones)
+    for row in csv.DictReader(open(f"{R}/data/images/commons/manifest.csv")):
+        cur.execute("INSERT INTO images(file,object_ref,description,license,license_url,attribution,source_url,source_id,downloaded) VALUES (?,?,?,?,?,?,?,?,?)",
+                    (row["local_file"] or None, None, row["title"] + " | " + row["description"][:200], row["license"], row["license_url"], row["artist"], row["page"], "ds_commons", row["downloaded"]))
+elif os.path.exists(f"{R}/data_open/images/commons/manifest.csv"):  # session 7: public repo ships the open subset in data_open/
+    for row in csv.DictReader(open(f"{R}/data_open/images/commons/manifest.csv")):
+        cur.execute("INSERT INTO images(file,object_ref,description,license,license_url,attribution,source_url,source_id,downloaded) VALUES (?,?,?,?,?,?,?,?,?)",
+                    ("data_open/images/commons/" + row["file"], None, row["title"], row["license"], row["license_url"], row["author"], row["source_page"], "ds_commons", "yes"))
+_met = f"{R}/data/images/met/manifest.csv" if os.path.exists(f"{R}/data/images/met/manifest.csv") else f"{R}/data_open/images/met/manifest.csv"
+if os.path.exists(_met):
+    for row in csv.DictReader(open(_met)):
         cur.execute("INSERT INTO images(file,object_ref,description,license,license_url,attribution,source_url,source_id,downloaded) VALUES (?,?,?,?,?,?,?,?,?)",
                     (row["local_file"] or None, "Met " + row["accession"], f"{row['title']} | {row['date']} | {row['medium']}", "CC0" if row["isPublicDomain"] == "True" else "unknown",
                      "https://creativecommons.org/publicdomain/zero/1.0/", "The Metropolitan Museum of Art", row["url"], "ds_met", "yes" if row["local_file"].startswith("met_") else "no"))

@@ -29,8 +29,8 @@ curl -sfL https://raw.githubusercontent.com/sanskrit-lexicon/csl-orig/master/v02
 for l in en fi tr id hu; do
   curl -sfL "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/$l/${l}_50k.txt" -o "lexicons/freq_$l.txt" && echo "ok  lexicons/freq_$l.txt (CC BY-SA 4.0)"
 done
-for f in NotoSansBrahmi NotoSansCuneiform NotoSansEgyptianHieroglyphs NotoSansLinearA; do
-  echo "    get $f-Regular.ttf from https://github.com/notofonts (OFL) into data/fonts_open/"
+for f in NotoSansBrahmi NotoSansCuneiform NotoSansEgyptianHieroglyphs NotoSansLinearA NotoSansCyproMinoan NotoSansLinearB NotoSansAnatolianHieroglyphs NotoSansPhoenician NotoSansOldPersian; do
+  curl -sfL "https://github.com/notofonts/notofonts.github.io/raw/main/fonts/$f/hinted/ttf/$f-Regular.ttf" -o "fonts_open/$f-Regular.ttf" && echo "ok  fonts_open/$f-Regular.ttf (SIL OFL 1.1)" || echo "    get $f-Regular.ttf from https://github.com/notofonts (OFL) into data/fonts_open/"
 done
 # Dravidian DB v1.2 (CC BY 4.0), Zenodo record 22682542: fetch the files the scripts read and verify Zenodo's md5 checksums
 python - <<'PY' || echo "    Dravidian DB: download the files of https://zenodo.org/records/22682542 into data/zenodo/dravidian_db_22682542/"
@@ -51,6 +51,9 @@ PY
 cp ../data_open/toy/toy_corpus.csv toy/ 2>/dev/null || true
 # Sproat (2014) non-linguistic symbol corpora (Apache-2.0), used by scripts/emblem_tests.py
 mkdir -p sproat_nonling && ( cd sproat_nonling && curl -sfLO https://richardsproat.com/data/non-linguistic-symbols/corpora.zip && unzip -o -q corpora.zip && echo "ok  sproat_nonling/corpora (Apache-2.0)" ) || echo "    get corpora.zip from https://richardsproat.com/data/non-linguistic-symbols/ into data/sproat_nonling/"
+# Epigraphic Database Heidelberg inscriptions (CC BY-SA 4.0; database frozen since Dec 2021), used by emblem_tests2.py.
+# The Wikipedia title samples used there ship in data_open/comparanda_short/ (CC BY-SA 4.0).
+mkdir -p comparanda_short && curl -sfL https://edh.ub.uni-heidelberg.de/data/download/edh_data_text.csv -o comparanda_short/edh_data_text.csv && echo "ok  comparanda_short/edh_data_text.csv (EDH, CC BY-SA 4.0)" || echo "    get edh_data_text.csv from https://edh.ub.uni-heidelberg.de/data/download into data/comparanda_short/"
 # Wikipedia comparanda text (CC BY-SA 4.0), used by emblem_tests.py and structure_ling.py
 ( cd .. && python scripts/fetch_wiki.py --pages >/dev/null 2>&1 && echo "ok  comparanda_text (Wikipedia, CC BY-SA 4.0)" ) || echo "    run python scripts/fetch_wiki.py --pages"
 cat <<'MSG'

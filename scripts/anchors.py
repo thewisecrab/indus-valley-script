@@ -144,6 +144,7 @@ wt, wa = bigram_attest(west.segs)
 # null: random Indus texts matched on segment-length profile, attestation measured against the Indus corpus minus the sampled texts
 lens = [len(s) for ss in west.segs for s in ss if len(s) >= 2]
 pool = [s for ss in indus.segs for s in ss]
+random.seed(0)   # session 7: this null was unseeded (different on every run)
 null = []
 for _ in range(300):
     tot = att = 0

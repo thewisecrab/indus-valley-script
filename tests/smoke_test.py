@@ -70,6 +70,19 @@ check(r.returncode == 0, 'prereg_heldout.py --selftest (synthetic data) passes')
 sl = J('outputs/signlist/indus_open_signlist.json')
 check(len(sl) == 1132 if isinstance(sl, list) else len(sl.get('signs', sl)) == 1132, 'open sign list has 1,132 entries')
 
+# 4c. session 7: extended seeds, strict look-alike controls, H7 post hoc, emblem stability
+se = J('outputs/claims/seed_claims_extended.json')
+check(se['loo']['n_replicates'] >= 20 and se['rebus']['n_replicates'] >= 50 and se['loo']['any_sign_beats_all_nulls'] == 0,
+      'seed claims: >= 20 LOO and >= 50 rebus replicates; no sign beats all nulls')
+check(se['rebus']['by_lexicon']['dravidian_DEDR_forms+PDR']['rank']['median'] == 6.0, 'seed claims: Dravidian median rebus rank 6 of 8')
+ls = J('outputs/comparanda/lookalikes_strict.json')['scripts']
+check(ls['linear_elamite']['indus_no_strokes']['N2_p'] < 0.01 and ls['linear_b']['indus_no_strokes']['N2_p'] < 0.05,
+      'strict look-alikes: Linear Elamite and (confound check) Linear B pass the complexity-matched null')
+check('EXPLORATORY' in J('outputs/prereg/h7_posthoc_exploratory.json')['label'], 'H7 post hoc is labelled exploratory')
+es = J('outputs/emblem/emblem_stability.json')
+check(es['n_configs'] == 54 and 0.3 < es['share_of_configs_assigning_linguistic']['Indus M77 (dedup)'] < 0.7, 'emblem classifier stability: 54 configs, Indus M77 unstable')
+check(all(os.path.exists(f'{ROOT}/data_open/comparanda_short/wiki_titles_{l}.txt') for l in ['fi', 'ta', 'sa']), 'Wikipedia title samples shipped')
+
 # 5. restricted-content checker
 r = subprocess.run([sys.executable, f'{ROOT}/tools/check_public.py'], capture_output=True, text=True, cwd=ROOT)
 print(r.stdout.strip()); check(r.returncode == 0, 'tools/check_public.py clean')

@@ -17,10 +17,22 @@ Code, derived statistics and manuscript for a null-model-calibrated study of the
 
 - **Pre-registered held-out tests** (`prereg/`, committed before the run): 7 of 8 structural predictions replicated in every primary split with enough data (CISI transcription, ICIT regions, ICIT object types). **H7, numeral+fish as a unit, only partially replicated**: it failed on ICIT pottery (4 vs 2.16 expected, p = 0.109) and only just passed on CISI (p = 0.046). Results: `outputs/prereg/`.
 - **Robustness:** all 90 tests pass across M77, ICIT and CISI under native, Parpola-level, numerals-collapsed and allograph sign schemes (`outputs/robustness/`).
-- **Real non-linguistic comparanda** (Sproat 2014 corpora, Apache-2.0): the Indus profile is mixed, emblem-like in order and edge structure, language-like in avoiding repeats. Linguistic status stays undetermined (`outputs/emblem/`).
+- **Real non-linguistic comparanda** (Sproat 2014 corpora, Apache-2.0): the Indus profile is mixed, emblem-like in order structure, language-like in avoiding repeats (session 7: the edge-structure part was an artefact). Linguistic status stays undetermined (`outputs/emblem/`).
 - **Claim-scoring benchmark:** `scripts/bench_score.py` and `bench/template_submission.csv` score any sign→value key against shuffles, other lexicons, noise-fitted keys and per-sign leave-one-out. No key tested so far beats all nulls (`bench/results/`).
 - **Open sign list** (`outputs/signlist/`, 1,132 entries, derived data only) and a **blind rater kit** for human checks of the AI-made concordance judgements (`rater_kit/`; no raters recruited yet).
 - **Deterministic reruns:** the controls no longer depend on Python's hash seed. `scripts/run_claim_seeds.sh` reruns them over five seeds; the spread is in `outputs/claims/seed_spread.csv`.
+
+**Session 7 additions (29 October 2026)**
+
+- **More seeds:** the seed-dependent claims were rerun over 20 seeds (per-sign leave-one-out) and 50 seeds (rebus keys); see `outputs/claims/seed_claims_extended.json`.
+  - Yajnadevam's key beats the shuffle-fitted key in 65% of seeds. The median difference in mean p is +0.009 (95% interval −0.040 to +0.052; Wilcoxon p = .054), so the advantage is not reliable.
+  - Dravidian rebus keys have a median rank of 6 of 8 lexicons. They score above Markov nonsense in 58% of seeds and above English in 46%.
+- **Linear Elamite look-alikes** (`outputs/comparanda/lookalikes_strict*`): the excess similarity survives a complexity-matched null (p = .001, BH q = .010 across 10 scripts) and a modern-font render check. Linear B, which has no plausible link, also passes the complexity-matched null (q = .045). We therefore treat it as a visual-style statistic, **not evidence of a link**.
+- **H7 post hoc (exploratory; verdict unchanged):** the pottery and West failures are consistent with low power (about 0.5 at n = 5). We see no heterogeneity on pottery, and the West split is inconclusive (`outputs/prereg/h7_posthoc_exploratory.json`).
+- **Short real-text comparanda:** we added Latin inscriptions from EDH and Wikipedia titles, both CC BY-SA 4.0.
+  - Edge effects of 0.05–0.31 bits appear in real short texts too. The session-6 "emblem-like edge structure" was therefore an artefact of the windowed comparanda.
+  - The language-vs-emblem classifiers are unstable. Across 54 configurations, Indus is labelled linguistic in 44–52%, about the same as for synthetic emblem generators, so linguistic status stays undetermined (`outputs/emblem/emblem_stability.json`).
+- **Fresh clone:** `build_map.py`, `sign_table.py`, `claims_table.py` and `loo_hand.py` now run from a fresh clone, and the last three match the committed outputs byte for byte. The Gulf null in `anchors.py` is now seeded.
 
 **Status:** unreviewed preprint (working draft), not peer-reviewed. Maintained by the Indus Valley Script project contributors.
 

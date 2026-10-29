@@ -22,6 +22,8 @@ paper/evidence/
 *_private.*
 *_private/
 map/*.sqlite
+map/*.graphml
+outputs/map_build_summary.json
 outputs/m77_codes*
 outputs/m77_field_symbols.csv
 outputs/claims/A_reproduction.csv
@@ -32,6 +34,7 @@ outputs/signmap/handcheck_montage.png
 outputs/structure/sign_table.csv
 outputs/structure/sign_table.md
 outputs/comparanda/sim_matrix*
+outputs/claims/seeds/
 **/ngrams_3.csv
 **/ngrams_4.csv
 **/segments_branching_entropy.csv

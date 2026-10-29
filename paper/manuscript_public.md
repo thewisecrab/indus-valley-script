@@ -14,7 +14,7 @@ We re-examine the Indus script using two independent machine-readable transcript
 2. **Slot grammar.** A hidden Markov model of seal texts recovers a reproducible slot template: initial → post-initial → medial → terminal → post-terminal. It gains 0.38 nats/token on held-out, de-duplicated texts, against no gain on shuffled texts.
 3. **Segmentation.** Byte-pair segmentation lowers held-out description length by about 1 bit per sign after de-duplication, against no reduction for shuffled texts. This shows that recurrent multi-sign units exist.
 4. **Linguistic status.** Measures proposed to separate writing from non-linguistic symbol systems do not separate them at Indus text lengths. These are bigram conditional entropy (Rao), Sproat's repetition ratio r/R, and Lee et al.'s Cr/Ur. Linguistic comparanda cut to Indus lengths cross Sproat's boundary, and the two Indus transcriptions disagree with each other (r/R 0.66 vs 0.26). Linguistic status therefore remains **undetermined** by internal statistics.
-5. **Published readings.** A sign-value key published by Yajnadevam does not distinguish real from shuffled sign order on any of three measures, including a full Sanskrit morphological parse. Fitted rebus keys built from a Dravidian lexicon perform no better than keys built from English or Finnish, and about as well as nonsense lexicons (over five seeds).
+5. **Published readings.** A sign-value key published by Yajnadevam does not distinguish real from shuffled sign order on any of three measures, including a full Sanskrit morphological parse. Fitted rebus keys built from a Dravidian lexicon perform no better than keys built from English or Finnish, and about as well as nonsense lexicons (median rank 6 of 8 over 50 seeds; above Markov nonsense in 58% of seeds).
 6. **Phonetic values.** We find **no sign whose phonetic value can be estimated above null**. The stroke numerals are an iconic, plate-checked exception, assessed qualitatively. A complete phonetic decipherment at 85% confidence is not supported by the available evidence.
 
 7. **Full sign map (session 4).** We mapped all 417 M77 signs and 712 ICIT signs. Each entry gives cross-scheme IDs, allographs, positional profile, class, neighbours, sites, object types, glyph references, foreign look-alikes and published claims.
@@ -22,7 +22,7 @@ We re-examine the Indus script using two independent machine-readable transcript
    - A visual check of 40 Carlson links, made by the project's AI research assistant (not a human epigrapher), judged 37 correct or plausible; an independent human check is still outstanding.
 8. **Claims re-tested.** We compiled 42 hand-sourced sign-value proposals and two complete keys, and tested each per sign with held-out values or held-out sites.
    - No phonetic value beats the alternative-value, shuffled-corpus and alternative-lexicon nulls.
-   - Yajnadevam's small per-sign advantage is comparable to that of short hill-climbed keys fitted to a shuffled or real corpus. Over five seeds it is sometimes slightly larger (one-sided p < .05 in 2 of 5 seeds against the shuffle-fitted key), so this comparison is seed-sensitive (§4.9).
+   - Yajnadevam's small per-sign advantage is comparable to that of short hill-climbed keys fitted to a shuffled or real corpus. Over 20 seeds the median difference is +0.009 in mean p (95% interval −0.040 to +0.052; Wilcoxon p = .054). The per-seed one-sided test is below .05 in only 2 of 20 seeds, about the 1 expected by chance (§4.9).
    - Twelve claim rows (nine distinct tests) have their implied **roles** replicate on sites outside Mohenjo-daro and Harappa: jar and arrow are final, M267 and M150 are initial, and numeral+fish, M087+fish and M267+M099 are units. These results do not discriminate between proposed sound values.
 9. **Look-alikes.** Visual look-alikes in Linear Elamite, Egyptian, cuneiform, Brahmi and Linear A do not predict Indus sign function beyond the trivial resemblance of stroke numerals.
 10. **Prior work re-run (session 5).** We replicated two published results on our data and added baselines they lacked.
@@ -32,9 +32,16 @@ We re-examine the Indus script using two independent machine-readable transcript
 11. **Session 6: pre-registration, robustness and real non-linguistic comparanda.**
    - Eight structural predictions were committed publicly before testing (§4.13). Seven replicated in every primary held-out split with enough data (CISI transcription, ICIT regions and object types). **The numeral+fish unit (H7) only partially replicated**: it failed on ICIT pottery (p = 0.109).
    - All 90 positional and entropy tests pass across M77, ICIT and CISI under four sign-merge schemes (§4.14).
-   - Against Sproat's real non-linguistic corpora, the Indus profile is mixed: emblem-like in order dependence and edge effects, language-like in its low repetition rate. Linguistic status stays **undetermined** (§4.15).
+   - Against Sproat's real non-linguistic corpora, the Indus profile is mixed: emblem-like in order dependence, language-like in its low repetition rate. The session-6 "emblem-like edge effects" turned out to be an artefact of the windowed comparanda (§4.20). Linguistic status stays **undetermined** (§4.15).
    - A public claim-scoring benchmark finds no submitted key that beats all nulls (§4.16). We also release an open sign list and a blind rater kit (§4.17).
-   - Control values are now deterministic, and the spread over five seeds is reported (§4.6).
+   - Control values are now deterministic, and their spread over seeds is reported (§4.6; extended to 20–50 seeds in session 7).
+
+12. **Session 7: stricter controls.**
+   - Seed-dependent claims were re-run over 20 seeds (per-sign leave-one-out) and 50 seeds (rebus keys). Yajnadevam's edge over fitted keys is not reliable. Dravidian rebus keys rank 6th of 8 lexicons (median) and are statistically indistinguishable from Markov nonsense and English (§4.6, §4.9).
+   - The Linear Elamite look-alike excess survives complexity-matched nulls, BH correction across 10 scripts and a modern-font render check. Linear B, a script with no plausible link, also passes one of these controls, so we read the excess as a visual-style statistic and **not as evidence of a link** (§4.18).
+   - An exploratory look at the two H7 failures points to low power (about 0.5 at n = 5), not heterogeneity. The pre-registered verdict is unchanged (§4.19).
+   - We added short real linguistic texts: Latin inscriptions and Wikipedia titles. Language-vs-emblem classifiers are unstable under leave-one-system-out tests and reference changes, and they assign Indus no differently from synthetic emblem generators (§4.20).
+   - A fresh-clone run of the full quick start reproduces the public outputs (§4.21).
 
 # 1. Introduction
 
@@ -443,7 +450,7 @@ What the table shows:
 
 - Published readings follow from the key in 59.8% of cases by exact consonant skeleton, and in 85.9% allowing s~h and n~m.
 - **B (fixed key):** real texts segment into Monier-Williams headwords at 99.35%. Within-text shuffles give 99.08% and a permuted key 99.02%.
-- **C (fitted keys):** keys fitted to any of 8 lexicons reach ≥ 85% held-out "readability" on shuffled texts too. Fitting to Markov nonsense reaches 0.98 (0.967–0.991 over five seeds).
+- **C (fitted keys):** keys fitted to any of 8 lexicons reach ≥ 85% held-out "readability" on shuffled texts too. Fitting to Markov nonsense reaches 0.98 (0.967–0.991 over the five session-6 seeds).
 - **E (full parse):** vidyut parses 57.9% of mechanical outputs in real order, against 59.3% shuffled.
 - No test favours real sign order or the published key over controls (Fig. 3).
 
@@ -451,7 +458,22 @@ What the table shows:
 
 - In the canonical run (seed 0), the held-out compound hit rate for the Dravidian lexicon is 0.068, against 0.071 within-shuffled and 0.054 globally shuffled.
 - This is lower than for Finnish (0.195), Sanskrit (0.191) or Markov nonsense (0.089). Finnish and Sanskrit have higher base rates of short attested strings.
-- **Spread over five seeds** (`outputs/claims/seed_spread.csv`): the Dravidian real-corpus score ranges 0.068–0.157 (mean 0.102), Finnish 0.195–0.299, Sanskrit 0.191–0.247, English 0.065–0.119 and Markov nonsense 0.064–0.098. Real sign order beats both shuffles for most lexicons in most seeds (Dravidian 4/5, English 4/5, Markov nonsense 4/5, Finnish, Sanskrit, Turkish and Hungarian 5/5). The Dravidian gain over the better shuffle (mean +0.021) is about the same as English (+0.023) and smaller than Finnish (+0.048) or Sanskrit (+0.043). Dravidian ranks 5th–7th of 8 lexicons in every seed. Its ranking against Markov nonsense is not stable (lower in 2 of 5 seeds), so we no longer claim it scores below nonsense.
+- **Spread over 50 seeds (session 7; supersedes the five-seed figures of session 6).** Sources: `outputs/claims/seed_claims_extended.json`, `scripts/run_claim_seeds_extra.sh`, `scripts/seed_claims_extended.py`. Medians are given with 2.5–97.5% intervals.
+
+  | Lexicon | Real-corpus score | Gain over the better shuffle | Real beats both shuffles | Rank of 8 |
+  |---|---|---|---|---|
+  | Finnish | 0.242 [0.179–0.301] | +0.034 [+0.011, +0.070] | 98% | 1 |
+  | Sanskrit (MW) | 0.204 [0.167–0.275] | +0.034 [−0.019, +0.081] | 90% | 2 |
+  | Turkish | 0.203 [0.151–0.260] | +0.036 [+0.001, +0.072] | 96% | 3 |
+  | Hungarian | 0.169 [0.113–0.222] | +0.029 [+0.005, +0.064] | 98% | 4 |
+  | English | 0.105 [0.065–0.148] | +0.027 [−0.002, +0.051] | 90% | 6 |
+  | Dravidian (DEDR+PDR) | 0.099 [0.069–0.155] | +0.022 [−0.005, +0.057] | 94% | 6 (range 4–8) |
+  | Markov nonsense | 0.098 [0.067–0.147] | +0.023 [−0.012, +0.051] | 90% | 7 |
+  | Indonesian | 0.095 [0.060–0.131] | +0.023 [−0.006, +0.056] | 92% | 7 |
+
+  - Dravidian scores above Markov nonsense in 58% of seeds, above English in 46%, above Hungarian in 6%, and never above Finnish or Sanskrit.
+  - Real sign order beats both shuffles for every lexicon in most seeds, and by similar margins. This is the generic ordered structure of §4.1–4.3, not a signal for any one language.
+  - **Claim rewritten:** Dravidian keys are statistically indistinguishable from English and from Markov nonsense, and rank below the lexicons with high base rates of short attested strings. The session-6 wording ("ranks 5th–7th of 8 in every seed") is replaced by these figures.
 - Of Parpola's asterism compounds, only mū-m-mīn is attested in the DEDR forms; aru-mīn and eḻu-mīn are not.
 - These tests have low power against a specific, correct rebus system. They do **not** refute a Dravidian hypothesis. They show that no lexicon is singled out by the data.
 
@@ -461,7 +483,7 @@ What the table shows:
 
 - **Motif:** no sign–motif association survives correction among 1,472 seals.
 - **Site:** Mohenjo-daro vs Harappa differences vanish when the comparison is restricted to seals.
-- **Gulf:** West-Asian/Gulf inscriptions use Indus signs in non-Indus sequences. Only 35% of their bigrams are attested in the Indus corpus, against 80% (95% interval 68–91%) for matched Indus texts. This is consistent with Laursen (2010) and with a different language or usage.
+- **Gulf:** West-Asian/Gulf inscriptions use Indus signs in non-Indus sequences. Only 35% of their bigrams are attested in the Indus corpus, against 80% (95% interval 69–89%; session 7: this null is now seeded, it was previously re-drawn on every run) for matched Indus texts. This is consistent with Laursen (2010) and with a different language or usage.
 - **Tablets:** moulded tablets are mass-produced formula sets; 73–85% of them are duplicates.
 
 ## 4.8 Full sign map and an improved concordance
@@ -530,7 +552,14 @@ Of the 417 M signs:
 - **Field-Cady / proto-Dravidian.** 4 of 99 signs reach p < .05; 0 survive.
 - **No sign beats all nulls**, i.e. significant against alternative values, above both shuffles, and above every alternative lexicon.
 - **Yajnadevam vs calibration keys.** In the canonical run, Yajnadevam's mean per-sign p is 0.386, better than the 0.5 expected by chance. A key hill-climbed to a shuffled corpus reaches 0.406, and a key fitted to the real corpus from a random start reaches 0.403 (Mann–Whitney p = .32).
-- **Seed spread (session 6).** This comparison is less stable than the canonical run suggested. Over five seeds, Yajnadevam's mean p ranges 0.360–0.414, the shuffle-fitted key 0.356–0.462 and the random-start key 0.403–0.435. Yajnadevam is lower (better) than the random-start key in 5 of 5 seeds, by 0.017–0.051, and lower than the shuffle-fitted key in 3 of 5. The one-sided Mann–Whitney p against the shuffle-fitted key ranges 0.004–0.99 and is below .05 in 2 of 5 seeds. So Yajnadevam's small aggregate advantage is **comparable to, and sometimes slightly larger than,** what our short in-sample fits produce. These fits use only 2,000-iteration hill-climbs, while the published key was developed on the same corpus over a long period, so the comparison favours the published key if anything. In no seed does any single sign beat all nulls.
+- **Seed spread (session 7: 20 seeds; supersedes the five-seed figures of session 6).** Medians are given with 95% intervals.
+  - Yajnadevam's mean per-sign p: 0.385 [0.355–0.420].
+  - Key fitted to a shuffled corpus: 0.393 [0.359–0.450].
+  - Key fitted to the real corpus from a random start: 0.403 [0.358–0.447].
+  - Yajnadevam is lower (better) than the shuffle-fitted key in 65% of seeds: median difference +0.009 [−0.040, +0.052], Wilcoxon signed-rank p = .054 one-sided. It is lower than the random-start key in 60%: +0.013 [−0.054, +0.052], p = .085.
+  - The per-seed one-sided Mann–Whitney p against the shuffle-fitted key has median 0.42 (range 0.004–0.99). It is below .05 in 2 of 20 seeds, against 1 expected by chance (binomial p = .26).
+  - With 10 seeds the random-start comparison had looked significant (80% of seeds, p = .022). This did not hold at 20 seeds, so we do not claim it.
+  - **Claim rewritten:** Yajnadevam's aggregate advantage is **not reliably different from** what our short in-sample fits produce. These fits use only 2,000-iteration hill-climbs, while the published key was developed on the same corpus over a long period, so the comparison favours the published key if anything. In no seed does any single sign beat all nulls.
 - **Field-Cady vs chance.** Field-Cady's mean p is 0.56.
 - **Power.** The alternative inventories hold 129 (Yajnadevam) and 99 (Field-Cady) values (corrected in session 6 from 100; the smallest attainable p is 1/129 and 1/99), so a single true value could not reach significance after FDR correction alone. The global comparison is the informative test.
 
@@ -588,7 +617,7 @@ The confirmed predictions confirm the **role** each claim assigns, never the sou
 
 **Indus-internal similarity.** Visual similarity does not predict positional similarity (Mantel ρ = 0.009, p = .40; 143 signs).
 
-**Match quality.** For Egyptian, cuneiform, Brahmi and Linear A, best-match scores are no higher than against equally sized random glyph sets from the other scripts (share of Indus signs whose best match beats the control: 0.15–0.42). Linear Elamite is the exception (mean best 0.663 vs 0.627; share 0.64), which we attribute to its simple line-drawn glyph style rather than to any link; it is not tested further (corrected in session 6: the earlier text said all five scripts behaved alike). Most of the highest-scoring look-alikes are stroke signs (Fig. 8). Nothing here supports a genetic link between the scripts.
+**Match quality.** For Egyptian, cuneiform, Brahmi and Linear A, best-match scores are no higher than against equally sized random glyph sets from the other scripts (share of Indus signs whose best match beats the control: 0.15–0.42). Linear Elamite is the exception (mean best 0.663 vs 0.627; share 0.64; corrected in session 6: the earlier text said all five scripts behaved alike). Session 7 tests it with stricter controls (§4.18): the excess survives them, but a similar, smaller excess for Linear B shows that it can arise from glyph style alone. Most of the highest-scoring look-alikes are stroke signs (Fig. 8). Nothing here supports a genetic link between the scripts.
 
 *Fig. 8 (top visual look-alikes, M77 crops beside foreign glyphs) is omitted from the public version because the M77 crops are under copyright. Scores are in `outputs/comparanda/lookalikes_top3.csv`.*
 
@@ -714,7 +743,7 @@ Sproat's (2014) non-linguistic corpora are openly released under Apache-2.0 (Wu,
 - A nearest-centroid classifier on the five measures scores 11/15 in leave-one-system-out tests on the known systems. It assigns M77 to the non-linguistic group and ICIT to the linguistic group, so it does not settle the question.
 - Mutual information between signs d positions apart, as a gain over shuffles, falls off fast in Indus: M77 1.02, 0.12, −0.08 and −0.22 bits for d = 1–4. Totem poles behave similarly (0.36, 0.14, −0.04, −0.16). Linguistic windows mostly stay positive to d = 3 (e.g. English words 0.31, 0.10, 0.10, 0.03). Indus dependence is therefore short-range or slot-like. This is suggestive only.
 - **Caveats.** The linguistic comparanda are windows of running text without real text boundaries, so their edge MI gain near zero is partly an artefact. That measure separates bounded texts from windows rather than language from non-language. A simple order-1 Markov generator reproduces the Indus H ratio, and a positional-slot generator reproduces its edge effects. Sproat's corpora differ from Indus in text length (mean 1.4–13.7 symbols).
-- **Conclusion: still undetermined.** With real non-linguistic comparanda the Indus profile is mixed: emblem-like in order and edge structure, language-like in avoiding repetition.
+- **Conclusion: still undetermined.** With real non-linguistic comparanda the Indus profile is mixed: emblem-like in order structure, language-like in avoiding repetition. (Session 7: short real linguistic texts have edge MI gains of 0.05–0.31 bits, so the session-6 "emblem-like edge structure" was an artefact of the windowed comparanda; see §4.20.)
 
 ## 4.16 A claim-scoring benchmark (session 6)
 
@@ -740,6 +769,78 @@ Sproat's (2014) non-linguistic corpora are openly released under Apache-2.0 (Wu,
 
 - **Open sign list.** `outputs/signlist/indus_open_signlist.{csv,json}` (with a JSON schema) has 1,132 entries (418 M, 714 W). It is built only from derived data: concordance IDs, positional shares, class and confidence, replication, pre-registered test outcomes (164 signs), recurrent units and the status of published values. Sign descriptions come from mayig (MIT). It contains no glyph images and no proposed phonetic values.
 - **Rater kit.** `rater_kit/` holds a blind sheet of 60 M↔W items: the 40 Carlson links judged by the AI assistant, plus 20 decoys. It includes a protocol, a scorer, and the SHA-256 of the withheld answer key. The AI check counts as confirmed only if, across at least two independent raters, median agreement with the AI judgements and median decoy accuracy are both ≥ 80%. **No raters have been recruited yet.**
+
+## 4.18 Stricter controls for the Linear Elamite look-alike signal (session 7)
+
+Session 6 reported one unexplained residue in §4.11: Indus signs find closer visual matches among Linear Elamite glyphs (mean best similarity 0.663) than among size-matched random glyph sets drawn from other scripts (0.627). We tested whether this survives stricter controls (`scripts/lookalikes_strict.py`; `outputs/comparanda/lookalikes_strict.{json,_table.csv}`). We used the same chamfer + HOG similarity on binarised 48×48 glyphs, invariant to mirroring, with 1,000 draws per null.
+
+- **Ten comparison scripts.** Session 6 used five. We added five scripts rendered from openly licensed Noto fonts (OFL): Cypro-Minoan (99 glyphs), Linear B (211), Anatolian hieroglyphs (583), Phoenician (22) and Old Persian cuneiform (44). We found no open glyph source for Proto-Elamite or archaic proto-cuneiform. The only open Cypro-Minoan tracing we found (elamicon) has two glyphs, so we used the Noto font instead.
+- **N1, size-matched random glyphs.** This is the session-6 control.
+- **N2, complexity-matched glyphs.** Each glyph of the target script is replaced by one of its 10 nearest non-target glyphs in a rank-normalised complexity space. The space has seven dimensions: ink share, connected components, holes, skeleton end points, skeleton junctions, skeleton length and log aspect ratio. This controls for the fact that simple line glyphs match simple line glyphs.
+- **N3, query specificity.** We computed the same N2 advantage using every other script's glyphs as the queries in place of the Indus signs.
+- **Render check.** We repeated the test with 631 Indus sign renders from a modern font (W numbering), in place of the M77 plate crops.
+- **Multiple comparisons.** We applied a BH correction across the 10 scripts.
+
+| Script | Indus mean best (no strokes) | N1 mean, p | N2 mean, p, BH q | N2 advantage | W-font renders: N2 advantage, p, BH q |
+|---|---|---|---|---|---|
+| Linear Elamite | 0.657 | 0.629, .001 | 0.620, .001, .010 | +0.036 (z = 12.1) | +0.028, .001, .010 |
+| Linear B | 0.622 | 0.615, .13 | 0.609, .009, .045 | +0.013 (z = 2.4) | +0.011, .014, .070 |
+| Egyptian | 0.639 | 0.671, 1.0 | 0.634, .11, .38 | +0.005 | +0.004, .12, .38 |
+| Brahmi | 0.574 | 0.586, .94 | 0.568, .19, .47 | +0.006 | +0.007, .15, .38 |
+| Phoenician | 0.520 | 0.524, .63 | 0.515, .35, .71 | +0.004 | +0.004, .39, .78 |
+| Cypro-Minoan, Linear A, Anatolian, cuneiform, Old Persian | — | — | p ≥ .92 | −0.027 to −0.008 | p ≥ .57, q ≥ .94 |
+
+- **The Linear Elamite advantage survives every control we applied.** These are complexity matching, BH correction, the modern-font renders and the query-specificity check. With other scripts' glyphs as queries the Linear Elamite advantage is always negative (−0.014 to −0.152), so the Indus advantage ranks first of 10 query sets. It is broad rather than driven by a few signs: the median per-sign advantage is +0.027, 66% of signs are positive, and it holds in every complexity tercile (+0.040, +0.028, +0.043).
+- **But Linear B also passes the complexity-matched control** on the plate crops (q = .045). On the modern-font renders it is significant before correction but not after (p = .014, q = .070). Its advantage is about a third the size of the Linear Elamite one. There is no plausible historical link between Indus and Linear B, so the complexity-matched null does not remove every stylistic confound. Two candidate confounds remain. The first is shape properties that our seven complexity descriptors miss, such as simple open line figures. Linear B is typeset, so this one would apply to it as well. The second is the drawing source: the Linear Elamite set is a hand tracing in a uniform line style (elamicon), while every other script was rendered from a typeset font.
+- **Interpretation.** This is a robust *visual-similarity* statistic for two broadly contemporary sign systems. It is **not evidence of a historical, phonetic or functional link**. It says nothing about what any sign means, and with Linear B showing a smaller effect of the same kind we cannot rule out drawing style. A test of function, like the category tests in §4.11, is not possible for Linear Elamite with open data. We therefore keep the conclusion of §4.11: look-alikes predict nothing about Indus sign function.
+
+## 4.19 Why H7 (numeral before fish) failed in two splits: an exploratory post-hoc look (session 7)
+
+**This section is exploratory and post hoc. The pre-registered H7 verdict, "partially replicated", is unchanged.** H7 failed on ICIT pottery (p = 0.109, a primary split) and in the exploratory West/foreign split (p = 0.29). We asked whether these failures reflect sample size or a real difference (`scripts/h7_posthoc.py`; `outputs/prereg/h7_posthoc_exploratory.json`).
+
+| Split | Relevant texts | Mean length | Texts with numeral→fish adjacency | Rest of corpus | Fisher OR, p | Power at same n |
+|---|---|---|---|---|---|---|
+| ICIT pottery | 5 | 2.4 | 4 (80%) | 65.2% | 2.14, .66 | 0.48 (length-matched 0.46) |
+| ICIT West | 5 | 7.0 | 2 (40%) | 66.5% | 0.34, .34 | 0.50 (length-matched 0.47) |
+
+- **Pottery.** Four of the five relevant texts show the adjacency. This is a *higher* rate than elsewhere. The texts are very short, so the within-text permutation null is itself high (2.16 adjacencies expected against 4 observed). At this n, resampling the same number of texts (or texts with the same lengths) from the rest of the corpus produces a pass only about half the time. The failure is consistent with low power, and there is no sign of heterogeneity.
+- **West.** Two of five texts show the adjacency, a lower rate than elsewhere, but the difference is not significant. This split is equally underpowered and the result is inconclusive. A real difference would be consistent with the Gulf result of §4.7, where Indus signs are used in non-Indus sequences, but these data cannot show it.
+- For comparison, the seal split has 128 relevant texts (67.2% with the adjacency) and the tablet split 21 (52.4%). All split descriptives are in the JSON file.
+
+## 4.20 Short real-text comparanda and classifier stability (session 7)
+
+Session 6 compared Indus with *windows* of running text, which have no real text boundaries (§4.15). We added short real texts with natural boundaries (`scripts/emblem_tests2.py`; `outputs/emblem/emblem_measures_v2.csv`, `emblem_stability.json`, `emblem_stability_configs.csv`):
+
+- Latin inscriptions from the Epigraphic Database Heidelberg (EDH; CC BY-SA 4.0). We used owner/maker inscriptions (2,412 texts), as words and as letters, and a sample of all genres.
+- Wikipedia article titles in Finnish, Tamil and Sanskrit (CC BY-SA 4.0). The exact samples are released in `data_open/comparanda_short/`.
+
+We looked for further openly licensed non-linguistic sequence corpora. One candidate, a folk-tune database, was excluded because its licence forbids processing with AI/LLM tools. We found no other usable corpus beyond Sproat's.
+
+| System | H ratio | Edge MI gain (bits) | Repetition rate | Mean length |
+|---|---|---|---|---|
+| Indus M77 / ICIT (dedup) | 0.752 / 0.774 | 0.453 / 0.406 | 0.098 / 0.037 | 4.5 / 4.1 |
+| EDH owner/maker inscriptions, words | 1.000 | 0.311 | 0.082 | 2.8 |
+| EDH owner/maker inscriptions, letters | 0.873 | 0.081 | 0.763 | 10.9 |
+| EDH all genres, words | 0.806 | 0.051 | 0.448 | 10.6 |
+| Wikipedia titles, words (fi / ta / sa) | 1.533 / 0.291 / 0.681 | 0.076 / 0.208 / 0.113 | 0.005–0.007 | 1.6–2.4 |
+
+- **The edge-MI artefact is confirmed.** Short real linguistic texts have edge MI gains of 0.05–0.31 bits, far above the near-zero values of running-text windows. Edge effects therefore do not mark Indus as emblem-like. We withdraw the session-6 wording "emblem-like in edge structure".
+- Word-level H ratios for titles are unstable (0.29–1.53), because nearly every word type is rare at 800 tokens.
+- **Classifier stability.** We ran 54 configurations: three reference sets (windows, short texts, both), six measure subsets and three classifiers (nearest centroid, 1-NN, 3-NN on z-scored measures).
+  - Leave-one-system-out accuracy on known systems is modest: 12–16 of 21 with both references, 5–10 of 13 with short texts only, and 6–13 of 15 with windows only.
+  - Indus M77 is assigned "linguistic" in 44% of configurations and ICIT in 52%. Our synthetic non-linguistic generators are assigned "linguistic" in 41–48%, about the same as Indus.
+  - When a random 25% of the reference systems is dropped (both references, all five measures), the share of runs labelling M77 linguistic is 0.63 (centroid), 0.67 (1-NN) and 0.25 (3-NN). For ICIT it is 0.89, 0.73 and 0.45.
+- **Conclusion.** The classification depends on the reference set, the measures and the classifier, and it does not separate Indus from synthetic emblem generators. Linguistic status remains **undetermined**. If anything, the added comparanda weaken the emblem-leaning part of §4.15.
+
+## 4.21 Fresh-clone reproducibility (session 7)
+
+We cloned the public repository at commit ff98449 over HTTPS into a clean virtual environment (Python 3.13.5, empty environment). We then ran the full quick start: install, smoke test, `fetch_data.sh`, `run_all.py`, `build_map.py`, `sign_table.py`, `claims_table.py` and `loo_hand.py`.
+
+- Every step exited cleanly.
+- `run_all.py` left no tracked file changed.
+- `sign_table.py`, `claims_table.py` and `loo_hand.py` reproduced the private outputs byte for byte.
+- `build_map.py` had imported no images in a fresh clone. It now imports the 88 openly licensed Commons/Met images from their manifests.
+- A determinism audit found one remaining unseeded null, the Gulf bigram null in `anchors.py`. It is now seeded, which changes the reported null from 79% (68–90%) to 80% (69–89%).
 
 # 5. Sign-by-sign assessment
 
@@ -777,7 +878,7 @@ Of the 116 rows, none carries a phonetic value at any confidence above null.
   - Per-sign lexical tests have low power: the alternative-value inventories hold 99–129 values.
   - Mappings of signs that appear only in figures were made by glyph similarity and carry the stated confidence.
   - Parpola's Fig. 15.2 nos. 1–10 (p. 275) are missing from the scan, so they are not in the claims table.
-  - Proto-Elamite, archaic proto-cuneiform and South Indian graffiti marks have no open glyph source and were not compared.
+  - Proto-Elamite, archaic proto-cuneiform and South Indian graffiti marks have no open glyph source and were not compared (re-checked in session 7).
 - **Session-5 limits.**
   - Replications use our own implementations; Yadav's smoothing details and Nair's exact corpus filters may differ from ours.
   - Fuls' positional formula is approximated from an abstract.
@@ -788,7 +889,11 @@ Of the 116 rows, none carries a phonetic value at any confidence above null.
   - The pre-registered held-out splits are not fully independent: CISI covers the same Mohenjo-daro objects, and the largest ICIT splits overlap the data that defined the classes.
   - Several splits are small (36 texts for Eastern Headwaters + Upper Indus), so some tests had insufficient data.
   - The benchmark uses a generic segmenter, so its numbers are not comparable with the key-specific harness of §4.6 and §4.9.
-- **Seed dependence of controls (fixed in session 6).** Earlier runs depended on Python's per-process string-hash order. The code now iterates in sorted order and derives seeds with CRC32, so a rerun is byte-identical under any `PYTHONHASHSEED`. The remaining spread comes from the explicit random seeds, and we report it over five replicates (`outputs/claims/seed_spread.csv`). That spread is large for the fitted rebus keys (e.g. Dravidian 0.068–0.157) and for the Yajnadevam-vs-fitted-key comparison (§4.9). Single-seed values should be read with it in mind.
+- **Seed dependence of controls (fixed in session 6).** Earlier runs depended on Python's per-process string-hash order. The code now iterates in sorted order and derives seeds with CRC32, so a rerun is byte-identical under any `PYTHONHASHSEED`. The remaining spread comes from the explicit random seeds. Session 6 reported it over five replicates (`outputs/claims/seed_spread.csv`). Session 7 extends this to 20 replicates for the leave-one-out comparison and 50 for the rebus keys (`outputs/claims/seed_claims_extended.json`). The spread is large: the Dravidian 95% interval is 0.069–0.155, and the Yajnadevam-vs-fitted-key difference interval spans zero. Single-seed values should be read with it in mind.
+- **Session-7 limits.**
+  - The look-alike complexity descriptors are hand-chosen. Linear B passes the complexity-matched control, which shows that they do not capture all stylistic similarity.
+  - The H7 post-hoc analysis is exploratory, at n = 5 per split.
+  - The short-text linguistic comparanda are Latin inscriptions and Wikipedia titles, not texts in a language that might be the Indus language. We found no further openly licensed non-linguistic corpus.
 - **Scope of the original brief.** The request for "85% confidence in a complete decipherment" cannot be met. Without a bilingual or an independent semantic anchor, no current method can calibrate phonetic values (Parpola 1994: 48).
 
 # 7. Data and code availability
@@ -852,7 +957,9 @@ Only works opened during the project are listed. Works cited at second hand are 
 - Cady, F. 2026. *indus_valley_script_corpus* (optimal-transport sign → Dravidian syllable mapping), commit 3030826. https://github.com/field-cady/indus_valley_script_corpus
 - Carlson, M. *mayig/indus-valley-script-corpus* (CISI-based corpus; hand-matched P↔M↔W concordance), commit ad2f1e2. https://github.com/mayig/indus-valley-script-corpus
 - elamicon project. *elamicon* (Linear Elamite glyph sources and corpus browser), commit 69b4cc2. https://github.com/elamicon/elamicon
-- Google / Noto project. Noto Sans Egyptian Hieroglyphs, Cuneiform, Brahmi, Linear A (SIL OFL 1.1). https://github.com/notofonts
+- Google / Noto project. Noto Sans Egyptian Hieroglyphs, Cuneiform, Brahmi, Linear A, and (session 7) Cypro-Minoan, Linear B, Anatolian Hieroglyphs, Phoenician and Old Persian (SIL OFL 1.1). https://github.com/notofonts
+- Epigraphic Database Heidelberg (EDH). Text data export `edh_data_text.csv` (CC BY-SA 4.0), downloaded 29 October 2026. https://edh.ub.uni-heidelberg.de/data/download
+- Wikipedia contributors. Finnish, Tamil and Sanskrit Wikipedia article-title lists (CC BY-SA 4.0), Wikimedia dumps, downloaded 29 October 2026. https://dumps.wikimedia.org/
 - Kumbhar, S. 2017. SK Indus Script font (All Rights Reserved), as distributed in yajnadevam/indus-website.
 - Wells, B. K. 2015. *The Archaeology and Epigraphy of Indus Writing.* Archaeopress. [publisher sample only: front matter and TOC]
 - Yajnadevam. *lipi* repository, commit fc8813a (2026-08-20 IST). https://github.com/yajnadevam/lipi

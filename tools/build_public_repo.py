@@ -38,7 +38,9 @@ KEEP += ['outputs/claims/seed_spread.csv', 'outputs/claims/alt_value_pool_sizes.
 for sub in ['prereg', 'robustness', 'emblem']:
     KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/outputs/{sub}/*') if os.path.isfile(f))
 KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/prereg/*') if os.path.isfile(f))
-KEEP += ['scripts/run_claim_seeds.sh']
+KEEP += ['scripts/run_claim_seeds.sh', 'scripts/run_claim_seeds_extra.sh']
+# session 7: extended seed claims, strict look-alike controls
+KEEP += [k for k in ['outputs/claims/seed_claims_extended.json', 'outputs/comparanda/lookalikes_strict.json', 'outputs/comparanda/lookalikes_strict_table.csv'] if os.path.exists(f'{SRC}/{k}')]
 KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/bench/*') + glob.glob(f'{SRC}/bench/examples/*') + glob.glob(f'{SRC}/bench/results/*') if os.path.isfile(f))
 KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/rater_kit/*') if os.path.isfile(f))
 KEEP += ['map/schema.sql'] + sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/map/seed/*.csv'))
@@ -95,6 +97,11 @@ with open(f'{DST}/data_open/images/commons/ATTRIBUTION.md', 'w') as fh:
     fh.write('# Wikimedia Commons images: attribution\n\nEach file keeps its own licence (shown below). These files are NOT covered by the repository\'s MIT or CC BY 4.0 grants. CC BY-SA files must be shared under the same licence when adapted.\n\n| File | Author | Licence | Source |\n|---|---|---|---|\n')
     for r in rows: fh.write(f"| `{r['file']}` | {r['author'].replace('|', '/')} | [{r['license']}]({r['license_url']}) | {r['source_page']} |\n")
 cp('data/toy/toy_corpus.csv', 'data_open/toy/toy_corpus.csv')
+# session 7: the exact Wikipedia-title samples used as short-text comparanda (CC BY-SA 4.0, Wikipedia contributors)
+for f in sorted(glob.glob(f'{SRC}/data_open/comparanda_short/*')):
+    cp(os.path.relpath(f, SRC))
+with open(f'{DST}/data_open/comparanda_short/README.md', 'w') as fh:
+    fh.write('# Short-text comparanda\n\n`wiki_titles_<lang>.txt`: 6,000 Wikipedia article titles per language (fi, ta, sa), one per line, words separated by spaces, in the order used by `scripts/emblem_tests2.py`. Sampled from the all-titles-in-ns0 dumps (dumps.wikimedia.org, fetched 29 October 2026). Content: Wikipedia contributors, CC BY-SA 4.0. The EDH Latin inscriptions are fetched by `scripts/fetch_data.sh` (CC BY-SA 4.0).\n')
 # session 6: exact Wikipedia page IDs for the comparanda (fetch_wiki.py --pages re-downloads them)
 for f in sorted(glob.glob(f'{SRC}/tools/repo_docs/comparanda_pages/*')):
     cp(os.path.relpath(f, SRC), f'data_open/comparanda_pages/{os.path.basename(f)}')

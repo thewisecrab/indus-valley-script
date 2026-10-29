@@ -1,0 +1,646 @@
+{
+ "scripts": {
+  "linear_elamite": {
+   "indus_all": {
+    "n_queries": 416,
+    "mean_best": 0.6627,
+    "N1_mean": 0.6334,
+    "N1_p": 0.000999000999000999,
+    "N2_mean": 0.6254,
+    "N2_p": 0.000999000999000999,
+    "advantage_N2": 0.0373,
+    "z_N2": 11.68
+   },
+   "indus_no_strokes": {
+    "n_queries": 398,
+    "mean_best": 0.6568,
+    "N1_mean": 0.6286,
+    "N1_p": 0.000999000999000999,
+    "N2_mean": 0.6203,
+    "N2_p": 0.000999000999000999,
+    "advantage_N2": 0.0364,
+    "z_N2": 12.05
+   },
+   "indus_W_font_renders": {
+    "n_queries": 631,
+    "mean_best": 0.6626,
+    "N1_mean": 0.6379,
+    "N1_p": 0.000999000999000999,
+    "N2_mean": 0.6352,
+    "N2_p": 0.000999000999000999,
+    "advantage_N2": 0.0275,
+    "z_N2": 9.86
+   },
+   "other_script_queries_advantage_N2": {
+    "egyptian": -0.0499,
+    "cuneiform": -0.1065,
+    "brahmi": -0.0135,
+    "linear_a": -0.0566,
+    "cypro_minoan": -0.041,
+    "linear_b": -0.0214,
+    "anatolian": -0.0689,
+    "phoenician": -0.1518,
+    "old_persian": -0.0736
+   },
+   "per_sign_advantage_M77_crops": {
+    "median": 0.0266,
+    "share_positive": 0.663,
+    "trimmed_mean_10pct": 0.0308,
+    "by_complexity_tercile": {
+     "simple": 0.0397,
+     "middle": 0.0282,
+     "complex": 0.0431
+    }
+   },
+   "indus_advantage_rank_among_query_sets": "1 of 10",
+   "complexity_T_median": {
+    "ink": 0.241,
+    "components": 1.0,
+    "holes": 2.0,
+    "ends": 2.0,
+    "junctions": 52.0,
+    "skeleton_len": 140.0,
+    "log_aspect": -0.095
+   }
+  },
+  "egyptian": {
+   "indus_all": {
+    "n_queries": 416,
+    "mean_best": 0.6453,
+    "N1_mean": 0.6757,
+    "N1_p": 1.0,
+    "N2_mean": 0.6381,
+    "N2_p": 0.02097902097902098,
+    "advantage_N2": 0.0073,
+    "z_N2": 1.99
+   },
+   "indus_no_strokes": {
+    "n_queries": 398,
+    "mean_best": 0.6387,
+    "N1_mean": 0.6705,
+    "N1_p": 1.0,
+    "N2_mean": 0.6342,
+    "N2_p": 0.11288711288711288,
+    "advantage_N2": 0.0045,
+    "z_N2": 1.25
+   },
+   "indus_W_font_renders": {
+    "n_queries": 631,
+    "mean_best": 0.644,
+    "N1_mean": 0.6821,
+    "N1_p": 1.0,
+    "N2_mean": 0.64,
+    "N2_p": 0.11688311688311688,
+    "advantage_N2": 0.004,
+    "z_N2": 1.18
+   },
+   "other_script_queries_advantage_N2": {
+    "linear_elamite": -0.0877,
+    "cuneiform": -0.1275,
+    "brahmi": 0.0283,
+    "linear_a": 0.0093,
+    "cypro_minoan": 0.0101,
+    "linear_b": -0.0,
+    "anatolian": -0.162,
+    "phoenician": 0.0019,
+    "old_persian": -0.0107
+   },
+   "per_sign_advantage_M77_crops": {
+    "median": 0.011,
+    "share_positive": 0.599,
+    "trimmed_mean_10pct": 0.0097,
+    "by_complexity_tercile": {
+     "simple": 0.0154,
+     "middle": 0.0115,
+     "complex": -0.0047
+    }
+   },
+   "indus_advantage_rank_among_query_sets": "4 of 10",
+   "complexity_T_median": {
+    "ink": 0.118,
+    "components": 1.0,
+    "holes": 6.0,
+    "ends": 1.0,
+    "junctions": 94.0,
+    "skeleton_len": 195.0,
+    "log_aspect": -0.023
+   }
+  },
+  "cuneiform": {
+   "indus_all": {
+    "n_queries": 416,
+    "mean_best": 0.612,
+    "N1_mean": 0.6847,
+    "N1_p": 1.0,
+    "N2_mean": 0.639,
+    "N2_p": 1.0,
+    "advantage_N2": -0.027,
+    "z_N2": -7.57
+   },
+   "indus_no_strokes": {
+    "n_queries": 398,
+    "mean_best": 0.6076,
+    "N1_mean": 0.6791,
+    "N1_p": 1.0,
+    "N2_mean": 0.6343,
+    "N2_p": 1.0,
+    "advantage_N2": -0.0267,
+    "z_N2": -7.75
+   },
+   "indus_W_font_renders": {
+    "n_queries": 631,
+    "mean_best": 0.6193,
+    "N1_mean": 0.6894,
+    "N1_p": 1.0,
+    "N2_mean": 0.6485,
+    "N2_p": 1.0,
+    "advantage_N2": -0.0292,
+    "z_N2": -9.13
+   },
+   "other_script_queries_advantage_N2": {
+    "linear_elamite": -0.0668,
+    "egyptian": -0.0693,
+    "brahmi": -0.1282,
+    "linear_a": -0.1656,
+    "cypro_minoan": -0.1775,
+    "linear_b": -0.1805,
+    "anatolian": -0.0891,
+    "phoenician": -0.0361,
+    "old_persian": -0.0942
+   },
+   "per_sign_advantage_M77_crops": {
+    "median": -0.0234,
+    "share_positive": 0.317,
+    "trimmed_mean_10pct": -0.0256,
+    "by_complexity_tercile": {
+     "simple": -0.0366,
+     "middle": -0.0241,
+     "complex": -0.0203
+    }
+   },
+   "indus_advantage_rank_among_query_sets": "1 of 10",
+   "complexity_T_median": {
+    "ink": 0.221,
+    "components": 1.0,
+    "holes": 5.0,
+    "ends": 5.0,
+    "junctions": 81.0,
+    "skeleton_len": 185.0,
+    "log_aspect": 0.318
+   }
+  },
+  "brahmi": {
+   "indus_all": {
+    "n_queries": 416,
+    "mean_best": 0.579,
+    "N1_mean": 0.5896,
+    "N1_p": 0.913086913086913,
+    "N2_mean": 0.5712,
+    "N2_p": 0.13186813186813187,
+    "advantage_N2": 0.0078,
+    "z_N2": 1.12
+   },
+   "indus_no_strokes": {
+    "n_queries": 398,
+    "mean_best": 0.5735,
+    "N1_mean": 0.5856,
+    "N1_p": 0.9430569430569431,
+    "N2_mean": 0.5675,
+    "N2_p": 0.18681318681318682,
+    "advantage_N2": 0.006,
+    "z_N2": 0.87
+   },
+   "indus_W_font_renders": {
+    "n_queries": 631,
+    "mean_best": 0.5824,
+    "N1_mean": 0.5942,
+    "N1_p": 0.951048951048951,
+    "N2_mean": 0.5751,
+    "N2_p": 0.15384615384615385,
+    "advantage_N2": 0.0073,
+    "z_N2": 0.98
+   },
+   "other_script_queries_advantage_N2": {
+    "linear_elamite": -0.0019,
+    "egyptian": 0.0354,
+    "cuneiform": -0.0084,
+    "linear_a": -0.0401,
+    "cypro_minoan": -0.0574,
+    "linear_b": -0.0333,
+    "anatolian": 0.0177,
+    "phoenician": -0.097,
+    "old_persian": -0.0382
+   },
+   "per_sign_advantage_M77_crops": {
+    "median": 0.0082,
+    "share_positive": 0.538,
+    "trimmed_mean_10pct": 0.0054,
+    "by_complexity_tercile": {
+     "simple": 0.0176,
+     "middle": -0.0011,
+     "complex": 0.0069
+    }
+   },
+   "indus_advantage_rank_among_query_sets": "3 of 10",
+   "complexity_T_median": {
+    "ink": 0.209,
+    "components": 1.0,
+    "holes": 0.0,
+    "ends": 2.5,
+    "junctions": 16.5,
+    "skeleton_len": 77.5,
+    "log_aspect": -0.334
+   }
+  },
+  "linear_a": {
+   "indus_all": {
+    "n_queries": 416,
+    "mean_best": 0.6221,
+    "N1_mean": 0.6373,
+    "N1_p": 0.998001998001998,
+    "N2_mean": 0.6383,
+    "N2_p": 0.999000999000999,
+    "advantage_N2": -0.0161,
+    "z_N2": -4.04
+   },
+   "indus_no_strokes": {
+    "n_queries": 398,
+    "mean_best": 0.6182,
+    "N1_mean": 0.6323,
+    "N1_p": 0.996003996003996,
+    "N2_mean": 0.6342,
+    "N2_p": 0.999000999000999,
+    "advantage_N2": -0.0159,
+    "z_N2": -4.04
+   },
+   "indus_W_font_renders": {
+    "n_queries": 631,
+    "mean_best": 0.6283,
+    "N1_mean": 0.6414,
+    "N1_p": 0.997002997002997,
+    "N2_mean": 0.6465,
+    "N2_p": 1.0,
+    "advantage_N2": -0.0182,
+    "z_N2": -5.78
+   },
+   "other_script_queries_advantage_N2": {
+    "linear_elamite": -0.0999,
+    "egyptian": 0.0055,
+    "cuneiform": -0.0999,
+    "brahmi": -0.0785,
+    "cypro_minoan": -0.1441,
+    "linear_b": -0.0848,
+    "anatolian": -0.0072,
+    "phoenician": -0.0695,
+    "old_persian": -0.1526
+   },
+   "per_sign_advantage_M77_crops": {
+    "median": -0.0133,
+    "share_positive": 0.399,
+    "trimmed_mean_10pct": -0.0137,
+    "by_complexity_tercile": {
+     "simple": -0.0055,
+     "middle": -0.0154,
+     "complex": -0.0262
+    }
+   },
+   "indus_advantage_rank_among_query_sets": "3 of 10",
+   "complexity_T_median": {
+    "ink": 0.244,
+    "components": 1.0,
+    "holes": 1.0,
+    "ends": 4.0,
+    "junctions": 38.0,
+    "skeleton_len": 130.0,
+    "log_aspect": -0.258
+   }
+  },
+  "cypro_minoan": {
+   "indus_all": {
+    "n_queries": 416,
+    "mean_best": 0.5773,
+    "N1_mean": 0.5923,
+    "N1_p": 0.971028971028971,
+    "N2_mean": 0.5857,
+    "N2_p": 0.9280719280719281,
+    "advantage_N2": -0.0084,
+    "z_N2": -1.49
+   },
+   "indus_no_strokes": {
+    "n_queries": 398,
+    "mean_best": 0.5722,
+    "N1_mean": 0.5882,
+    "N1_p": 0.981018981018981,
+    "N2_mean": 0.5802,
+    "N2_p": 0.9210789210789211,
+    "advantage_N2": -0.008,
+    "z_N2": -1.46
+   },
+   "indus_W_font_renders": {
+    "n_queries": 631,
+    "mean_best": 0.5864,
+    "N1_mean": 0.5964,
+    "N1_p": 0.9140859140859141,
+    "N2_mean": 0.5889,
+    "N2_p": 0.6593406593406593,
+    "advantage_N2": -0.0025,
+    "z_N2": -0.39
+   },
+   "other_script_queries_advantage_N2": {
+    "linear_elamite": -0.0832,
+    "egyptian": -0.0404,
+    "cuneiform": -0.0905,
+    "brahmi": -0.0544,
+    "linear_a": -0.0575,
+    "linear_b": -0.049,
+    "anatolian": -0.0248,
+    "phoenician": -0.035,
+    "old_persian": -0.0916
+   },
+   "per_sign_advantage_M77_crops": {
+    "median": -0.0128,
+    "share_positive": 0.411,
+    "trimmed_mean_10pct": -0.0096,
+    "by_complexity_tercile": {
+     "simple": -0.0169,
+     "middle": -0.0039,
+     "complex": -0.0049
+    }
+   },
+   "indus_advantage_rank_among_query_sets": "1 of 10",
+   "complexity_T_median": {
+    "ink": 0.206,
+    "components": 2.0,
+    "holes": 0.0,
+    "ends": 5.0,
+    "junctions": 20.0,
+    "skeleton_len": 104.0,
+    "log_aspect": -0.318
+   }
+  },
+  "linear_b": {
+   "indus_all": {
+    "n_queries": 416,
+    "mean_best": 0.6261,
+    "N1_mean": 0.6195,
+    "N1_p": 0.14385614385614387,
+    "N2_mean": 0.6136,
+    "N2_p": 0.011988011988011988,
+    "advantage_N2": 0.0125,
+    "z_N2": 2.36
+   },
+   "indus_no_strokes": {
+    "n_queries": 398,
+    "mean_best": 0.622,
+    "N1_mean": 0.6149,
+    "N1_p": 0.12687312687312688,
+    "N2_mean": 0.6094,
+    "N2_p": 0.008991008991008992,
+    "advantage_N2": 0.0126,
+    "z_N2": 2.42
+   },
+   "indus_W_font_renders": {
+    "n_queries": 631,
+    "mean_best": 0.6314,
+    "N1_mean": 0.6241,
+    "N1_p": 0.08091908091908091,
+    "N2_mean": 0.6205,
+    "N2_p": 0.013986013986013986,
+    "advantage_N2": 0.0109,
+    "z_N2": 2.24
+   },
+   "other_script_queries_advantage_N2": {
+    "linear_elamite": -0.0309,
+    "egyptian": 0.0041,
+    "cuneiform": -0.1232,
+    "brahmi": -0.0339,
+    "linear_a": -0.0631,
+    "cypro_minoan": -0.0789,
+    "anatolian": 0.0035,
+    "phoenician": -0.0075,
+    "old_persian": -0.1156
+   },
+   "per_sign_advantage_M77_crops": {
+    "median": 0.0109,
+    "share_positive": 0.611,
+    "trimmed_mean_10pct": 0.0128,
+    "by_complexity_tercile": {
+     "simple": 0.0182,
+     "middle": 0.0144,
+     "complex": 0.0057
+    }
+   },
+   "indus_advantage_rank_among_query_sets": "1 of 10",
+   "complexity_T_median": {
+    "ink": 0.217,
+    "components": 1.0,
+    "holes": 1.0,
+    "ends": 4.0,
+    "junctions": 33.0,
+    "skeleton_len": 128.0,
+    "log_aspect": -0.229
+   }
+  },
+  "anatolian": {
+   "indus_all": {
+    "n_queries": 416,
+    "mean_best": 0.6449,
+    "N1_mean": 0.6551,
+    "N1_p": 0.988011988011988,
+    "N2_mean": 0.6533,
+    "N2_p": 0.987012987012987,
+    "advantage_N2": -0.0084,
+    "z_N2": -2.22
+   },
+   "indus_no_strokes": {
+    "n_queries": 398,
+    "mean_best": 0.6395,
+    "N1_mean": 0.65,
+    "N1_p": 0.993006993006993,
+    "N2_mean": 0.6477,
+    "N2_p": 0.986013986013986,
+    "advantage_N2": -0.0082,
+    "z_N2": -2.14
+   },
+   "indus_W_font_renders": {
+    "n_queries": 631,
+    "mean_best": 0.6534,
+    "N1_mean": 0.659,
+    "N1_p": 0.9500499500499501,
+    "N2_mean": 0.6539,
+    "N2_p": 0.5734265734265734,
+    "advantage_N2": -0.0005,
+    "z_N2": -0.15
+   },
+   "other_script_queries_advantage_N2": {
+    "linear_elamite": -0.1057,
+    "egyptian": -0.0937,
+    "cuneiform": -0.1228,
+    "brahmi": -0.0316,
+    "linear_a": -0.0485,
+    "cypro_minoan": -0.0533,
+    "linear_b": -0.0524,
+    "phoenician": -0.0047,
+    "old_persian": -0.0439
+   },
+   "per_sign_advantage_M77_crops": {
+    "median": -0.0035,
+    "share_positive": 0.459,
+    "trimmed_mean_10pct": -0.0059,
+    "by_complexity_tercile": {
+     "simple": -0.0196,
+     "middle": -0.0008,
+     "complex": -0.0051
+    }
+   },
+   "indus_advantage_rank_among_query_sets": "2 of 10",
+   "complexity_T_median": {
+    "ink": 0.158,
+    "components": 1.0,
+    "holes": 2.0,
+    "ends": 1.0,
+    "junctions": 42.0,
+    "skeleton_len": 168.0,
+    "log_aspect": -0.095
+   }
+  },
+  "phoenician": {
+   "indus_all": {
+    "n_queries": 416,
+    "mean_best": 0.5225,
+    "N1_mean": 0.5269,
+    "N1_p": 0.6353646353646354,
+    "N2_mean": 0.518,
+    "N2_p": 0.3676323676323676,
+    "advantage_N2": 0.0045,
+    "z_N2": 0.36
+   },
+   "indus_no_strokes": {
+    "n_queries": 398,
+    "mean_best": 0.5197,
+    "N1_mean": 0.5239,
+    "N1_p": 0.6293706293706294,
+    "N2_mean": 0.5153,
+    "N2_p": 0.35264735264735264,
+    "advantage_N2": 0.0044,
+    "z_N2": 0.37
+   },
+   "indus_W_font_renders": {
+    "n_queries": 631,
+    "mean_best": 0.5272,
+    "N1_mean": 0.5316,
+    "N1_p": 0.6503496503496503,
+    "N2_mean": 0.5237,
+    "N2_p": 0.3886113886113886,
+    "advantage_N2": 0.0035,
+    "z_N2": 0.3
+   },
+   "other_script_queries_advantage_N2": {
+    "linear_elamite": -0.0403,
+    "egyptian": 0.0191,
+    "cuneiform": 0.0335,
+    "brahmi": -0.0414,
+    "linear_a": -0.0013,
+    "cypro_minoan": -0.0259,
+    "linear_b": 0.004,
+    "anatolian": 0.0057,
+    "old_persian": 0.0116
+   },
+   "per_sign_advantage_M77_crops": {
+    "median": 0.0114,
+    "share_positive": 0.577,
+    "trimmed_mean_10pct": 0.0065,
+    "by_complexity_tercile": {
+     "simple": -0.0027,
+     "middle": 0.0075,
+     "complex": 0.0118
+    }
+   },
+   "indus_advantage_rank_among_query_sets": "5 of 10",
+   "complexity_T_median": {
+    "ink": 0.225,
+    "components": 1.0,
+    "holes": 0.0,
+    "ends": 2.0,
+    "junctions": 24.0,
+    "skeleton_len": 85.5,
+    "log_aspect": -0.303
+   }
+  },
+  "old_persian": {
+   "indus_all": {
+    "n_queries": 416,
+    "mean_best": 0.5049,
+    "N1_mean": 0.559,
+    "N1_p": 1.0,
+    "N2_mean": 0.5297,
+    "N2_p": 0.999000999000999,
+    "advantage_N2": -0.0249,
+    "z_N2": -3.37
+   },
+   "indus_no_strokes": {
+    "n_queries": 398,
+    "mean_best": 0.5027,
+    "N1_mean": 0.5555,
+    "N1_p": 1.0,
+    "N2_mean": 0.5256,
+    "N2_p": 0.999000999000999,
+    "advantage_N2": -0.0229,
+    "z_N2": -3.21
+   },
+   "indus_W_font_renders": {
+    "n_queries": 631,
+    "mean_best": 0.5083,
+    "N1_mean": 0.5638,
+    "N1_p": 1.0,
+    "N2_mean": 0.5365,
+    "N2_p": 0.999000999000999,
+    "advantage_N2": -0.0283,
+    "z_N2": -3.88
+   },
+   "other_script_queries_advantage_N2": {
+    "linear_elamite": -0.0342,
+    "egyptian": -0.0447,
+    "cuneiform": -0.0266,
+    "brahmi": -0.0611,
+    "linear_a": -0.0607,
+    "cypro_minoan": -0.1061,
+    "linear_b": -0.0547,
+    "anatolian": -0.0269,
+    "phoenician": -0.0507
+   },
+   "per_sign_advantage_M77_crops": {
+    "median": -0.0213,
+    "share_positive": 0.353,
+    "trimmed_mean_10pct": -0.0227,
+    "by_complexity_tercile": {
+     "simple": -0.0304,
+     "middle": -0.0212,
+     "complex": -0.0204
+    }
+   },
+   "indus_advantage_rank_among_query_sets": "1 of 10",
+   "complexity_T_median": {
+    "ink": 0.238,
+    "components": 4.0,
+    "holes": 0.0,
+    "ends": 8.0,
+    "junctions": 28.0,
+    "skeleton_len": 111.0,
+    "log_aspect": 0.023
+   }
+  }
+ },
+ "indus_complexity_median": {
+  "ink": 0.183,
+  "components": 1.0,
+  "holes": 1.0,
+  "ends": 4.0,
+  "junctions": 44.0,
+  "skeleton_len": 133.0,
+  "log_aspect": -0.288
+ },
+ "n_draws": 1000,
+ "k_nearest": 10,
+ "label": "visual resemblance only; no reading or historical link implied"
+}

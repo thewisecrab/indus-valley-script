@@ -498,9 +498,9 @@
   "bigrams_total": 91,
   "bigrams_attested_in_indus": 32,
   "attested_share": 0.352,
-  "null_attested_share_mean": 0.793,
-  "null_2_5pct": 0.681,
-  "null_97_5pct": 0.901,
+  "null_attested_share_mean": 0.796,
+  "null_2_5pct": 0.687,
+  "null_97_5pct": 0.885,
   "signs_unattested_in_indus": [
    "340"
   ],

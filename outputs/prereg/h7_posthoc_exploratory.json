@@ -1,0 +1,87 @@
+{
+ "label": "EXPLORATORY post-hoc analysis; the pre-registered H7 verdict (partially replicated) is unchanged",
+ "descriptive": {
+  "ICIT region: Lower Indus": {
+   "n_relevant": 94,
+   "mean_len": 6.87,
+   "texts_with_adjacency": 63,
+   "share_with_adjacency": 0.67
+  },
+  "ICIT region: Inter-Riverine": {
+   "n_relevant": 46,
+   "mean_len": 5.39,
+   "texts_with_adjacency": 29,
+   "share_with_adjacency": 0.63
+  },
+  "ICIT region: Gujarat/Kutch": {
+   "n_relevant": 11,
+   "mean_len": 6.91,
+   "texts_with_adjacency": 7,
+   "share_with_adjacency": 0.636
+  },
+  "ICIT region: Eastern Headwaters + Upper Indus": {
+   "n_relevant": 4,
+   "mean_len": 3.5,
+   "texts_with_adjacency": 4,
+   "share_with_adjacency": 1.0
+  },
+  "ICIT region: West/foreign (Persian Gulf, Mesopotamia, Iranian Plateau, Central Asia)": {
+   "n_relevant": 5,
+   "mean_len": 7.0,
+   "texts_with_adjacency": 2,
+   "share_with_adjacency": 0.4
+  },
+  "ICIT object: SEAL": {
+   "n_relevant": 128,
+   "mean_len": 6.8,
+   "texts_with_adjacency": 86,
+   "share_with_adjacency": 0.672
+  },
+  "ICIT object: TAB (tablets)": {
+   "n_relevant": 21,
+   "mean_len": 4.57,
+   "texts_with_adjacency": 11,
+   "share_with_adjacency": 0.524
+  },
+  "ICIT object: POT (pottery)": {
+   "n_relevant": 5,
+   "mean_len": 2.4,
+   "texts_with_adjacency": 4,
+   "share_with_adjacency": 0.8
+  },
+  "ICIT object: other (TAG, MISC, BNGL, ROD, IMPL, BEAD)": {
+   "n_relevant": 9,
+   "mean_len": 5.78,
+   "texts_with_adjacency": 7,
+   "share_with_adjacency": 0.778
+  }
+ },
+ "ICIT object: POT (pottery)": {
+  "n_relevant": 5,
+  "comparison": "other ICIT object-type splits pooled (SEAL, TAB, other), texts not in this split",
+  "n_comparison": 155,
+  "power_same_n": 0.48,
+  "power_same_lengths": 0.463,
+  "share_adjacency_split": 0.8,
+  "share_adjacency_rest": 0.652,
+  "fisher_OR": 2.139,
+  "fisher_p": 0.6607,
+  "mean_excess_split": 0.362,
+  "mean_excess_rest": 0.407,
+  "excess_diff_p_two_sided": 0.8522295540891822
+ },
+ "ICIT region: West/foreign (Persian Gulf, Mesopotamia, Iranian Plateau, Central Asia)": {
+  "n_relevant": 5,
+  "comparison": "other ICIT object-type splits pooled (SEAL, TAB, other), texts not in this split",
+  "n_comparison": 155,
+  "power_same_n": 0.497,
+  "power_same_lengths": 0.47,
+  "share_adjacency_split": 0.4,
+  "share_adjacency_rest": 0.665,
+  "fisher_OR": 0.337,
+  "fisher_p": 0.3402,
+  "mean_excess_split": 0.183,
+  "mean_excess_rest": 0.413,
+  "excess_diff_p_two_sided": 0.2803439312137572
+ }
+}
