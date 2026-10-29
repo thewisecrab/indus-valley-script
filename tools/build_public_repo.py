@@ -129,7 +129,10 @@ open(f'{DST}/paper/manuscript_public.md', 'w').write(md)
 
 # docs, licences, fetch + check scripts
 D = f'{SRC}/tools/repo_docs'
-for f in ['README.md', 'LICENSE', 'LICENSE-SCOPE.md', 'LICENSE-CC-BY-4.0.txt', 'CITATION.cff', 'DATA_POLICY.md', 'REPRODUCIBILITY.md', 'requirements.txt', '.gitignore']:
+os.makedirs(f'{DST}/.github', exist_ok=True)
+shutil.copy2(f'{D}/README.md', f'{DST}/.github/README.md')  # GitHub renders .github/README.md first
+shutil.copy2(f'{D}/README_root_remote.md', f'{DST}/README.md')  # byte-identical to the remote's initial README (clean merge)
+for f in ['LICENSE', 'LICENSE-SCOPE.md', 'LICENSE-CC-BY-4.0.txt', 'CITATION.cff', 'DATA_POLICY.md', 'REPRODUCIBILITY.md', 'requirements.txt', '.gitignore']:
     shutil.copy2(f'{D}/{f}', f'{DST}/{f}')
 shutil.copy2(f'{D}/data_open_README.md', f'{DST}/data_open/README.md')
 shutil.copy2(f'{D}/fetch_data.sh', f'{DST}/scripts/fetch_data.sh')
