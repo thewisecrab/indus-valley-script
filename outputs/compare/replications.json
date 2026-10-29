@@ -1,0 +1,362 @@
+{
+ "corpus_sizes": {
+  "M77_single_line_undamaged": 2861,
+  "EBUDS_like_dedup": 1849,
+  "EBUDS_published": 1548,
+  "ICIT_lipi_undamaged_lines": 3755,
+  "ICIT_lipi_dedup": 2273
+ },
+ "yadav_published": {
+  "perplexity": {
+   "1": 68.82,
+   "2": 26.69,
+   "3": 26.09,
+   "4": 25.26,
+   "5": 25.26
+  },
+  "sensitivity90": 0.74
+ },
+ "perplexity": {
+  "M77_EBUDS_like_dedup": {
+   "1": {
+    "cross_entropy_bits": 6.226,
+    "perplexity": 74.84
+   },
+   "2": {
+    "cross_entropy_bits": 4.969,
+    "perplexity": 31.33
+   },
+   "3": {
+    "cross_entropy_bits": 5.034,
+    "perplexity": 32.75
+   },
+   "4": {
+    "cross_entropy_bits": 5.268,
+    "perplexity": 38.54
+   },
+   "5": {
+    "cross_entropy_bits": 5.507,
+    "perplexity": 45.47
+   }
+  },
+  "M77_with_duplicates": {
+   "1": {
+    "cross_entropy_bits": 6.061,
+    "perplexity": 66.76
+   },
+   "2": {
+    "cross_entropy_bits": 4.412,
+    "perplexity": 21.29
+   },
+   "3": {
+    "cross_entropy_bits": 4.22,
+    "perplexity": 18.63
+   },
+   "4": {
+    "cross_entropy_bits": 4.322,
+    "perplexity": 20.01
+   },
+   "5": {
+    "cross_entropy_bits": 4.476,
+    "perplexity": 22.25
+   }
+  },
+  "ICIT_dedup": {
+   "1": {
+    "cross_entropy_bits": 6.49,
+    "perplexity": 89.9
+   },
+   "2": {
+    "cross_entropy_bits": 5.394,
+    "perplexity": 42.04
+   },
+   "3": {
+    "cross_entropy_bits": 5.481,
+    "perplexity": 44.66
+   },
+   "4": {
+    "cross_entropy_bits": 5.719,
+    "perplexity": 52.67
+   },
+   "5": {
+    "cross_entropy_bits": 5.965,
+    "perplexity": 62.48
+   }
+  },
+  "M77_dedup_within_shuffled": {
+   "1": {
+    "cross_entropy_bits": 6.226,
+    "perplexity": 74.84
+   },
+   "2": {
+    "cross_entropy_bits": 6.318,
+    "perplexity": 79.81
+   },
+   "3": {
+    "cross_entropy_bits": 6.639,
+    "perplexity": 99.64
+   },
+   "4": {
+    "cross_entropy_bits": 6.862,
+    "perplexity": 116.31
+   },
+   "5": {
+    "cross_entropy_bits": 7.078,
+    "perplexity": 135.14
+   }
+  }
+ },
+ "restoration": {
+  "M77_EBUDS_like_dedup": {
+   "unigram": {
+    "top1": 0.116,
+    "top5": 0.25,
+    "sensitivity90": 0.878,
+    "mean_set90": 120.4,
+    "n": 1761
+   },
+   "position_unigram": {
+    "top1": 0.161,
+    "top5": 0.328,
+    "sensitivity90": 0.861,
+    "mean_set90": 96.3,
+    "n": 1761
+   },
+   "WB2": {
+    "top1": 0.344,
+    "top5": 0.593,
+    "sensitivity90": 0.812,
+    "mean_set90": 37.1,
+    "n": 1761
+   },
+   "WB3": {
+    "top1": 0.357,
+    "top5": 0.589,
+    "sensitivity90": 0.738,
+    "mean_set90": 23.5,
+    "n": 1761
+   }
+  },
+  "M77_with_duplicates": {
+   "unigram": {
+    "top1": 0.119,
+    "top5": 0.255,
+    "sensitivity90": 0.898,
+    "mean_set90": 111.6,
+    "n": 2671
+   },
+   "position_unigram": {
+    "top1": 0.141,
+    "top5": 0.364,
+    "sensitivity90": 0.89,
+    "mean_set90": 82.7,
+    "n": 2671
+   },
+   "WB2": {
+    "top1": 0.465,
+    "top5": 0.721,
+    "sensitivity90": 0.876,
+    "mean_set90": 24.6,
+    "n": 2671
+   },
+   "WB3": {
+    "top1": 0.551,
+    "top5": 0.754,
+    "sensitivity90": 0.818,
+    "mean_set90": 14.0,
+    "n": 2671
+   }
+  },
+  "ICIT_dedup": {
+   "unigram": {
+    "top1": 0.101,
+    "top5": 0.2,
+    "sensitivity90": 0.875,
+    "mean_set90": 185.6,
+    "n": 2159
+   },
+   "position_unigram": {
+    "top1": 0.108,
+    "top5": 0.265,
+    "sensitivity90": 0.861,
+    "mean_set90": 142.9,
+    "n": 2159
+   },
+   "WB2": {
+    "top1": 0.285,
+    "top5": 0.514,
+    "sensitivity90": 0.792,
+    "mean_set90": 60.8,
+    "n": 2159
+   },
+   "WB3": {
+    "top1": 0.299,
+    "top5": 0.511,
+    "sensitivity90": 0.697,
+    "mean_set90": 39.7,
+    "n": 2159
+   }
+  }
+ },
+ "nair_published": {
+  "n_texts": 1916,
+  "signs": 584,
+  "tokens": 11110,
+  "zipf_slope": -1.49,
+  "zipf_R2": 0.96,
+  "hcond_bits": 3.232
+ },
+ "nair_replication": {
+  "ICIT_lipi_dedup_undamaged": {
+   "n_texts": 2273,
+   "signs": 664,
+   "tokens": 9662,
+   "zipf_slope": -1.395,
+   "zipf_R2": 0.964,
+   "hcond": {
+    "obs": 3.433,
+    "null_mean": 4.616,
+    "null_sd": 0.015,
+    "p": 0.000999000999000999
+   }
+  },
+  "ICIT_lipi_dedup_all_segments": {
+   "n_texts": 3225,
+   "signs": 712,
+   "tokens": 12377,
+   "zipf_slope": -1.442,
+   "zipf_R2": 0.963,
+   "hcond": {
+    "obs": 3.604,
+    "null_mean": 4.774,
+    "null_sd": 0.015,
+    "p": 0.000999000999000999
+   }
+  },
+  "M77_EBUDS_like_dedup": {
+   "n_texts": 1849,
+   "signs": 398,
+   "tokens": 8313,
+   "zipf_slope": -1.522,
+   "zipf_R2": 0.925,
+   "hcond": {
+    "obs": 3.346,
+    "null_mean": 4.663,
+    "null_sd": 0.015,
+    "p": 0.000999000999000999
+   }
+  }
+ },
+ "fuls_style": {
+  "n_signs": 124,
+  "crosstab": {
+   "early-medial": {
+    "BOUND-COLLOCATE": 3,
+    "INITIAL": 10,
+    "MEDIAL/UNSPECIFIED": 26,
+    "NUMERAL-STROKE": 6,
+    "PRE-TERMINAL": 1,
+    "TERMINAL": 0
+   },
+   "initial": {
+    "BOUND-COLLOCATE": 0,
+    "INITIAL": 3,
+    "MEDIAL/UNSPECIFIED": 0,
+    "NUMERAL-STROKE": 0,
+    "PRE-TERMINAL": 0,
+    "TERMINAL": 0
+   },
+   "late-medial": {
+    "BOUND-COLLOCATE": 1,
+    "INITIAL": 0,
+    "MEDIAL/UNSPECIFIED": 6,
+    "NUMERAL-STROKE": 0,
+    "PRE-TERMINAL": 9,
+    "TERMINAL": 3
+   },
+   "mid-medial": {
+    "BOUND-COLLOCATE": 2,
+    "INITIAL": 1,
+    "MEDIAL/UNSPECIFIED": 25,
+    "NUMERAL-STROKE": 9,
+    "PRE-TERMINAL": 7,
+    "TERMINAL": 1
+   },
+   "terminal": {
+    "BOUND-COLLOCATE": 0,
+    "INITIAL": 0,
+    "MEDIAL/UNSPECIFIED": 0,
+    "NUMERAL-STROKE": 0,
+    "PRE-TERMINAL": 0,
+    "TERMINAL": 11
+   }
+  },
+  "our_INITIAL_mapped_initial_or_early": 0.9285714285714286,
+  "our_TERMINAL_mapped_terminal": 0.7333333333333333,
+  "our_PRETERMINAL_mapped_late": 0.5294117647058824
+ },
+ "sigil_like": {
+  "n_texts": 1808,
+  "signs": 356,
+  "zipf_slope": -1.179,
+  "zipf_R2": 0.861,
+  "hcond": {
+   "obs": 3.541,
+   "null_mean": 4.508,
+   "null_sd": 0.013,
+   "p": 0.0033222591362126247
+  },
+  "perplexity": {
+   "1": {
+    "cross_entropy_bits": 6.705,
+    "perplexity": 104.31
+   },
+   "2": {
+    "cross_entropy_bits": 5.176,
+    "perplexity": 36.14
+   },
+   "3": {
+    "cross_entropy_bits": 5.43,
+    "perplexity": 43.12
+   },
+   "4": {
+    "cross_entropy_bits": 5.683,
+    "perplexity": 51.37
+   },
+   "5": {
+    "cross_entropy_bits": 5.92,
+    "perplexity": 60.56
+   }
+  },
+  "restoration": {
+   "unigram": {
+    "top1": 0.041,
+    "top5": 0.163,
+    "sensitivity90": 0.884,
+    "mean_set90": 181.6,
+    "n": 1753
+   },
+   "position_unigram": {
+    "top1": 0.096,
+    "top5": 0.27,
+    "sensitivity90": 0.863,
+    "mean_set90": 109.0,
+    "n": 1753
+   },
+   "WB2": {
+    "top1": 0.219,
+    "top5": 0.461,
+    "sensitivity90": 0.736,
+    "mean_set90": 33.0,
+    "n": 1753
+   },
+   "WB3": {
+    "top1": 0.187,
+    "top5": 0.432,
+    "sensitivity90": 0.627,
+    "mean_set90": 23.3,
+    "n": 1753
+   }
+  }
+ }
+}

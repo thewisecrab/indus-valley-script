@@ -1,0 +1,41 @@
+{
+ "p": {
+  "top1": 0.847457627118644,
+  "top5": 0.940677966101695,
+  "n": 118
+ },
+ "p_dist": {
+  "top1": 0.6610169491525424,
+  "top5": 0.8305084745762712,
+  "n": 118
+ },
+ "p_vis": {
+  "top1": 0.4915254237288136,
+  "top5": 0.7288135593220338,
+  "n": 118
+ },
+ "hungarian_combined": {
+  "acc": 0.8559322033898306,
+  "n": 118
+ },
+ "mean_candidates": 398.6101694915254,
+ "chance_top1": 0.002508716727612892,
+ "global_hungarian_agreement_with_carlson": {
+  "agree": 0.7354085603112841,
+  "n": 257
+ },
+ "cv_rank_distribution": {
+  "r1": 0.847457627118644,
+  "r<=5": 0.940677966101695,
+  "r<=20": 0.9661016949152542,
+  "median": 1.0
+ },
+ "n_links": 566,
+ "n_anchors": 118,
+ "label_counts": {
+  "unsupported by distribution/visual evidence (check)": 281,
+  "strong: hand match = top candidate (other hand-matched variants of the same M excluded)": 198,
+  "supported: hand match in top 5": 54,
+  "weak support": 33
+ }
+}

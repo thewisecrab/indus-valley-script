@@ -1,0 +1,645 @@
+{
+ "category_tests": {
+  "egyptian": {
+   "n": 153,
+   "MI_bits": 0.6633,
+   "null_mean": 0.5533,
+   "p": 0.0197980201979802,
+   "crosstab": {
+    "BOUND-COLLOCATE": {
+     "Gardiner_?": 0,
+     "Gardiner_A": 0,
+     "Gardiner_AA": 1,
+     "Gardiner_B": 0,
+     "Gardiner_D": 1,
+     "Gardiner_E": 1,
+     "Gardiner_F": 0,
+     "Gardiner_G": 0,
+     "Gardiner_K": 0,
+     "Gardiner_L": 0,
+     "Gardiner_M": 1,
+     "Gardiner_N": 0,
+     "Gardiner_NL": 0,
+     "Gardiner_O": 1,
+     "Gardiner_Q": 0,
+     "Gardiner_R": 0,
+     "Gardiner_S": 2,
+     "Gardiner_T": 1,
+     "Gardiner_U": 0,
+     "Gardiner_V": 1,
+     "Gardiner_W": 0,
+     "Gardiner_X": 0,
+     "Gardiner_Y": 0,
+     "Gardiner_Z": 0
+    },
+    "INITIAL": {
+     "Gardiner_?": 1,
+     "Gardiner_A": 0,
+     "Gardiner_AA": 0,
+     "Gardiner_B": 0,
+     "Gardiner_D": 2,
+     "Gardiner_E": 0,
+     "Gardiner_F": 3,
+     "Gardiner_G": 0,
+     "Gardiner_K": 1,
+     "Gardiner_L": 0,
+     "Gardiner_M": 4,
+     "Gardiner_N": 1,
+     "Gardiner_NL": 1,
+     "Gardiner_O": 1,
+     "Gardiner_Q": 0,
+     "Gardiner_R": 1,
+     "Gardiner_S": 0,
+     "Gardiner_T": 0,
+     "Gardiner_U": 1,
+     "Gardiner_V": 1,
+     "Gardiner_W": 1,
+     "Gardiner_X": 2,
+     "Gardiner_Y": 0,
+     "Gardiner_Z": 0
+    },
+    "MEDIAL/UNSPECIFIED": {
+     "Gardiner_?": 0,
+     "Gardiner_A": 4,
+     "Gardiner_AA": 0,
+     "Gardiner_B": 2,
+     "Gardiner_D": 11,
+     "Gardiner_E": 0,
+     "Gardiner_F": 2,
+     "Gardiner_G": 1,
+     "Gardiner_K": 1,
+     "Gardiner_L": 1,
+     "Gardiner_M": 11,
+     "Gardiner_N": 1,
+     "Gardiner_NL": 0,
+     "Gardiner_O": 5,
+     "Gardiner_Q": 1,
+     "Gardiner_R": 2,
+     "Gardiner_S": 5,
+     "Gardiner_T": 3,
+     "Gardiner_U": 0,
+     "Gardiner_V": 8,
+     "Gardiner_W": 1,
+     "Gardiner_X": 4,
+     "Gardiner_Y": 1,
+     "Gardiner_Z": 4
+    },
+    "NUMERAL-STROKE": {
+     "Gardiner_?": 0,
+     "Gardiner_A": 0,
+     "Gardiner_AA": 0,
+     "Gardiner_B": 0,
+     "Gardiner_D": 0,
+     "Gardiner_E": 0,
+     "Gardiner_F": 0,
+     "Gardiner_G": 0,
+     "Gardiner_K": 0,
+     "Gardiner_L": 0,
+     "Gardiner_M": 2,
+     "Gardiner_N": 0,
+     "Gardiner_NL": 0,
+     "Gardiner_O": 3,
+     "Gardiner_Q": 0,
+     "Gardiner_R": 0,
+     "Gardiner_S": 1,
+     "Gardiner_T": 0,
+     "Gardiner_U": 1,
+     "Gardiner_V": 0,
+     "Gardiner_W": 0,
+     "Gardiner_X": 0,
+     "Gardiner_Y": 0,
+     "Gardiner_Z": 11
+    },
+    "PRE-TERMINAL": {
+     "Gardiner_?": 0,
+     "Gardiner_A": 1,
+     "Gardiner_AA": 1,
+     "Gardiner_B": 0,
+     "Gardiner_D": 3,
+     "Gardiner_E": 2,
+     "Gardiner_F": 0,
+     "Gardiner_G": 1,
+     "Gardiner_K": 0,
+     "Gardiner_L": 0,
+     "Gardiner_M": 1,
+     "Gardiner_N": 0,
+     "Gardiner_NL": 0,
+     "Gardiner_O": 2,
+     "Gardiner_Q": 0,
+     "Gardiner_R": 1,
+     "Gardiner_S": 1,
+     "Gardiner_T": 0,
+     "Gardiner_U": 0,
+     "Gardiner_V": 1,
+     "Gardiner_W": 0,
+     "Gardiner_X": 2,
+     "Gardiner_Y": 0,
+     "Gardiner_Z": 4
+    },
+    "STAND-ALONE": {
+     "Gardiner_?": 0,
+     "Gardiner_A": 0,
+     "Gardiner_AA": 0,
+     "Gardiner_B": 0,
+     "Gardiner_D": 0,
+     "Gardiner_E": 0,
+     "Gardiner_F": 0,
+     "Gardiner_G": 0,
+     "Gardiner_K": 0,
+     "Gardiner_L": 0,
+     "Gardiner_M": 1,
+     "Gardiner_N": 0,
+     "Gardiner_NL": 0,
+     "Gardiner_O": 1,
+     "Gardiner_Q": 0,
+     "Gardiner_R": 0,
+     "Gardiner_S": 0,
+     "Gardiner_T": 0,
+     "Gardiner_U": 0,
+     "Gardiner_V": 0,
+     "Gardiner_W": 0,
+     "Gardiner_X": 0,
+     "Gardiner_Y": 0,
+     "Gardiner_Z": 0
+    },
+    "TERMINAL": {
+     "Gardiner_?": 0,
+     "Gardiner_A": 2,
+     "Gardiner_AA": 0,
+     "Gardiner_B": 0,
+     "Gardiner_D": 3,
+     "Gardiner_E": 0,
+     "Gardiner_F": 1,
+     "Gardiner_G": 0,
+     "Gardiner_K": 0,
+     "Gardiner_L": 0,
+     "Gardiner_M": 3,
+     "Gardiner_N": 0,
+     "Gardiner_NL": 0,
+     "Gardiner_O": 2,
+     "Gardiner_Q": 0,
+     "Gardiner_R": 1,
+     "Gardiner_S": 0,
+     "Gardiner_T": 0,
+     "Gardiner_U": 1,
+     "Gardiner_V": 0,
+     "Gardiner_W": 2,
+     "Gardiner_X": 0,
+     "Gardiner_Y": 0,
+     "Gardiner_Z": 1
+    }
+   }
+  },
+  "egyptian_no_strokes": {
+   "n": 135,
+   "MI_bits": 0.5134,
+   "null_mean": 0.5247,
+   "p": 0.5717428257174283,
+   "crosstab": {
+    "BOUND-COLLOCATE": {
+     "Gardiner_?": 0,
+     "Gardiner_A": 0,
+     "Gardiner_AA": 1,
+     "Gardiner_B": 0,
+     "Gardiner_D": 1,
+     "Gardiner_E": 1,
+     "Gardiner_F": 0,
+     "Gardiner_G": 0,
+     "Gardiner_K": 0,
+     "Gardiner_L": 0,
+     "Gardiner_M": 1,
+     "Gardiner_N": 0,
+     "Gardiner_NL": 0,
+     "Gardiner_O": 1,
+     "Gardiner_Q": 0,
+     "Gardiner_R": 0,
+     "Gardiner_S": 2,
+     "Gardiner_T": 1,
+     "Gardiner_U": 0,
+     "Gardiner_V": 1,
+     "Gardiner_W": 0,
+     "Gardiner_X": 0,
+     "Gardiner_Y": 0,
+     "Gardiner_Z": 0
+    },
+    "INITIAL": {
+     "Gardiner_?": 1,
+     "Gardiner_A": 0,
+     "Gardiner_AA": 0,
+     "Gardiner_B": 0,
+     "Gardiner_D": 2,
+     "Gardiner_E": 0,
+     "Gardiner_F": 3,
+     "Gardiner_G": 0,
+     "Gardiner_K": 1,
+     "Gardiner_L": 0,
+     "Gardiner_M": 4,
+     "Gardiner_N": 1,
+     "Gardiner_NL": 1,
+     "Gardiner_O": 1,
+     "Gardiner_Q": 0,
+     "Gardiner_R": 1,
+     "Gardiner_S": 0,
+     "Gardiner_T": 0,
+     "Gardiner_U": 1,
+     "Gardiner_V": 1,
+     "Gardiner_W": 1,
+     "Gardiner_X": 2,
+     "Gardiner_Y": 0,
+     "Gardiner_Z": 0
+    },
+    "MEDIAL/UNSPECIFIED": {
+     "Gardiner_?": 0,
+     "Gardiner_A": 4,
+     "Gardiner_AA": 0,
+     "Gardiner_B": 2,
+     "Gardiner_D": 11,
+     "Gardiner_E": 0,
+     "Gardiner_F": 2,
+     "Gardiner_G": 1,
+     "Gardiner_K": 1,
+     "Gardiner_L": 1,
+     "Gardiner_M": 11,
+     "Gardiner_N": 1,
+     "Gardiner_NL": 0,
+     "Gardiner_O": 5,
+     "Gardiner_Q": 1,
+     "Gardiner_R": 2,
+     "Gardiner_S": 5,
+     "Gardiner_T": 3,
+     "Gardiner_U": 0,
+     "Gardiner_V": 8,
+     "Gardiner_W": 1,
+     "Gardiner_X": 4,
+     "Gardiner_Y": 1,
+     "Gardiner_Z": 4
+    },
+    "PRE-TERMINAL": {
+     "Gardiner_?": 0,
+     "Gardiner_A": 1,
+     "Gardiner_AA": 1,
+     "Gardiner_B": 0,
+     "Gardiner_D": 3,
+     "Gardiner_E": 2,
+     "Gardiner_F": 0,
+     "Gardiner_G": 1,
+     "Gardiner_K": 0,
+     "Gardiner_L": 0,
+     "Gardiner_M": 1,
+     "Gardiner_N": 0,
+     "Gardiner_NL": 0,
+     "Gardiner_O": 2,
+     "Gardiner_Q": 0,
+     "Gardiner_R": 1,
+     "Gardiner_S": 1,
+     "Gardiner_T": 0,
+     "Gardiner_U": 0,
+     "Gardiner_V": 1,
+     "Gardiner_W": 0,
+     "Gardiner_X": 2,
+     "Gardiner_Y": 0,
+     "Gardiner_Z": 4
+    },
+    "STAND-ALONE": {
+     "Gardiner_?": 0,
+     "Gardiner_A": 0,
+     "Gardiner_AA": 0,
+     "Gardiner_B": 0,
+     "Gardiner_D": 0,
+     "Gardiner_E": 0,
+     "Gardiner_F": 0,
+     "Gardiner_G": 0,
+     "Gardiner_K": 0,
+     "Gardiner_L": 0,
+     "Gardiner_M": 1,
+     "Gardiner_N": 0,
+     "Gardiner_NL": 0,
+     "Gardiner_O": 1,
+     "Gardiner_Q": 0,
+     "Gardiner_R": 0,
+     "Gardiner_S": 0,
+     "Gardiner_T": 0,
+     "Gardiner_U": 0,
+     "Gardiner_V": 0,
+     "Gardiner_W": 0,
+     "Gardiner_X": 0,
+     "Gardiner_Y": 0,
+     "Gardiner_Z": 0
+    },
+    "TERMINAL": {
+     "Gardiner_?": 0,
+     "Gardiner_A": 2,
+     "Gardiner_AA": 0,
+     "Gardiner_B": 0,
+     "Gardiner_D": 3,
+     "Gardiner_E": 0,
+     "Gardiner_F": 1,
+     "Gardiner_G": 0,
+     "Gardiner_K": 0,
+     "Gardiner_L": 0,
+     "Gardiner_M": 3,
+     "Gardiner_N": 0,
+     "Gardiner_NL": 0,
+     "Gardiner_O": 2,
+     "Gardiner_Q": 0,
+     "Gardiner_R": 1,
+     "Gardiner_S": 0,
+     "Gardiner_T": 0,
+     "Gardiner_U": 1,
+     "Gardiner_V": 0,
+     "Gardiner_W": 2,
+     "Gardiner_X": 0,
+     "Gardiner_Y": 0,
+     "Gardiner_Z": 1
+    }
+   }
+  },
+  "brahmi": {
+   "n": 153,
+   "MI_bits": 0.0929,
+   "null_mean": 0.0938,
+   "p": 0.47295270472952705,
+   "crosstab": {
+    "BOUND-COLLOCATE": {
+     "consonant": 6,
+     "numeral": 1,
+     "other": 0,
+     "vowel": 2
+    },
+    "INITIAL": {
+     "consonant": 8,
+     "numeral": 4,
+     "other": 4,
+     "vowel": 4
+    },
+    "MEDIAL/UNSPECIFIED": {
+     "consonant": 31,
+     "numeral": 13,
+     "other": 9,
+     "vowel": 15
+    },
+    "NUMERAL-STROKE": {
+     "consonant": 7,
+     "numeral": 3,
+     "other": 4,
+     "vowel": 4
+    },
+    "PRE-TERMINAL": {
+     "consonant": 10,
+     "numeral": 8,
+     "other": 0,
+     "vowel": 2
+    },
+    "STAND-ALONE": {
+     "consonant": 1,
+     "numeral": 1,
+     "other": 0,
+     "vowel": 0
+    },
+    "TERMINAL": {
+     "consonant": 9,
+     "numeral": 3,
+     "other": 3,
+     "vowel": 1
+    }
+   }
+  },
+  "brahmi_no_strokes": {
+   "n": 135,
+   "MI_bits": 0.0956,
+   "null_mean": 0.0878,
+   "p": 0.3594640535946405,
+   "crosstab": {
+    "BOUND-COLLOCATE": {
+     "consonant": 6,
+     "numeral": 1,
+     "other": 0,
+     "vowel": 2
+    },
+    "INITIAL": {
+     "consonant": 8,
+     "numeral": 4,
+     "other": 4,
+     "vowel": 4
+    },
+    "MEDIAL/UNSPECIFIED": {
+     "consonant": 31,
+     "numeral": 13,
+     "other": 9,
+     "vowel": 15
+    },
+    "PRE-TERMINAL": {
+     "consonant": 10,
+     "numeral": 8,
+     "other": 0,
+     "vowel": 2
+    },
+    "STAND-ALONE": {
+     "consonant": 1,
+     "numeral": 1,
+     "other": 0,
+     "vowel": 0
+    },
+    "TERMINAL": {
+     "consonant": 9,
+     "numeral": 3,
+     "other": 3,
+     "vowel": 1
+    }
+   }
+  },
+  "linear_a": {
+   "n": 153,
+   "MI_bits": 0.1183,
+   "null_mean": 0.0622,
+   "p": 0.019198080191980802,
+   "crosstab": {
+    "BOUND-COLLOCATE": {
+     "AB_syllabogram": 7,
+     "A_fraction": 0,
+     "A_only": 2
+    },
+    "INITIAL": {
+     "AB_syllabogram": 7,
+     "A_fraction": 3,
+     "A_only": 10
+    },
+    "MEDIAL/UNSPECIFIED": {
+     "AB_syllabogram": 27,
+     "A_fraction": 5,
+     "A_only": 36
+    },
+    "NUMERAL-STROKE": {
+     "AB_syllabogram": 8,
+     "A_fraction": 6,
+     "A_only": 4
+    },
+    "PRE-TERMINAL": {
+     "AB_syllabogram": 4,
+     "A_fraction": 1,
+     "A_only": 15
+    },
+    "STAND-ALONE": {
+     "AB_syllabogram": 0,
+     "A_fraction": 0,
+     "A_only": 2
+    },
+    "TERMINAL": {
+     "AB_syllabogram": 5,
+     "A_fraction": 2,
+     "A_only": 9
+    }
+   }
+  },
+  "linear_a_no_strokes": {
+   "n": 135,
+   "MI_bits": 0.077,
+   "null_mean": 0.0589,
+   "p": 0.20077992200779923,
+   "crosstab": {
+    "BOUND-COLLOCATE": {
+     "AB_syllabogram": 7,
+     "A_fraction": 0,
+     "A_only": 2
+    },
+    "INITIAL": {
+     "AB_syllabogram": 7,
+     "A_fraction": 3,
+     "A_only": 10
+    },
+    "MEDIAL/UNSPECIFIED": {
+     "AB_syllabogram": 27,
+     "A_fraction": 5,
+     "A_only": 36
+    },
+    "PRE-TERMINAL": {
+     "AB_syllabogram": 4,
+     "A_fraction": 1,
+     "A_only": 15
+    },
+    "STAND-ALONE": {
+     "AB_syllabogram": 0,
+     "A_fraction": 0,
+     "A_only": 2
+    },
+    "TERMINAL": {
+     "AB_syllabogram": 5,
+     "A_fraction": 2,
+     "A_only": 9
+    }
+   }
+  },
+  "cuneiform": {
+   "n": 153,
+   "MI_bits": 0.0329,
+   "null_mean": 0.0308,
+   "p": 0.3818618138186181,
+   "crosstab": {
+    "BOUND-COLLOCATE": {
+     "numeric": 1,
+     "sign": 8
+    },
+    "INITIAL": {
+     "numeric": 7,
+     "sign": 13
+    },
+    "MEDIAL/UNSPECIFIED": {
+     "numeric": 18,
+     "sign": 50
+    },
+    "NUMERAL-STROKE": {
+     "numeric": 9,
+     "sign": 9
+    },
+    "PRE-TERMINAL": {
+     "numeric": 4,
+     "sign": 16
+    },
+    "STAND-ALONE": {
+     "numeric": 1,
+     "sign": 1
+    },
+    "TERMINAL": {
+     "numeric": 5,
+     "sign": 11
+    }
+   }
+  },
+  "cuneiform_no_strokes": {
+   "n": 135,
+   "MI_bits": 0.0168,
+   "null_mean": 0.0294,
+   "p": 0.7461253874612539,
+   "crosstab": {
+    "BOUND-COLLOCATE": {
+     "numeric": 1,
+     "sign": 8
+    },
+    "INITIAL": {
+     "numeric": 7,
+     "sign": 13
+    },
+    "MEDIAL/UNSPECIFIED": {
+     "numeric": 18,
+     "sign": 50
+    },
+    "PRE-TERMINAL": {
+     "numeric": 4,
+     "sign": 16
+    },
+    "STAND-ALONE": {
+     "numeric": 1,
+     "sign": 1
+    },
+    "TERMINAL": {
+     "numeric": 5,
+     "sign": 11
+    }
+   }
+  }
+ },
+ "mantel_visual_vs_position": {
+  "n_signs": 143,
+  "rho": 0.008620585536693802,
+  "null_mean": 2.6129959400503554e-05,
+  "p": 0.3963018490754623,
+  "no_strokes": {
+   "n_signs": 125,
+   "rho": 0.01912673550906577,
+   "null_mean": 0.00023646677269915903,
+   "p": 0.3118440779610195
+  }
+ },
+ "calibration": {
+  "linear_elamite": {
+   "mean_best": 0.6627091346153846,
+   "mean_ctrl": 0.6265168269230769,
+   "share_best_above_ctrl": 0.6370192307692307,
+   "n_score_ge_0_8": 48
+  },
+  "egyptian": {
+   "mean_best": 0.6453293269230769,
+   "mean_ctrl": 0.6719471153846155,
+   "share_best_above_ctrl": 0.375,
+   "n_score_ge_0_8": 24
+  },
+  "cuneiform": {
+   "mean_best": 0.6119951923076923,
+   "mean_ctrl": 0.6865552884615383,
+   "share_best_above_ctrl": 0.15384615384615385,
+   "n_score_ge_0_8": 4
+  },
+  "brahmi": {
+   "mean_best": 0.579,
+   "mean_ctrl": 0.5872740384615385,
+   "share_best_above_ctrl": 0.4230769230769231,
+   "n_score_ge_0_8": 10
+  },
+  "linear_a": {
+   "mean_best": 0.6221274038461538,
+   "mean_ctrl": 0.6328221153846154,
+   "share_best_above_ctrl": 0.43028846153846156,
+   "n_score_ge_0_8": 19
+  }
+ }
+}

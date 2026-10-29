@@ -1,0 +1,44 @@
+{
+ "W700_tokens": 578,
+ "numeral_adjacent_to_700": {
+  "long1": 10,
+  "long2": 124,
+  "long3": 186,
+  "long4": 130,
+  "short2": 2,
+  "short3": 4,
+  "short4": 10,
+  "short7": 1
+ },
+ "types": {
+  "TAB:B": 230,
+  "TAB:I": 200,
+  "POT:T:g": 6,
+  "SEAL:R": 3,
+  "TAG": 3,
+  "SEAL:S": 3
+ },
+ "sites": {
+  "Harappa": 437,
+  "Mohenjo-daro": 6,
+  "Lothal": 2,
+  "Banawali": 1,
+  "Kalibangan": 1
+ },
+ "top_texts": {
+  "+700-033+": 125,
+  "+700-034+": 109,
+  "+700-032+": 89,
+  "+033-700+": 32,
+  "+032-700+": 18,
+  "+034-700+": 14,
+  "[ICIT text of 6 signs redacted]": 10,
+  "]033-700+": 2
+ },
+ "chisq_uniform_2_3_4": {
+  "stat": 15.945454545454547,
+  "p": 0.00034473750943857446
+ },
+ "binary_prediction": "if values were binary weight multiples, 2 and 4 should dominate 3; observed long-stroke counts 2:124 3:186 4:130",
+ "weight_classes": "see anchors_summary.json: ratio classes 1,2,(8/3),4,8,16,32,64,...; no x3 class except 8/3 (12 weights)"
+}

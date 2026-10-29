@@ -1,0 +1,60 @@
+{
+ "M77_full_dedup": {
+  "tokens": 8313,
+  "types": 398,
+  "K": {
+   "observed": 398,
+   "chao1": 521,
+   "list": 417
+  },
+  "H1_ML": 6.704118447208218,
+  "H1_MillerMadow": 6.738567498767999,
+  "H1_NSB_K=observed": [
+   6.753484836050108,
+   0.004768066046953861
+  ],
+  "H1_NSB_K=chao1": [
+   6.756198356653265,
+   0.00483336460511381
+  ],
+  "H1_NSB_K=list": [
+   6.754078219567771,
+   0.004780890919129538
+  ],
+  "Hcond_NSB_K=observed": 4.292568385527132,
+  "Hcond_NSB_K=observed_shuffled_mean": 5.651912457611505,
+  "Hcond_NSB_K=chao1": 4.306221559396896,
+  "Hcond_NSB_K=chao1_shuffled_mean": 5.672459209663397,
+  "Hcond_ML": 3.6964363832235314,
+  "Hcond_MillerMadow": 3.882203600405508
+ },
+ "ICIT_full_dedup": {
+  "tokens": 9662,
+  "types": 664,
+  "K": {
+   "observed": 664,
+   "chao1": 908,
+   "list": 712
+  },
+  "H1_ML": 7.059285667525222,
+  "H1_MillerMadow": 7.10878405357932,
+  "H1_NSB_K=observed": [
+   7.138749091854716,
+   0.005628351300711417
+  ],
+  "H1_NSB_K=chao1": [
+   7.1442210187399535,
+   0.005783334314378761
+  ],
+  "H1_NSB_K=list": [
+   7.140260387656496,
+   0.0056682729363692185
+  ],
+  "Hcond_NSB_K=observed": 4.619172650690355,
+  "Hcond_NSB_K=observed_shuffled_mean": 5.838839625943545,
+  "Hcond_NSB_K=chao1": 4.640820632007427,
+  "Hcond_NSB_K=chao1_shuffled_mean": 5.866522504855027,
+  "Hcond_ML": 3.8637664829202234,
+  "Hcond_MillerMadow": 4.064003126006294
+ }
+}

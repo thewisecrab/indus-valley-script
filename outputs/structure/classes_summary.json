@@ -1,0 +1,73 @@
+{
+ "class_counts": {
+  "MEDIAL/UNSPECIFIED": 68,
+  "PRE-TERMINAL": 20,
+  "TERMINAL": 16,
+  "NUMERAL-STROKE": 18,
+  "INITIAL": 20,
+  "BOUND-COLLOCATE": 9,
+  "STAND-ALONE": 2
+ },
+ "null_mean_counts": {
+  "NUMERAL-STROKE": 18.0,
+  "PRE-TERMINAL": 0.0,
+  "MEDIAL/UNSPECIFIED": 130.73333333333332,
+  "INITIAL": 0.06666666666666667,
+  "STAND-ALONE": 4.0,
+  "BOUND-COLLOCATE": 0.16666666666666666,
+  "TERMINAL": 0.03333333333333333
+ },
+ "FDR": {
+  "MEDIAL/UNSPECIFIED": 1.0,
+  "PRE-TERMINAL": 0.0,
+  "TERMINAL": 0.0020833333333333333,
+  "NUMERAL-STROKE": null,
+  "INITIAL": 0.003333333333333333,
+  "BOUND-COLLOCATE": 0.018518518518518517,
+  "STAND-ALONE": 1.0
+ },
+ "cohesion": {
+  "short_stroke_numerals": {
+   "n_signs": 11,
+   "observed": 0.1777,
+   "null_mean": 0.232,
+   "p": 0.6984031334739379
+  },
+  "long_strokes": {
+   "n_signs": 5,
+   "observed": 0.1083,
+   "null_mean": 0.2042,
+   "p": 0.7406696523779057
+  },
+  "terminal_class": {
+   "n_signs": 16,
+   "observed": 0.1729,
+   "null_mean": 0.183,
+   "p": 0.5199286139202856
+  },
+  "initial_class": {
+   "n_signs": 20,
+   "observed": 0.0827,
+   "null_mean": 0.1584,
+   "p": 0.9508748317631225
+  },
+  "pre_terminal_class": {
+   "n_signs": 20,
+   "observed": 0.6024,
+   "null_mean": 0.1656,
+   "p": 0.0008264462809917355
+  }
+ },
+ "n_lines": 3574,
+ "n_full_lines": 2861,
+ "icit_lines": 3755,
+ "replication_rate": {
+  "MEDIAL/UNSPECIFIED": 0.8,
+  "PRE-TERMINAL": 0.8125,
+  "TERMINAL": 0.9333333333333333,
+  "NUMERAL-STROKE": 0.7647058823529411,
+  "INITIAL": 0.7692307692307693,
+  "BOUND-COLLOCATE": 0.42857142857142855,
+  "STAND-ALONE": null
+ }
+}

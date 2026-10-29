@@ -1,0 +1,567 @@
+M,W,P,one_to_one,freqM,freqW,visual_sim,dist_cosL,dist_cosR,posdiff,p_link_raw,support_share,rank_among_W,confidence,visual_rank_among_W
+M001,W090,P013,True,134,195,0.746,0.998,0.996,0.044,0.8571506432862398,0.8655485707484711,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M002,W091,P016,False,21,28,0.348,0.925,0.085,0.369,0.0026778475554272052,0.002824188250011291,15.0,weak support,402.0
+M002,W097,P015,False,21,20,0.727,0.972,0.996,0.071,0.7117771193763585,0.7506747623088288,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M003,W093,P014,True,6,7,0.758,0.577,0.894,0.452,0.24984626112161382,0.0967120843844827,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M004,W105,P007,False,2,3,0.719,0.816,1.0,1.0,0.08360154946077902,0.06815953753050273,2.0,supported: hand match in top 5,5.0
+M004,W107,P007,False,2,1,0.719,0.707,0.0,1.0,0.00032323991935424883,,,rare sign: weak visual support (rank 6-25),6.0
+M005,W106,P008,False,2,1,,0.707,1.0,0.0,0.0011377946272943635,,,untestable (no glyph),
+M007,W098,P012,True,8,10,0.702,0.977,0.92,0.325,0.5203468489972285,0.2153544601933454,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),4.0
+M008,W100,P009,True,105,134,0.817,0.975,0.998,0.099,0.89723806455983,0.8434482190582087,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M009,W101,P010,False,12,8,,0.883,0.973,0.083,0.002109305548075861,0.0016637449397392103,81.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),
+M009,W103,P010,False,12,5,,0.641,0.943,0.167,0.0002964620953237989,0.00023383872069619946,186.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),
+M011,W159,P003,False,2,6,0.588,0.408,0.0,0.833,0.00015020922721230363,0.00047187910480887,184.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),10.0
+M011,W160,P003,False,2,5,0.461,0.949,0.0,0.5,0.0009300757508413198,0.002921813265779792,71.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),94.0
+M011,W161,P003,False,2,13,0.461,0.603,0.0,1.346,2.5681047487418627e-06,8.06764665781104e-06,389.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),95.0
+M012,W151,P001,True,80,94,0.751,0.952,1.0,0.091,0.8066276529550123,0.48343035785651656,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),4.0
+M014,W159,P003,False,13,6,0.641,0.615,1.0,0.513,0.022798607144847615,0.03235505607204169,5.0,supported: hand match in top 5,9.0
+M014,W160,P003,False,13,5,0.642,0.0,0.894,1.246,0.00017957063507234372,0.00025484091768171284,73.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),7.0
+M014,W161,P003,False,13,13,0.642,0.545,1.0,0.154,0.2709508258459135,0.38452476975075867,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),8.0
+M015,W153,P004,False,126,5,0.665,0.529,1.0,0.157,0.0005040831718647944,0.00039604861576574105,32.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),6.0
+M015,W154,P004,False,126,45,0.797,0.474,0.999,0.113,0.13116894418672012,0.10305695900226973,2.0,supported: hand match in top 5,2.0
+M015,W155,P004,False,126,8,0.632,0.397,0.981,0.238,0.0005247143444706395,0.00041225813794030884,30.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),7.0
+M015,W156,P004,False,126,107,0.824,0.912,0.999,0.071,0.7905053652738979,0.6210851167951559,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M015,W158,P004,False,126,39,0.499,0.551,0.998,0.361,0.00468031822763222,0.0036772375251877816,3.0,supported: hand match in top 5,57.0
+M016,W123,P006,False,1,1,,1.0,0.0,0.0,0.0002834671444906719,,,untestable (no glyph),
+M017,W140,P011,True,91,110,0.593,0.997,0.857,0.097,0.44216726176703264,0.4911247378778284,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),18.0
+M018,W095,P023,True,27,30,0.732,0.992,0.958,0.1,0.7445731941189236,0.766977053913263,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M019,W130,P026,True,8,16,0.591,0.956,0.68,0.188,0.13164426230518914,0.6078986861823767,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),4.0
+M020,W131,P027,False,1,1,0.771,1.0,0.0,0.0,0.1388143477634814,,,rare sign: visual-only support (visual rank <= 5),1.0
+M023,W133,P028,False,1,2,0.625,1.0,1.0,0.5,0.18075199036229836,,,rare sign: visual-only support (visual rank <= 5),2.0
+M024,W134,P029,False,2,3,0.815,0.707,0.816,0.5,0.3351174654119546,0.6441791489014621,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M025,W142,P031,True,53,81,0.821,0.99,0.956,0.145,0.8545871434397082,0.28112173578149197,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M026,W144,P032,False,1,4,0.758,1.0,0.0,1.5,0.00011900338943401975,,,rare sign: visual-only support (visual rank <= 5),1.0
+M027,W146,P034,False,2,4,0.724,1.0,0.577,0.5,0.10075749865413046,0.21416260192758152,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M028,W125,P035,False,50,59,0.77,0.991,0.988,0.037,0.863188435813032,0.4543331821135929,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M028,W126,P035,False,50,2,,0.961,0.234,0.8,3.879840550795948e-08,2.042126875664366e-08,486.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),
+M029,W127,P036,True,3,4,0.908,0.894,0.894,0.5,0.7290538057089092,0.3220475608635369,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M030,W119,P038,False,2,1,0.798,0.707,0.0,1.0,0.0006214925437143176,,,rare sign: visual-only support (visual rank <= 5),1.0
+M031,W117,P039,False,2,3,0.666,1.0,1.0,0.667,0.23542172044833654,0.09982859029403292,5.0,supported: hand match in top 5,3.0
+M032,W110,P040,False,11,6,,0.728,0.632,1.455,1.9646373249876346e-06,2.066566415984027e-06,463.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),
+M032,W111,P040,False,11,15,0.683,0.879,0.866,0.224,0.5024326084692866,0.5284997601093707,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M034,W112,P041,False,2,2,0.699,1.0,0.0,0.0,0.08156062135576163,0.2376195885423586,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M035,W113,P042,False,4,1,0.642,0.949,1.0,1.25,0.000981721348558676,,,rare sign: weak visual support (rank 6-25),7.0
+M036,W122,P037,False,2,2,0.783,0.0,0.0,0.5,0.0026988009841855706,0.07465973022256078,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M037,W121,P024,False,1,2,0.544,0.707,1.0,0.5,0.053544220291161154,,,rare sign: weak visual support (rank 6-25),10.0
+M038,W094,P022,False,6,2,0.707,0.224,0.943,0.667,0.0037420891682250295,0.0036177633668730974,57.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),4.0
+M040,W137,P019,True,14,16,0.434,0.995,1.0,0.223,0.16656890853895623,0.12518576224474215,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),94.0
+M041,W104,P020,True,20,26,0.19,0.997,0.729,0.404,0.0069724597039964534,0.2007355856950206,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),346.0
+M042,W118,P021,False,1,3,0.422,1.0,0.0,0.0,0.003216523452194581,,,rare sign: untestable distributionally; visual evidence weak,156.0
+M047,W175,P193,True,16,27,0.54,0.98,0.876,0.319,0.15592887070578212,0.20335406318898594,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),18.0
+M048,W176,P194,False,168,217,0.512,0.992,0.997,0.082,0.44595173922557974,0.4653524137991618,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),26.0
+M048,W177,P194,False,168,3,0.552,0.7,0.988,0.167,5.258546632430613e-05,5.487314328511257e-05,91.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),18.0
+M048,W178,P194,False,168,2,0.373,0.978,0.988,0.595,2.100651690384694e-06,2.1920383949379082e-06,206.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),268.0
+M048,W179,P194,False,168,1,0.552,0.0,0.0,0.5,9.17072902817129e-09,,,rare sign: weak visual support (rank 6-25),19.0
+M050,W340,P043,False,8,1,0.289,0.0,0.0,0.625,3.840826239478351e-07,,,rare sign: untestable distributionally; visual evidence weak,405.0
+M050,W341,P043,False,8,2,0.265,0.981,0.0,1.625,3.5638963869072873e-07,6.67881205352763e-07,455.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),464.0
+M050,W342,P043,False,8,1,0.265,0.0,0.0,0.625,3.135217840730704e-07,,,rare sign: untestable distributionally; visual evidence weak,465.0
+M050,W343,P043,False,8,2,0.265,0.0,0.0,1.125,2.157962686815012e-07,4.0440645964654716e-07,465.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),466.0
+M050,W344,P043,False,8,1,0.326,0.196,0.354,0.625,2.8876575267370544e-06,,,rare sign: untestable distributionally; visual evidence weak,335.0
+M050,W345,P043,False,8,3,0.326,0.981,0.707,0.042,0.00531026446871919,0.009951540249989836,22.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),336.0
+M050,W346,P044,False,8,6,0.275,0.981,0.354,0.042,0.004245209348484128,0.007955605968390223,32.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),450.0
+M050,W347,P043,False,8,10,0.281,0.981,0.707,0.275,0.019117118447086724,0.035825856661314805,4.0,supported: hand match in top 5,432.0
+M050,W348,P043,False,8,1,0.292,0.981,0.0,0.375,9.955889861259468e-06,,,rare sign: untestable distributionally; visual evidence weak,395.0
+M051,W255,P073,True,105,136,0.71,0.98,0.987,0.134,0.7619962871618446,0.2821045497614599,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M052,W256,P074,False,1,1,0.601,1.0,1.0,0.0,0.5754773968688439,,,rare sign: untestable distributionally; visual evidence weak,28.0
+M053,W193,P075,False,130,3,0.37,0.915,0.0,0.436,3.8192867011375115e-07,4.150737230292992e-07,301.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),107.0
+M053,W797,P075,False,130,4,0.704,0.915,0.83,0.504,0.00015811101927432715,0.0001718324246320812,67.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),1.0
+M053,W798,P075,False,130,151,0.589,0.976,0.99,0.059,0.553824263557067,0.6018869934800295,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M054,W190,P076,False,19,11,0.727,0.993,0.612,0.057,0.19947181013857423,0.2573641798684676,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M054,W192,P076,False,19,4,0.668,0.886,0.408,0.579,0.0010464612908703307,0.001350174000535923,97.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),2.0
+M054,W194,P076,False,19,1,0.514,0.99,0.408,0.526,2.53212893180328e-05,,,rare sign: untestable distributionally; visual evidence weak,67.0
+M055,W190,P076,False,4,11,0.734,0.569,0.0,0.386,0.004418537433325676,0.004677453374683657,40.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),1.0
+M055,W192,P076,False,4,4,0.703,0.775,0.0,0.25,0.02125415250122945,0.022499596041238114,13.0,weak support,2.0
+M055,W194,P076,False,4,1,0.555,0.577,1.0,0.75,0.0012335643311311775,,,rare sign: weak visual support (rank 6-25),13.0
+M056,W204,P083,True,8,8,0.781,0.926,0.857,0.0,0.751732883199226,0.3702198364714142,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M057,W205,P082,False,7,2,0.651,0.289,0.5,0.571,0.0005953942565559814,0.0004365694178488624,192.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),5.0
+M057,W206,P082,False,7,1,0.691,0.866,0.0,0.714,7.767404838991774e-05,,,rare sign: visual-only support (visual rank <= 5),2.0
+M057,W207,P082,False,7,1,0.691,0.0,0.0,0.571,1.6810576094937125e-05,,,rare sign: visual-only support (visual rank <= 5),3.0
+M057,W208,P082,False,7,1,0.682,0.866,0.5,0.714,0.0004228882947690251,,,rare sign: visual-only support (visual rank <= 5),4.0
+M057,W209,P082,False,7,1,0.782,0.866,0.5,0.714,0.0009576922120699442,,,rare sign: visual-only support (visual rank <= 5),1.0
+M059,W220,P050,True,381,477,0.66,0.981,0.969,0.097,0.6810759655034503,0.6278394936490066,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),4.0
+M060,W226,P051,True,29,41,0.564,0.974,0.997,0.113,0.5115611877221846,0.6769685742081509,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),11.0
+M061,W944,P052,False,1,1,0.582,1.0,0.0,0.0,0.03294007273702594,,,rare sign: untestable distributionally; visual evidence weak,28.0
+M062,W222,P053,True,13,17,0.763,0.98,0.997,0.054,0.8745386409472435,0.5351771042267378,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M064,W940,P054,False,2,2,0.776,0.0,0.0,0.0,0.015432390798072345,0.2403248709298328,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M064,W942,P055,False,2,10,0.813,0.0,0.0,0.7,0.00020220015604110122,0.003148813883629718,54.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),1.0
+M064,W943,P055,False,2,1,0.776,0.0,0.0,1.0,9.70726675409156e-05,,,rare sign: visual-only support (visual rank <= 5),2.0
+M065,W235,P060,True,216,250,0.703,0.998,0.977,0.043,0.770266711671008,0.5571253656555942,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),4.0
+M066,W236,P061,True,19,26,0.653,0.812,0.992,0.16,0.5695218961838451,0.32680399393978715,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M067,W240,P062,False,279,354,0.852,0.992,0.946,0.03,0.9274848164457823,0.6106029860578296,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M067,W242,P062,False,279,6,0.713,0.938,0.5,0.711,1.2532331427614556e-05,8.250570636069444e-06,113.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),4.0
+M068,W241,P063,True,9,12,0.59,0.436,0.993,0.028,0.34431093175102323,0.473855862041175,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),10.0
+M070,W231,P056,True,73,95,0.719,0.988,0.968,0.091,0.7953401561073434,0.44473567301128625,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M071,W232,P057,True,7,10,0.488,0.756,0.999,0.329,0.1313236956279312,0.13110849006649125,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),136.0
+M072,W233,P058,True,188,192,0.616,0.997,0.948,0.051,0.5249321713885636,0.3152861145958654,2.0,supported: hand match in top 5,26.0
+M073,W234,P059,True,8,9,0.489,0.964,1.0,0.306,0.17310815875824534,0.05516257995553865,3.0,supported: hand match in top 5,153.0
+M074,W227,P064,False,2,2,0.646,0.0,0.0,0.5,0.000875943460432235,0.0064855370202238465,26.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),7.0
+M074,W228,P064,False,2,1,0.63,1.0,0.707,0.0,0.1264837583256075,,,rare sign: weak visual support (rank 6-25),8.0
+M075,W243,P048,True,13,12,0.776,0.998,0.965,0.115,0.736934716591855,0.45812698595221024,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M076,W260,P071,False,15,8,0.66,0.993,0.0,0.083,0.012492293830237,0.05731661549457507,4.0,supported: hand match in top 5,1.0
+M076,W264,P066,False,15,3,0.358,0.7,0.0,0.333,2.748215549140495e-05,0.00012609246633715293,256.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),266.0
+M076,W266,P066,False,15,2,0.358,0.99,0.354,0.667,2.426082276114947e-05,0.00011131248341414158,261.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),267.0
+M076,W268,P066,False,15,4,0.358,0.0,0.0,0.667,2.836820775257033e-06,1.3015781393875922e-05,377.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),268.0
+M077,W264,P066,False,2,3,0.597,0.5,0.0,0.167,0.009546189965110488,0.009254401868426677,23.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),6.0
+M077,W266,P066,False,2,2,0.597,0.707,0.707,0.5,0.03646091924218461,0.03534645763311311,6.0,weak support,7.0
+M077,W268,P066,False,2,4,0.597,0.0,0.0,0.5,0.00048068064017002174,0.00046598819327544125,145.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),8.0
+M078,W264,P066,False,8,3,0.505,0.535,0.0,0.208,0.00036261422032059384,0.00388882981083354,59.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),115.0
+M078,W266,P066,False,8,2,0.505,0.378,0.0,0.875,9.486105180242364e-06,0.00010173304450391911,332.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),116.0
+M078,W268,P066,False,8,4,0.505,0.535,0.0,0.125,0.0008947887757245565,0.00959609709282899,23.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),117.0
+M079,W262,P069,False,1,2,0.534,1.0,1.0,0.0,0.3915815992002024,,,rare sign: untestable distributionally; visual evidence weak,32.0
+M080,W272,P070,True,4,5,0.552,1.0,0.756,0.15,0.26121974180010293,0.13405754399267777,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),51.0
+M081,W265,P067,False,24,1,0.784,0.588,0.0,1.208,1.090467793906966e-06,,,rare sign: visual-only support (visual rank <= 5),1.0
+M081,W267,P067,False,24,7,0.784,0.588,0.976,0.137,0.08935577376746172,0.10614694198645801,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M081,W269,P067,False,24,11,0.784,0.555,0.93,0.239,0.12010436135831008,0.14267360842958202,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M081,W270,P067,False,24,1,0.667,0.0,0.0,0.375,2.1621292116213243e-06,,,rare sign: visual-only support (visual rank <= 5),5.0
+M081,W271,P067,False,24,1,0.69,0.588,0.0,1.208,5.043777983673302e-07,,,rare sign: visual-only support (visual rank <= 5),4.0
+M082,W952,P068,False,1,1,0.637,1.0,1.0,0.0,0.6454928585010276,,,rare sign: visual-only support (visual rank <= 5),5.0
+M083,W244,P065,True,4,5,0.825,0.949,1.0,0.2,0.8541795678839427,0.4931026427117086,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M084,W280,P045,False,8,1,0.653,0.0,0.0,0.625,7.649329258371413e-06,,,rare sign: visual-only support (visual rank <= 5),1.0
+M085,W281,P046,False,1,2,0.681,1.0,1.0,1.0,0.05344162631705714,,,rare sign: visual-only support (visual rank <= 5),2.0
+M086,W031,P144,True,149,258,1.0,0.991,0.895,0.212,0.9264530775825747,0.5098946178042028,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M087,W032,P145,True,365,588,0.842,0.992,0.86,0.202,0.7857603589761625,0.6454356490237052,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M089,W033,P147,True,314,523,0.955,0.991,0.892,0.216,0.9012601496216261,0.7227855875285492,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M090,W045,P148,False,2,2,0.596,0.707,0.0,2.0,1.3145196372062513e-05,2.8599560162833936e-05,214.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),2.0
+M090,W046,P148,False,2,3,0.76,0.894,0.707,0.667,0.15547028314284234,0.33825144869851026,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M091,W045,P148,False,2,2,0.805,0.5,1.0,1.0,0.05537581886322324,0.10779827382525355,3.0,supported: hand match in top 5,1.0
+M091,W046,P148,False,2,3,0.756,0.316,0.707,1.333,0.0039952122420741564,0.007777347443382749,19.0,weak support,2.0
+M092,W044,P149,False,1,1,0.494,1.0,0.0,2.0,1.1401446365822207e-05,,,rare sign: untestable distributionally; visual evidence weak,168.0
+M095,W034,P150,True,64,184,,0.996,0.918,0.497,0.0004525317015173993,0.002353027096225456,46.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),
+M096,W035,P151,True,22,37,0.802,0.992,0.962,0.265,0.7329261081210835,0.3297921259916176,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M097,W001,P121,False,91,214,0.347,0.638,0.655,0.13,0.007683001145462242,0.07154786642909766,4.0,supported: hand match in top 5,229.0
+M098,W001,P121,False,88,214,0.288,0.797,0.898,0.116,0.01579608867145983,0.08359262009122567,2.0,supported: hand match in top 5,289.0
+M099,W002,P122,False,649,852,0.306,0.885,0.926,0.1,0.07973246097710418,0.7039165702604747,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),438.0
+M100,W002,P122,False,29,852,0.269,0.662,0.327,0.48,1.948986935258642e-06,4.715681187419118e-06,376.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),483.0
+M101,W012,P140,False,1,3,,0.894,0.577,0.333,0.0001779579596793917,,,untestable (no glyph),
+M102,W003,P123,False,151,259,0.554,0.998,0.9,0.084,0.349961879056528,0.2678360210839936,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),94.0
+M103,W003,P123,False,30,259,0.61,0.996,0.057,0.261,0.0007780067335713619,0.003018488520748878,22.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),19.0
+M103,W013,P139,False,30,50,0.605,0.98,0.916,0.507,0.1587968924638155,0.6160956921700671,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),20.0
+M104,W004,P124,False,70,99,0.526,0.994,0.777,0.236,0.19107109742264153,0.13539771220329472,2.0,supported: hand match in top 5,116.0
+M104,W014,P124,False,70,8,0.392,0.976,0.62,0.211,0.00030101876121514193,0.00021330935001983447,111.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),344.0
+M105,W004,P124,False,2,99,0.341,0.045,0.148,0.545,1.149145762086091e-07,2.1880335833266773e-06,433.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),279.0
+M105,W014,P124,False,2,8,0.572,0.0,0.447,0.625,0.0002844350741456105,0.005415792452445943,39.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),26.0
+M106,W005,P125,False,38,49,0.619,0.997,0.974,0.054,0.6660821783280562,0.6627099092628429,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),33.0
+M106,W015,P125,False,38,8,0.538,0.982,0.179,0.25,0.000666362241451035,0.0006629885544703804,66.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),93.0
+M107,W005,P125,False,6,49,0.502,0.985,0.294,0.656,0.000192449389872612,6.882046514829492e-05,245.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),100.0
+M107,W015,P125,False,6,8,0.341,1.0,0.598,0.667,0.006168898698534542,0.0022060162319396254,61.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),384.0
+M108,W006,P126,False,3,7,0.234,0.947,0.0,0.667,9.025394582184365e-05,5.105113280237981e-05,234.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),584.0
+M108,W016,P126,False,3,49,0.339,0.94,0.298,0.361,3.173684863846298e-05,1.7951592695674354e-05,295.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),360.0
+M109,W006,P126,False,38,7,0.16,0.957,0.484,0.474,2.7406317043884505e-05,0.00022111455243186708,127.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),419.0
+M109,W016,P126,False,38,49,0.261,0.99,0.953,0.191,0.05505739606143597,0.4442038479192516,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),181.0
+M110,W007,P127,False,6,6,0.503,0.964,1.0,0.0,0.357571213537776,0.5035897469177743,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),51.0
+M110,W017,P127,False,6,82,0.176,0.792,0.483,0.744,4.02213264236172e-06,5.66461919402432e-06,398.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),605.0
+M111,W048,P136,False,4,18,0.743,0.0,0.998,0.556,0.008071116766220677,0.0035085384732398916,38.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),2.0
+M111,W049,P136,False,4,6,0.604,1.0,0.905,0.333,0.3066887610738341,0.1333185169667267,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),21.0
+M112,W007,P127,False,70,6,0.333,0.801,0.436,0.786,4.330870649078119e-06,1.7077349151758357e-05,196.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),176.0
+M112,W017,P127,False,70,82,0.331,0.976,0.979,0.042,0.13423160410436208,0.5292977223826208,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),184.0
+M113,W048,P136,False,17,18,0.709,0.951,0.997,0.062,0.7245380659113502,0.7271128246786099,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M113,W049,P136,False,17,6,0.497,0.0,0.936,0.382,0.0012187102329228635,0.0012230411093869184,35.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),106.0
+M114,W018,P128,True,7,7,0.434,1.0,0.707,0.286,0.04153090784077662,0.015383388743214056,18.0,weak support,295.0
+M115,W019,P129,False,1,6,0.687,1.0,0.707,1.667,0.00018880926658085175,,,rare sign: weak visual support (rank 6-25),15.0
+M116,W019,P129,False,2,6,0.69,1.0,0.707,0.167,0.1618217046820709,0.05425963420594588,4.0,supported: hand match in top 5,12.0
+M117,W051,P137,False,1,1,0.698,1.0,0.0,0.0,0.0812961320817945,,,rare sign: visual-only support (visual rank <= 5),5.0
+M118,W020,P130,False,1,2,,0.707,1.0,1.0,0.00010455154550986656,,,untestable (no glyph),
+M119,W025,P141,False,13,3,,1.0,0.997,0.0,0.0004481649414128181,0.0011290398554660306,51.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),
+M119,W026,P141,False,13,1,0.288,0.0,0.0,1.0,3.53850697925986e-08,,,rare sign: untestable distributionally; visual evidence weak,516.0
+M119,W027,P141,False,13,6,0.268,1.0,0.997,0.0,0.016982010396966136,0.04278194207621455,2.0,supported: hand match in top 5,552.0
+M119,W028,P141,False,13,5,0.395,0.97,0.967,0.2,0.013357117592253952,0.033649928234591335,2.0,supported: hand match in top 5,290.0
+M119,W029,P141,False,13,4,0.612,0.894,0.891,0.5,0.010771301500696358,0.02713560916030061,2.0,supported: hand match in top 5,6.0
+M120,W025,P141,False,2,3,,1.0,1.0,0.0,0.014323848276695073,0.016519434170631696,9.0,weak support,
+M120,W026,P141,False,2,1,0.299,0.0,0.0,1.0,1.9202480172745063e-06,,,rare sign: untestable distributionally; visual evidence weak,497.0
+M120,W027,P141,False,2,6,0.273,1.0,1.0,0.0,0.031197725913880172,0.03597977090739362,2.0,supported: hand match in top 5,550.0
+M120,W028,P141,False,2,5,0.418,0.97,0.97,0.2,0.05917092986506797,0.0682407591758285,2.0,supported: hand match in top 5,228.0
+M120,W029,P141,False,2,4,0.734,0.894,0.894,0.5,0.22541566040517796,0.259967788764653,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M121,W055,P142,True,70,62,0.821,0.871,0.981,0.176,0.7002505186880877,0.3122945461961399,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M122,W057,P143,False,1,1,0.335,1.0,0.0,0.0,0.0044577565583828705,,,rare sign: untestable distributionally; visual evidence weak,210.0
+M123,W060,P120,True,193,221,0.009,0.995,0.987,0.012,0.012328692446195678,0.8633239703926836,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),620.0
+M124,W061,P204,False,78,93,0.888,0.985,0.988,0.035,0.9443498578729734,0.69622197957459,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M124,W062,P204,False,78,3,0.888,0.535,0.544,0.628,0.00010855520764637314,8.00323322236946e-05,88.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),2.0
+M124,W063,P204,False,78,13,0.888,0.549,0.065,0.295,0.0014824643894384762,0.0010929469446719874,32.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),3.0
+M125,W061,P204,False,18,93,0.935,0.297,0.018,0.226,0.006211962794120911,0.010593977779942051,2.0,supported: hand match in top 5,1.0
+M125,W062,P204,False,18,3,0.935,0.236,0.044,0.444,0.000559210290961035,0.0009536859110558329,18.0,weak support,2.0
+M125,W063,P204,False,18,13,0.935,0.37,0.899,0.12,0.5221862887746369,0.8905446029883666,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M127,W440,P283,True,50,59,0.941,0.97,0.995,0.187,0.9356500008417956,0.5384210050662281,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M128,W443,P284,True,8,5,0.546,0.929,0.97,0.2,0.10609998726018954,0.2867711729427924,2.0,supported: hand match in top 5,22.0
+M129,W066,P185,True,5,18,0.647,0.953,0.735,0.122,0.09689749667437451,0.24938571407863216,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M130,W435,P188,False,63,75,0.654,0.993,0.998,0.106,0.6676572482384585,0.8884491194583848,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M130,W436,P188,False,63,17,0.603,0.996,0.998,0.038,0.07146222010801569,0.09509452147343679,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M131,W454,P189,False,1,1,0.108,1.0,0.0,0.0,0.0006889665812536008,,,rare sign: untestable distributionally; visual evidence weak,618.0
+M132,W450,P191,False,3,2,0.765,1.0,1.0,0.167,0.5498788484091888,0.6905262283464496,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M133,W451,P192,False,1,1,0.735,1.0,1.0,0.0,0.8038022720537409,,,rare sign: visual-only support (visual rank <= 5),1.0
+M134,W480,P184,True,14,43,0.949,0.655,0.339,0.439,0.06487445670180098,0.6168330698984353,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M135,W482,P197,True,35,41,0.902,0.957,1.0,0.094,0.9352333767091475,0.5817519590870643,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M136,W484,P195,True,15,14,0.782,0.943,0.571,0.167,0.3543152529101049,0.6158920782897005,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M137,W645,P240,True,23,28,0.836,0.945,0.923,0.127,0.8567750322570883,0.840669638578913,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M138,W678,P244,True,4,3,0.643,1.0,1.0,1.0,0.02695900116685242,0.03223057400108163,4.0,supported: hand match in top 5,1.0
+M139,W679,P243,True,15,19,0.802,0.934,0.981,0.365,0.7103549134550283,0.7983506448408458,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M140,W680,P242,False,2,2,0.451,0.0,1.0,0.0,0.035779408516431625,0.06405322840772261,2.0,supported: hand match in top 5,226.0
+M141,W685,P245,True,4,4,0.667,0.4,0.73,0.5,0.0341152349451843,0.10481443011360497,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M143,W689,P246,False,2,2,0.753,1.0,1.0,0.0,0.8262674934222474,0.7594543076866073,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M144,W688,P247,False,1,3,0.676,1.0,0.707,1.333,0.002457021433298579,,,rare sign: visual-only support (visual rank <= 5),1.0
+M145,W686,P249,False,1,1,0.71,1.0,1.0,0.0,0.7688815303082045,,,rare sign: visual-only support (visual rank <= 5),1.0
+M146,W683,P254,False,3,3,0.622,1.0,1.0,0.0,0.6167732740343889,0.45586900660508467,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M146,W684,P254,False,3,1,0.615,1.0,0.707,0.667,0.004793656052913797,,,rare sign: visual-only support (visual rank <= 5),4.0
+M147,W683,P254,False,1,3,0.628,1.0,0.707,0.667,0.01850244963097905,,,rare sign: weak visual support (rank 6-25),10.0
+M147,W684,P254,False,1,1,0.838,1.0,1.0,0.0,0.9054657475644157,,,rare sign: visual-only support (visual rank <= 5),1.0
+M149,W690,P255,True,92,119,0.834,0.973,0.996,0.087,0.9142380499688774,0.5731629660994715,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M150,W692,P256,True,63,77,0.874,0.999,0.997,0.061,0.9393142308477916,0.8838615966585862,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M151,W694,P257,False,1,1,0.31,1.0,0.0,0.0,0.003606785275619303,,,rare sign: untestable distributionally; visual evidence weak,274.0
+M152,W693,P258,False,1,1,0.305,1.0,0.0,0.0,0.0034864284697679587,,,rare sign: untestable distributionally; visual evidence weak,342.0
+M155,W070,P114,False,49,38,0.532,0.884,0.985,0.088,0.19202656344923857,0.856160919800379,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),5.0
+M155,W072,P114,False,49,15,0.528,0.617,0.974,0.278,0.00839805023896063,0.037443165611923235,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),7.0
+M156,W073,P115,False,1,2,0.222,0.0,0.0,2.0,9.382086272736647e-08,,,rare sign: untestable distributionally; visual evidence weak,472.0
+M157,W071,P116,False,1,4,0.583,0.408,0.0,1.0,4.3030030409776666e-05,,,rare sign: weak visual support (rank 6-25),22.0
+M158,W080,P250,False,4,2,0.377,0.707,0.894,0.5,0.002815873226915532,0.01639093851243229,17.0,weak support,31.0
+M159,W083,P253,False,2,1,0.404,0.707,1.0,0.5,0.0051066804660170224,,,rare sign: weak visual support (rank 6-25),25.0
+M160,W081,P251,True,6,4,0.291,0.962,0.904,0.083,0.021444296958016393,0.18764718583181245,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),160.0
+M161,W064,P085,False,4,14,0.728,0.816,0.933,0.25,0.16840393099040965,0.16203977490325114,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M161,W390,P086,False,4,290,0.759,0.276,0.837,0.316,7.361701352765377e-05,7.08349516006842e-05,201.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),2.0
+M161,W392,P086,False,4,6,0.82,0.516,0.8,0.25,0.4385516527346315,0.4219783390722356,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M161,W405,P086,False,4,118,0.54,0.138,0.779,0.36,3.962698982573785e-05,3.812944551645685e-05,238.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),23.0
+M161,W406,P086,False,4,13,0.657,0.536,0.783,0.365,0.025616513227022866,0.02464843909937786,2.0,supported: hand match in top 5,5.0
+M161,W407,P086,False,4,143,0.54,0.063,0.859,0.316,3.456665025942409e-05,3.326034133677952e-05,248.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),24.0
+M161,W408,P086,False,4,9,0.657,0.566,0.868,0.361,0.07695586601289235,0.07404762544957441,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),6.0
+M162,W390,P086,False,212,290,0.855,0.969,0.999,0.072,0.9340909517661574,0.6466690887165433,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M162,W392,P086,False,212,6,0.801,0.662,0.988,0.41,0.0003974336266254744,0.00027514241591705994,25.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),2.0
+M162,W405,P086,False,212,118,0.641,0.982,0.982,0.105,0.25466784024318645,0.17630597948099944,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),15.0
+M162,W406,P086,False,212,13,0.66,0.599,0.984,0.459,0.0004472835857574932,0.00030965343176996794,24.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),10.0
+M162,W407,P086,False,212,143,0.641,0.55,0.965,0.156,0.1256631115237172,0.08699629266366236,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),16.0
+M162,W408,P086,False,212,9,0.66,0.28,0.891,0.521,5.604397788036338e-05,3.879912125839495e-05,64.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),11.0
+M163,W391,P089,True,5,10,0.758,0.947,0.97,0.2,0.6095275381336132,0.35244096149841314,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M164,W393,P087,False,1,1,0.767,1.0,0.0,0.0,0.13444348655490745,,,rare sign: visual-only support (visual rank <= 5),1.0
+M165,W394,P088,False,1,1,0.336,0.0,1.0,2.0,9.899510676656019e-06,,,rare sign: untestable distributionally; visual evidence weak,199.0
+M166,W394,P088,False,1,1,0.826,1.0,1.0,0.0,0.8964096692601032,,,rare sign: visual-only support (visual rank <= 5),1.0
+M167,W390,P086,False,7,290,0.671,0.818,0.802,0.453,0.00022196090897719847,0.00029910385171306824,170.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),6.0
+M167,W392,P086,False,7,6,0.61,0.809,0.791,0.524,0.04564607739703803,0.06151045978303079,2.0,supported: hand match in top 5,11.0
+M167,W405,P086,False,7,118,0.811,0.721,0.795,0.465,0.003379381683619765,0.0045538923166110416,28.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),1.0
+M167,W406,P086,False,7,13,0.691,0.784,0.774,0.264,0.22055367132881276,0.2972075259012519,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),4.0
+M167,W407,P086,False,7,143,0.811,0.387,0.758,0.667,0.0004313294667971138,0.0005812388562961513,124.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),2.0
+M167,W408,P086,False,7,9,0.691,0.591,0.772,0.857,0.03486852153732933,0.046987143562412986,2.0,supported: hand match in top 5,5.0
+M168,W390,P086,False,1,290,0.54,0.012,0.93,0.69,1.272067985854663e-07,,,rare sign: untestable distributionally; visual evidence weak,54.0
+M168,W392,P086,False,1,6,0.511,0.0,0.894,1.0,9.093570775194627e-05,,,rare sign: untestable distributionally; visual evidence weak,81.0
+M168,W405,P086,False,1,118,0.504,0.0,0.871,0.678,5.081600587208273e-07,,,rare sign: untestable distributionally; visual evidence weak,92.0
+M168,W406,P086,False,1,13,0.404,0.0,0.875,1.077,5.305076524595159e-06,,,rare sign: untestable distributionally; visual evidence weak,249.0
+M168,W407,P086,False,1,143,0.504,0.0,0.96,0.476,9.754366052806819e-07,,,rare sign: untestable distributionally; visual evidence weak,93.0
+M168,W408,P086,False,1,9,0.404,0.0,0.97,1.111,1.4110612463945674e-05,,,rare sign: untestable distributionally; visual evidence weak,250.0
+M168,W411,P100,False,1,11,0.717,0.229,0.98,1.0,0.00032592680556865636,,,rare sign: visual-only support (visual rank <= 5),2.0
+M169,W390,P086,False,240,290,0.622,0.778,0.993,0.215,0.38834182066168926,0.6175597078677201,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),7.0
+M169,W392,P086,False,240,6,0.695,0.482,0.99,0.55,5.094408697983911e-05,8.101371986991053e-05,44.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),4.0
+M169,W405,P086,False,240,118,0.528,0.831,0.982,0.203,0.04838779190427565,0.07694857736890767,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),18.0
+M169,W406,P086,False,240,13,0.731,0.426,0.97,0.602,0.00023187325181367116,0.00036873591777573765,20.0,weak support,1.0
+M169,W407,P086,False,240,143,0.528,0.866,0.989,0.028,0.13804717646036713,0.21952921223258343,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),19.0
+M169,W408,P086,False,240,9,0.731,0.168,0.913,0.661,3.853023864798993e-05,6.127262544884487e-05,48.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),2.0
+M170,W950,P282,False,1,2,0.691,1.0,0.707,0.5,0.11934799451634609,,,rare sign: visual-only support (visual rank <= 5),2.0
+M171,W415,P092,True,132,177,0.792,0.998,0.995,0.079,0.8988684027383406,0.8252599745430308,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M172,W417,P093,True,8,9,0.803,1.0,1.0,0.014,0.89681369960548,0.7754206748699501,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M173,W416,P095,True,38,57,0.71,0.994,0.875,0.289,0.5247692001566668,0.42508722672045474,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M174,W350,P091,False,11,48,0.603,0.886,0.577,0.377,0.009597557976683404,0.0030009023798080294,43.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),22.0
+M174,W352,P091,False,11,5,0.669,0.949,0.0,0.873,0.0004942916554347754,0.0001545519192191485,207.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),5.0
+M174,W353,P091,False,11,10,0.685,0.945,0.891,0.445,0.20844699950943749,0.06517586019395696,2.0,supported: hand match in top 5,3.0
+M174,W354,P091,False,11,16,0.876,1.0,0.959,0.29,0.8625501096975878,0.2696965919021875,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M175,W350,P091,False,54,48,0.799,0.943,0.857,0.238,0.5456633852706506,0.5394030924038107,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M175,W352,P091,False,54,5,0.761,0.947,0.0,0.359,0.00024609495150634944,0.00024327155064958063,108.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),3.0
+M175,W353,P091,False,54,10,0.755,0.954,0.688,0.4,0.009834853518708988,0.009722020103472496,15.0,weak support,4.0
+M175,W354,P091,False,54,16,0.605,0.983,0.372,0.428,0.002429745329063701,0.0024018693202231397,34.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),9.0
+M176,W400,P098,False,355,502,0.85,0.994,1.0,0.062,0.9334959150385518,0.9593256821075274,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M176,W402,P098,False,355,2,0.212,0.019,0.999,0.865,4.712466009087347e-09,4.842859615930464e-09,290.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),568.0
+M177,W413,P099,True,21,57,0.466,0.993,0.97,0.075,0.11603260703166939,0.4509134949383424,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),59.0
+M178,W465,P186,False,35,6,0.537,0.981,0.0,0.29,0.00019677595639666683,0.0006858521090467632,82.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),24.0
+M178,W467,P186,False,35,9,0.822,0.994,0.0,0.124,0.00892915237752314,0.031122084741791605,4.0,supported: hand match in top 5,1.0
+M178,W468,P186,False,35,10,0.667,0.981,0.0,0.057,0.0038655821436260314,0.013473280549352347,6.0,weak support,3.0
+M178,W469,P186,False,35,1,0.408,0.0,0.0,0.543,6.320169119506309e-08,,,rare sign: untestable distributionally; visual evidence weak,181.0
+M178,W470,P186,False,35,4,0.474,0.99,0.0,0.293,5.0889441720226524e-05,0.00017737243701497696,139.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),83.0
+M178,W471,P186,False,35,1,0.324,0.0,0.0,0.543,3.1753098969662246e-08,,,rare sign: untestable distributionally; visual evidence weak,362.0
+M178,W472,P186,False,35,6,0.553,0.99,0.0,0.376,0.0001684086057317664,0.0005869792201132623,85.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),16.0
+M178,W473,P186,False,35,1,0.492,0.99,0.0,0.457,1.799512216470787e-06,,,rare sign: untestable distributionally; visual evidence weak,63.0
+M178,W474,P186,False,35,1,0.553,0.0,0.0,0.543,2.0909880130167246e-07,,,rare sign: weak visual support (rank 6-25),17.0
+M178,W475,P186,False,35,2,0.488,0.99,0.0,0.043,3.353870731534228e-05,0.00011689737693643961,161.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),64.0
+M179,W466,P187,False,1,1,0.719,1.0,0.0,0.0,0.09528539434324805,,,rare sign: visual-only support (visual rank <= 5),1.0
+M180,W289,P205,False,44,0,,,,,,,,untestable (no glyph),
+M180,W290,P205,False,44,1,0.773,0.258,0.0,0.318,3.304442882282884e-06,,,rare sign: visual-only support (visual rank <= 5),1.0
+M180,W291,P205,False,44,2,0.773,0.183,0.919,0.455,0.00018300204137247427,0.00029313472223414425,162.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),2.0
+M180,W292,P205,False,44,4,0.773,0.258,0.919,0.455,0.0009293392986242001,0.0014886261110552555,88.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),3.0
+M180,W293,P205,False,44,1,0.773,0.0,0.0,0.318,1.7930002271053746e-06,,,rare sign: visual-only support (visual rank <= 5),4.0
+M180,W294,P205,False,44,2,0.773,0.0,0.919,0.955,1.9243282761667164e-05,3.08241061406152e-05,259.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),5.0
+M180,W295,P205,False,44,1,0.773,0.129,0.0,0.318,2.4341052147698905e-06,,,rare sign: weak visual support (rank 6-25),6.0
+M180,W296,P205,False,44,3,0.773,0.548,0.0,0.424,4.414905099006477e-05,7.071844500648442e-05,213.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),7.0
+M180,W297,P205,False,44,15,0.773,0.82,0.215,0.291,0.008338843215444204,0.013357252582434764,22.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),8.0
+M180,W299,P205,False,44,2,0.773,0.0,0.0,0.318,7.618191870166003e-06,1.220290517547976e-05,303.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),10.0
+M180,W300,P205,False,44,3,0.773,0.0,0.919,0.288,0.0005076694167833068,0.0008131905653044171,118.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),11.0
+M180,W301,P205,False,44,3,0.773,0.0,0.919,0.288,0.0005076694167833068,0.0008131905653044171,118.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),12.0
+M180,W302,P205,False,44,3,0.773,0.274,0.866,0.288,0.0008063461639007526,0.0012916143284900411,92.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),13.0
+M180,W303,P205,False,44,1,0.773,0.0,0.919,0.955,4.529095302316585e-06,,,rare sign: weak visual support (rank 6-25),14.0
+M180,W304,P205,False,44,2,0.773,0.0,0.0,0.318,7.618191870166003e-06,1.220290517547976e-05,303.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),15.0
+M180,W305,P205,False,44,1,0.773,0.129,0.0,0.318,2.4341052147698905e-06,,,rare sign: weak visual support (rank 6-25),16.0
+M180,W306,P205,False,44,1,0.773,0.0,0.0,0.318,1.7930002271053746e-06,,,rare sign: weak visual support (rank 6-25),17.0
+M181,W307,P206,False,2,2,0.497,0.0,0.0,1.5,6.744740777101874e-06,2.7375274318926733e-05,320.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),4.0
+M181,W308,P206,False,2,3,0.497,0.0,0.707,0.5,0.004661344354516575,0.018919271268821414,5.0,supported: hand match in top 5,5.0
+M181,W309,P206,False,2,2,0.301,1.0,1.0,0.0,0.10339988258166152,0.41967515783965675,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),213.0
+M182,W322,P303,False,43,4,0.586,0.699,0.864,0.494,0.0004256147745733128,0.0011399997694922998,51.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),20.0
+M182,W323,P303,False,43,7,0.509,0.686,0.664,0.415,0.0004625268402640766,0.0012388679218517677,47.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),44.0
+M182,W324,P303,False,43,3,0.727,0.592,0.783,0.256,0.0010267531437708922,0.0027501356088913006,29.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),2.0
+M182,W325,P303,False,43,1,0.551,0.699,0.033,0.744,3.7788547583311265e-07,,,rare sign: untestable distributionally; visual evidence weak,30.0
+M183,W321,P304,True,11,15,0.286,1.0,0.0,0.024,0.004992314639648505,0.06564312502968593,2.0,supported: hand match in top 5,239.0
+M186,W317,P296,True,33,13,0.924,0.907,0.689,0.641,0.06726434523821805,0.10615501188931427,2.0,supported: hand match in top 5,1.0
+M188,W318,P295,True,3,13,0.514,0.0,0.0,0.333,8.874852544238536e-05,4.561067057053354e-05,262.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),68.0
+M189,W420,P305,True,4,6,0.953,0.0,0.802,0.333,0.33806650737105143,0.7915443531939989,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M190,W421,P306,False,22,5,0.729,0.707,0.0,0.882,0.0001040551158409952,0.00012977188815096978,191.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),8.0
+M190,W422,P306,False,22,8,0.668,0.0,0.998,0.068,0.020230885473899656,0.025230861411233388,9.0,weak support,23.0
+M190,W423,P306,False,22,7,0.647,0.0,0.998,0.175,0.008880958337511107,0.011075848820446533,25.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),33.0
+M190,W425,P306,False,22,2,0.852,0.0,0.998,0.318,0.002091861771457356,0.0026088563703842702,46.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),1.0
+M190,W426,P306,False,22,7,0.852,0.707,0.984,0.539,0.061207525107204994,0.07633470049033884,2.0,supported: hand match in top 5,2.0
+M190,W427,P306,False,22,1,0.82,0.0,0.998,0.318,0.0003786229784415569,,,rare sign: visual-only support (visual rank <= 5),4.0
+M190,W428,P306,False,22,1,0.646,0.707,0.062,1.682,1.2456944520800168e-07,,,rare sign: untestable distributionally; visual evidence weak,35.0
+M190,W429,P306,False,22,1,0.629,0.0,0.998,0.318,7.861109351665365e-05,,,rare sign: untestable distributionally; visual evidence weak,42.0
+M190,W430,P306,False,22,1,0.63,0.0,0.998,0.318,7.971168602226413e-05,,,rare sign: untestable distributionally; visual evidence weak,39.0
+M191,W329,P307,False,1,1,0.358,1.0,1.0,0.0,0.15546861586973793,,,rare sign: untestable distributionally; visual evidence weak,51.0
+M192,W335,P308,True,21,43,0.212,0.931,0.958,0.12,0.02010835364996775,0.09935852941287736,3.0,supported: hand match in top 5,391.0
+M193,W336,P309,False,25,11,0.785,0.293,0.99,0.12,0.11524754608445355,0.07901353880850326,2.0,supported: hand match in top 5,2.0
+M193,W337,P309,False,25,14,0.848,0.975,0.994,0.094,0.669941183170809,0.45931063588192095,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M193,W338,P309,False,25,1,0.706,0.0,0.993,0.12,0.00023075395810723853,,,rare sign: weak visual support (rank 6-25),6.0
+M195,W572,P285,True,4,6,0.492,0.707,0.969,0.25,0.1300060397463729,0.12317645234686819,2.0,supported: hand match in top 5,64.0
+M196,W573,P286,False,1,1,0.397,1.0,1.0,0.0,0.20191514271986075,,,rare sign: untestable distributionally; visual evidence weak,190.0
+M197,W575,P289,True,60,82,0.704,0.964,0.867,0.105,0.6926001658183853,0.5678565673905442,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M198,W578,P290,False,4,5,0.85,0.707,1.0,0.5,0.5760301148523269,0.6067668863067524,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M198,W579,P290,False,4,2,0.85,0.707,0.0,0.5,0.005842907975585997,0.006154683562389939,12.0,weak support,2.0
+M199,W315,P293,False,2,11,0.502,0.866,0.0,0.818,6.528507898221853e-05,0.00018027579665194662,136.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),22.0
+M199,W360,P293,False,2,12,0.503,0.985,0.0,0.917,5.044397317904276e-05,0.0001392941173222478,143.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),19.0
+M199,W570,P292,False,2,2,0.66,1.0,0.0,0.0,0.06086086213486298,0.16805892827785426,2.0,supported: hand match in top 5,4.0
+M199,W571,P292,False,2,1,0.417,1.0,0.0,0.0,0.0020567007195818293,,,rare sign: untestable distributionally; visual evidence weak,84.0
+M200,W570,P292,False,1,2,0.61,1.0,0.0,0.0,0.034034092352367755,,,rare sign: visual-only support (visual rank <= 5),4.0
+M200,W571,P292,False,1,1,0.442,1.0,1.0,0.0,0.26884285236029365,,,rare sign: untestable distributionally; visual evidence weak,60.0
+M201,W362,P272,True,9,5,0.26,0.984,0.949,0.578,0.002356972644768081,0.00780878442531486,31.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),300.0
+M203,W361,P294,False,2,3,0.297,1.0,0.894,0.667,0.010104380222785146,0.021478643331485924,5.0,supported: hand match in top 5,257.0
+M204,W503,P210,True,76,82,0.627,0.999,0.905,0.074,0.5180906995143867,0.8548630784506094,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),5.0
+M206,W504,P211,True,7,9,0.811,1.0,0.944,0.19,0.8414319470169589,0.6861028697338756,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M208,W505,P213,False,1,1,0.705,1.0,0.0,0.0,0.08546448557707957,,,rare sign: visual-only support (visual rank <= 5),2.0
+M209,W500,P208,True,24,24,0.853,0.889,0.99,0.208,0.7892045327222583,0.8094162845942231,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M210,W502,P209,True,22,4,0.791,0.818,0.707,0.318,0.013198842369636688,0.029548191528243728,10.0,weak support,1.0
+M211,W520,P217,True,227,321,0.835,0.977,1.0,0.072,0.9202223139908252,0.9397011880529316,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M214,W540,P224,True,16,22,0.933,0.994,0.911,0.273,0.9094616994008933,0.5161948324492467,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M215,W545,P226,True,10,10,0.921,1.0,1.0,0.0,0.9495864961139906,0.9223093794035535,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M216,W550,P230,False,90,124,0.927,0.99,0.982,0.086,0.9598578070947158,0.8836259643272061,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M216,W551,P234,False,90,3,0.899,0.97,0.453,0.822,8.801823430883199e-05,8.102783203371396e-05,87.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),2.0
+M216,W555,P230,False,90,24,0.832,0.569,0.487,0.369,0.008739251792857202,0.00804518100064764,4.0,supported: hand match in top 5,3.0
+M219,W560,P232,False,11,3,0.67,0.789,0.258,0.485,0.001202738448600138,0.0009810452306519947,104.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),10.0
+M219,W561,P232,False,11,3,0.716,0.992,0.913,0.636,0.016300806895573346,0.01329618162560131,20.0,weak support,7.0
+M220,W562,P233,False,1,1,0.713,1.0,1.0,0.0,0.7730171408185984,,,rare sign: visual-only support (visual rank <= 5),1.0
+M221,W556,P231,True,4,10,0.815,1.0,0.378,0.4,0.09578097104440132,0.3091014591473633,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M223,W564,P237,True,6,6,0.754,0.798,0.904,0.333,0.3847792074170184,0.33855926823068055,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M224,W565,P238,True,14,15,0.77,0.976,1.0,0.171,0.7620963863790093,0.74639351252107,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M225,W530,P227,True,4,19,0.866,0.813,0.63,0.658,0.025042476768360074,0.07948033647148517,2.0,supported: hand match in top 5,1.0
+M226,W554,P229,True,11,15,0.709,0.909,0.92,0.242,0.603426929934377,0.6104167903958716,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M227,W532,P235,False,1,1,0.56,0.0,0.0,1.0,6.962976261847027e-05,,,rare sign: visual-only support (visual rank <= 5),2.0
+M228,W531,P228,False,5,5,0.344,1.0,1.0,0.0,0.14098648383343415,0.13968881245745243,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),245.0
+M228,W533,P228,False,5,2,0.418,0.0,0.0,0.4,2.847788578885112e-05,2.8215768909049163e-05,314.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),88.0
+M230,W460,P215,True,54,39,0.836,0.949,0.894,0.162,0.6166689826735321,0.4413585484030317,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M231,W461,P216,False,1,1,0.292,1.0,1.0,0.0,0.09636744245608674,,,rare sign: untestable distributionally; visual evidence weak,336.0
+M233,W455,P221,True,29,46,0.807,0.916,0.895,0.181,0.7430234920973667,0.5907829125061905,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M234,W456,P222,True,7,6,0.739,0.999,0.577,0.095,0.3269715804618192,0.29459494584376117,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M235,W457,P223,False,1,2,0.583,1.0,1.0,1.0,0.02477665622255203,,,rare sign: visual-only support (visual rank <= 5),2.0
+M236,W628,P396,False,1,1,0.306,0.0,0.0,1.0,8.609840122665488e-06,,,rare sign: untestable distributionally; visual evidence weak,197.0
+M237,W600,P262,False,8,5,0.597,0.5,0.707,0.925,0.00184421735228016,0.0018270886032386684,86.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),33.0
+M237,W625,P262,False,8,11,0.278,0.674,0.635,0.443,0.004333486563038341,0.004293237942819479,50.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),482.0
+M238,W603,P264,True,4,7,0.718,1.0,0.0,0.714,0.008369033370803062,0.024234342415134825,7.0,weak support,4.0
+M239,W602,P267,False,1,1,0.417,1.0,1.0,0.0,0.23074460570230532,,,rare sign: untestable distributionally; visual evidence weak,270.0
+M241,W615,P268,False,1,73,0.634,0.306,0.062,1.027,1.342657280174327e-07,,,rare sign: untestable distributionally; visual evidence weak,31.0
+M242,W621,P265,False,26,22,0.505,0.963,0.996,0.238,0.1421879618894046,0.1079532210417019,3.0,supported: hand match in top 5,103.0
+M242,W622,P265,False,26,2,0.834,0.848,0.996,0.308,0.009732859292500796,0.007389468817257272,16.0,weak support,2.0
+M243,W623,P266,False,1,1,0.4,1.0,0.0,0.0,0.007530700880627033,,,rare sign: untestable distributionally; visual evidence weak,326.0
+M244,W630,P270,False,89,40,0.801,0.954,0.98,0.358,0.23096590341710316,0.11544562612466601,2.0,supported: hand match in top 5,4.0
+M244,W631,P270,False,89,3,0.672,0.942,0.0,0.73,3.6765303351832233e-06,1.837671016509554e-06,247.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),18.0
+M244,W632,P270,False,89,32,0.801,0.987,0.227,0.239,0.021554448791384833,0.010773741057353004,19.0,weak support,5.0
+M244,W633,P270,False,89,1,0.516,0.324,0.0,0.427,7.180181735618906e-08,,,rare sign: untestable distributionally; visual evidence weak,71.0
+M244,W634,P270,False,89,5,0.773,0.992,0.079,0.53,7.588419455196225e-05,3.792983389932062e-05,120.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),7.0
+M244,W635,P270,False,89,1,0.573,0.942,0.0,0.73,1.6406998170848276e-07,,,rare sign: untestable distributionally; visual evidence weak,50.0
+M244,W636,P270,False,89,22,0.751,0.942,0.975,0.2,0.08912757631374911,0.044549384564062815,6.0,weak support,9.0
+M244,W637,P270,False,89,5,0.806,0.942,0.921,0.33,0.003544117010749156,0.0017714857531422018,38.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),3.0
+M244,W638,P270,False,89,1,0.76,0.942,0.949,0.73,2.1952085428667598e-05,,,rare sign: weak visual support (rank 6-25),8.0
+M244,W639,P270,False,89,1,0.714,0.0,0.949,0.427,4.84061805357448e-06,,,rare sign: weak visual support (rank 6-25),12.0
+M245,W615,P268,False,207,73,0.905,0.775,0.8,0.28,0.16490677631126552,0.2751343151748417,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M246,W616,P269,False,1,1,,1.0,1.0,0.0,0.009590551943442773,,,untestable (no glyph),
+M247,W626,P380,True,8,8,0.761,0.75,0.825,0.125,0.49001494130241036,0.3181409108597515,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),6.0
+M249,W590,P276,True,170,228,0.649,0.984,0.954,0.046,0.7195987501121889,0.77020068926346,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),5.0
+M250,W592,P277,True,13,11,0.707,0.99,0.968,0.287,0.413103009510061,0.3141460481720965,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M251,W593,P278,False,1,1,0.916,0.0,0.0,0.0,0.04754189133660944,,,rare sign: visual-only support (visual rank <= 5),1.0
+M252,W595,P280,True,51,49,0.835,0.884,0.998,0.11,0.8127478226860448,0.8351776142882947,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M253,W510,P275,False,21,13,0.763,0.967,0.983,0.234,0.41165242938911994,0.5907098248666659,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M253,W511,P275,False,21,12,0.741,0.964,0.281,0.381,0.023772231788734277,0.03411249363316436,2.0,supported: hand match in top 5,3.0
+M253,W512,P275,False,21,1,0.75,0.0,0.0,0.571,2.760003722694562e-06,,,rare sign: visual-only support (visual rank <= 5),2.0
+M253,W513,P275,False,21,3,0.333,0.895,0.985,0.286,0.0006759348477640845,0.0009699477691326154,60.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),346.0
+M254,W526,P301,False,73,13,0.8,0.889,1.0,0.205,0.06491523254243829,0.06406453091923038,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M254,W527,P301,False,73,63,0.8,0.99,1.0,0.017,0.8251500450522131,0.8143366125923186,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M255,W363,P302,False,1,1,0.77,1.0,0.0,0.0,0.1381507170615728,,,rare sign: visual-only support (visual rank <= 5),1.0
+M256,W611,P281,True,4,6,0.865,0.577,0.289,0.583,0.05991924493976021,0.1257173424507402,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M257,W610,P274,False,2,2,0.785,0.0,0.0,0.0,0.016678865139113812,0.30497247437958075,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M258,W604,P200,False,20,6,0.489,0.968,0.408,0.7,0.00039402321484767526,0.0004682885288790345,127.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),95.0
+M258,W605,P200,False,20,15,0.62,1.0,0.0,0.033,0.022117381502687928,0.02628605538014839,6.0,weak support,5.0
+M259,W483,P198,False,3,2,0.666,0.707,1.0,0.333,0.1286692138964567,0.1453260422020165,2.0,supported: hand match in top 5,1.0
+M261,W790,P355,False,27,55,0.225,0.785,0.592,0.257,0.0027245575232616613,0.0046521763602866695,18.0,weak support,452.0
+M261,W850,P355,False,27,57,0.797,0.94,0.573,0.22,0.3014960399306976,0.5148038673107262,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M262,W860,P356,False,1,1,0.634,1.0,1.0,0.0,0.6409772868939653,,,rare sign: visual-only support (visual rank <= 5),1.0
+M263,W851,P361,True,7,7,0.83,0.8,0.833,0.571,0.27880911421614535,0.19933776270981543,2.0,supported: hand match in top 5,2.0
+M264,W853,P359,True,11,11,0.833,0.995,0.913,0.0,0.8694768420515924,0.9085028178005123,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M266,W858,P363,False,1,1,0.914,1.0,1.0,0.0,0.9469860672103008,,,rare sign: visual-only support (visual rank <= 5),1.0
+M267,W817,P385,False,376,221,0.58,1.0,0.978,0.091,0.20055327898672046,0.2070617256276785,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),47.0
+M267,W861,P385,False,376,272,0.851,0.999,0.958,0.31,0.6009858586178021,0.6204893262875744,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M268,W202,P386,True,4,5,0.762,0.949,1.0,0.2,0.7765325595545419,0.9499692573323006,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M270,W863,P392,False,1,1,0.228,1.0,0.0,0.0,0.0018444890480787668,,,rare sign: untestable distributionally; visual evidence weak,429.0
+M271,W864,P393,False,1,1,0.469,1.0,0.0,0.0,0.013215743103323704,,,rare sign: untestable distributionally; visual evidence weak,63.0
+M272,W865,P389,True,3,3,0.756,0.667,0.894,0.333,0.3107842407373524,0.3672003619892307,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M275,W868,P388,True,5,13,0.756,0.0,1.0,0.154,0.11013102484867109,0.27702779206169864,2.0,supported: hand match in top 5,9.0
+M277,W869,P390,False,11,6,0.852,0.0,0.962,0.197,0.10750923364250711,0.2750718415542097,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M277,W871,P390,False,11,5,0.811,0.0,0.962,0.636,0.011732945615221459,0.030019774561561966,4.0,supported: hand match in top 5,5.0
+M278,W870,P391,False,2,3,0.635,1.0,0.5,1.0,0.011973267500275542,0.02567649725660042,10.0,weak support,6.0
+M279,W869,P390,False,1,6,0.839,0.0,0.0,0.833,0.00010565066459703204,,,rare sign: visual-only support (visual rank <= 5),1.0
+M279,W871,P390,False,1,5,0.795,0.0,0.0,0.8,0.00012122987818630299,,,rare sign: visual-only support (visual rank <= 5),5.0
+M280,W869,P390,False,2,6,0.79,0.267,0.707,0.833,0.006794380892548153,0.01415410948579339,11.0,weak support,10.0
+M280,W871,P390,False,2,5,0.865,0.632,0.707,0.6,0.09386570396798183,0.1955417972491113,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M282,W869,P390,False,3,6,0.825,0.0,1.0,0.5,0.09653335061121263,0.2375284143531855,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),4.0
+M282,W871,P390,False,3,5,0.775,0.258,1.0,1.0,0.030142960302940093,0.07416928470145477,2.0,supported: hand match in top 5,7.0
+M283,W869,P390,False,4,6,0.816,0.309,1.0,0.5,0.273959169996313,0.2892283194364245,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),5.0
+M283,W871,P390,False,4,5,0.788,0.365,1.0,0.6,0.20163541261892165,0.21287358817529523,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),7.0
+M284,W877,P382,True,41,22,0.684,0.919,0.895,0.253,0.14259406535327046,0.10596808015160913,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),16.0
+M285,W878,P383,False,1,1,0.73,1.0,1.0,0.0,0.7969844353869743,,,rare sign: visual-only support (visual rank <= 5),3.0
+M286,W880,P384,True,15,11,0.861,1.0,0.632,0.412,0.26885988559902246,0.5874145726006731,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M287,W900,P154,True,88,112,0.741,0.987,0.996,0.062,0.8442324055261635,0.5460495803963231,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M288,W901,P156,False,1,2,0.805,0.0,1.0,0.5,0.08341190273865752,,,rare sign: visual-only support (visual rank <= 5),2.0
+M289,W926,P155,False,5,1,0.423,0.894,1.0,0.6,0.0009558270596535888,,,rare sign: weak visual support (rank 6-25),11.0
+M290,W903,P162,True,3,4,0.558,1.0,0.707,0.167,0.25141335766265793,0.4675791145953585,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),15.0
+M293,W920,P160,True,136,153,0.813,0.985,0.996,0.066,0.8818493694201326,0.8729241525870619,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M294,W904,P172,False,53,64,0.711,0.952,0.964,0.127,0.7111527526212824,0.43584476340571054,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M294,W927,P172,False,53,11,0.476,0.812,0.969,0.269,0.0038947398394359677,0.0023869723594387203,25.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),72.0
+M295,W905,P173,False,9,13,0.625,0.997,0.995,0.077,0.6640304896054574,0.7490889456527355,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),6.0
+M295,W928,P173,False,9,2,0.403,1.0,0.0,0.0,0.0003369510424908998,0.0003801125175834455,83.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),236.0
+M296,W923,P175,True,35,45,0.8,0.946,0.999,0.114,0.8725011922889069,0.5166873420449968,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M297,W924,P176,True,6,10,0.669,0.853,0.5,0.2,0.1434016661568102,0.1545131903124873,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),8.0
+M298,W908,P177,True,4,3,0.805,0.949,0.5,0.833,0.02821089541139066,0.03140097269630857,9.0,weak support,1.0
+M299,W909,P163,False,1,3,0.238,0.0,0.0,0.667,5.8881936624111116e-06,,,rare sign: untestable distributionally; visual evidence weak,121.0
+M300,W902,P164,False,1,1,0.818,1.0,1.0,0.0,0.8898532136531829,,,rare sign: visual-only support (visual rank <= 5),1.0
+M301,W921,P165,True,13,16,0.898,0.847,0.93,0.159,0.8804246198698426,0.47102559990756604,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M303,W906,P174,True,11,16,0.797,0.995,0.945,0.017,0.8926636170751965,0.6189933403531607,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M304,W890,P178,True,11,12,0.749,0.964,0.975,0.083,0.7732240989963082,0.9646118232976582,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M305,W891,P179,False,3,2,0.671,1.0,1.0,0.0,0.5095678871445397,0.3844022380261834,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),4.0
+M306,W796,P180,False,1,1,0.59,1.0,1.0,0.0,0.5536127857992212,,,rare sign: untestable distributionally; visual evidence weak,32.0
+M307,W892,P182,True,69,90,0.614,0.984,0.946,0.113,0.5804521547225323,0.43702529918502625,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),7.0
+M308,W895,P183,False,1,1,0.439,0.0,0.0,0.0,0.0009845027554263395,,,rare sign: untestable distributionally; visual evidence weak,207.0
+M309,W531,P228,False,2,5,0.537,0.0,0.0,0.4,0.0002643729343803026,0.005888116149690173,36.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),11.0
+M309,W533,P228,False,2,2,0.745,0.0,0.0,0.0,0.012017082000311288,0.2676445482743638,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M310,W894,P078,False,1,1,0.731,1.0,1.0,0.0,0.7984836886850203,,,rare sign: visual-only support (visual rank <= 5),1.0
+M311,W896,P181,False,3,2,0.752,1.0,0.0,0.0,0.05569979011248421,0.13611488950645723,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M317,W931,P338,False,1,2,0.646,1.0,1.0,0.0,0.6181822901408157,,,rare sign: visual-only support (visual rank <= 5),5.0
+M318,W932,P341,False,1,1,0.739,1.0,1.0,0.0,0.8082117991094703,,,rare sign: visual-only support (visual rank <= 5),1.0
+M319,W165,P342,True,27,31,0.496,0.983,0.984,0.122,0.3088665749114794,0.22292184786017297,2.0,supported: hand match in top 5,105.0
+M320,W166,P343,False,1,1,0.411,1.0,0.0,0.0,0.00826769512976682,,,rare sign: untestable distributionally; visual evidence weak,273.0
+M321,W167,P344,True,13,19,0.587,0.0,1.0,0.344,0.048968159576841024,0.3240575037837899,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),22.0
+M322,W168,P345,True,4,3,0.596,1.0,0.707,0.0,0.20219010449396171,0.2938791455666575,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),35.0
+M323,W380,P196,True,10,8,0.646,0.874,0.516,0.325,0.04832149165102294,0.25134004119415154,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M325,W382,P111,True,13,21,0.646,0.93,0.523,0.319,0.11045083150548225,0.262242865439926,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M326,W384,P112,False,35,33,0.699,0.951,0.945,0.209,0.4794853343929622,0.26603256266744035,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M326,W385,P112,False,35,1,0.657,0.0,0.05,0.457,8.000344560742081e-07,,,rare sign: visual-only support (visual rank <= 5),3.0
+M327,W388,P110,True,42,59,0.827,0.964,0.947,0.109,0.8844698806270882,0.35540139759269507,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M328,W700,P310,True,323,578,0.676,0.87,0.995,0.358,0.3398283970376535,0.9416317474567462,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),12.0
+M329,W701,P311,False,7,1,,0.632,0.0,0.714,1.519115173865824e-07,,,untestable (no glyph),
+M330,W703,P312,True,8,12,0.88,0.926,0.577,0.125,0.7076138391580649,0.4944046728157682,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M332,W732,P313,False,3,2,0.718,0.816,0.0,0.833,0.0013941934490546357,0.0016753902680297751,83.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),1.0
+M332,W734,P313,False,3,1,0.451,0.577,0.0,0.333,0.0001279224053287569,,,rare sign: untestable distributionally; visual evidence weak,134.0
+M334,W731,P314,False,4,1,0.672,0.707,0.949,1.0,0.0014707492000569098,,,rare sign: visual-only support (visual rank <= 5),1.0
+M335,W735,P317,False,2,1,0.716,1.0,0.0,0.0,0.023461422966813663,,,rare sign: visual-only support (visual rank <= 5),5.0
+M335,W736,P317,False,2,4,0.605,1.0,0.0,0.0,0.032687317976975744,0.09714719047181791,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),30.0
+M336,W704,P316,False,236,5,0.923,0.851,0.118,0.12,0.00012433210614084479,7.548787136002983e-05,58.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),1.0
+M336,W705,P316,False,236,219,0.85,0.992,0.986,0.079,0.863865817350855,0.5244935818801002,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M336,W706,P316,False,236,102,0.923,0.976,0.969,0.105,0.6585022891494041,0.3998077217262341,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M336,W707,P316,False,236,1,0.653,0.91,0.0,0.72,3.9902976410468205e-08,,,rare sign: weak visual support (rank 6-25),24.0
+M338,W721,P322,False,3,2,0.78,0.0,1.0,0.333,0.06598640089774808,0.050917706776952905,4.0,supported: hand match in top 5,1.0
+M339,W719,P321,False,1,1,0.757,0.0,1.0,0.0,0.3141972881746554,,,rare sign: visual-only support (visual rank <= 5),1.0
+M341,W716,P320,False,59,3,0.44,0.879,0.181,0.678,2.5382404884044015e-06,5.294197234953342e-06,275.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),10.0
+M341,W717,P320,False,59,56,0.302,0.943,0.884,0.142,0.03470249757298936,0.07238158383187217,4.0,supported: hand match in top 5,178.0
+M342,W740,P324,True,1395,1928,0.528,0.819,1.0,0.135,0.34695179787276226,0.9115022650448786,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),36.0
+M343,W741,P325,True,177,225,0.487,0.984,0.942,0.049,0.3665990611110534,0.695786750238005,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),76.0
+M344,W742,P326,False,35,57,0.32,0.9,0.93,0.223,0.04468161787333448,0.19083859554323002,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),186.0
+M344,W743,P326,False,35,2,0.172,0.445,0.0,0.557,1.0511540230561691e-07,4.4895589508045003e-07,465.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),574.0
+M344,W744,P326,False,35,5,0.235,0.625,0.866,0.514,4.559592295779147e-05,0.00019474366224673257,182.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),437.0
+M345,W745,P327,False,51,36,0.648,0.996,0.907,0.351,0.1611048530052482,0.23864185621543507,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),11.0
+M345,W746,P327,False,51,9,0.82,0.686,0.525,0.529,0.0028377684217443335,0.004203537702570343,31.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),3.0
+M345,W747,P327,False,51,7,0.598,0.97,0.536,0.51,0.0005957906054010143,0.0008825344074767508,68.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),24.0
+M346,W749,P329,False,2,6,0.369,1.0,1.0,0.667,0.00624348353979505,0.005460153361700501,20.0,weak support,92.0
+M347,W752,P332,False,118,53,0.239,0.516,0.999,0.062,0.003281650046530873,0.024152996846102878,9.0,weak support,346.0
+M347,W760,P332,False,118,134,0.205,0.9,1.0,0.092,0.0371085911046771,0.2731198242366135,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),487.0
+M348,W770,P096,False,22,2,0.2,0.236,0.995,0.182,2.7876894316369754e-05,8.250050255273181e-05,197.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),504.0
+M348,W772,P096,False,22,10,0.219,0.68,0.989,0.2,0.002470511127022415,0.007311374331314227,24.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),447.0
+M348,W773,P096,False,22,9,0.205,0.843,0.995,0.111,0.0036489217083010028,0.010798831150055007,18.0,weak support,487.0
+M349,W765,P335,False,1,1,0.625,0.0,1.0,0.0,0.13456424322392518,,,rare sign: visual-only support (visual rank <= 5),1.0
+M350,W764,P336,False,1,1,0.485,1.0,0.0,0.0,0.01504440714185458,,,rare sign: untestable distributionally; visual evidence weak,53.0
+M351,W767,P106,False,1,2,0.293,0.707,0.0,0.5,0.0002104742677012806,,,rare sign: untestable distributionally; visual evidence weak,192.0
+M352,W750,P331,False,1,1,0.617,0.0,0.0,0.0,0.004247907628248127,,,rare sign: weak visual support (rank 6-25),25.0
+M355,W753,P337,False,2,2,0.654,1.0,0.707,1.0,0.01929657382546189,0.010248091311519787,23.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),24.0
+M357,W761,P333,False,1,1,0.675,1.0,0.0,0.0,0.06812703924938436,,,rare sign: weak visual support (rank 6-25),6.0
+M358,W752,P332,False,32,53,0.666,0.537,0.999,0.088,0.40680178238936526,0.70378524615813,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M358,W760,P332,False,32,134,0.62,0.295,1.0,0.163,0.028136874302468407,0.0486780487803506,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),5.0
+M362,W777,P118,False,2,7,0.528,1.0,0.986,0.286,0.060391637493218395,0.017943639515117647,9.0,weak support,103.0
+M362,W778,P118,False,2,1,0.529,0.0,0.0,1.0,1.2737567638813285e-05,,,rare sign: untestable distributionally; visual evidence weak,102.0
+M362,W782,P118,False,2,3,0.696,1.0,1.0,0.0,0.816781043951851,0.24268301413584364,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),10.0
+M363,W777,P118,False,3,7,0.673,1.0,0.986,0.286,0.33122864257721435,0.11400097544269829,3.0,supported: hand match in top 5,7.0
+M363,W778,P118,False,3,1,0.573,0.0,0.0,1.0,7.872538952600978e-06,,,rare sign: untestable distributionally; visual evidence weak,43.0
+M363,W782,P118,False,3,3,0.765,1.0,1.0,0.0,0.8397545056061164,0.2890234130316232,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M364,W777,P118,False,3,7,0.585,1.0,0.588,0.714,0.01217379078677614,0.013375514644776402,16.0,weak support,54.0
+M364,W778,P118,False,3,1,0.597,0.0,0.894,0.667,0.0007528233672272727,,,rare sign: untestable distributionally; visual evidence weak,51.0
+M364,W782,P118,False,3,3,0.827,1.0,0.447,1.0,0.03148809469718993,0.03459641118655236,5.0,supported: hand match in top 5,1.0
+M367,W776,P117,False,8,11,0.809,0.507,0.983,0.193,0.6621834449792535,0.6245926694772047,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),3.0
+M367,W783,P117,False,8,2,0.859,0.0,0.671,0.375,0.004690715521179636,0.004424433367136712,21.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),1.0
+M367,W784,P117,False,8,1,0.766,0.0,0.671,0.375,0.0005155789438338192,,,rare sign: weak visual support (rank 6-25),6.0
+M367,W785,P117,False,8,2,0.573,0.447,0.671,0.375,0.0012833719956884017,0.0012105176394804319,64.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),67.0
+M367,W786,P117,False,8,3,0.774,0.0,0.0,0.708,0.0001518625283569225,0.0001432416088006844,166.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),4.0
+M372,W768,P107,False,1,1,0.64,1.0,0.0,0.0,0.051904176227475576,,,rare sign: untestable distributionally; visual evidence weak,38.0
+M373,W790,P355,False,61,55,0.262,0.992,0.753,0.23,0.011793329801994552,0.013774791790385002,16.0,weak support,416.0
+M373,W850,P355,False,61,57,0.571,0.882,0.93,0.259,0.17554641727899425,0.20504093315165517,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),43.0
+M374,W790,P355,False,9,55,0.201,0.953,0.976,1.327,2.6485999414598674e-05,4.4209528848429326e-05,209.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),592.0
+M374,W850,P355,False,9,57,0.556,0.889,0.613,1.298,0.00012079785342973868,0.0002016316659392058,121.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),78.0
+M375,W832,P366,True,57,45,0.794,0.97,0.869,0.14,0.5889063170799957,0.3148170673788423,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),8.0
+M376,W834,P367,False,2,2,0.661,1.0,0.0,0.0,0.06138338337040295,0.12632776056309447,2.0,supported: hand match in top 5,18.0
+M377,W946,P109,False,1,1,0.635,1.0,1.0,0.0,0.6428782917345064,,,rare sign: visual-only support (visual rank <= 5),2.0
+M379,W831,P372,False,17,18,0.822,0.961,0.873,0.147,0.7625720041130776,0.7724961144954592,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),4.0
+M379,W833,P372,False,17,2,0.425,0.976,0.0,1.147,1.5647367620288243e-06,1.5851002428043943e-06,398.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),196.0
+M380,W825,P376,True,5,6,0.805,1.0,1.0,0.2,0.8365678416208895,0.322483044710051,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M381,W812,P369,False,14,9,0.772,0.912,0.849,0.04,0.47522086157931,0.7969795171748654,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),5.0
+M381,W813,P369,False,14,2,0.603,0.853,0.632,0.071,0.0035099386878918296,0.0058864192777499874,6.0,weak support,38.0
+M381,W814,P369,False,14,2,0.841,0.0,0.0,0.071,0.00035561112745176684,0.0005963854021825583,51.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),3.0
+M383,W815,P371,False,1,1,0.288,1.0,0.0,0.0,0.00301599545413522,,,rare sign: untestable distributionally; visual evidence weak,204.0
+M383,W816,P371,False,1,1,0.286,0.0,0.0,1.0,7.353215131803005e-06,,,rare sign: untestable distributionally; visual evidence weak,206.0
+M384,W823,P375,False,7,2,0.832,0.949,0.894,0.786,0.02262632397520804,0.004969527948316023,49.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),1.0
+M387,W803,P364,False,102,135,0.85,0.995,0.932,0.074,0.9179832344799276,0.2928228973148134,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),4.0
+M387,W805,P364,False,102,3,0.766,0.682,0.499,0.069,0.0002102970111206403,6.70815955891381e-05,96.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),18.0
+M387,W806,P364,False,102,135,0.766,0.97,0.607,0.141,0.568899377691304,0.18147037745252476,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),19.0
+M388,W804,P365,False,8,8,0.595,0.71,1.0,0.375,0.142892451704231,0.19457177034536194,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),40.0
+M388,W807,P365,False,8,3,0.518,0.3,0.0,0.5,7.990388202148746e-05,0.00010880238666887825,186.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),127.0
+M390,W804,P365,False,3,8,0.584,0.129,0.447,0.542,0.0013358310528447813,0.005775294719555939,27.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),37.0
+M390,W807,P365,False,3,3,0.489,0.8,0.894,0.333,0.06447031485229962,0.2787291612525935,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),168.0
+M391,W820,P378,True,195,244,0.359,0.999,0.96,0.081,0.1607577492694006,0.5679307999869306,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),111.0
+M393,W930,P339,True,7,8,0.684,1.0,1.0,0.179,0.6491659678574813,0.41953869724407206,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M395,W285,P084,False,7,5,0.477,0.866,0.707,0.229,0.026615565732408173,0.018937638911447754,16.0,weak support,35.0
+M395,W286,P084,False,7,3,0.457,0.833,1.0,0.286,0.01665443304934519,0.011850044539137586,20.0,weak support,52.0
+M395,W287,P084,False,7,2,0.391,0.204,0.0,0.571,9.802759963963433e-06,6.974908232256444e-06,423.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),153.0
+M397,W370,P108,False,13,10,0.918,0.968,0.68,0.208,0.600600516705234,0.3542538000721961,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M397,W371,P108,False,13,11,0.889,0.99,0.63,0.189,0.577366759204761,0.340549771095248,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M397,W372,P108,False,13,1,0.533,0.0,0.0,0.846,4.645596382665735e-07,,,rare sign: untestable distributionally; visual evidence weak,46.0
+M398,W517,P047,False,7,2,0.769,0.68,0.0,0.714,0.0004025039311280117,0.00029977787467013606,102.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),2.0
+M398,W518,P047,False,7,7,0.776,0.981,1.0,0.0,0.8459459458092746,0.630045716596664,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M399,W373,P360,False,1,2,0.765,0.707,0.707,0.5,0.11006029740904634,,,rare sign: visual-only support (visual rank <= 5),1.0
+M400,W374,P103,True,14,16,0.618,0.998,0.943,0.098,0.5411110601777891,0.32139084904572823,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0
+M401,W375,P104,False,1,1,0.19,0.0,1.0,0.0,0.00432561682612584,,,rare sign: untestable distributionally; visual evidence weak,531.0
+M402,W365,P202,False,99,18,0.386,0.857,0.935,0.379,0.0009393254171246529,0.002116621907614563,51.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),186.0
+M402,W367,P202,False,99,3,0.799,0.853,0.959,0.414,0.0006355717412795866,0.0014321608325803265,65.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),1.0
+M402,W368,P202,False,99,120,0.311,0.96,0.991,0.056,0.1186085460386972,0.2672656806671947,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),346.0
+M403,W840,P349,True,93,132,0.523,0.97,0.963,0.166,0.3504634427953906,0.4177091470988103,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),17.0
+M405,W841,P351,False,1,1,0.726,1.0,1.0,0.0,0.7910557617143811,,,rare sign: visual-only support (visual rank <= 5),1.0
+M407,W845,P352,True,48,55,0.826,0.986,0.894,0.029,0.8727925896864559,0.8919447692992778,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M408,W169,P347,False,1,1,0.119,1.0,1.0,0.0,0.025214602502051764,,,rare sign: untestable distributionally; visual evidence weak,619.0
+M409,W170,P348,False,26,1,0.265,0.0,0.0,0.654,2.420067955566922e-08,,,rare sign: untestable distributionally; visual evidence weak,366.0
+M409,W171,P346,False,26,29,0.305,0.999,0.924,0.078,0.0790190739073888,0.5472931809687698,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),248.0
+M410,W200,P079,False,1,5,0.289,0.0,0.97,0.8,5.8047560732694437e-05,,,rare sign: untestable distributionally; visual evidence weak,193.0
+M412,W201,P077,True,4,5,0.753,1.0,1.0,0.0,0.8831296374634208,0.6646138236125488,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M413,W203,P080,False,1,1,0.611,1.0,1.0,0.0,0.5965801664447696,,,rare sign: weak visual support (rank 6-25),24.0
+M415,W215,P353,False,9,11,0.867,0.975,0.824,0.626,0.4878671272906237,0.32168864672819614,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M415,W216,P353,False,9,4,0.747,0.949,0.263,0.556,0.007180833071259798,0.004734880347243753,28.0,not confirmed by model (distribution diverges - often a W-split variant or numeral; NOT evidence of error),5.0
+M416,W217,P354,False,2,2,0.784,1.0,1.0,0.0,0.8593248918263272,0.32434560206904695,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),1.0
+M417,W215,P353,False,5,11,0.873,0.973,0.588,0.818,0.0875777196757977,0.04066863352498275,3.0,supported: hand match in top 5,1.0
+M417,W216,P353,False,5,4,0.821,1.0,1.0,0.1,0.7837670375426259,0.36395940128127235,1.0,strong: hand match = top candidate (other hand-matched variants of the same M excluded),2.0

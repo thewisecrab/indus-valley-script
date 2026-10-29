@@ -1,0 +1,479 @@
+{
+ "Yajnadevam": {
+  "n_signs_tested": 226,
+  "q05_by_condition": {
+   "Yajnadevam|real|english": {
+    "q05": 0,
+    "p05": 6,
+    "mean_effect": 0.1039
+   },
+   "Yajnadevam|real|finnish": {
+    "q05": 0,
+    "p05": 17,
+    "mean_effect": 0.1275
+   },
+   "Yajnadevam|real|hungarian": {
+    "q05": 0,
+    "p05": 3,
+    "mean_effect": 0.0828
+   },
+   "Yajnadevam|real|indonesian": {
+    "q05": 0,
+    "p05": 7,
+    "mean_effect": 0.1173
+   },
+   "Yajnadevam|real|markov_nonsense": {
+    "q05": 0,
+    "p05": 5,
+    "mean_effect": 0.1602
+   },
+   "Yajnadevam|real|proto_dravidian_PDR": {
+    "q05": 0,
+    "p05": 2,
+    "mean_effect": 0.1057
+   },
+   "Yajnadevam|real|sanskrit_MW": {
+    "q05": 0,
+    "p05": 10,
+    "mean_effect": 0.1632
+   },
+   "Yajnadevam|real|turkish": {
+    "q05": 0,
+    "p05": 7,
+    "mean_effect": 0.1209
+   },
+   "Yajnadevam|shuffled0|sanskrit_MW": {
+    "q05": 0,
+    "p05": 3,
+    "mean_effect": 0.1479
+   },
+   "Yajnadevam|shuffled1|sanskrit_MW": {
+    "q05": 0,
+    "p05": 3,
+    "mean_effect": 0.1537
+   }
+  },
+  "beats_all_nulls": 0,
+  "beats_all_nulls_signs": []
+ },
+ "FieldCady": {
+  "n_signs_tested": 99,
+  "q05_by_condition": {
+   "FieldCady|real|english": {
+    "q05": 0,
+    "p05": 4,
+    "mean_effect": 0.0181
+   },
+   "FieldCady|real|finnish": {
+    "q05": 0,
+    "p05": 4,
+    "mean_effect": 0.0112
+   },
+   "FieldCady|real|hungarian": {
+    "q05": 0,
+    "p05": 3,
+    "mean_effect": -0.0137
+   },
+   "FieldCady|real|indonesian": {
+    "q05": 0,
+    "p05": 3,
+    "mean_effect": -0.0132
+   },
+   "FieldCady|real|markov_nonsense": {
+    "q05": 0,
+    "p05": 5,
+    "mean_effect": 0.0009
+   },
+   "FieldCady|real|proto_dravidian_PDR": {
+    "q05": 0,
+    "p05": 4,
+    "mean_effect": -0.0012
+   },
+   "FieldCady|real|sanskrit_MW": {
+    "q05": 0,
+    "p05": 2,
+    "mean_effect": -0.0038
+   },
+   "FieldCady|real|turkish": {
+    "q05": 0,
+    "p05": 5,
+    "mean_effect": 0.0042
+   },
+   "FieldCady|shuffled0|proto_dravidian_PDR": {
+    "q05": 0,
+    "p05": 3,
+    "mean_effect": 0.0033
+   },
+   "FieldCady|shuffled1|proto_dravidian_PDR": {
+    "q05": 0,
+    "p05": 4,
+    "mean_effect": 0.0026
+   }
+  },
+  "beats_all_nulls": 0,
+  "beats_all_nulls_signs": []
+ },
+ "FittedToShuffled": {
+  "n_signs_tested": 226,
+  "q05_by_condition": {
+   "FittedToShuffled|real|english": {
+    "q05": 0,
+    "p05": 5,
+    "mean_effect": 0.0686
+   },
+   "FittedToShuffled|real|finnish": {
+    "q05": 0,
+    "p05": 13,
+    "mean_effect": 0.1407
+   },
+   "FittedToShuffled|real|hungarian": {
+    "q05": 0,
+    "p05": 10,
+    "mean_effect": 0.0959
+   },
+   "FittedToShuffled|real|indonesian": {
+    "q05": 0,
+    "p05": 6,
+    "mean_effect": 0.0903
+   },
+   "FittedToShuffled|real|markov_nonsense": {
+    "q05": 0,
+    "p05": 11,
+    "mean_effect": 0.1782
+   },
+   "FittedToShuffled|real|proto_dravidian_PDR": {
+    "q05": 0,
+    "p05": 9,
+    "mean_effect": 0.1048
+   },
+   "FittedToShuffled|real|sanskrit_MW": {
+    "q05": 0,
+    "p05": 14,
+    "mean_effect": 0.1546
+   },
+   "FittedToShuffled|real|turkish": {
+    "q05": 0,
+    "p05": 4,
+    "mean_effect": 0.0973
+   },
+   "FittedToShuffled|shuffled0|sanskrit_MW": {
+    "q05": 0,
+    "p05": 11,
+    "mean_effect": 0.1504
+   },
+   "FittedToShuffled|shuffled1|sanskrit_MW": {
+    "q05": 0,
+    "p05": 6,
+    "mean_effect": 0.1508
+   }
+  },
+  "beats_all_nulls": 0,
+  "beats_all_nulls_signs": []
+ },
+ "FittedToReal_randominit": {
+  "n_signs_tested": 226,
+  "q05_by_condition": {
+   "FittedToReal_randominit|real|english": {
+    "q05": 0,
+    "p05": 8,
+    "mean_effect": 0.052
+   },
+   "FittedToReal_randominit|real|finnish": {
+    "q05": 0,
+    "p05": 10,
+    "mean_effect": 0.0839
+   },
+   "FittedToReal_randominit|real|hungarian": {
+    "q05": 0,
+    "p05": 11,
+    "mean_effect": 0.0857
+   },
+   "FittedToReal_randominit|real|indonesian": {
+    "q05": 0,
+    "p05": 4,
+    "mean_effect": 0.0673
+   },
+   "FittedToReal_randominit|real|markov_nonsense": {
+    "q05": 0,
+    "p05": 9,
+    "mean_effect": 0.1464
+   },
+   "FittedToReal_randominit|real|proto_dravidian_PDR": {
+    "q05": 0,
+    "p05": 5,
+    "mean_effect": 0.0851
+   },
+   "FittedToReal_randominit|real|sanskrit_MW": {
+    "q05": 0,
+    "p05": 9,
+    "mean_effect": 0.1635
+   },
+   "FittedToReal_randominit|real|turkish": {
+    "q05": 0,
+    "p05": 5,
+    "mean_effect": 0.1071
+   },
+   "FittedToReal_randominit|shuffled0|sanskrit_MW": {
+    "q05": 0,
+    "p05": 14,
+    "mean_effect": 0.1798
+   },
+   "FittedToReal_randominit|shuffled1|sanskrit_MW": {
+    "q05": 0,
+    "p05": 12,
+    "mean_effect": 0.1621
+   }
+  },
+  "beats_all_nulls": 0,
+  "beats_all_nulls_signs": []
+ },
+ "global_mean_p_alt_by_condition": {
+  "FieldCady|real|english": {
+   "mean": 0.531,
+   "median": 0.535,
+   "count": 99,
+   "frac_p_le_0.05": 0.04
+  },
+  "FieldCady|real|finnish": {
+   "mean": 0.536,
+   "median": 0.525,
+   "count": 99,
+   "frac_p_le_0.05": 0.04
+  },
+  "FieldCady|real|hungarian": {
+   "mean": 0.562,
+   "median": 0.545,
+   "count": 99,
+   "frac_p_le_0.05": 0.03
+  },
+  "FieldCady|real|indonesian": {
+   "mean": 0.556,
+   "median": 0.576,
+   "count": 99,
+   "frac_p_le_0.05": 0.03
+  },
+  "FieldCady|real|markov_nonsense": {
+   "mean": 0.554,
+   "median": 0.596,
+   "count": 99,
+   "frac_p_le_0.05": 0.051
+  },
+  "FieldCady|real|proto_dravidian_PDR": {
+   "mean": 0.562,
+   "median": 0.525,
+   "count": 99,
+   "frac_p_le_0.05": 0.04
+  },
+  "FieldCady|real|sanskrit_MW": {
+   "mean": 0.547,
+   "median": 0.525,
+   "count": 99,
+   "frac_p_le_0.05": 0.02
+  },
+  "FieldCady|real|turkish": {
+   "mean": 0.544,
+   "median": 0.535,
+   "count": 99,
+   "frac_p_le_0.05": 0.051
+  },
+  "FieldCady|shuffled0|proto_dravidian_PDR": {
+   "mean": 0.561,
+   "median": 0.545,
+   "count": 99,
+   "frac_p_le_0.05": 0.03
+  },
+  "FieldCady|shuffled1|proto_dravidian_PDR": {
+   "mean": 0.568,
+   "median": 0.525,
+   "count": 99,
+   "frac_p_le_0.05": 0.04
+  },
+  "FittedToReal_randominit|real|english": {
+   "mean": 0.502,
+   "median": 0.441,
+   "count": 226,
+   "frac_p_le_0.05": 0.035
+  },
+  "FittedToReal_randominit|real|finnish": {
+   "mean": 0.485,
+   "median": 0.423,
+   "count": 226,
+   "frac_p_le_0.05": 0.044
+  },
+  "FittedToReal_randominit|real|hungarian": {
+   "mean": 0.471,
+   "median": 0.405,
+   "count": 226,
+   "frac_p_le_0.05": 0.049
+  },
+  "FittedToReal_randominit|real|indonesian": {
+   "mean": 0.493,
+   "median": 0.423,
+   "count": 226,
+   "frac_p_le_0.05": 0.018
+  },
+  "FittedToReal_randominit|real|markov_nonsense": {
+   "mean": 0.426,
+   "median": 0.396,
+   "count": 226,
+   "frac_p_le_0.05": 0.04
+  },
+  "FittedToReal_randominit|real|proto_dravidian_PDR": {
+   "mean": 0.482,
+   "median": 0.396,
+   "count": 226,
+   "frac_p_le_0.05": 0.022
+  },
+  "FittedToReal_randominit|real|sanskrit_MW": {
+   "mean": 0.403,
+   "median": 0.369,
+   "count": 226,
+   "frac_p_le_0.05": 0.04
+  },
+  "FittedToReal_randominit|real|turkish": {
+   "mean": 0.451,
+   "median": 0.374,
+   "count": 226,
+   "frac_p_le_0.05": 0.022
+  },
+  "FittedToReal_randominit|shuffled0|sanskrit_MW": {
+   "mean": 0.374,
+   "median": 0.342,
+   "count": 226,
+   "frac_p_le_0.05": 0.062
+  },
+  "FittedToReal_randominit|shuffled1|sanskrit_MW": {
+   "mean": 0.39,
+   "median": 0.369,
+   "count": 226,
+   "frac_p_le_0.05": 0.053
+  },
+  "FittedToShuffled|real|english": {
+   "mean": 0.473,
+   "median": 0.383,
+   "count": 226,
+   "frac_p_le_0.05": 0.022
+  },
+  "FittedToShuffled|real|finnish": {
+   "mean": 0.42,
+   "median": 0.348,
+   "count": 226,
+   "frac_p_le_0.05": 0.058
+  },
+  "FittedToShuffled|real|hungarian": {
+   "mean": 0.439,
+   "median": 0.357,
+   "count": 226,
+   "frac_p_le_0.05": 0.044
+  },
+  "FittedToShuffled|real|indonesian": {
+   "mean": 0.453,
+   "median": 0.383,
+   "count": 226,
+   "frac_p_le_0.05": 0.027
+  },
+  "FittedToShuffled|real|markov_nonsense": {
+   "mean": 0.392,
+   "median": 0.37,
+   "count": 226,
+   "frac_p_le_0.05": 0.049
+  },
+  "FittedToShuffled|real|proto_dravidian_PDR": {
+   "mean": 0.48,
+   "median": 0.37,
+   "count": 226,
+   "frac_p_le_0.05": 0.04
+  },
+  "FittedToShuffled|real|sanskrit_MW": {
+   "mean": 0.406,
+   "median": 0.365,
+   "count": 226,
+   "frac_p_le_0.05": 0.062
+  },
+  "FittedToShuffled|real|turkish": {
+   "mean": 0.459,
+   "median": 0.374,
+   "count": 226,
+   "frac_p_le_0.05": 0.018
+  },
+  "FittedToShuffled|shuffled0|sanskrit_MW": {
+   "mean": 0.403,
+   "median": 0.365,
+   "count": 226,
+   "frac_p_le_0.05": 0.049
+  },
+  "FittedToShuffled|shuffled1|sanskrit_MW": {
+   "mean": 0.404,
+   "median": 0.339,
+   "count": 226,
+   "frac_p_le_0.05": 0.027
+  },
+  "Yajnadevam|real|english": {
+   "mean": 0.428,
+   "median": 0.337,
+   "count": 226,
+   "frac_p_le_0.05": 0.027
+  },
+  "Yajnadevam|real|finnish": {
+   "mean": 0.438,
+   "median": 0.357,
+   "count": 226,
+   "frac_p_le_0.05": 0.075
+  },
+  "Yajnadevam|real|hungarian": {
+   "mean": 0.465,
+   "median": 0.38,
+   "count": 226,
+   "frac_p_le_0.05": 0.013
+  },
+  "Yajnadevam|real|indonesian": {
+   "mean": 0.435,
+   "median": 0.357,
+   "count": 226,
+   "frac_p_le_0.05": 0.031
+  },
+  "Yajnadevam|real|markov_nonsense": {
+   "mean": 0.393,
+   "median": 0.388,
+   "count": 226,
+   "frac_p_le_0.05": 0.022
+  },
+  "Yajnadevam|real|proto_dravidian_PDR": {
+   "mean": 0.471,
+   "median": 0.384,
+   "count": 226,
+   "frac_p_le_0.05": 0.009
+  },
+  "Yajnadevam|real|sanskrit_MW": {
+   "mean": 0.386,
+   "median": 0.36,
+   "count": 226,
+   "frac_p_le_0.05": 0.044
+  },
+  "Yajnadevam|real|turkish": {
+   "mean": 0.416,
+   "median": 0.333,
+   "count": 226,
+   "frac_p_le_0.05": 0.031
+  },
+  "Yajnadevam|shuffled0|sanskrit_MW": {
+   "mean": 0.398,
+   "median": 0.372,
+   "count": 226,
+   "frac_p_le_0.05": 0.013
+  },
+  "Yajnadevam|shuffled1|sanskrit_MW": {
+   "mean": 0.394,
+   "median": 0.353,
+   "count": 226,
+   "frac_p_le_0.05": 0.013
+  }
+ },
+ "alt_value_pool_sizes": {
+  "Yajnadevam": 129,
+  "FieldCady": 100
+ },
+ "Yajnadevam_vs_FittedToShuffled_MWU_less": {
+  "p": 0.3235645234149853
+ }
+}
