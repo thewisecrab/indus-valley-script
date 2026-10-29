@@ -11,14 +11,19 @@ clone () { # url dir commit
 }
 # --- corpora (restricted terms: private research use; do not redistribute) ---
 clone https://github.com/joyboseroy/indus_decipher joyboseroy_indus_decipher cd60034        # M77 export: ASI copyright
-clone https://github.com/yajnadevam/lipi lipi fc8813a                                       # no licence; ICIT-derived
+clone https://github.com/yajnadevam/lipi lipi_repo fc8813a                                  # no licence; ICIT-derived
+# the scripts read a flat data/lipi/ folder (as in the original analysis); copy the needed files out of the app tree
+mkdir -p lipi
+for f in src/assets/data/{inscriptions.csv,xlits.csv,decipher.csv,words.csv,lexicons.json,synonym_groups.json,unknown.txt,Notes.txt} \
+         glossing.csv src/pages/index.vue src/scripts/index/filter.js; do cp "lipi_repo/$f" lipi/; done
+echo "ok  lipi/ (flat copy of lipi_repo data files)"
 clone https://github.com/field-cady/indus_valley_script_corpus field-cady_indus_valley_script_corpus 3030826
 clone https://github.com/yajnadevam/indus-website yajnadevam_indus-website 2434249          # GPL-3; SK font All Rights Reserved
 # --- open ---
 clone https://github.com/mayig/indus-valley-script-corpus mayig_indus-valley-script-corpus ad2f1e2   # MIT
 clone https://github.com/isramos/indus-script-sign-merging isramos_indus-script-sign-merging 0759bd6  # GPL-3
 clone https://github.com/elamicon/elamicon elamicon_repo 69b4cc2                              # GPL-2
-mkdir -p weights lexicons fonts_open zenodo/dravidian_db_22682542 vidyut toy
+mkdir -p weights lexicons fonts_open zenodo/dravidian_db_22682542 vidyut toy ../map
 curl -sfL https://richardsproat.com/indus_weights/weights.xml -o weights/weights.xml && echo "ok  weights/weights.xml (GPL-3)"
 curl -sfL https://raw.githubusercontent.com/sanskrit-lexicon/csl-orig/master/v02/mw/mw.txt -o lexicons/mw.txt && echo "ok  lexicons/mw.txt (CC BY-SA 4.0)"
 for l in en fi tr id hu; do
@@ -27,7 +32,19 @@ done
 for f in NotoSansBrahmi NotoSansCuneiform NotoSansEgyptianHieroglyphs NotoSansLinearA; do
   echo "    get $f-Regular.ttf from https://github.com/notofonts (OFL) into data/fonts_open/"
 done
-echo "    Dravidian DB v1.2 (CC BY 4.0): download the files of https://zenodo.org/records/22682542 into data/zenodo/dravidian_db_22682542/"
+# Dravidian DB v1.2 (CC BY 4.0), Zenodo record 22682542: fetch the files the scripts read and verify Zenodo's md5 checksums
+python - <<'PY' || echo "    Dravidian DB: download the files of https://zenodo.org/records/22682542 into data/zenodo/dravidian_db_22682542/"
+import hashlib, json, urllib.request
+D = "zenodo/dravidian_db_22682542"; WANT = {"README.md", "Wordlist-metadata.json", "dedr_entry_v11.csv", "forms.csv", "languages.csv", "parameters.csv", "pdr_04.csv"}
+rec = json.load(urllib.request.urlopen("https://zenodo.org/api/records/22682542"))
+for f in rec["files"]:
+    if f["key"] not in WANT: continue
+    b = urllib.request.urlopen(f["links"]["self"]).read()
+    algo, want = f["checksum"].split(":", 1)
+    assert hashlib.new(algo, b).hexdigest() == want, f["key"] + " checksum mismatch"
+    open(f"{D}/{f['key']}", "wb").write(b)
+print("ok  " + D + " (CC BY 4.0, checksums verified)")
+PY
 python - <<'PY' || echo "    vidyut data: run python -c \"import vidyut; vidyut.download_data('data/vidyut')\""
 import vidyut; vidyut.download_data('vidyut'); print('ok  vidyut data (MIT)')
 PY

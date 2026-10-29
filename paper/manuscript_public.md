@@ -19,7 +19,7 @@ We re-examine the Indus script using two independent machine-readable transcript
 
 7. **Full sign map (session 4).** We mapped all 417 M77 signs and 712 ICIT signs. Each entry gives cross-scheme IDs, allographs, positional profile, class, neighbours, sites, object types, glyph references, foreign look-alikes and published claims.
    - A distributional-plus-visual model recovers hand-made M↔W concordance links at 84.7% top-1 under cross-validation (chance 0.25%).
-   - A hand check judged 37 of 40 Carlson links correct.
+   - A visual check of 40 Carlson links, made by the project's AI research assistant (not a human epigrapher), judged 37 correct or plausible; an independent human check is still outstanding.
 8. **Claims re-tested.** We compiled 42 hand-sourced sign-value proposals and two complete keys, and tested each per sign with held-out values or held-out sites.
    - No phonetic value beats the alternative-value, shuffled-corpus and alternative-lexicon nulls.
    - Yajnadevam's per-sign advantage equals that of a key fitted to a shuffled corpus.
@@ -111,7 +111,7 @@ None of these settles linguistic status, which our results, Sproat (2014) and Ra
 - Held-out-page digit accuracy was 0.997–0.999, and agreement with an independent OCR pass was 99.3% on 1,822 overlapping texts.
 - Single-sign direction codes matched line length in 53 of 53 checkable cases, with no false positives in 1,785.
 
-**Plate checks.** We checked the stroke numerals and fish signs by eye against the M77 sign-list plates (book pp. 32–38). Crops are kept privately in `paper/evidence/` and are not for publication.
+**Plate checks.** The stroke numerals and fish signs were checked visually against the M77 sign-list plates (book pp. 32–38) by the project's AI research assistant, not by a human epigrapher. Crops are kept privately in `paper/evidence/` and are not for publication.
 
 # 3. Methods
 
@@ -137,7 +137,7 @@ Calibration:
 - **Reported distributional confidence** = stability × (1 − FDR).
 - **Replication:** the same rules applied to the ICIT corpus through the concordance, with positional classes compared.
 
-Stroke signs were also tagged NUMERAL-STROKE by visual inspection. This tag is kept separate from their positional class.
+Stroke signs were also tagged NUMERAL-STROKE by visual inspection (made by the AI research assistant, not a human). This tag is kept separate from their positional class.
 
 ## 3.2 Segmentation (`structure2.py`, `structure3_dedup.py`)
 
@@ -218,7 +218,7 @@ Stroke signs were also tagged NUMERAL-STROKE by visual inspection. This tag is k
 - Every link was ranked among the W candidates, with the other hand-matched variants of the same M sign excluded.
 - Rare signs (no distributional rank) received a visual-only rank among all 631 W renders.
 
-**Hand check.** Forty links were inspected by eye, M crop beside W render: the 20 the model scores lowest plus 20 at random.
+**Visual check (AI-made).** Forty links were inspected visually, M crop beside W render: the 20 the model scores lowest plus 20 at random. The inspection was made by the project's AI research assistant (an image-capable language model), **not by a human**. It is therefore not independent expert validation; a blind human check is planned (§6).
 
 ## 3.8 Claims table and per-sign leave-one-out tests (`claims_table.py`, `loo_signs.py`, `loo_hand.py`)
 
@@ -499,15 +499,15 @@ Of the 417 M signs:
 | Rare, untestable | 62 |
 | No glyph | 7 |
 
-**Hand check (Fig. 7).**
+**Visual check by the AI assistant (Fig. 7).**
 
-- By eye, 37 of 40 links look correct or plausible variants: 17/20 of the lowest-scored and 20/20 of the random sample.
+- In the AI assistant's judgement (not a human's), 37 of 40 links look correct or plausible variants: 17/20 of the lowest-scored and 20/20 of the random sample.
 - All 15 links the model supports were correct.
 - 22 of the 25 links it does not confirm were also correct.
 - So "not confirmed" usually reflects numerals, or a W counterpart split into several variants. It is not evidence of error.
 - Doubtful links: M053/W193, M067/W242, and M112/W007 (crop clipped).
 
-*Fig. 7 (hand check of 40 concordance links, M77 crops beside SK-font renders) is omitted from the public version: both image sources are under copyright. The per-pair judgements are in `outputs/signmap/handcheck_pairs.csv`.*
+*Fig. 7 (visual check of 40 concordance links, M77 crops beside SK-font renders; the judgements were made by the project's AI research assistant, not by a human) is omitted from the public version: both image sources are under copyright. The per-pair judgements are in `outputs/signmap/handcheck_pairs.csv`.*
 
 ## 4.9 Published sign values: claims table and leave-one-out tests
 
@@ -691,6 +691,8 @@ Of the 116 rows, none carries a phonetic value at any confidence above null.
   - Fuls' positional formula is approximated from an abstract.
   - Our synthetic control is one hand-designed generator, not Raghavendra's registered 54-method battery.
   - Koskenniemi (1981), Fuls (2013), FLAIR and Tamkiya et al. were seen only as abstracts or second-hand.
+- **AI-made visual checks.** Every visual judgement in this paper (the 40-link concordance check, the plate checks of numerals and fish signs, the NUMERAL-STROKE tags and glyph-crop spot checks) was made by the project's AI research assistant, not by a human epigrapher. None has yet been independently checked by a person. A blind human protocol is planned.
+- **Run-to-run variation in controls (found in session 6).** The Markov-nonsense control lexicon and the fitted rebus keys depend on Python's per-process string-hash order, so these control values shift between runs (fitted rebus scores by up to about 0.02; Markov-nonsense fixed-key segmentability between 0.76 and 0.91). The published-key results do not change, and no qualitative conclusion changed in a fresh-clone rerun. A deterministic rerun with reported spread is planned.
 - **Scope of the original brief.** The request for "85% confidence in a complete decipherment" cannot be met. Without a bilingual or an independent semantic anchor, no current method can calibrate phonetic values (Parpola 1994: 48).
 
 # 7. Data and code availability
@@ -834,7 +836,7 @@ Columns: M = Mahadevan 1977; P = Parpola; W = Wells/ICIT (via Carlson's unverifi
 
 - `outputs/signmap/sign_map_full_public.csv`; the SQLite table `sign_map_full`; summary in `sign_map_full_summary.json`
 - concordance scoring: `outputs/signmap/concordance_links_scored.csv`
-- the hand check: `handcheck_pairs.csv`
+- the AI-made visual check (not a human check): `handcheck_pairs.csv`
 - look-alikes: `outputs/comparanda/lookalikes_top3.csv`
 
 **Columns**

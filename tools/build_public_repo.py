@@ -51,6 +51,7 @@ sm = sm.drop(columns=['glyph_crop_private', 'glyph_render_private', 'yajnadevam_
                       'lipi_canonical_decomposition_Yajnadevam'])
 sm.to_csv(f'{DST}/outputs/signmap/sign_map_full_public.csv', index=False)
 hp = pd.read_csv(f'{DST}/outputs/signmap/handcheck_pairs.csv', dtype=str, keep_default_na=False).rename(columns=lambda c: 'visual_judgement' if c.endswith('_visual_judgement') else c)
+hp['judged_by'] = 'AI research assistant (image-capable language model); not a human check'  # session 6: say who judged
 hp.to_csv(f'{DST}/outputs/signmap/handcheck_pairs.csv', index=False)
 ap = pd.read_csv(f'{SRC}/outputs/claims/all_proposals.csv', dtype=str, keep_default_na=False)
 mask = ap.proponent == 'Yajnadevam'
@@ -82,7 +83,7 @@ print('commons images:', len(rows), 'met images:', len(os.listdir(f"{DST}/data_o
 
 # ---------- paper (public variant) ----------
 body = open(f'{SRC}/paper/manuscript_body.md').read()
-body = re.sub(r'!\[Fig\. 7\.[^\n]*\n', '*Fig. 7 (hand check of 40 concordance links, M77 crops beside SK-font renders) is omitted from the public version: both image sources are under copyright. The per-pair judgements are in `outputs/signmap/handcheck_pairs.csv`.*\n', body)
+body = re.sub(r'!\[Fig\. 7\.[^\n]*\n', '*Fig. 7 (visual check of 40 concordance links, M77 crops beside SK-font renders; the judgements were made by the project\'s AI research assistant, not by a human) is omitted from the public version: both image sources are under copyright. The per-pair judgements are in `outputs/signmap/handcheck_pairs.csv`.*\n', body)
 body = re.sub(r'!\[Fig\. 8\.[^\n]*\n', '*Fig. 8 (top visual look-alikes, M77 crops beside foreign glyphs) is omitted from the public version because the M77 crops are under copyright. Scores are in `outputs/comparanda/lookalikes_top3.csv`.*\n', body)
 body = re.sub(r'^author: .*$', 'author: "Indus Valley Script project contributors"\nsubtitle: "UNREVIEWED PREPRINT: working draft, not peer-reviewed (29 October 2026; public version with restricted figures and lipi key values removed)"', body, count=1, flags=re.M)
 body = body.replace('# Abstract', '<div class="preprint-banner">UNREVIEWED PREPRINT / WORKING DRAFT. This manuscript has not been peer-reviewed. Results are provisional and may change.</div>\n\n# Abstract', 1)
@@ -129,10 +130,12 @@ open(f'{DST}/paper/manuscript_public.md', 'w').write(md)
 
 # docs, licences, fetch + check scripts
 D = f'{SRC}/tools/repo_docs'
-os.makedirs(f'{DST}/.github', exist_ok=True)
-shutil.copy2(f'{D}/README.md', f'{DST}/.github/README.md')  # GitHub renders .github/README.md first
-shutil.copy2(f'{D}/README_root_remote.md', f'{DST}/README.md')  # byte-identical to the remote's initial README (clean merge)
-for f in ['LICENSE', 'LICENSE-SCOPE.md', 'LICENSE-CC-BY-4.0.txt', 'CITATION.cff', 'DATA_POLICY.md', 'REPRODUCIBILITY.md', 'requirements.txt', '.gitignore']:
+# session 6: the full project README sits at the root (as on the remote since commit e12d7c9); no .github/README.md
+if os.path.exists(f'{DST}/.github/README.md'): os.remove(f'{DST}/.github/README.md')
+shutil.copy2(f'{D}/README.md', f'{DST}/README.md')
+os.makedirs(f'{DST}/.github/workflows', exist_ok=True); shutil.copy2(f'{D}/workflows/smoke.yml', f'{DST}/.github/workflows/smoke.yml')
+os.makedirs(f'{DST}/tests', exist_ok=True); shutil.copy2(f'{D}/tests/smoke_test.py', f'{DST}/tests/smoke_test.py')
+for f in ['LICENSE', 'LICENSE-SCOPE.md', 'LICENSE-CC-BY-4.0.txt', 'CITATION.cff', 'DATA_POLICY.md', 'REPRODUCIBILITY.md', 'requirements.txt', 'requirements-ci.txt', '.gitignore']:
     shutil.copy2(f'{D}/{f}', f'{DST}/{f}')
 shutil.copy2(f'{D}/data_open_README.md', f'{DST}/data_open/README.md')
 shutil.copy2(f'{D}/fetch_data.sh', f'{DST}/scripts/fetch_data.sh')

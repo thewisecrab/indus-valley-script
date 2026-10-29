@@ -19,6 +19,7 @@ Code, derived statistics and manuscript for a null-model-calibrated study of the
 |---|---|
 | `scripts/` | all analysis code (Python) |
 | `scripts/fetch_data.sh` | fetch the openly hosted inputs; instructions for the restricted ones |
+| `tests/smoke_test.py`, `.github/workflows/smoke.yml` | offline smoke test, run by GitHub Actions on every push |
 | `tools/check_public.py` | scan the repo for restricted files and patterns (run before every push) |
 | `tools/build_public_repo.py` | how this repo was assembled from the private project |
 | `outputs/` | derived statistics only (frequencies, positional profiles, bigram counts, test statistics, concordance scores) |
@@ -34,9 +35,12 @@ Clone over SSH with `git clone git@github.com:thewisecrab/indus-valley-script.gi
 ```bash
 python -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
-bash scripts/fetch_data.sh        # open inputs; read its output for the restricted ones
-python scripts/compare_replications.py   # needs the M77 export + lipi texts (see DATA_POLICY.md)
+python tests/smoke_test.py        # offline: compiles everything, re-runs the toy pipeline, checks headline numbers
+bash scripts/fetch_data.sh        # fetched inputs; read its output for the restricted ones
+python scripts/run_all.py         # frequencies, positions, n-grams for M77 / ICIT / CISI (reproduces outputs/<corpus>/ exactly)
 ```
+
+Some analyses need inputs that cannot be fetched (for example the M77 object-type codes, which come from OCR of the printed concordance). `REPRODUCIBILITY.md` lists, script by script, what runs from a fresh clone.
 
 Full instructions are in `REPRODUCIBILITY.md`, and the exclusions are in `DATA_POLICY.md`.
 

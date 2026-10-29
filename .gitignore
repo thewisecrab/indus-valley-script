@@ -39,6 +39,7 @@ outputs/comparanda/sim_matrix*
 *.ttf
 *.otf
 # ---- local clutter ----
+figures/
 .venv/
 __pycache__/
 *.pyc
