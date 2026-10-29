@@ -102,6 +102,15 @@ for f in sorted(glob.glob(f'{SRC}/data_open/comparanda_short/*')):
     cp(os.path.relpath(f, SRC))
 with open(f'{DST}/data_open/comparanda_short/README.md', 'w') as fh:
     fh.write('# Short-text comparanda\n\n`wiki_titles_<lang>.txt`: 6,000 Wikipedia article titles per language (fi, ta, sa), one per line, words separated by spaces, in the order used by `scripts/emblem_tests2.py`. Sampled from the all-titles-in-ns0 dumps (dumps.wikimedia.org, fetched 29 October 2026). Content: Wikipedia contributors, CC BY-SA 4.0. The EDH Latin inscriptions are fetched by `scripts/fetch_data.sh` (CC BY-SA 4.0).\n')
+# session 7: positive control for the shuffle test (scripts, aggregate results, checksums; DCS/ORACC data are fetched,
+# not shipped; the M77 input is an aggregate line-length distribution only)
+for f in sorted(glob.glob(f'{SRC}/positive_control/scripts/pc_*.py')): cp(os.path.relpath(f, SRC))
+for f in ['pc_results.csv', 'pc_results_by_length.csv', 'pc_summary.csv', 'pc_run_meta.json']:
+    cp(f'positive_control/outputs/{f}')
+# shipped under positive_control/data_open/ (data/ dirs are never committed); fetch_data.sh copies them into data/
+for f, d in [('m77_line_length_distribution.json', 'm77_line_length_distribution.json'), ('dcs_SHA256SUMS', 'dcs_SHA256SUMS'), ('oracc/SHA256SUMS', 'oracc_SHA256SUMS')]:
+    cp(f'positive_control/data/{f}', f'positive_control/data_open/{d}')
+cp('tools/repo_docs/positive_control_README.md', 'positive_control/README.md')
 # session 6: exact Wikipedia page IDs for the comparanda (fetch_wiki.py --pages re-downloads them)
 for f in sorted(glob.glob(f'{SRC}/tools/repo_docs/comparanda_pages/*')):
     cp(os.path.relpath(f, SRC), f'data_open/comparanda_pages/{os.path.basename(f)}')

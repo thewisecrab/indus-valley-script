@@ -1,5 +1,5 @@
 # ---- restricted inputs: never commit (see DATA_POLICY.md) ----
-data/
+/data/
 data/raw/
 data/books/
 data/lipi/
@@ -47,3 +47,7 @@ figures/
 __pycache__/
 *.pyc
 .DS_Store
+# session 7 positive control: fetched data and rebuilt corpora are not committed
+positive_control/data/
+positive_control/outputs/corpora/
+positive_control/outputs/pc_run.log

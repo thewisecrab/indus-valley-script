@@ -29,6 +29,7 @@ This creates `data/`, which is git-ignored. Restricted items need your own lawfu
 | Pre-registered held-out tests, robustness (`prereg_heldout.py`, `robustness_schemes.py`) | M77 export, lipi texts, mayig corpus, isramos merge file (GPL-3) |
 | Non-linguistic comparison (`emblem_tests.py`) | Sproat corpora (fetched; Apache-2.0), M77 export, lipi texts, Wikipedia comparanda (`fetch_wiki.py --pages`) |
 | Short-text comparanda and classifier stability (`emblem_tests2.py`, session 7) | everything `emblem_tests.py` needs, plus the EDH CSV (fetched; CC BY-SA 4.0) and `data_open/comparanda_short/wiki_titles_*.txt` (shipped; CC BY-SA 4.0) |
+| Shuffle-test positive control (`positive_control/scripts/pc_*.py`, session 7) | DCS CoNLL-U (fetched, CC BY 4.0, SHA-256 checked against `positive_control/data_open/dcs_SHA256SUMS`), ORACC SAAo/RINAP JSON (fetched, CC0 per metadata, SHA-256 checked), vidyut data, *lipi* texts and key (Indus row only), M77 line-length distribution (shipped, aggregate only) |
 | Strict look-alike controls (`lookalikes_strict.py`, session 7) | M77 plate crops and SK-font W renders (private), elamicon glyphs, Noto fonts (fetched; OFL) |
 | Benchmark (`bench_score.py`) | lipi texts, the lexicons above |
 | Open sign list (`open_signlist.py`) | only files in this repository |
@@ -46,6 +47,7 @@ prereg_heldout.py → robustness_schemes.py → emblem_tests.py → bench_score.
 run_claim_seeds.sh → seed_spread.py
 run_claim_seeds_extra.sh 5 19 49 → seed_claims_extended.py      (session 7: 20 LOO / 50 rebus replicates)
 lookalikes_strict.py → h7_posthoc.py → emblem_tests2.py            (session 7)
+positive_control/scripts/pc_data.py → pc_run.py → pc_summary.py   (session 7 positive control)
 ```
 
 `run_all.py` runs the early pipeline. `scripts/indus_lib.py` holds the shared loaders and measures. After `loo_signs.py`, run `loo_global_calibration.py` to add the global calibration block to `outputs/claims/loo_phonetic_summary.json`.
@@ -85,6 +87,10 @@ We cloned this repository into an empty directory, built a new virtual environme
 - `anchors.py` previously re-drew its Gulf bigram null on every run. It is now seeded (`random.seed(0)`): the null mean is 0.796 (0.687–0.885), where earlier runs gave about 0.793 (0.681–0.901).
 - `lookalikes_strict.py` is deterministic: two runs gave identical JSON. It needs the private plate crops and W-font renders, so it does not run from a fresh clone.
 - `h7_posthoc.py` needs the ICIT data, which `fetch_data.sh` fetches.
+- **Positive control.** `fetch_data.sh` downloads the 517 DCS files, pinned to commit 8aeed5a, and the four ORACC zips into `positive_control/data/`, then checks them against the SHA-256 lists shipped in `positive_control/data_open/`.
+  - **TLS caveat:** the ORACC server does not send its intermediate certificate, so the original download used `curl -k` (no certificate verification). `fetch_data.sh` tries a verified download first and falls back to `-k`. Integrity therefore rests on the SHA-256 check, not on TLS.
+  - From freshly fetched files, `pc_data.py` rebuilt all five corpora byte-identically on 29 October 2026.
+  - `pc_run.py` (200/200/100 nulls at seed 0, 50/50/20 at seeds 1–4) is slow. It was not re-run in the fresh-clone check.
 - `emblem_tests2.py` needs the EDH CSV (fetched by `fetch_data.sh`) and the saved Wikipedia title samples in `data_open/comparanda_short/`. Like `emblem_tests.py`, it also needs the M77 export. Reruns from the saved samples are byte-identical.
 
 `lookalikes.py` also used `hash()` for its control draws. After the fix only the random-control columns move (by under 0.012 in the share of signs above control); the category tests and the Mantel test are unchanged.

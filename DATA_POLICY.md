@@ -27,6 +27,7 @@ Rule: we publish code, our own text, and **derived statistics** (sign IDs with c
 - **Sign descriptions:** in `sign_classes_M77.csv` and `sign_map_full_public.csv`, from M. Carlson's `mayig/indus-valley-script-corpus` (MIT).
 - **`data_open/images/met/`:** Metropolitan Museum Open Access, CC0.
 - **`data_open/images/commons/`:** Wikimedia Commons; each file keeps its own licence (CC0, PD, CC BY, CC BY-SA). See ATTRIBUTION.md. These files are not covered by the MIT or CC BY grants.
+- **`positive_control/data_open/m77_line_length_distribution.json`:** counts of M77 line lengths only (aggregate; no texts).
 - **`data_open/toy/`:** a hand-made toy corpus (ours, CC BY 4.0).
 
 ## Openly licensed inputs fetched, not committed
@@ -37,6 +38,8 @@ Rule: we publish code, our own text, and **derived statistics** (sign IDs with c
 | `weights.xml` (Sproat, Indus weights from Hemmy and HARP) | **GPL-3** | Fetched, not committed. Our `w700_weights.py` only reads it, and our outputs are statistics, so we do not think GPL applies to this repo. If you redistribute `weights.xml` with the code, that file stays GPL-3. |
 | yajnadevam/indus-website (ICIT-style texts, SK font) | **GPL-3** code; font All Rights Reserved | Read only. Nothing is copied into this repo. |
 | isramos/indus-script-sign-merging | **GPL-3** | Consulted only. No code copied. |
+| Digital Corpus of Sanskrit (O. Hellwig), 517 CoNLL-U files (session 7 positive control) | CC BY 4.0 | Fetched by `fetch_data.sh`, pinned to commit 8aeed5a and checked against `positive_control/data_open/dcs_SHA256SUMS`. Cite Hellwig, DCS. |
+| ORACC JSON: SAAo SAA 1, 5, 10 and RINAP 4 (session 7 positive control) | CC0 per each file's metadata; ORACC site licence CC BY-SA 3.0 | Fetched, not committed. We credit ORACC and the volume editors (Parpola; Lanfranchi & Parpola; Leichty). Downloaded with `curl -k` because the server omits its intermediate certificate, so integrity rests on `positive_control/data_open/oracc_SHA256SUMS`. |
 | elamicon (Linear Elamite glyphs) | **GPL-2** | Glyphs were rendered for private comparison only. Rendered images are not committed. |
 | Noto fonts | SIL OFL 1.1 | Fetched |
 | csl-orig Monier-Williams | CC BY-SA 4.0 | Fetched |

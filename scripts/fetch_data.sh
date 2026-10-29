@@ -56,6 +56,32 @@ mkdir -p sproat_nonling && ( cd sproat_nonling && curl -sfLO https://richardspro
 mkdir -p comparanda_short && curl -sfL https://edh.ub.uni-heidelberg.de/data/download/edh_data_text.csv -o comparanda_short/edh_data_text.csv && echo "ok  comparanda_short/edh_data_text.csv (EDH, CC BY-SA 4.0)" || echo "    get edh_data_text.csv from https://edh.ub.uni-heidelberg.de/data/download into data/comparanda_short/"
 # Wikipedia comparanda text (CC BY-SA 4.0), used by emblem_tests.py and structure_ling.py
 ( cd .. && python scripts/fetch_wiki.py --pages >/dev/null 2>&1 && echo "ok  comparanda_text (Wikipedia, CC BY-SA 4.0)" ) || echo "    run python scripts/fetch_wiki.py --pages"
+# --- session 7 positive control (positive_control/): correct keys for deciphered scripts ---
+mkdir -p ../positive_control/data/oracc && cp ../positive_control/data_open/m77_line_length_distribution.json ../positive_control/data_open/dcs_SHA256SUMS ../positive_control/data/ && cp ../positive_control/data_open/oracc_SHA256SUMS ../positive_control/data/oracc/SHA256SUMS
+# Digital Corpus of Sanskrit (O. Hellwig; CC BY 4.0): the exact 517 CoNLL-U files listed, with SHA-256, in
+# positive_control/data_open/dcs_SHA256SUMS (Manusmrti 12, Hitopadesa 5, Rgveda 500 = RV 1.1-6.59), pinned to commit 8aeed5a.
+python - <<'PY' || echo "    DCS: see positive_control/README.md"
+import hashlib, os, urllib.parse, urllib.request
+D = '../positive_control/data/dcs'; BASE = 'https://raw.githubusercontent.com/OliverHellwig/sanskrit/8aeed5a1343d0e48b64eb32af8c00e8c6eb29359/dcs/data/conllu/files/'
+bad = 0
+for line in open('../positive_control/data/dcs_SHA256SUMS', encoding='utf-8'):
+    h, rel = line.rstrip('\n').split('  ', 1); out = f'{D}/{rel}'
+    if not (os.path.exists(out) and hashlib.sha256(open(out, 'rb').read()).hexdigest() == h):
+        os.makedirs(os.path.dirname(out), exist_ok=True)
+        b = urllib.request.urlopen(BASE + urllib.parse.quote(rel)).read(); open(out, 'wb').write(b)
+    bad += hashlib.sha256(open(out, 'rb').read()).hexdigest() != h
+print(f'ok  positive_control/data/dcs (DCS, CC BY 4.0; {bad} checksum mismatches)')
+PY
+# ORACC JSON (CC0 per each file's metadata; ORACC site licence CC BY-SA 3.0): SAAo SAA 1, 5, 10 and RINAP 4.
+# CAVEAT: the ORACC server does not send its intermediate TLS certificate (InCommon RSA Server CA 2), so plain curl
+# fails certificate verification. We downloaded with `curl -k` (verification DISABLED) and check the files against the
+# SHA-256 values in positive_control/data_open/oracc_SHA256SUMS instead. If your system has that intermediate installed,
+# drop the -k.
+( mkdir -p ../positive_control/data/oracc && cd ../positive_control/data/oracc && \
+  for z in saao-saa01 saao-saa05 saao-saa10 rinap-rinap4; do
+    [ -f "$z.zip" ] || curl -sfL --retry 2 "https://oracc.museum.upenn.edu/json/$z.zip" -o "$z.zip" || curl -sfLk --retry 2 "https://oracc.museum.upenn.edu/json/$z.zip" -o "$z.zip"
+  done && grep -E 'saao-saa0[15]|saao-saa10|rinap-rinap4' SHA256SUMS | sha256sum -c --quiet - && echo "ok  positive_control/data/oracc (ORACC; SHA-256 verified)" ) \
+  || echo "    ORACC: download saao-saa01/05/10 and rinap-rinap4 .zip from https://oracc.museum.upenn.edu/json/ into positive_control/data/oracc/ and check SHA256SUMS"
 cat <<'MSG'
 
 Restricted inputs that are NOT fetched (obtain lawfully; see DATA_POLICY.md):

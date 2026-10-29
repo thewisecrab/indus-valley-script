@@ -14,7 +14,7 @@ We re-examine the Indus script using two independent machine-readable transcript
 2. **Slot grammar.** A hidden Markov model of seal texts recovers a reproducible slot template: initial → post-initial → medial → terminal → post-terminal. It gains 0.38 nats/token on held-out, de-duplicated texts, against no gain on shuffled texts.
 3. **Segmentation.** Byte-pair segmentation lowers held-out description length by about 1 bit per sign after de-duplication, against no reduction for shuffled texts. This shows that recurrent multi-sign units exist.
 4. **Linguistic status.** Measures proposed to separate writing from non-linguistic symbol systems do not separate them at Indus text lengths. These are bigram conditional entropy (Rao), Sproat's repetition ratio r/R, and Lee et al.'s Cr/Ur. Linguistic comparanda cut to Indus lengths cross Sproat's boundary, and the two Indus transcriptions disagree with each other (r/R 0.66 vs 0.26). Linguistic status therefore remains **undetermined** by internal statistics.
-5. **Published readings.** A sign-value key published by Yajnadevam does not distinguish real from shuffled sign order on any of three measures, including a full Sanskrit morphological parse. Fitted rebus keys built from a Dravidian lexicon perform no better than keys built from English or Finnish, and about as well as nonsense lexicons (median rank 6 of 8 over 50 seeds; above Markov nonsense in 58% of seeds).
+5. **Published readings.** A sign-value key published by Yajnadevam gains nothing from real sign order on a full Sanskrit morphological parse (57.9% real vs 59.2% shuffled). On the same measure, correct keys for Sanskrit and Akkadian at Indus text lengths lose 17–25 points when order is shuffled (§4.22). On two weaker dictionary-segmentation measures the key shows small real-order gains (+0.4 and +2.2 points; p = .015 and .005 with 200 shuffles). Those gains come at a 94–99% ceiling, and correct keys show only modest gains on the same measures (session 7 correction: the earlier text said no measure distinguished real from shuffled order). Fitted rebus keys built from a Dravidian lexicon perform no better than keys built from English or Finnish, and about as well as nonsense lexicons (median rank 6 of 8 over 50 seeds; above Markov nonsense in 58% of seeds).
 6. **Phonetic values.** We find **no sign whose phonetic value can be estimated above null**. The stroke numerals are an iconic, plate-checked exception, assessed qualitatively. A complete phonetic decipherment at 85% confidence is not supported by the available evidence.
 
 7. **Full sign map (session 4).** We mapped all 417 M77 signs and 712 ICIT signs. Each entry gives cross-scheme IDs, allographs, positional profile, class, neighbours, sites, object types, glyph references, foreign look-alikes and published claims.
@@ -42,6 +42,7 @@ We re-examine the Indus script using two independent machine-readable transcript
    - An exploratory look at the two H7 failures points to low power (about 0.5 at n = 5), not heterogeneity. The pre-registered verdict is unchanged (§4.19).
    - We added short real linguistic texts: Latin inscriptions and Wikipedia titles. Language-vs-emblem classifiers are unstable under leave-one-system-out tests and reference changes, and they assign Indus no differently from synthetic emblem generators (§4.20).
    - A fresh-clone run of the full quick start reproduces the public outputs (§4.21).
+   - **Positive control (§4.22).** Correct keys for Sanskrit and Akkadian lose 17–25 points under shuffling on the strong measures, even at about 4 signs per text. Yajnadevam's key loses nothing on the parse, but shows small significant gains on two weak measures, which corrects item 5.
 
 # 1. Introduction
 
@@ -449,10 +450,12 @@ What the table shows:
 **Yajnadevam (Sanskrit).**
 
 - Published readings follow from the key in 59.8% of cases by exact consonant skeleton, and in 85.9% allowing s~h and n~m.
-- **B (fixed key):** real texts segment into Monier-Williams headwords at 99.35%. Within-text shuffles give 99.08% and a permuted key 99.02%.
+- **B (fixed key):** real texts segment into Monier-Williams headwords at 99.35%. Within-text shuffles give 99.08% and a permuted key 99.02% (original run, three shuffles).
+  - Session 7 reran this with 200 shuffles (§4.22). Real order is ahead by a small but significant margin on M1, the full Monier-Williams list (99.35% vs 98.92%, p = .015), and on M2, the 4,361-word stratified list (95.8% vs 93.6%, p = .005).
 - **C (fitted keys):** keys fitted to any of 8 lexicons reach ≥ 85% held-out "readability" on shuffled texts too. Fitting to Markov nonsense reaches 0.98 (0.967–0.991 over the five session-6 seeds).
-- **E (full parse):** vidyut parses 57.9% of mechanical outputs in real order, against 59.3% shuffled.
-- No test favours real sign order or the published key over controls (Fig. 3).
+- **E (full parse):** vidyut parses 57.9% of mechanical outputs in real order, against 59.3% shuffled. Session 7, with 200 shuffles: 59.2% within-text and 60.1% global; p = .96 for real > shuffled.
+  - A correct Sanskrit key at the same text lengths parses 53.5% real against 33.4% shuffled (§4.22).
+- **Overall.** On the strong measure, the full parse, real sign order is not favoured over shuffles (Fig. 3). On the two weak segmentation measures it is favoured slightly, but at a ceiling that correct keys do not reach. §4.22 shows that the weak measures are not diagnostic on their own (corrected in session 7: the earlier text said no test favoured real order).
 
 **Dravidian rebus keys.**
 
@@ -477,7 +480,7 @@ What the table shows:
 - Of Parpola's asterism compounds, only mū-m-mīn is attested in the DEDR forms; aru-mīn and eḻu-mīn are not.
 - These tests have low power against a specific, correct rebus system. They do **not** refute a Dravidian hypothesis. They show that no lexicon is singled out by the data.
 
-![Fig. 3. Left: vidyut full-parse rate of the Yajnadevam key output. Right: held-out compound hit rate of fitted rebus keys by lexicon.](figures/fig3_claim_harness.png)
+![Fig. 3. Left: vidyut full-parse rate of the Yajnadevam key output (real vs shuffled; original run with three shuffles; see §4.22 for the 200-shuffle rerun and correct-key positive controls). Right: held-out compound hit rate of fitted rebus keys by lexicon.](figures/fig3_claim_harness.png)
 
 ## 4.7 Other anchors
 
@@ -842,6 +845,61 @@ We cloned the public repository at commit ff98449 over HTTPS into a clean virtua
 - `build_map.py` had imported no images in a fresh clone. It now imports the 88 openly licensed Commons/Met images from their manifests.
 - A determinism audit found one remaining unseeded null, the Gulf bigram null in `anchors.py`. It is now seeded, which changes the reported null from 79% (68–90%) to 80% (69–89%).
 
+## 4.22 Positive control: does a correct key lose under shuffling? (session 7)
+
+The shuffle test of §4.6 assumes that a correct key reads real sign order better than shuffled order. A reader asked us to check that assumption on scripts that have actually been deciphered. We ran the same three measures on two such scripts, with the correct sign values and the same nulls (`positive_control/`; `pc_data.py`, `pc_run.py`, `pc_summary.py`; results in `positive_control/outputs/pc_summary.csv`).
+
+**The three measures:**
+- **M1:** the reading segments into dictionary words from the full dictionary.
+- **M2:** the same, against a 4,361-word dictionary sample stratified by word length.
+- **M3:** a full vidyut morphological parse (Sanskrit only; we found no open Akkadian parser).
+
+**Nulls:** 200 within-text shuffles, 200 global shuffles and 100 permuted (wrong) keys. Four further text-sample seeds use 50/50/20. Every set has 2,317 texts. p is one-sided, with a minimum of 0.005.
+
+**Controls:**
+- **Sanskrit.** The Digital Corpus of Sanskrit (Hellwig; CC BY 4.0) supplied classical texts (Manusmṛti, Hitopadeśa) and Vedic texts (Ṛgveda 1.1–6.59). We re-applied sandhi with vidyut's rule table and split the text into orthographic aksharas. The "correct key" maps each akshara to itself.
+- **Akkadian cuneiform.** ORACC SAAo editions of the Neo-Assyrian letters SAA 1 and SAA 5 (Parpola 1987; Lanfranchi & Parpola 1990). We used two keys: the editors' contextual readings, and a cruder fixed key with one value per sign, which is closer in kind to Yajnadevam's. The dictionaries are ORACC glossaries. A held-out lexicon uses only SAA 10 and RINAP 4 (Parpola 1993; Leichty 2011).
+- **Text lengths.** Controls were cut to match the M77 line-length distribution: 2–12 signs, mean ≈ 4.2, against 4.27 for the Indus test texts. Texts were cut either at word boundaries or at random points. The Indus/Yajnadevam test was rerun with the same nulls and counts.
+
+| Script and key | Measure | Real | Within-shuffle | Global shuffle | Wrong key | Drop (within) | p (within / global) |
+|---|---|---|---|---|---|---|---|
+| **Indus, Yajnadevam key** | M3 vidyut parse | 0.579 | 0.592 | 0.601 | 0.476 | **−0.013** | 0.96 / 1.0 |
+| | M2 | 0.958 | 0.936 | 0.940 | 0.925 | +0.022 | 0.005 / 0.005 |
+| | M1 | 0.994 | 0.989 | 0.991 | 0.988 | +0.004 | 0.015 / 0.075 |
+| **Classical Sanskrit, correct key** (word-aligned, 4.2 signs) | M3 | 0.535 | 0.334 | 0.291 | 0.043 | **+0.201** | 0.005 / 0.005 |
+| | M2 | 0.722 | 0.656 | 0.648 | 0.177 | +0.065 | 0.005 / 0.005 |
+| | M1 | 0.904 | 0.862 | 0.852 | 0.388 | +0.043 | 0.005 / 0.005 |
+| **Vedic Sanskrit, correct key** (word-aligned) | M3 | 0.530 | 0.365 | 0.314 | 0.046 | **+0.165** | 0.005 / 0.005 |
+| | M2, random-cut windows | 0.697 | 0.702 | 0.700 | 0.170 | −0.005 | 0.84 / 0.69 |
+| **Akkadian, editors' readings** (word-aligned) | M1 | 0.979 | 0.730 | 0.605 | 0.404 | **+0.249** | 0.005 / 0.005 |
+| | M1, held-out lexicon | 0.882 | 0.681 | 0.562 | 0.335 | +0.201 | 0.005 / 0.005 |
+| **Akkadian, one value per sign** (word-aligned) | M1 | 0.855 | 0.679 | 0.598 | 0.396 | +0.176 | 0.005 / 0.005 |
+
+**Findings.**
+
+- **The premise holds on the strong measures.** At Indus-like lengths, correct keys lose a lot when order is destroyed.
+  - Sanskrit parse: −17 to −24 points.
+  - Akkadian segmentation: −25 to −37 points with the editors' readings, and −18 to −26 points with a crude one-value-per-sign key.
+- **The result is stable.**
+  - The Sanskrit parse drop is 0.19–0.20 (classical) and 0.14–0.17 (Vedic) across all five sample seeds, and every drop is at the minimum attainable p.
+  - The drop shrinks for very short texts but remains large: for the classical parse it is +0.11 at 2 signs and +0.21 to +0.27 at 3–5 signs.
+  - Yajnadevam's key on the parse measure stays between −0.04 and +0.01 at every length, so it gains nothing from real order.
+- **The weak measures are not diagnostic on their own.**
+  - Correct Sanskrit gains only 2–7 points from real order on M1 and M2.
+  - Correct Vedic Sanskrit cut into random windows gains nothing on M2 (−0.005, p = 0.84).
+  - So "no loss under shuffling" on M1 or M2 alone would not show that a key is wrong. Only the parse (and, for Akkadian, segmentation) is a strong positive control.
+- **Correction to §4.6 and the abstract.** The original run used only three shuffles. With 200, Yajnadevam's key shows small but statistically significant real-order gains on the two weak measures: M2 +2.2 points (p = 0.005) and M1 +0.4 points (within-shuffle p = 0.015; global p = 0.075).
+  - The earlier statement that the key "does not distinguish real from shuffled sign order on any of three measures" was too strong and is withdrawn.
+  - On the strong measure, the full parse, the key reads shuffled text slightly *better* than real text. A correct Sanskrit key at the same lengths gains 17–20 points (within-shuffle).
+  - The M2 gain is a third to a half of what correct Sanskrit shows on M2 (+4.5 to +6.5 points). It comes at a ceiling of 94–99% segmentability, which correct Sanskrit never reaches (72–92%). That ceiling reflects the permissive lipi reading rule, with its optional inherent *a*.
+  - Separately, the published key parses better than a permuted key (0.579 vs 0.476, p = 0.06). This is a property of the value inventory, not of sign order.
+- **Caveats.**
+  - DCS gives unsandhied tokens, and our automatic sandhi uses the first matching rule, so it is approximate. Aksharas have no polyphony, so this is the ideal case for a correct key.
+  - The Akkadian main lexicon includes the SAA 1/5 glossaries (in-sample). The held-out lexicon still shows drops of 20–32 points.
+  - The controls use each script's own reading rule, and the Indus row uses lipi's rule.
+  - The Indus row was run for one text set (seed 0) only.
+  - Linear B, Old Persian and Prakrit inscriptions were not run, because we found no open corpus with a lexicon.
+
 # 5. Sign-by-sign assessment
 
 Appendix A lists the 100 most frequent M77 signs plus all stroke numerals: 116 rows, with full columns in `outputs/structure/sign_table.csv`. Confidence is assigned at three levels.
@@ -893,6 +951,7 @@ Of the 116 rows, none carries a phonetic value at any confidence above null.
 - **Session-7 limits.**
   - The look-alike complexity descriptors are hand-chosen. Linear B passes the complexity-matched control, which shows that they do not capture all stylistic similarity.
   - The H7 post-hoc analysis is exploratory, at n = 5 per split.
+  - The shuffle-test positive controls (§4.22) cover Sanskrit (aksharas, automatic sandhi) and Neo-Assyrian Akkadian only. The ORACC files were downloaded without TLS certificate verification, because the server omits its intermediate certificate; their SHA-256 hashes are recorded.
   - The short-text linguistic comparanda are Latin inscriptions and Wikipedia titles, not texts in a language that might be the Indus language. We found no further openly licensed non-linguistic corpus.
 - **Scope of the original brief.** The request for "85% confidence in a complete decipherment" cannot be met. Without a bilingual or an independent semantic anchor, no current method can calibrate phonetic values (Parpola 1994: 48).
 
@@ -958,6 +1017,11 @@ Only works opened during the project are listed. Works cited at second hand are 
 - Carlson, M. *mayig/indus-valley-script-corpus* (CISI-based corpus; hand-matched P↔M↔W concordance), commit ad2f1e2. https://github.com/mayig/indus-valley-script-corpus
 - elamicon project. *elamicon* (Linear Elamite glyph sources and corpus browser), commit 69b4cc2. https://github.com/elamicon/elamicon
 - Google / Noto project. Noto Sans Egyptian Hieroglyphs, Cuneiform, Brahmi, Linear A, and (session 7) Cypro-Minoan, Linear B, Anatolian Hieroglyphs, Phoenician and Old Persian (SIL OFL 1.1). https://github.com/notofonts
+- Hellwig, O. 2010–2024. *The Digital Corpus of Sanskrit (DCS)*. CoNLL-U files (CC BY 4.0). https://github.com/OliverHellwig/sanskrit
+- Parpola, S. 1987. *The Correspondence of Sargon II, Part I: Letters from Assyria and the West*. State Archives of Assyria 1. Helsinki University Press. Online edition: SAAo (State Archives of Assyria online), ORACC, `saao/saa01` JSON (CC0), downloaded 29 October 2026. https://oracc.museum.upenn.edu/saao/
+- Lanfranchi, G. B. & S. Parpola. 1990. *The Correspondence of Sargon II, Part II: Letters from the Northern and Northeastern Provinces*. State Archives of Assyria 5. Helsinki University Press. ORACC SAAo `saao/saa05` JSON (CC0).
+- Parpola, S. 1993. *Letters from Assyrian and Babylonian Scholars*. State Archives of Assyria 10. Helsinki University Press. ORACC SAAo `saao/saa10` JSON (CC0).
+- Leichty, E. 2011. *The Royal Inscriptions of Esarhaddon, King of Assyria (680–669 BC)*. RINAP 4. Eisenbrauns. ORACC RINAP `rinap/rinap4` JSON (CC0). https://oracc.museum.upenn.edu/rinap/
 - Epigraphic Database Heidelberg (EDH). Text data export `edh_data_text.csv` (CC BY-SA 4.0), downloaded 29 October 2026. https://edh.ub.uni-heidelberg.de/data/download
 - Wikipedia contributors. Finnish, Tamil and Sanskrit Wikipedia article-title lists (CC BY-SA 4.0), Wikimedia dumps, downloaded 29 October 2026. https://dumps.wikimedia.org/
 - Kumbhar, S. 2017. SK Indus Script font (All Rights Reserved), as distributed in yajnadevam/indus-website.

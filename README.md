@@ -11,6 +11,7 @@ Code, derived statistics and manuscript for a null-model-calibrated study of the
 - Positional sign classes, a slot template and recurrent multi-sign units are real. They are tested against shuffles, on held-out and deduplicated data, and across the two corpora.
 - Linguistic status is **undetermined** by internal statistics. A synthetic, non-linguistic emblem system passes the same structural tests.
 - No published phonetic sign value beats null models in per-sign leave-one-out tests.
+- A published Sanskrit key (Yajnadevam) gains nothing from real sign order on a full morphological parse, where correct keys for Sanskrit and Akkadian lose 17–25 points under shuffling (positive control, §4.22).
 - Published results are replicated on our data: Nair 2026's Zipf slope and conditional entropy, and Yadav et al. 2010's bigram perplexity drop. Yadav's restoration "sensitivity" turns out to be matched by a frequency-only baseline. See `outputs/compare/` and manuscript §1.1 and §4.12.
 
 **Session 6 additions (29 October 2026)**
@@ -32,6 +33,10 @@ Code, derived statistics and manuscript for a null-model-calibrated study of the
 - **Short real-text comparanda:** we added Latin inscriptions from EDH and Wikipedia titles, both CC BY-SA 4.0.
   - Edge effects of 0.05–0.31 bits appear in real short texts too. The session-6 "emblem-like edge structure" was therefore an artefact of the windowed comparanda.
   - The language-vs-emblem classifiers are unstable. Across 54 configurations, Indus is labelled linguistic in 44–52%, about the same as for synthetic emblem generators, so linguistic status stays undetermined (`outputs/emblem/emblem_stability.json`).
+- **Positive control for the shuffle test** (`positive_control/`; manuscript §4.22): we asked whether a *correct* key for a deciphered script loses a lot when sign order is shuffled.
+  - It does. On a full morphological parse, correct Sanskrit cut to about 4 signs per text drops from 53.5% to 33.4%. Correct Akkadian cuneiform readings (ORACC) drop from 97.9% to 73.0% on dictionary segmentation.
+  - Yajnadevam's key on Indus texts loses nothing on the parse (57.9% real vs 59.2% shuffled).
+  - **Correction:** with 200 shuffles, Yajnadevam's key does show small, significant real-order gains on two weaker segmentation measures (+2.2 points, p = .005; +0.4, p = .015). Our earlier "no difference on any of three measures" was too strong. Those weak measures turn out not to be diagnostic: correct Sanskrit gains only 2–7 points on them.
 - **Fresh clone:** `build_map.py`, `sign_table.py`, `claims_table.py` and `loo_hand.py` now run from a fresh clone, and the last three match the committed outputs byte for byte. The Gulf null in `anchors.py` is now seeded.
 
 **Status:** unreviewed preprint (working draft), not peer-reviewed. Maintained by the Indus Valley Script project contributors.

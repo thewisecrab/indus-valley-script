@@ -83,6 +83,14 @@ es = J('outputs/emblem/emblem_stability.json')
 check(es['n_configs'] == 54 and 0.3 < es['share_of_configs_assigning_linguistic']['Indus M77 (dedup)'] < 0.7, 'emblem classifier stability: 54 configs, Indus M77 unstable')
 check(all(os.path.exists(f'{ROOT}/data_open/comparanda_short/wiki_titles_{l}.txt') for l in ['fi', 'ta', 'sa']), 'Wikipedia title samples shipped')
 
+# 4d. session 7 positive control: correct keys lose under shuffling; Yajnadevam's key does not on the parse
+import csv
+pc = {(r['corpus'], r['key'], r['textset'], r['measure']): r for r in csv.DictReader(open(f'{ROOT}/positive_control/outputs/pc_summary.csv'))}
+sk = pc[('sanskrit_classical', 'correct', 'lenmatch_wordaligned', 'M3_vidyut')]; ya = pc[('indus_lipi', 'yajnadevam', 'lipi_test_texts_2317', 'M3_vidyut')]
+ak = pc[('akkadian_NA_letters', 'correct', 'lenmatch_wordaligned', 'M1_seg_full')]; y2 = pc[('indus_lipi', 'yajnadevam', 'lipi_test_texts_2317', 'M2_seg_lm4361')]
+check(float(sk['drop_within']) > 0.15 and float(sk['p_within']) <= 0.005 and float(ak['drop_within']) > 0.2, 'positive control: correct Sanskrit parse and Akkadian segmentation lose under shuffling')
+check(float(ya['drop_within']) < 0 and float(y2['drop_within']) > 0 and float(y2['p_within']) <= 0.005, 'positive control: Yajnadevam key no parse gain; small significant M2 gain (corrected claim)')
+
 # 5. restricted-content checker
 r = subprocess.run([sys.executable, f'{ROOT}/tools/check_public.py'], capture_output=True, text=True, cwd=ROOT)
 print(r.stdout.strip()); check(r.returncode == 0, 'tools/check_public.py clean')
