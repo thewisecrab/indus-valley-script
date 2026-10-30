@@ -1,0 +1,13 @@
+corpus,key,textset,measure,n_texts,n_texts_4plus,real,real_4plus,n_shuf,drop_within,p_within,drop_within_4plus,p_within_4plus,drop_edgefixed,p_edgefixed,drop_edgefixed_4plus,p_edgefixed_4plus,drop_posglobal,p_posglobal,drop_posglobal_4plus,p_posglobal_4plus
+sanskrit_classical,correct,lenmatch_wordaligned,M1_seg_full,2317,1300,0.9042,0.8938,100,0.0425,0.0099,0.0543,0.0099,0.0158,0.0099,0.0282,0.0099,0.036,0.0099,0.0439,0.0099
+sanskrit_classical,correct,lenmatch_wordaligned,M2_seg_lm4361,2317,1300,0.7216,0.6946,100,0.0666,0.0099,0.0757,0.0099,0.0207,0.0099,0.0369,0.0099,0.0382,0.0099,0.0593,0.0099
+sanskrit_classical,correct,lenmatch_wordaligned,M3_vidyut,2317,1300,0.5352,0.4346,100,0.2014,0.0099,0.2389,0.0099,0.1058,0.0099,0.1886,0.0099,0.2234,0.0099,0.262,0.0099
+sanskrit_vedic,correct,lenmatch_wordaligned,M1_seg_full,2317,1300,0.9189,0.9077,100,0.0397,0.0099,0.0507,0.0099,0.0154,0.0099,0.0275,0.0099,0.0285,0.0099,0.0337,0.0099
+sanskrit_vedic,correct,lenmatch_wordaligned,M2_seg_lm4361,2317,1300,0.7294,0.6915,100,0.0444,0.0099,0.0515,0.0099,0.0077,0.0594,0.0137,0.0594,0.0195,0.0099,0.0222,0.0396
+sanskrit_vedic,correct,lenmatch_wordaligned,M3_vidyut,2317,1300,0.5296,0.4092,100,0.1661,0.0099,0.2028,0.0099,0.0892,0.0099,0.1589,0.0099,0.2086,0.0099,0.2305,0.0099
+akkadian_NA_letters,correct,lenmatch_wordaligned,M1_seg_full,2317,1300,0.9793,0.97,100,0.2486,0.0099,0.3165,0.0099,0.1262,0.0099,0.225,0.0099,0.3387,0.0099,0.397,0.0099
+akkadian_NA_letters,correct,lenmatch_wordaligned,M2_seg_lm4361,2317,1300,0.7687,0.69,100,0.1544,0.0099,0.1707,0.0099,0.0591,0.0099,0.1053,0.0099,0.2392,0.0099,0.2304,0.0099
+akkadian_NA_letters,correct,lenmatch_wordaligned,M1h_seg_full_heldout_lexicon,2317,1300,0.8822,0.8315,100,0.2007,0.0099,0.2443,0.0099,0.0956,0.0099,0.1705,0.0099,0.283,0.0099,0.3134,0.0099
+akkadian_NA_letters,fixed_one_value_per_sign,lenmatch_wordaligned,M1_seg_full,2317,1300,0.855,0.8208,100,0.1761,0.0099,0.2188,0.0099,0.0834,0.0099,0.1486,0.0099,0.2256,0.0099,0.2536,0.0099
+akkadian_NA_letters,fixed_one_value_per_sign,lenmatch_wordaligned,M2_seg_lm4361,2317,1300,0.7233,0.6515,100,0.1382,0.0099,0.1601,0.0099,0.0555,0.0099,0.0989,0.0099,0.1914,0.0099,0.1819,0.0099
+akkadian_NA_letters,fixed_one_value_per_sign,lenmatch_wordaligned,M1h_seg_full_heldout_lexicon,2317,1300,0.7972,0.7392,100,0.155,0.0099,0.1895,0.0099,0.0702,0.0099,0.125,0.0099,0.2078,0.0099,0.2245,0.0099

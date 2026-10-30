@@ -91,6 +91,22 @@ ak = pc[('akkadian_NA_letters', 'correct', 'lenmatch_wordaligned', 'M1_seg_full'
 check(float(sk['drop_within']) > 0.15 and float(sk['p_within']) <= 0.005 and float(ak['drop_within']) > 0.2, 'positive control: correct Sanskrit parse and Akkadian segmentation lose under shuffling')
 check(float(ya['drop_within']) < 0 and float(y2['drop_within']) > 0 and float(y2['p_within']) <= 0.005, 'positive control: Yajnadevam key no parse gain; small significant M2 gain (corrected claim)')
 
+# 4e. session 8: shuffle benchmark (tools/evaluate_key.py) runs offline on the toy corpus; headline results; positional nulls
+import tempfile
+with tempfile.TemporaryDirectory() as td:
+    r = subprocess.run([sys.executable, f'{ROOT}/tools/evaluate_key.py', 'key', f'{ROOT}/bench/examples/toy_key.csv', f'{ROOT}/bench/examples/toy_key.meta.json',
+                        '--corpus', 'toy', '--nshuf', '10', '--nperm', '5', '--procs', '1', '--out', td], capture_output=True, text=True, cwd=ROOT)
+    check(r.returncode == 0 and os.path.exists(f'{td}/toy_demo_key.json') and 'Verdict' in open(f'{td}/toy_demo_key.md').read(),
+          'evaluate_key.py toy demo runs offline' + ('' if r.returncode == 0 else ': ' + r.stderr[-400:]))
+ek = J('bench/results/evaluate_key/Yajnadevam_key_lipi_fc8813a.json'); m3 = [x for x in ek['results'] if x['measure'] == 'M3'][0]
+check(m3['drop_within'] < 0 and ek['verdict']['label'] == 'NO SUPPORT FROM SIGN ORDER', 'evaluate_key: Yajnadevam key, no parse gain from real order')
+er = J('bench/results/evaluate_key/Yajnadevam_readings_lipi_fc8813a.json')
+r3 = [x for x in er['results'] if x['test'] == 'R3_derived_values_heldout' and x['measure'] == 'M3'][0]
+check(er['verdict']['label'].startswith('WEAK') and r3['drop_posglobal'] < 0.1, 'evaluate_key: Yajnadevam readings (R3) weak, largely positional')
+pn = {(r['corpus'], r['key'], r['measure']): r for r in csv.DictReader(open(f'{ROOT}/positive_control/outputs/pc_positional_nulls.csv'))}
+check(float(pn[('sanskrit_classical', 'correct', 'M3_vidyut')]['drop_posglobal']) > 0.15 and float(pn[('akkadian_NA_letters', 'correct', 'M1_seg_full')]['drop_posglobal']) > 0.2,
+      'positive control: correct keys still lose when signs keep their usual positions')
+
 # 5. restricted-content checker
 r = subprocess.run([sys.executable, f'{ROOT}/tools/check_public.py'], capture_output=True, text=True, cwd=ROOT)
 print(r.stdout.strip()); check(r.returncode == 0, 'tools/check_public.py clean')

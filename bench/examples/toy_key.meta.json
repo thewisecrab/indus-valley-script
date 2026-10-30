@@ -1,0 +1,9 @@
+{
+ "name": "toy_demo_key",
+ "author": "Indus Valley Script project contributors (made-up key for the offline demo)",
+ "language": "toy (made-up)",
+ "lexicon": "toy_lexicon.txt",
+ "reading_rule": "concat",
+ "alphabet": "latin",
+ "vidyut_parse": false
+}

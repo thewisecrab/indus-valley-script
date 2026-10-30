@@ -13,6 +13,7 @@ def cp(rel, dst_rel=None):
 for f in sorted(glob.glob(f'{SRC}/scripts/*.py')):
     cp(os.path.relpath(f, SRC))
 cp('tools/build_public_repo.py')
+cp('tools/evaluate_key.py')   # session 8: shuffle benchmark for any proposed key or set of readings
 
 # ---------- outputs (derived statistics only) ----------
 KEEP = []
@@ -41,7 +42,7 @@ KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/prereg/*') if 
 KEEP += ['scripts/run_claim_seeds.sh', 'scripts/run_claim_seeds_extra.sh']
 # session 7: extended seed claims, strict look-alike controls
 KEEP += [k for k in ['outputs/claims/seed_claims_extended.json', 'outputs/comparanda/lookalikes_strict.json', 'outputs/comparanda/lookalikes_strict_table.csv'] if os.path.exists(f'{SRC}/{k}')]
-KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/bench/*') + glob.glob(f'{SRC}/bench/examples/*') + glob.glob(f'{SRC}/bench/results/*') if os.path.isfile(f))
+KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/bench/*') + glob.glob(f'{SRC}/bench/examples/*') + glob.glob(f'{SRC}/bench/results/*') + glob.glob(f'{SRC}/bench/results/evaluate_key/*') if os.path.isfile(f))
 KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/rater_kit/*') if os.path.isfile(f))
 KEEP += ['map/schema.sql'] + sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/map/seed/*.csv'))
 assert not any(k.startswith(('bench/private', 'rater_kit_private', 'data/')) for k in KEEP)
@@ -105,7 +106,7 @@ with open(f'{DST}/data_open/comparanda_short/README.md', 'w') as fh:
 # session 7: positive control for the shuffle test (scripts, aggregate results, checksums; DCS/ORACC data are fetched,
 # not shipped; the M77 input is an aggregate line-length distribution only)
 for f in sorted(glob.glob(f'{SRC}/positive_control/scripts/pc_*.py')): cp(os.path.relpath(f, SRC))
-for f in ['pc_results.csv', 'pc_results_by_length.csv', 'pc_summary.csv', 'pc_run_meta.json']:
+for f in ['pc_results.csv', 'pc_results_by_length.csv', 'pc_summary.csv', 'pc_run_meta.json', 'pc_positional_nulls.csv']:
     cp(f'positive_control/outputs/{f}')
 # shipped under positive_control/data_open/ (data/ dirs are never committed); fetch_data.sh copies them into data/
 for f, d in [('m77_line_length_distribution.json', 'm77_line_length_distribution.json'), ('dcs_SHA256SUMS', 'dcs_SHA256SUMS'), ('oracc/SHA256SUMS', 'oracc_SHA256SUMS')]:
@@ -178,6 +179,8 @@ os.makedirs(f'{DST}/tests', exist_ok=True); shutil.copy2(f'{D}/tests/smoke_test.
 for f in ['LICENSE', 'LICENSE-SCOPE.md', 'LICENSE-CC-BY-4.0.txt', 'CITATION.cff', 'DATA_POLICY.md', 'REPRODUCIBILITY.md', 'requirements.txt', 'requirements-ci.txt', '.gitignore']:
     shutil.copy2(f'{D}/{f}', f'{DST}/{f}')
 shutil.copy2(f'{D}/data_open_README.md', f'{DST}/data_open/README.md')
+os.makedirs(f'{DST}/docs', exist_ok=True)   # session 8: plain-language docs (submit a key, FAQ)
+for f in sorted(glob.glob(f'{D}/docs/*.md')): shutil.copy2(f, f'{DST}/docs/{os.path.basename(f)}')
 shutil.copy2(f'{D}/fetch_data.sh', f'{DST}/scripts/fetch_data.sh')
 shutil.copy2(f'{D}/check_public.py', f'{DST}/tools/check_public.py')
 print('repo assembled at', DST)
