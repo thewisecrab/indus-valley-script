@@ -44,6 +44,10 @@ KEEP += ['scripts/run_claim_seeds.sh', 'scripts/run_claim_seeds_extra.sh']
 KEEP += [k for k in ['outputs/claims/seed_claims_extended.json', 'outputs/comparanda/lookalikes_strict.json', 'outputs/comparanda/lookalikes_strict_table.csv'] if os.path.exists(f'{SRC}/{k}')]
 KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/bench/*') + glob.glob(f'{SRC}/bench/examples/*') + glob.glob(f'{SRC}/bench/results/*') + glob.glob(f'{SRC}/bench/results/evaluate_key/*') if os.path.isfile(f))
 KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/rater_kit/*') if os.path.isfile(f))
+# session 8: structured-notation (Diener 2026 / Kriger & Hunt 2026) tests and the arbitrary-text control (aggregate statistics only; no logs)
+for sub in ['structured_notation', 'arbitrary_text']:
+    KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/outputs/{sub}/**', recursive=True) if os.path.isfile(f) and not f.endswith('.log'))
+KEEP += sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/data_open/arbitrary_text/*') if os.path.isfile(f))
 KEEP += ['map/schema.sql'] + sorted(os.path.relpath(f, SRC) for f in glob.glob(f'{SRC}/map/seed/*.csv'))
 assert not any(k.startswith(('bench/private', 'rater_kit_private', 'data/')) for k in KEEP)
 for k in KEEP: cp(k)

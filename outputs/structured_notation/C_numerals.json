@@ -1,0 +1,82 @@
+{
+ "I1 (K&H set)": {
+  "n5": 35,
+  "stroke_share_of_texts_by_reading_position": [
+   0.057,
+   0.257,
+   0.171,
+   0.171,
+   0.057
+  ],
+  "p_reading_position2": 0.041979010494752625,
+  "p_reading_position4": 0.3728135932033983,
+  "stroke_tokens": 154,
+  "two_stroke_tokens": 103,
+  "two_stroke_share": 0.6688,
+  "two_stroke_tokens_inside_initial_diamond_pair": 29,
+  "initial_pair": [
+   "P385",
+   "P122"
+  ]
+ },
+ "I1": {
+  "n5": 35,
+  "stroke_share_of_texts_by_reading_position": [
+   0.086,
+   0.257,
+   0.171,
+   0.2,
+   0.057
+  ],
+  "p_reading_position2": 0.06746626686656672,
+  "p_reading_position4": 0.2593703148425787,
+  "stroke_tokens": 164,
+  "two_stroke_tokens": 103,
+  "two_stroke_share": 0.628,
+  "two_stroke_tokens_inside_initial_diamond_pair": 29,
+  "initial_pair": [
+   "P385",
+   "P122"
+  ]
+ },
+ "I2": {
+  "n5": 406,
+  "stroke_share_of_texts_by_reading_position": [
+   0.049,
+   0.33,
+   0.227,
+   0.138,
+   0.03
+  ],
+  "p_reading_position2": 0.0004997501249375312,
+  "p_reading_position4": 0.8530734632683659,
+  "stroke_tokens": 1576,
+  "two_stroke_tokens": 790,
+  "two_stroke_share": 0.5013,
+  "two_stroke_tokens_inside_initial_diamond_pair": 123,
+  "initial_pair": [
+   "W861",
+   "W002"
+  ]
+ },
+ "I3": {
+  "n5": 350,
+  "stroke_share_of_texts_by_reading_position": [
+   0.049,
+   0.329,
+   0.246,
+   0.134,
+   0.034
+  ],
+  "p_reading_position2": 0.0004997501249375312,
+  "p_reading_position4": 0.9170414792603698,
+  "stroke_tokens": 1272,
+  "two_stroke_tokens": 682,
+  "two_stroke_share": 0.5362,
+  "two_stroke_tokens_inside_initial_diamond_pair": 196,
+  "initial_pair": [
+   "M267",
+   "M099"
+  ]
+ }
+}

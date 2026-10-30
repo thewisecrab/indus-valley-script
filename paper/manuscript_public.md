@@ -78,6 +78,8 @@ Table R1 compares this study with published work making similar claims. The full
 | Mukhopadhyay 2019 | M77/ICIT observations | none | none | none | n/s | n/a | data-carrier syntax, not phonetic spelling |
 | Nair 2026 | 1,916 dedup texts | 2 generators + 7 real corpora; 1,000 perms | sweeps | Bonferroni (variant) | no | public | Indus intermediate |
 | Raghavendra 2026 | SIGIL 3,000 + Indus | synthetic emblem system, 54 methods | grouped held-out | Bonferroni | n/s | corpus released | measures non-specific |
+| Kriger & Hunt 2026 | CISI/mayig Mohenjo-daro unicorn seals, 179 | global shuffle | none | none | none | n/s | positional constraints, sequence uniqueness, stroke numerals (re-tested in §4.25) |
+| Diener 2026 | statistics from Kriger & Hunt 2026 | none | none | none | none | n/a | non-linguistic five-field "cargo-tag" records (tested in §4.25) |
 | **This work** | M77 3,573 lines + ICIT 712 signs | shuffles, fitted/noise keys, alt lexicons, synthetic emblem | dedup CV, LOO, site-held-out | BH-FDR | yes (scored concordance) | scripts | structure yes; language undetermined; no value beats null |
 
 n/s = not seen in the parts we read. Computational decipherments of other scripts (Snyder, Barzilay & Knight 2010; Luo, Cao & Barzilay 2019; Luo et al. 2021) are validated against known answers (Ugaritic, Linear B, Gothic). They need a known related language and, except Luo et al. 2021, word boundaries; Indus has neither. Image-recognition work (Palaniappan & Adhikari 2017; Dixit et al. 2025; Ganeriwala et al. 2025) solves a different task. A visual-similarity study (Reddy 2025) reports cosine similarities without a null; our look-alike tests (§4.11) suggest such resemblances do not carry function. A press survey (Roychowdhury, *Indian Express*, 12 Aug 2026) reports about 200 claims emailed to Rao and at least 60 to RMRL, and no agreed mechanism for evaluating them.
@@ -900,6 +902,22 @@ The shuffle test of §4.6 assumes that a correct key reads real sign order bette
   - The Indus row was run for one text set (seed 0) only.
   - Linear B, Old Persian and Prakrit inscriptions were not run, because we found no open corpus with a lexicon.
 
+## 4.25 A non-linguistic "cargo-tag" proposal, tested (session 8)
+
+Diener (2026) proposes that Indus seal texts are not language but fixed-format administrative records ("cargo tags") with five ordered fields: issuer, commodity, attribute, numeral "tariff" and a closing operator. The proposal rests on statistics from Kriger & Hunt (2026), who analysed the 179 Mohenjo-daro unicorn seals of M. Carlson's open CISI corpus. We have that corpus (mayig @ ad2f1e2), so we could check the statistics directly. We then tested each claim against within-text shuffles and against short texts in known languages (Latin owner's and maker's stamps and Latin inscriptions of all genres from EDH; Wikipedia titles; DCS Sanskrit and ORACC Akkadian word-aligned spans; running-text windows) and Sproat's non-linguistic corpora. The predictions and decision rules were written and committed before the run (`prereg/session8_structured_notation_prereg.md`). Results are in `outputs/structured_notation/RESULTS.md`. q is Benjamini–Hochberg across all 22 tests.
+
+| Claim | Fact replicated? | Distinguishes a non-linguistic record from short written language? | Verdict |
+|---|---|---|---|
+| (a) Five rigid fields | Positional entropy varies (z = 7.7–11.0, q ≤ .003); a five-field fit beats shuffles (held-out strict share 0.07–0.32) | No. Latin stamps (z = 16.0) and Tamil titles (16.3) vary more by position, and the five-field fit is as good on Latin stamps (0.47), Akkadian spans (0.32) and Latin inscriptions (0.31). Also 22–52% of Indus texts have more than 5 signs. | Not supported |
+| (b) 98.31% unique sequences | Yes (176/179) | No. Latin inscriptions (99.4%), Sanskrit spans (100%) and running text (99.4–100%) are as unique at the same sample size and lengths. The shuffled corpus is *more* unique (99.99%) than the real one. | Not supported |
+| (c) Numerals in field 4; two strokes dominate | Two-stroke share yes (103/154 = 66.9%) | Numerals concentrate at reading position 2, after the initial sign (q = .002), not at position 4 (q = .34–.96). The published "position 4" counts in visual order, left to right. | Not supported (position); "excludes counting" untestable |
+| (d) Animal fixes the numeral tier | n/a | No association (permutation p = .40, q = .46); elephants have k ≥ 4 in 1 of 39 seals | Not supported |
+| (e) Jar sign is a closing operator | Yes: final in 72–78% of its uses (q = .002) | No. The most final type in Latin and Akkadian samples is final in 68–100% of uses (suffixes, titles, closing words). | Function untestable |
+
+**Corrections to the source papers.** Kriger & Hunt's positional entropy table is in visual left-to-right order, the reverse of the reading order. Diener's Appendix C gives P324 as the "unicorn" field, but P324 is the jar sign (M342). It gives P385 as "sign 342", but P385 is the diamond (M267), which stands first in reading order. Diener's "draft record" M-141 contains P000, the corpus's marker for damaged or lost signs.
+
+**What this shows and does not show.** The positional habits, the uniqueness and the final jar sign are real properties of the corpus. But each is equally expected of short texts in a language, such as names, titles and owner's marks, so none of them argues for a non-linguistic record over a linguistic one. The two predictions specific to the cargo-tag model (a numeral field at position 4, and tiers fixed by the animal) fail. This does not show that the script writes language. The question stays open, as in §4.4 and §4.15. Physical arguments (jar stamps, tags, Gadd seal 1) were not tested, and the optional proto-cuneiform benchmark from CDLI was not run.
+
 # 5. Sign-by-sign assessment
 
 Appendix A lists the 100 most frequent M77 signs plus all stroke numerals: 116 rows, with full columns in `outputs/structure/sign_table.csv`. Confidence is assigned at three levels.
@@ -972,6 +990,8 @@ Only works opened during the project are listed. Works cited at second hand are 
 
 - Bose, J. 2026. *Sequential structure without a linguistic diagnosis: a falsification-oriented analysis of the Indus script.* Zenodo record 22668356 (preprint, not peer reviewed).
 - Desset, F., K. Tabibzadeh, M. Kervran, G. P. Basello & G. Marchesi. 2022. The decipherment of Linear Elamite writing. *Zeitschrift für Assyriologie* 112(1): 11–60. doi:10.1515/za-2022-0003.
+- Diener, Ł. 2026. *Excel in Clay II: The Meluhha Operating System. A Mathematical Reconstruction of the Indus Valley Non-Linguistic Cargo-Tag Database*, version 2.1. Zenodo preprint (CC BY 4.0). doi:10.5281/zenodo.20688721.
+- Kriger, B. & T. A. Hunt. 2026. *Positional constraints, sequence uniqueness, and stroke numerals in Indus seal inscriptions from Mohenjo-Daro: a statistical analysis.* Zenodo preprint (CC BY 4.0). doi:10.5281/zenodo.19103880.
 - Dave, H. 2018. FrequencyWords. https://github.com/hermitdave/FrequencyWords
 - Farmer, S., R. Sproat & M. Witzel. 2004. The collapse of the Indus-script thesis: the myth of a literate Harappan civilization. *Electronic Journal of Vedic Studies* 11(2): 19–57.
 - Fuls, A. 2010. *Documentation of the Online Indus Writing Database* (ICIT). Berlin.
