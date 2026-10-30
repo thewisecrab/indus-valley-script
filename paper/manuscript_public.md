@@ -1,7 +1,7 @@
 ---
 title: "Calibrated structural analysis of the Indus script: positional classes, slot grammar, a full sign map, and null-model tests of published readings"
 author: "Indus Valley Script project contributors"
-subtitle: "UNREVIEWED PREPRINT: working draft, not peer-reviewed (29 October 2026; public version with restricted figures and lipi key values removed)"
+subtitle: "UNREVIEWED PREPRINT: working draft, not peer-reviewed (30 October 2026, session 8; public version with restricted figures and lipi key values removed)"
 ---
 
 <div class="preprint-banner">UNREVIEWED PREPRINT / WORKING DRAFT. This manuscript has not been peer-reviewed. Results are provisional and may change.</div>
@@ -43,6 +43,11 @@ We re-examine the Indus script using two independent machine-readable transcript
    - We added short real linguistic texts: Latin inscriptions and Wikipedia titles. Language-vs-emblem classifiers are unstable under leave-one-system-out tests and reference changes, and they assign Indus no differently from synthetic emblem generators (§4.20).
    - A fresh-clone run of the full quick start reproduces the public outputs (§4.21).
    - **Positive control (§4.22).** Correct keys for Sanskrit and Akkadian lose 17–25 points under shuffling on the strong measures, even at about 4 signs per text. Yajnadevam's key loses nothing on the parse, but shows small significant gains on two weak measures, which corrects item 5.
+
+13. **Session 8: a shuffle benchmark, an arbitrary-text control and a test of a non-linguistic proposal.**
+   - A **shuffle benchmark** that anyone can run (`tools/evaluate_key.py`, §4.23) scores a key or a set of per-inscription readings against within-text, positional and global shuffles. It compares the result with what correct keys show, and gives a verdict in calibrated wording. Yajnadevam's key and the Field-Cady Proto-Dravidian syllables get no support from sign order. Yajnadevam's *published readings* learned on 80% of inscriptions read the held-out 20% with a 14-point real-order gain. Most of that gain disappears when signs keep their usual positions (4.6 points, against at least 21 for correct keys). A small residual effect stays significant, and its source is unresolved.
+   - **Arbitrary-text control (§4.24).** We fitted sign values from Yajnadevam's value inventory, read with the same rule. They give a complete Sanskrit parse on 100% of held-out texts made from the US Constitution letter by letter, 92–93% of random strings, 96–98% of Akkadian and 90–92% of the Indus texts. Each held-out set parses far past the 475-symbol unicity distance. Readability is therefore not evidence of decipherment.
+   - **A non-linguistic proposal tested (§4.25).** Under a pre-registered protocol, we tested the five-field "cargo-tag" model of Diener (2026) and the statistics of Kriger & Hunt (2026). The positional regularities, the 98% sequence uniqueness and the final jar sign replicate. But each is matched by short texts in known languages, and the model's two distinctive predictions fail (numeral field, animal-fixed tiers). Kriger & Hunt's positional table is in visual order, the reverse of the reading order.
 
 # 1. Introduction
 
@@ -1013,6 +1018,11 @@ Of the 116 rows, none carries a phonetic value at any confidence above null.
   - The H7 post-hoc analysis is exploratory, at n = 5 per split.
   - The shuffle-test positive controls (§4.22) cover Sanskrit (aksharas, automatic sandhi) and Neo-Assyrian Akkadian only. The ORACC files were downloaded without TLS certificate verification, because the server omits its intermediate certificate; their SHA-256 hashes are recorded.
   - The short-text linguistic comparanda are Latin inscriptions and Wikipedia titles, not texts in a language that might be the Indus language. We found no further openly licensed non-linguistic corpus.
+- **Session-8 limits.**
+  - The shuffle benchmark's positional reference values come from Sanskrit and Akkadian only, with 100 shuffles.
+  - The readings test used the *lipi* readings at commit fc8813a, which may predate the current indusscript.net readings. The per-sign alignment of readings to key values is automatic.
+  - The arbitrary-text control uses Yajnadevam's value inventory and rule, not his hand procedure, and short hill-climbs, so it underestimates what fitting can reach.
+  - In the structured-notation tests, some comparison corpora needed nearest-length matching. A2 used 200 shuffles per seed. The optional proto-cuneiform (CDLI) benchmark was not run.
 - **Language arguments from outside the script.** Loanword and etymology arguments, such as a Dravidian origin for the Akkadian word for elephant (Mukhopadhyay 2021), bear on which languages were spoken in the Indus region. They do not tell us what the script encodes, and our tests do not evaluate them.
 - **Scope of the original brief.** The request for "85% confidence in a complete decipherment" cannot be met. Without a bilingual or an independent semantic anchor, no current method can calibrate phonetic values (Parpola 1994: 48).
 

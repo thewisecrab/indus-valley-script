@@ -33,6 +33,9 @@ This creates `data/`, which is git-ignored. Restricted items need your own lawfu
 | Strict look-alike controls (`lookalikes_strict.py`, session 7) | M77 plate crops and SK-font W renders (private), elamicon glyphs, Noto fonts (fetched; OFL) |
 | Benchmark (`bench_score.py`) | lipi texts, the lexicons above |
 | Open sign list (`open_signlist.py`) | only files in this repository |
+| Shuffle benchmark (`tools/evaluate_key.py`, session 8) | `--corpus toy`: only files in this repository (offline demo). Real runs: *lipi* texts (corpus W) or the M77 export (corpus M), csl-orig MW, vidyut data, and `positive_control/outputs/pc_summary.csv` + `pc_positional_nulls.csv` (shipped). `pc_positional_nulls.py` needs the positive-control corpora. |
+| Arbitrary-text control (`arbitrary_text_control.py`, session 8) | *lipi* texts and key (value inventory), the positive-control corpora (DCS, ORACC), csl-orig MW, vidyut data, and `data_open/arbitrary_text/us_constitution_gutenberg5.txt` (shipped; public domain). About 40 minutes on 4 cores for both objectives. |
+| Structured-notation tests (`structured_notation.py`, session 8) | mayig corpus (MIT), *lipi* texts, M77 export, EDH CSV, `data_open/comparanda_short/`, the positive-control corpora, Sproat corpora, Wikipedia windows (as `emblem_tests.py`). Pre-registration: `prereg/session8_structured_notation_prereg.md`. |
 
 ## 3. Order
 

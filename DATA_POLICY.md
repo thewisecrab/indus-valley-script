@@ -17,6 +17,7 @@ Rule: we publish code, our own text, and **derived statistics** (sign IDs with c
 | SQLite map `map/indus_map.sqlite` | Contains the corpora. | Rebuild with `scripts/build_map.py` after fetching. |
 | 3- and 4-gram counts and branching-entropy segments for real corpora (`ngrams_3/4.csv`, `segments_branching_entropy.csv`) | With a mean text length of about 4, long n-grams with counts reconstruct many complete texts. We excluded them as a precaution; unigram, positional and bigram tables are included. | Re-run `scripts/structure.py`. |
 | `outputs/claims/A_reproduction.csv`, `A_substitutions.csv` | Contain Yajnadevam's per-inscription readings (lipi). | Re-run `claim_harness.py`. |
+| Session-8 benchmark inputs for Yajnadevam's key and readings (`bench/private/`) | Built from lipi `xlits.csv` and the lipi `sanskrit` column (no licence). Only aggregate scores ship, in `bench/results/evaluate_key/`. | Build from lipi; see `docs/SUBMIT_A_KEY.md` for the formats. |
 | Complete ICIT texts of 4 or more signs quoted as examples in `outputs/anchors/anchors_summary.json` and `w700_vs_weights.json` | These are transcribed lipi texts. They are replaced by "[ICIT text of N signs redacted]"; counts are kept. | Re-run `anchors.py`. |
 | `outputs/comparanda/sim_matrix.npy` | 10 MB, derived from the M77 crops. Omitted for size and provenance. | Re-run `lookalikes.py`. |
 | Copyrighted paper PDFs used for the literature review | Not ours to redistribute. | Citations in the manuscript; open URLs in `scripts/fetch_data.sh`. |

@@ -6,6 +6,8 @@
 
 Code, derived statistics and manuscript for a null-model-calibrated study of the Indus script (c. 2600–1900 BCE). Two independent machine-readable transcriptions are used: Mahadevan 1977 (M77) and an ICIT-derived corpus.
 
+**Start here:** [`docs/FAQ.md`](docs/FAQ.md) answers common objections in plain words. To test your own decipherment, see [`docs/SUBMIT_A_KEY.md`](docs/SUBMIT_A_KEY.md).
+
 **What the study finds**
 
 - Positional sign classes, a slot template and recurrent multi-sign units are real. They are tested against shuffles, on held-out and deduplicated data, and across the two corpora.
@@ -39,6 +41,19 @@ Code, derived statistics and manuscript for a null-model-calibrated study of the
   - **Correction:** with 200 shuffles, Yajnadevam's key does show small, significant real-order gains on two weaker segmentation measures (+2.2 points, p = .005; +0.4, p = .015). Our earlier "no difference on any of three measures" was too strong. Those weak measures turn out not to be diagnostic: correct Sanskrit gains only 2–7 points on them.
 - **Fresh clone:** `build_map.py`, `sign_table.py`, `claims_table.py` and `loo_hand.py` now run from a fresh clone, and the last three match the committed outputs byte for byte. The Gulf null in `anchors.py` is now seeded.
 
+**Session 8 additions (30 October 2026)**
+
+- **A shuffle benchmark anyone can run** (`tools/evaluate_key.py`, [`docs/SUBMIT_A_KEY.md`](docs/SUBMIT_A_KEY.md); manuscript §4.23). It takes a sign→value key or one reading per inscription and reports the real score against within-text, positional and global shuffles. It compares that with what correct keys for Sanskrit and Akkadian lose (17–25 points under shuffling; 21–34 when signs keep their usual positions) and gives a verdict in fixed, calibrated wording.
+  - Yajnadevam's key and the Field-Cady Proto-Dravidian syllables get **no support from sign order**.
+  - Yajnadevam's **published readings**: values learned from 80% of inscriptions read the held-out 20% with a 14-point real-order gain. When signs keep their usual positions, the gain is 4.6 points (correct keys: at least 21). Verdict: **weak, largely positional**. A small significant residual remains unexplained.
+- **Arbitrary-text control** (`outputs/arbitrary_text/`; §4.24), after the "Panini Protocol" critique. Sanskrit values fitted from the same value inventory and reading rule give a complete Sanskrit parse on **100% of held-out texts made from the US Constitution** (letter by letter), 92–93% of random strings, 96–98% of Akkadian and 90–92% of Indus texts. Each held-out set parses far beyond the 475-symbol unicity distance. Readability is not evidence of decipherment; the shuffle comparison is the informative test.
+- **A non-linguistic "cargo-tag" proposal tested** (Diener 2026, using the statistics of Kriger & Hunt 2026; pre-registered in `prereg/session8_structured_notation_prereg.md`; results in `outputs/structured_notation/RESULTS.md`; §4.25).
+  - The positional regularities, the 98% sequence uniqueness and the final jar sign replicate, but short texts in known languages match each of them.
+  - The model's distinctive predictions fail: numerals sit at reading position 2, not field 4, and the seal animal does not fix the numeral (p = .40).
+  - Kriger & Hunt's positional table is in visual order, the reverse of the reading order. Several sign labels in Diener's appendix are wrong.
+  - Linguistic status stays undetermined.
+- **[`docs/FAQ.md`](docs/FAQ.md)** covers circularity, unicity distance, the missing bilingual, short texts, chronology, the non-linguistic hypothesis, and what we do and do not claim. References were re-verified, and the ORACC licence wording was corrected.
+
 **Status:** unreviewed preprint (working draft), not peer-reviewed. Maintained by the Indus Valley Script project contributors.
 
 ## Layout
@@ -56,6 +71,9 @@ Code, derived statistics and manuscript for a null-model-calibrated study of the
 | `outputs/prereg/`, `outputs/robustness/`, `outputs/emblem/` | held-out, merge-scheme and non-linguistic-comparison results |
 | `outputs/signlist/` | open machine-readable sign list (CSV, JSON, JSON schema) |
 | `bench/` | claim-scoring benchmark: submission template, examples, scored results |
+| `docs/` | plain-language FAQ and how to submit a key or readings to the shuffle benchmark (session 8) |
+| `tools/evaluate_key.py`, `bench/results/evaluate_key/` | shuffle benchmark for any proposed key or set of readings, with example results (session 8) |
+| `outputs/structured_notation/`, `outputs/arbitrary_text/` | session-8 tests: five-field cargo-tag model (pre-registered) and the arbitrary-text control |
 | `rater_kit/` | blind human-rater sheet, protocol and scorer (answer key withheld; SHA-256 published) |
 | `map/schema.sql`, `map/seed/` | SQLite schema and seed tables for the sign map |
 | `paper/manuscript_public.md`, `paper/manuscript_public.pdf` | manuscript, public version (unreviewed preprint) |

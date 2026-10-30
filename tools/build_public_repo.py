@@ -130,7 +130,7 @@ print('commons images:', len(rows), 'met images:', len(os.listdir(f"{DST}/data_o
 body = open(f'{SRC}/paper/manuscript_body.md').read()
 body = re.sub(r'!\[Fig\. 7\.[^\n]*\n', '*Fig. 7 (visual check of 40 concordance links, M77 crops beside SK-font renders; the judgements were made by the project\'s AI research assistant, not by a human) is omitted from the public version: both image sources are under copyright. The per-pair judgements are in `outputs/signmap/handcheck_pairs.csv`.*\n', body)
 body = re.sub(r'!\[Fig\. 8\.[^\n]*\n', '*Fig. 8 (top visual look-alikes, M77 crops beside foreign glyphs) is omitted from the public version because the M77 crops are under copyright. Scores are in `outputs/comparanda/lookalikes_top3.csv`.*\n', body)
-body = re.sub(r'^author: .*$', 'author: "Indus Valley Script project contributors"\nsubtitle: "UNREVIEWED PREPRINT: working draft, not peer-reviewed (29 October 2026; public version with restricted figures and lipi key values removed)"', body, count=1, flags=re.M)
+body = re.sub(r'^author: .*$', 'author: "Indus Valley Script project contributors"\nsubtitle: "UNREVIEWED PREPRINT: working draft, not peer-reviewed (30 October 2026, session 8; public version with restricted figures and lipi key values removed)"', body, count=1, flags=re.M)
 body = body.replace('# Abstract', '<div class="preprint-banner">UNREVIEWED PREPRINT / WORKING DRAFT. This manuscript has not been peer-reviewed. Results are provisional and may change.</div>\n\n# Abstract', 1)
 body = body.replace('- **Owner requirements.**', '- **Scope of the original brief.**')
 assert 'prepared by' not in body
