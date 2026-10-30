@@ -85,6 +85,7 @@ check(all(os.path.exists(f'{ROOT}/data_open/comparanda_short/wiki_titles_{l}.txt
 
 # 4d. session 7 positive control: correct keys lose under shuffling; Yajnadevam's key does not on the parse
 import csv
+import pandas as pd
 pc = {(r['corpus'], r['key'], r['textset'], r['measure']): r for r in csv.DictReader(open(f'{ROOT}/positive_control/outputs/pc_summary.csv'))}
 sk = pc[('sanskrit_classical', 'correct', 'lenmatch_wordaligned', 'M3_vidyut')]; ya = pc[('indus_lipi', 'yajnadevam', 'lipi_test_texts_2317', 'M3_vidyut')]
 ak = pc[('akkadian_NA_letters', 'correct', 'lenmatch_wordaligned', 'M1_seg_full')]; y2 = pc[('indus_lipi', 'yajnadevam', 'lipi_test_texts_2317', 'M2_seg_lm4361')]
@@ -106,6 +107,14 @@ check(er['verdict']['label'].startswith('WEAK') and r3['drop_posglobal'] < 0.1, 
 pn = {(r['corpus'], r['key'], r['measure']): r for r in csv.DictReader(open(f'{ROOT}/positive_control/outputs/pc_positional_nulls.csv'))}
 check(float(pn[('sanskrit_classical', 'correct', 'M3_vidyut')]['drop_posglobal']) > 0.15 and float(pn[('akkadian_NA_letters', 'correct', 'M1_seg_full')]['drop_posglobal']) > 0.2,
       'positive control: correct keys still lose when signs keep their usual positions')
+
+# 4f. session 8: arbitrary-text control and structured-notation (Diener 2026 / Kriger & Hunt 2026) headline results
+at = pd.read_csv(f'{ROOT}/outputs/arbitrary_text/fit_M3/results.csv')
+check(at[at.corpus == 'us_constitution_letters'].heldout_M3.min() >= 0.99 and (at.q_M3 >= 0.05).all(),
+      'arbitrary-text control: US Constitution letters fully parse as Sanskrit held out; no corpus shows a significant real-order gain')
+sn = J('outputs/structured_notation/results.json'); qs = {(x['test'], x['label']): x['q_BH'] for x in sn['pvalues']}
+check(sn['kriger_hunt_replication']['distinct_sequences'] == 176 and sn['D']['p_perm'] > 0.05 and qs[('C1', 'I2 reading pos 4 (Diener P4)')] > 0.05,
+      'structured notation: K&H 176/179 distinct replicated; tariff locking and numeral field 4 not supported')
 
 # 5. restricted-content checker
 r = subprocess.run([sys.executable, f'{ROOT}/tools/check_public.py'], capture_output=True, text=True, cwd=ROOT)

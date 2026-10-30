@@ -902,6 +902,46 @@ The shuffle test of §4.6 assumes that a correct key reads real sign order bette
   - The Indus row was run for one text set (seed 0) only.
   - Linear B, Old Persian and Prakrit inscriptions were not run, because we found no open corpus with a lexicon.
 
+## 4.23 A shuffle benchmark anyone can run, and Yajnadevam's published readings (session 8)
+
+`tools/evaluate_key.py` (instructions in `docs/SUBMIT_A_KEY.md`) packages the test of §4.6 and §4.22 for any proposal. It accepts either a sign→value key or one reading per inscription, and reports:
+- the real score and the scores under four nulls: within-text shuffle; a *positional re-deal*, where each sign keeps its usual first, middle or last position but the sequences are destroyed; an *interior-only* shuffle on texts of 4 or more signs; and a global shuffle;
+- the correct-key reference numbers from §4.22, recomputed for the new positional nulls (`positive_control/outputs/pc_positional_nulls.csv`). Correct keys lose 21–34 points under the positional re-deal and 15–23 points under the interior-only shuffle;
+- a verdict in fixed, calibrated wording. The benchmark never certifies a decipherment.
+
+| Proposal | Primary test | Real | Shuffled (within) | Drop | Positional re-deal drop | Verdict |
+|---|---|---|---|---|---|---|
+| Yajnadevam key (*lipi* @ fc8813a) | parse (M3), 2,317 texts | 0.579 | 0.591 | −0.012 (q = 1) | −0.013 | No support from sign order |
+| Field-Cady Proto-Dravidian syllables | M2, 1,016 texts | 0.399 | 0.432 | −0.033 (q = 1) | n/a | No support from sign order |
+| Yajnadevam *published readings* (1,694 inscriptions, *lipi* @ fc8813a): values learned from 80%, held-out 20% read mechanically | parse (M3), 386 held-out texts | 0.541 | 0.403 | +0.139 (q = .009) | +0.046 (q = .017); interior-only +0.073 (q = .009) | Weak: largely positional |
+
+**The published readings.** The readings parse well as written (78% complete vidyut parse). Shuffling their per-sign pieces costs 41 points. But the same readings re-cut against a *wrong* inscription of the same length lose just as much (40 points), so that loss measures how fluent the readings are, not whether they belong to their signs.
+
+The fair test learns the value each sign actually receives across 80% of the readings and reads the held-out 20% mechanically. Here real order helps by 14 points, close to the minimum a correct key shows (16.5). Most of this comes from where signs stand, though:
+- when signs keep their usual first, middle or last position, the gain falls to 4.6 points, against at least 21 for correct keys;
+- with first and last signs fixed, it falls to 7.3 points, against at least 16 for correct keys.
+
+So the readings encode the script's positional habits, for example word-final forms for signs that usually stand last. They also keep a small, statistically significant order effect beyond position: about a fifth to a half of what a correct key shows. We cannot tell from these data whether that residual reflects reading or the fitting of readings to frequent sign pairs. A test on inscriptions found or published after the readings were made would decide it.
+
+These readings come from the *lipi* repository at commit fc8813a. The current indusscript.net readings may differ.
+
+## 4.24 Arbitrary-text control: the same fitting freedom reads anything (session 8)
+
+The "Panini Protocol" critique (Ugraśravas, fetched 30 October 2026) "deciphered" the US Constitution as Sanskrit. We reproduced the critique under control (`scripts/arbitrary_text_control.py`; `outputs/arbitrary_text/RESULTS.md`). Sign values were drawn from Yajnadevam's value inventory, read with the *lipi* rule and hill-climbed for a complete vidyut parse on 80% of the texts of each corpus. Every corpus was cut to Indus text lengths. We then scored the held-out 20%:
+
+| Corpus | Held-out complete Sanskrit parse | Real vs shuffled order |
+|---|---|---|
+| US Constitution, letters as signs | **100%** (3/3 seeds) | +0.3 to +0.7 points, n.s. |
+| Akkadian cuneiform graphemes | 96–98% | n.s. |
+| Random strings with Indus sign frequencies | 92–93% | n.s. |
+| Indus texts | 90–92% | 0 to +5 points, n.s. |
+| US Constitution, words as signs | 86–90% | +2 to +6 points, n.s. |
+| Real Sanskrit aksharas, re-fitted values | 78–81% | n.s. |
+
+Fitted to segmentation (M2) instead, every corpus reaches 97–100% held out.
+
+In every corpus, the fitted keys fully parse 1,360–1,835 held-out symbols, several times the 475-symbol unicity distance used as a criterion of uniqueness. **Readability, even on held-out texts and beyond the unicity distance, therefore does not separate the Indus texts from English, Akkadian or random strings.** Only the shuffle comparison does that for known scripts (§4.22), and on it neither the fitted keys nor the published key show a correct key's loss.
+
 ## 4.25 A non-linguistic "cargo-tag" proposal, tested (session 8)
 
 Diener (2026) proposes that Indus seal texts are not language but fixed-format administrative records ("cargo tags") with five ordered fields: issuer, commodity, attribute, numeral "tariff" and a closing operator. The proposal rests on statistics from Kriger & Hunt (2026), who analysed the 179 Mohenjo-daro unicorn seals of M. Carlson's open CISI corpus. We have that corpus (mayig @ ad2f1e2), so we could check the statistics directly. We then tested each claim against within-text shuffles and against short texts in known languages (Latin owner's and maker's stamps and Latin inscriptions of all genres from EDH; Wikipedia titles; DCS Sanskrit and ORACC Akkadian word-aligned spans; running-text windows) and Sproat's non-linguistic corpora. The predictions and decision rules were written and committed before the run (`prereg/session8_structured_notation_prereg.md`). Results are in `outputs/structured_notation/RESULTS.md`. q is Benjamini–Hochberg across all 22 tests.
@@ -1049,6 +1089,7 @@ Only works opened during the project are listed. Works cited at second hand are 
 - Epigraphic Database Heidelberg (EDH). Text data export `edh_data_text.csv` (CC BY-SA 4.0), downloaded 29 October 2026. https://edh.ub.uni-heidelberg.de/data/download
 - Wikipedia contributors. Finnish, Tamil and Sanskrit Wikipedia article-title lists (CC BY-SA 4.0), Wikimedia dumps, downloaded 29 October 2026. https://dumps.wikimedia.org/
 - Kumbhar, S. 2017. SK Indus Script font (All Rights Reserved), as distributed in yajnadevam/indus-website.
+- Ugraśravas. n.d. *The Panini Protocol* (web page; progress stated as of 14 July 2025). https://ugrashravas.github.io/paniniprotocol (fetched 30 October 2026).
 - Wells, B. K. 2015. *The Archaeology and Epigraphy of Indus Writing.* Archaeopress. [publisher sample only: front matter and TOC]
 - Yajnadevam. *lipi* repository, commit fc8813a (2026-08-20 IST). https://github.com/yajnadevam/lipi
 
