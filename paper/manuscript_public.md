@@ -916,6 +916,8 @@ Diener (2026) proposes that Indus seal texts are not language but fixed-format a
 
 **Corrections to the source papers.** Kriger & Hunt's positional entropy table is in visual left-to-right order, the reverse of the reading order. Diener's Appendix C gives P324 as the "unicorn" field, but P324 is the jar sign (M342). It gives P385 as "sign 342", but P385 is the diamond (M267), which stands first in reading order. Diener's "draft record" M-141 contains P000, the corpus's marker for damaged or lost signs.
 
+**Archaeological context.** Seals and sealings did have administrative uses. Seals turn up in nearly every excavated structure at Mohenjo-daro, and sealings closed containers and doors, as Green (2021) summarises from the excavation literature. So a record-keeping function for some seal texts is plausible on archaeological grounds. The statistics above neither confirm nor exclude it.
+
 **What this shows and does not show.** The positional habits, the uniqueness and the final jar sign are real properties of the corpus. But each is equally expected of short texts in a language, such as names, titles and owner's marks, so none of them argues for a non-linguistic record over a linguistic one. The two predictions specific to the cargo-tag model (a numeral field at position 4, and tiers fixed by the animal) fail. This does not show that the script writes language. The question stays open, as in §4.4 and §4.15. Physical arguments (jar stamps, tags, Gadd seal 1) were not tested, and the optional proto-cuneiform benchmark from CDLI was not run.
 
 # 5. Sign-by-sign assessment
@@ -971,6 +973,7 @@ Of the 116 rows, none carries a phonetic value at any confidence above null.
   - The H7 post-hoc analysis is exploratory, at n = 5 per split.
   - The shuffle-test positive controls (§4.22) cover Sanskrit (aksharas, automatic sandhi) and Neo-Assyrian Akkadian only. The ORACC files were downloaded without TLS certificate verification, because the server omits its intermediate certificate; their SHA-256 hashes are recorded.
   - The short-text linguistic comparanda are Latin inscriptions and Wikipedia titles, not texts in a language that might be the Indus language. We found no further openly licensed non-linguistic corpus.
+- **Language arguments from outside the script.** Loanword and etymology arguments, such as a Dravidian origin for the Akkadian word for elephant (Mukhopadhyay 2021), bear on which languages were spoken in the Indus region. They do not tell us what the script encodes, and our tests do not evaluate them.
 - **Scope of the original brief.** The request for "85% confidence in a complete decipherment" cannot be met. Without a bilingual or an independent semantic anchor, no current method can calibrate phonetic values (Parpola 1994: 48).
 
 # 7. Data and code availability
@@ -1037,11 +1040,12 @@ Only works opened during the project are listed. Works cited at second hand are 
 - Carlson, M. *mayig/indus-valley-script-corpus* (CISI-based corpus; hand-matched P↔M↔W concordance), commit ad2f1e2. https://github.com/mayig/indus-valley-script-corpus
 - elamicon project. *elamicon* (Linear Elamite glyph sources and corpus browser), commit 69b4cc2. https://github.com/elamicon/elamicon
 - Google / Noto project. Noto Sans Egyptian Hieroglyphs, Cuneiform, Brahmi, Linear A, and (session 7) Cypro-Minoan, Linear B, Anatolian Hieroglyphs, Phoenician and Old Persian (SIL OFL 1.1). https://github.com/notofonts
+- Green, A. S. 2021. Killing the priest-king: addressing egalitarianism in the Indus civilization. *Journal of Archaeological Research* 29(2): 153–202 (online 16 September 2020; open access). doi:10.1007/s10814-020-09147-9.
 - Hellwig, O. 2010–2024. *The Digital Corpus of Sanskrit (DCS)*. CoNLL-U files (CC BY 4.0). https://github.com/OliverHellwig/sanskrit
-- Parpola, S. 1987. *The Correspondence of Sargon II, Part I: Letters from Assyria and the West*. State Archives of Assyria 1. Helsinki University Press. Online edition: SAAo (State Archives of Assyria online), ORACC, `saao/saa01` JSON (CC0), downloaded 29 October 2026. https://oracc.museum.upenn.edu/saao/
-- Lanfranchi, G. B. & S. Parpola. 1990. *The Correspondence of Sargon II, Part II: Letters from the Northern and Northeastern Provinces*. State Archives of Assyria 5. Helsinki University Press. ORACC SAAo `saao/saa05` JSON (CC0).
-- Parpola, S. 1993. *Letters from Assyrian and Babylonian Scholars*. State Archives of Assyria 10. Helsinki University Press. ORACC SAAo `saao/saa10` JSON (CC0).
-- Leichty, E. 2011. *The Royal Inscriptions of Esarhaddon, King of Assyria (680–669 BC)*. RINAP 4. Eisenbrauns. ORACC RINAP `rinap/rinap4` JSON (CC0). https://oracc.museum.upenn.edu/rinap/
+- Parpola, S. 1987. *The Correspondence of Sargon II, Part I: Letters from Assyria and the West*. State Archives of Assyria 1. Helsinki University Press. Online edition: SAAo (State Archives of Assyria online), ORACC, `saao/saa01` JSON (CC0 per each file's metadata; SAAo site content CC BY-SA 3.0), downloaded 29 October 2026. https://oracc.museum.upenn.edu/saao/
+- Lanfranchi, G. B. & S. Parpola. 1990. *The Correspondence of Sargon II, Part II: Letters from the Northern and Northeastern Provinces*. State Archives of Assyria 5. Helsinki University Press. ORACC SAAo `saao/saa05` JSON (CC0 per file metadata; site CC BY-SA 3.0).
+- Parpola, S. 1993. *Letters from Assyrian and Babylonian Scholars*. State Archives of Assyria 10. Helsinki University Press. ORACC SAAo `saao/saa10` JSON (CC0 per file metadata; site CC BY-SA 3.0).
+- Leichty, E. 2011. *The Royal Inscriptions of Esarhaddon, King of Assyria (680–669 BC)*. The Royal Inscriptions of the Neo-Assyrian Period 4. Winona Lake, IN: Eisenbrauns. ORACC RINAP `rinap/rinap4` JSON (CC0 per file metadata; site CC BY-SA 3.0). https://oracc.museum.upenn.edu/rinap/
 - Epigraphic Database Heidelberg (EDH). Text data export `edh_data_text.csv` (CC BY-SA 4.0), downloaded 29 October 2026. https://edh.ub.uni-heidelberg.de/data/download
 - Wikipedia contributors. Finnish, Tamil and Sanskrit Wikipedia article-title lists (CC BY-SA 4.0), Wikimedia dumps, downloaded 29 October 2026. https://dumps.wikimedia.org/
 - Kumbhar, S. 2017. SK Indus Script font (All Rights Reserved), as distributed in yajnadevam/indus-website.
